@@ -26,9 +26,9 @@
 - "In managing $X in ad spend, I've seen..."
 - "From implementing this across multiple stores..."
 - "As someone building a Shopify app, I understand..."
-- "In my experience with 7-8 figure stores
+- "In my experience with 7-8 figure stores..."
 
-- ## Competitor App Strategy
+## Competitor App Strategy
 - Review fairly but note limitations honestly
 - Build authority through unbiased analysis
 - Position own app development as natural evolution
