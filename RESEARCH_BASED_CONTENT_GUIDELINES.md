@@ -152,3 +152,17 @@ Bottom Line: Professional recommendation with caveats
 - Note feature additions or removals
 - Update competitive landscape shifts
 - Maintain accuracy of all claims
+
+- ## Disclosure and Compliance Strategy
+
+### Site-Wide Disclosure Approach
+- Create comprehensive `/affiliate-disclosure/` page with full terms
+- Implement minimal footer disclaimers on all content pages
+- Use inline affiliate link notices where relevant ("We may earn commission")
+
+### Footer Disclaimer Template
+```html
+<footer class="content-disclaimer">
+Analysis based on professional ecommerce experience and official documentation. 
+Individual results may vary. <a href="/affiliate-disclosure/">Full disclosure</a>
+</footer>Inline Affiliate NoticeUse when linking to affiliate programs: "We may earn commission from purchases made through this link"Affiliate Disclosure Page RequirementsFTC compliance statementCommission relationship explanationProfessional background disclosureData sources and methodologyResults variation disclaimerContact information for questionsContent Page ImplementationRemove lengthy disclaimers from article bodyAdd standardized footer to all pagesLink prominently to affiliate disclosure pageMaintain professional reading experience
