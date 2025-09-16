@@ -459,6 +459,87 @@
         }
 
         /* Mobile optimizations */
+        /* Mobile Optimization Styles */
+        .mobile-cta-early,
+        .mobile-cta-mid {
+            display: none;
+            text-align: center;
+            margin: 1.5rem 0;
+            padding: 0 1rem;
+        }
+
+        .mobile-only,
+        .mobile-enhanced {
+            min-height: 56px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(149, 191, 71, 0.3);
+            transition: all 0.2s ease;
+        }
+
+        .mobile-enhanced {
+            background: linear-gradient(135deg, #95BF47 0%, #7BA832 100%);
+        }
+
+        .desktop-primary {
+            display: block;
+        }
+
+        /* Sticky Mobile CTA */
+        .sticky-mobile-cta {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-top: 1px solid #e2e8f0;
+            padding: 1rem;
+            z-index: 1000;
+            display: none;
+            box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .sticky-cta-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .sticky-cta-text {
+            flex: 1;
+            margin-right: 1rem;
+        }
+
+        .sticky-cta-text h5 {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: #1a202c;
+            margin-bottom: 0.25rem;
+        }
+
+        .sticky-cta-text p {
+            font-size: 0.8rem;
+            color: #4a5568;
+            margin: 0;
+        }
+
+        .sticky-cta-button {
+            background: #95BF47;
+            color: white;
+            text-decoration: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            white-space: nowrap;
+            box-shadow: 0 2px 8px rgba(149, 191, 71, 0.3);
+        }
+
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2rem;
@@ -479,6 +560,89 @@
             .app-meta {
                 grid-template-columns: 1fr;
                 gap: 1rem;
+            }
+
+            /* Show mobile CTAs */
+            .mobile-cta-early,
+            .mobile-cta-mid {
+                display: block;
+            }
+
+            /* Hide desktop CTA on mobile */
+            .desktop-primary {
+                display: none;
+            }
+
+            /* Show sticky CTA */
+            .sticky-mobile-cta {
+                display: block;
+            }
+
+            /* Optimize selling points for mobile */
+            .selling-points {
+                padding: 1.5rem;
+                margin: 1.5rem 0;
+            }
+
+            .selling-point {
+                margin-bottom: 1.5rem;
+                gap: 0.75rem;
+            }
+
+            .point-bullets {
+                padding-left: 1rem;
+            }
+
+            .point-bullets li {
+                margin-bottom: 0.4rem;
+                line-height: 1.4;
+                font-size: 0.95rem;
+            }
+
+            .cta-button {
+                width: 100%;
+                padding: 1rem 2rem;
+                font-size: 1.1rem;
+                min-height: 56px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+            }
+
+            .conversion-visual {
+                padding: 1rem;
+                margin: 1rem 0;
+            }
+
+            .conversion-visual svg {
+                height: 80px;
+            }
+
+            /* Add bottom padding to last app item to account for sticky CTA */
+            .app-item:last-child {
+                padding-bottom: 6rem;
+            }
+
+            /* Optimize app tags for mobile */
+            .app-tag {
+                font-size: 0.65rem;
+                padding: 0.2rem 0.6rem;
+            }
+
+            /* Optimize brutal truth section */
+            .why-i-like {
+                padding: 1.25rem;
+                margin: 1.25rem 0;
+            }
+
+            .why-i-like h4 {
+                font-size: 1.1rem;
+            }
+
+            .why-i-like p {
+                font-size: 0.95rem;
+                line-height: 1.5;
             }
 
             .conversion-visual {
@@ -583,6 +747,11 @@
                         <p>I've watched stores hemorrhage money for months using inferior email tools while their competitors with Klaviyo clean up. The abandoned cart sequences alone will make you sick when you realize how much money you've been leaving on the table. Every email blast you send with basic tools is an opportunity cost that compounds daily. Your customers are getting sophisticated, personalized experiences from other brands - if you're not matching that, you're losing them forever.</p>
                     </div>
 
+                    <!-- Mobile Progressive CTA -->
+                    <div class="mobile-cta-early">
+                        <a href="https://www.klaviyo.com/partner/signup" class="cta-button mobile-only" target="_blank">Start Free - Get Klaviyo Now</a>
+                    </div>
+
                     <div class="selling-points">
                         <h4 class="selling-header">Why Smart Store Owners Choose Klaviyo:</h4>
                         <div class="selling-point">
@@ -635,7 +804,12 @@
                         </div>
                     </div>
 
-                    <a href="https://www.klaviyo.com/partner/signup" class="cta-button" target="_blank">Start Converting Emails Into Sales - Get Klaviyo Now</a>
+                    <!-- Progressive CTA after selling points -->
+                    <div class="mobile-cta-mid">
+                        <a href="https://www.klaviyo.com/partner/signup" class="cta-button mobile-enhanced" target="_blank">Start Free Trial - Get Klaviyo</a>
+                    </div>
+
+                    <a href="https://www.klaviyo.com/partner/signup" class="cta-button desktop-primary" target="_blank">Start Converting Emails Into Sales - Get Klaviyo Now</a>
                 </li>
 
                 <li class="app-item" id="recharge">
@@ -1191,6 +1365,17 @@
         </div>
     </section>
 
+    <!-- Sticky Mobile CTA for Klaviyo -->
+    <div class="sticky-mobile-cta" id="klaviyo-sticky-cta">
+        <div class="sticky-cta-content">
+            <div class="sticky-cta-text">
+                <h5>Stop Losing Revenue</h5>
+                <p>Start Klaviyo free - No credit card</p>
+            </div>
+            <a href="https://www.klaviyo.com/partner/signup" class="sticky-cta-button" target="_blank">Get Klaviyo</a>
+        </div>
+    </div>
+
     <footer>
         <div class="container">
             <p>&copy; 2025 ShopifyAppAuthority. All rights reserved. • <a href="/affiliate-disclosure/" style="color: #a0aec0;">Affiliate Disclosure</a></p>
@@ -1204,6 +1389,62 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-J09TH92K0M');
+    </script>
+
+    <!-- Mobile Sticky CTA JavaScript -->
+    <script>
+        // Mobile sticky CTA optimization
+        document.addEventListener('DOMContentLoaded', function() {
+            // Show/hide sticky CTA based on scroll position
+            const stickyCTA = document.getElementById('klaviyo-sticky-cta');
+            const klaviyoSection = document.getElementById('klaviyo');
+
+            if (stickyCTA && klaviyoSection && window.innerWidth <= 768) {
+                let hasSeenKlaviyo = false;
+
+                function handleScroll() {
+                    const klaviyoRect = klaviyoSection.getBoundingClientRect();
+                    const isKlaviyoVisible = klaviyoRect.top < window.innerHeight && klaviyoRect.bottom > 0;
+
+                    // Show sticky CTA when user scrolls past the "brutal truth" section
+                    if (klaviyoRect.top < -200 && !hasSeenKlaviyo) {
+                        hasSeenKlaviyo = true;
+                        stickyCTA.style.display = 'block';
+                    }
+
+                    // Hide when back in Klaviyo section
+                    if (isKlaviyoVisible && hasSeenKlaviyo) {
+                        stickyCTA.style.display = 'none';
+                    } else if (!isKlaviyoVisible && hasSeenKlaviyo) {
+                        stickyCTA.style.display = 'block';
+                    }
+                }
+
+                // Throttled scroll listener
+                let ticking = false;
+                window.addEventListener('scroll', function() {
+                    if (!ticking) {
+                        requestAnimationFrame(function() {
+                            handleScroll();
+                            ticking = false;
+                        });
+                        ticking = true;
+                    }
+                });
+
+                // Track sticky CTA clicks
+                stickyCTA.addEventListener('click', function() {
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'click', {
+                            event_category: 'affiliate_click',
+                            event_label: 'klaviyo_sticky_mobile',
+                            app_name: 'Klaviyo',
+                            placement: 'sticky_mobile_cta'
+                        });
+                    }
+                });
+            }
+        });
     </script>
 
     <!-- Meta Pixel -->
