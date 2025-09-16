@@ -583,13 +583,55 @@
         </div>
     </main>
 
-    <!-- Analytics tracking would go here -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J09TH92K0M"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-J09TH92K0M');
+    </script>
+
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '839806401714013');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=839806401714013&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+
+    <!-- Analytics tracking -->
     <script>
         // Track affiliate clicks
         document.addEventListener('click', function(e) {
-            if (e.target.classList.contains('cta-button')) {
+            if (e.target.classList.contains('cta-button') && e.target.href.includes('klaviyo.com')) {
+                // Track Google Analytics event
+                gtag('event', 'affiliate_click', {
+                    'app_name': 'klaviyo',
+                    'placement': 'cta_button',
+                    'page_url': window.location.href
+                });
+
+                // Track Facebook Pixel Lead event
+                if (typeof fbq !== 'undefined') {
+                    fbq('track', 'Lead', {
+                        content_name: 'klaviyo',
+                        content_category: 'email_marketing',
+                        source: 'review_page'
+                    });
+                }
                 console.log('Klaviyo affiliate link clicked');
-                // Add your tracking code here
             }
         });
     </script>
