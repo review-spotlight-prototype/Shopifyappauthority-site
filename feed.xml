@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>ShopifyAppAuthority - Expert Shopify App Reviews</title>
-    <description>Expert reviews and recommendations for the best Shopify apps. Data-driven analysis to help you choose the right apps for your ecommerce business.</description>
+    <title>ShopifyAppAuthority</title>
+    <description>Expert Shopify app reviews from a $100M+ ad spend manager. Real insights for ecommerce store owners.</description>
     <link>https://shopifyappauthority.com</link>
     <atom:link href="https://shopifyappauthority.com/feed.xml" rel="self" type="application/rss+xml" />
     <language>en-us</language>
@@ -84,13 +84,14 @@
     </item>
 
     <item>
-      <title>Best Shopify Apps 2025: Expert Reviews &amp; Recommendations</title>
-      <description>Discover the best Shopify apps for your ecommerce business. Expert reviews, comparisons, and recommendations to boost your store's revenue and efficiency.</description>
-      <link>https://shopifyappauthority.com/best-shopify-apps-2025/</link>
-      <guid>https://shopifyappauthority.com/best-shopify-apps-2025/</guid>
-      <pubDate>Sun, 15 Sep 2025 00:00:00 GMT</pubDate>
+      <title>15 Best Shopify Apps 2025: From Someone Who's Actually Used Them</title>
+      <description>Real insights from managing $100M+ in ad spend across 7-8 figure Shopify stores. Expert recommendations for email marketing, subscriptions, customer service, and more based on actual experience.</description>
+      <link>https://shopifyappauthority.com</link>
+      <guid>https://shopifyappauthority.com</guid>
+      <pubDate>Wed, 15 Jan 2025 12:00:00 GMT</pubDate>
       <category>Shopify Apps</category>
-      <category>Comparison</category>
+      <category>Expert Reviews</category>
+      <category>Ecommerce Tools</category>
       <author>hello@shopifyappauthority.com (ShopifyAppAuthority)</author>
     </item>
 
