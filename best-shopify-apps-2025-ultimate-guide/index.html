@@ -364,6 +364,52 @@
             color: #059669;
         }
 
+        .ai-indicator {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+            background: linear-gradient(135deg, #8b5cf6 0%, #a78bfa 100%);
+            color: white;
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 0.2rem 0.5rem;
+            border-radius: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-left: 0.5rem;
+            box-shadow: 0 2px 4px rgba(139, 92, 246, 0.3);
+        }
+
+        .ai-feature {
+            background: linear-gradient(135deg, #f3e8ff 0%, #ede9fe 100%);
+            border: 1px solid #c4b5fd;
+            border-radius: 8px;
+            padding: 0.75rem;
+            margin: 0.75rem 0;
+            position: relative;
+        }
+
+        .ai-feature::before {
+            content: "🤖 AI-POWERED";
+            position: absolute;
+            top: -0.5rem;
+            left: 1rem;
+            background: linear-gradient(135deg, #8b5cf6 0%, #a78bfa 100%);
+            color: white;
+            font-size: 0.6rem;
+            font-weight: 700;
+            padding: 0.25rem 0.5rem;
+            border-radius: 8px;
+            letter-spacing: 0.5px;
+        }
+
+        .ai-feature-text {
+            font-size: 0.9rem;
+            color: #6b46c1;
+            font-weight: 600;
+            margin-top: 0.25rem;
+        }
+
         .app-description {
             margin-bottom: 1.5rem;
             font-size: 1.125rem;
@@ -768,6 +814,7 @@
                         <div class="quick-info-item">
                             <span class="quick-info-label">Credit card:</span>
                             <span class="quick-info-value free">Not required</span>
+                            <span class="ai-indicator">🤖 AI POWERED</span>
                         </div>
                     </div>
 
@@ -822,12 +869,12 @@
                         <div class="selling-point">
                             <span class="check">✅</span>
                             <div class="point-content">
-                                <div class="point-header"><strong>Advanced automation</strong></div>
+                                <div class="point-header"><strong>AI-powered automation</strong></div>
                                 <ul class="point-bullets">
                                     <li><strong>Set-and-forget email sequences</strong> that work 24/7</li>
-                                    <li><strong>Abandoned cart recovery</strong> sequences</li>
-                                    <li><strong>Welcome series</strong> and <strong>post-purchase follow-ups</strong></li>
-                                    <li><strong>Win-back campaigns</strong> run automatically</li>
+                                    <li><strong>AI send-time optimization</strong> delivers emails when customers are most likely to open</li>
+                                    <li><strong>Abandoned cart recovery</strong> sequences with smart product recommendations</li>
+                                    <li><strong>Predictive analytics</strong> identify high-value customers automatically</li>
                                 </ul>
                             </div>
                         </div>
@@ -960,6 +1007,7 @@
                         <div class="quick-info-item">
                             <span class="quick-info-label">Saves:</span>
                             <span class="quick-info-value">70% response time</span>
+                            <span class="ai-indicator">🤖 AI POWERED</span>
                         </div>
                     </div>
 
@@ -1006,12 +1054,12 @@
                         <div class="selling-point">
                             <span class="check">✅</span>
                             <div class="point-content">
-                                <div class="point-header"><strong>Automation that actually works</strong></div>
+                                <div class="point-header"><strong>AI-powered automation that actually works</strong></div>
                                 <ul class="point-bullets">
+                                    <li><strong>AI intent detection</strong> routes tickets to right agents instantly</li>
                                     <li><strong>Smart macros</strong> handle 70% of common questions automatically</li>
-                                    <li>Intent detection routes tickets to right agents instantly</li>
-                                    <li><strong>Auto-responses</strong> that don't sound robotic</li>
-                                    <li>Response time targets that get met consistently</li>
+                                    <li><strong>AI-generated responses</strong> that sound natural, not robotic</li>
+                                    <li><strong>Predictive tagging</strong> categorizes tickets before agents see them</li>
                                 </ul>
                             </div>
                         </div>
@@ -1052,6 +1100,7 @@
                         <div class="quick-info-item">
                             <span class="quick-info-label">Boost:</span>
                             <span class="quick-info-value">3x ad performance</span>
+                            <span class="ai-indicator">🤖 AI POWERED</span>
                         </div>
                     </div>
                     <div class="app-description">
@@ -1117,12 +1166,12 @@
                         <div class="selling-point">
                             <span class="check">✅</span>
                             <div class="point-content">
-                                <div class="point-header"><strong>Enterprise-grade features</strong></div>
+                                <div class="point-header"><strong>AI-powered enterprise features</strong></div>
                                 <ul class="point-bullets">
-                                    <li><strong>Advanced analytics</strong> and sentiment analysis</li>
-                                    <li>Multi-language support for global brands</li>
-                                    <li><strong>API integrations</strong> with all major platforms</li>
-                                    <li>Dedicated customer success manager</li>
+                                    <li><strong>AI sentiment analysis</strong> monitors brand reputation automatically</li>
+                                    <li><strong>Smart review collection</strong> uses AI to optimize request timing</li>
+                                    <li><strong>Auto-moderation</strong> flags inappropriate content before publication</li>
+                                    <li>Dedicated customer success manager for enterprise accounts</li>
                                 </ul>
                             </div>
                         </div>
@@ -1150,6 +1199,7 @@
                         <div class="quick-info-item">
                             <span class="quick-info-label">For:</span>
                             <span class="quick-info-value">$50K+ ad spend</span>
+                            <span class="ai-indicator">🤖 AI POWERED</span>
                         </div>
                     </div>
                     <div class="app-description">
@@ -1203,12 +1253,12 @@
                         <div class="selling-point">
                             <span class="check">✅</span>
                             <div class="point-content">
-                                <div class="point-header"><strong>Scaling optimization tools</strong></div>
+                                <div class="point-header"><strong>AI-powered scaling optimization</strong></div>
                                 <ul class="point-bullets">
-                                    <li><strong>Audience insights</strong> reveal profitable customer segments</li>
-                                    <li>Budget allocation recommendations based on true performance</li>
-                                    <li><strong>Creative rotation</strong> prevents ad fatigue automatically</li>
-                                    <li>Predictive analytics for scaling decisions</li>
+                                    <li><strong>Machine learning models</strong> reveal profitable customer segments</li>
+                                    <li><strong>AI budget allocation</strong> recommendations based on true performance</li>
+                                    <li><strong>Predictive analytics</strong> forecast scaling opportunities</li>
+                                    <li><strong>Auto-optimization algorithms</strong> prevent ad fatigue automatically</li>
                                 </ul>
                             </div>
                         </div>
@@ -1380,6 +1430,10 @@
                     <div class="app-category">Attribution & Analytics</div>
                     <div class="app-description">
                         Military-grade attribution for serious advertisers. Northbeam tracks customer journeys across all touchpoints, giving you the attribution data needed to scale profitably in the post-iOS 14.5 world.
+                    </div>
+
+                    <div class="ai-feature">
+                        <div class="ai-feature-text">Advanced machine learning models analyze complex customer journeys across all touchpoints for military-grade attribution accuracy</div>
                     </div>
 
                     <div class="why-i-like">
@@ -1562,6 +1616,10 @@
                         AI-powered personalization engine that creates Amazon-like shopping experiences. Smart product recommendations and upsells that actually increase AOV without feeling pushy.
                     </div>
 
+                    <div class="ai-feature">
+                        <div class="ai-feature-text">Machine learning algorithms analyze customer behavior to deliver personalized product recommendations that drive higher AOV</div>
+                    </div>
+
                     <div class="why-i-like">
                         <h4>Why I recommend it:</h4>
                         <p>Average order value directly impacts ad efficiency - higher AOV means you can pay more for customers. Rebuy's machine learning features can help with product recommendations when properly configured.</p>
@@ -1590,6 +1648,10 @@
                     <div class="app-category">SMS & Email Marketing</div>
                     <div class="app-description">
                         Enterprise-grade SMS marketing with sophisticated automation. Attentive's two-way conversations and AI-powered messaging drive exceptional engagement for larger brands.
+                    </div>
+
+                    <div class="ai-feature">
+                        <div class="ai-feature-text">AI-powered conversational messaging adapts to customer responses for natural two-way SMS experiences</div>
                     </div>
 
                     <div class="why-i-like">
