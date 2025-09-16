@@ -3,9 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>15 Best Shopify Apps 2025: Expert Reviews from $100M+ Ad Manager</title>
-    <meta name="description" content="Discover the top 15 Shopify apps that actually drive results. Expert insights from managing $100M+ in ad spend across 7-8 figure stores.">
-    <meta name="keywords" content="best shopify apps 2025, shopify app reviews, ecommerce tools, shopify marketing apps">
+    <title>ShopifyAppAuthority: Expert Shopify App Reviews from $100M+ Ad Manager</title>
+    <meta name="description" content="Expert Shopify app reviews from someone who's managed $100M+ in ad spend. Real insights on the tools that actually scale 7-8 figure stores.">
+    <meta name="keywords" content="shopify app reviews, best shopify apps 2025, ecommerce tools, shopify expert, ad spend manager">
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://www.googletagmanager.com/gtag/js?id=G-J09TH92K0M" as="script">
+    <link rel="preload" href="https://connect.facebook.net/en_US/fbevents.js" as="script">
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -13,10 +17,11 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="15 Best Shopify Apps 2025: Expert Reviews">
-    <meta property="og:description" content="Expert insights from managing $100M+ in ad spend. Real reviews of the top Shopify apps that drive results.">
+    <meta property="og:title" content="ShopifyAppAuthority: Expert Reviews from $100M+ Ad Manager">
+    <meta property="og:description" content="Real insights on Shopify apps from someone who's managed $100M+ in ad spend across 7-8 figure stores. No BS, just results.">
     <meta property="og:url" content="https://shopifyappauthority.com">
-    <meta property="og:type" content="article">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ShopifyAppAuthority">
 
     <!-- Canonical URL -->
     <link rel="canonical" href="https://shopifyappauthority.com">
@@ -119,12 +124,104 @@
             margin-bottom: 1.5rem;
         }
 
-        .author-note {
-            background: #edf2f7;
-            border-left: 4px solid #3182ce;
-            padding: 1rem;
+        .credentials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
             margin: 2rem 0;
+            padding: 2rem 0;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .credential-item {
+            text-align: center;
+        }
+
+        .credential-item strong {
+            display: block;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 0.25rem;
+        }
+
+        .credential-item span {
+            font-size: 0.875rem;
+            opacity: 0.9;
+        }
+
+        .author-note {
+            background: rgba(255,255,255,0.1);
+            border-left: 4px solid #fff;
+            padding: 1rem;
+            margin: 2rem 0 0;
             border-radius: 0 4px 4px 0;
+        }
+
+        .featured-section {
+            background: #fff;
+            margin: 3rem 0;
+            padding: 3rem 0;
+            border-top: 3px solid #3182ce;
+        }
+
+        .featured-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .featured-header h2 {
+            font-size: 2.25rem;
+            color: #1a202c;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .featured-subtitle {
+            font-size: 1.125rem;
+            color: #4a5568;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .authority-section {
+            background: #f7fafc;
+            padding: 4rem 0;
+        }
+
+        .authority-section h2 {
+            text-align: center;
+            font-size: 2rem;
+            color: #1a202c;
+            margin-bottom: 3rem;
+            font-weight: 700;
+        }
+
+        .authority-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .authority-item {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-left: 4px solid #3182ce;
+        }
+
+        .authority-item h3 {
+            color: #1a202c;
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .authority-item p {
+            color: #4a5568;
+            line-height: 1.6;
         }
 
         main {
@@ -262,22 +359,63 @@
             margin-top: 3rem;
         }
 
+        /* Performance optimizations */
+        .app-item {
+            contain: layout style;
+        }
+
+        .cta-button {
+            will-change: transform;
+        }
+
+        /* Mobile optimizations */
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
             }
 
             .hero h1 {
-                font-size: 2rem;
+                font-size: 1.75rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1rem;
             }
 
             .container {
                 padding: 0 15px;
             }
 
+            .credentials {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+                padding: 1.5rem 0;
+            }
+
+            .credential-item strong {
+                font-size: 1.25rem;
+            }
+
+            .featured-header h2 {
+                font-size: 1.75rem;
+            }
+
             .app-meta {
                 flex-direction: column;
                 gap: 1rem;
+            }
+
+            .authority-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .authority-section {
+                padding: 3rem 0;
+            }
+
+            .featured-section {
+                padding: 2rem 0;
             }
         }
     </style>
@@ -298,21 +436,42 @@
 
     <section class="hero">
         <div class="container">
-            <h1>15 Best Shopify Apps 2025: From Someone Who's Actually Used Them</h1>
-            <p class="subtitle">Real insights from managing $100M+ in ad spend across 7-8 figure Shopify stores</p>
+            <h1>Expert Shopify App Reviews</h1>
+            <p class="subtitle">From a $100M+ ad spend manager who's actually used these tools</p>
+
+            <div class="credentials">
+                <div class="credential-item">
+                    <strong>10+ Years</strong>
+                    <span>Shopify Experience</span>
+                </div>
+                <div class="credential-item">
+                    <strong>$100M+</strong>
+                    <span>Ad Spend Managed</span>
+                </div>
+                <div class="credential-item">
+                    <strong>7-8 Figure</strong>
+                    <span>Stores Optimized</span>
+                </div>
+                <div class="credential-item">
+                    <strong>App Developer</strong>
+                    <span>Building Shopify Tools</span>
+                </div>
+            </div>
 
             <div class="author-note">
-                <strong>About these recommendations:</strong> I've been managing Shopify stores and ad campaigns for over 10 years, with $100M+ in managed ad spend. I'm also currently developing my own Shopify review app. These are the tools I actually use and recommend to clients based on real performance data, not marketing promises.
+                <strong>Why trust these reviews?</strong> I'm not just reviewing apps - I'm actively using them to manage millions in ad spend and building my own Shopify app. These recommendations come from real experience optimizing conversion rates and scaling ecommerce businesses, not marketing promises.
             </div>
         </div>
     </section>
 
-    <main class="container">
-        <div class="article-meta">
-            Last updated: January 2025 • 15 min read
-        </div>
+    <section class="featured-section">
+        <div class="container">
+            <div class="featured-header">
+                <h2>15 Best Shopify Apps 2025</h2>
+                <p class="featured-subtitle">Hand-picked recommendations from someone who's actually used them to scale 7-8 figure stores. Ordered by affiliate payout potential and real-world performance.</p>
+            </div>
 
-        <ol class="app-list">
+            <ol class="app-list">
             <li class="app-item" id="klaviyo">
                 <div class="app-rank">1</div>
                 <h3>Klaviyo</h3>
@@ -779,10 +938,35 @@
             </li>
         </ol>
 
-        <div class="affiliate-note">
-            <strong>Transparency Note:</strong> I earn affiliate commissions from these recommendations, which helps fund this site and my ongoing app development. However, these are genuinely the tools I use and recommend to my own clients. I've turned down higher-paying affiliate programs for apps I don't believe in.
+            <div class="affiliate-note">
+                <strong>Transparency Note:</strong> I earn affiliate commissions from these recommendations, which helps fund this site and my ongoing app development. However, these are genuinely the tools I use and recommend to my own clients. I've turned down higher-paying affiliate programs for apps I don't believe in.
+            </div>
         </div>
-    </main>
+    </section>
+
+    <section class="authority-section">
+        <div class="container">
+            <h2>Why These Recommendations Matter</h2>
+            <div class="authority-grid">
+                <div class="authority-item">
+                    <h3>Real Experience</h3>
+                    <p>I don't just review apps - I actively use them managing millions in ad spend across 7-8 figure Shopify stores. Every recommendation comes from hands-on experience.</p>
+                </div>
+                <div class="authority-item">
+                    <h3>Performance Focus</h3>
+                    <p>As someone who manages $100M+ in ad spend, I evaluate apps based on their impact on conversion rates, customer lifetime value, and overall ROI.</p>
+                </div>
+                <div class="authority-item">
+                    <h3>Industry Insider</h3>
+                    <p>Currently developing my own Shopify review app using reciprocity psychology. I understand both sides - what merchants need and how apps actually work.</p>
+                </div>
+                <div class="authority-item">
+                    <h3>Unbiased Analysis</h3>
+                    <p>I've turned down higher-paying affiliate programs for apps I don't believe in. These recommendations prioritize your success over commission rates.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <footer>
         <div class="container">
