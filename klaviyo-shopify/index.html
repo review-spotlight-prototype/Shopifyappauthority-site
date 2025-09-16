@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Klaviyo Shopify Integration 2025: Setup Guide & Advanced Strategies</title>
+    <meta name="description" content="Master Klaviyo for Shopify with expert setup guide and advanced strategies that drive 35%+ email revenue. Complete integration tutorial from $100M+ ecommerce experience.">
+    <link rel="canonical" href="https://shopifyappauthority.com/klaviyo-shopify/">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J09TH92K0M"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-J09TH92K0M');
+    </script>
+
+    <!-- Facebook Pixel -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1087447432711058');
+        fbq('track', 'PageView');
+    </script>
+
+    <style>
+        /* Same navigation styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #2d3748;
+            background: #fafafa;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(180deg, #ffffff 0%, #fafafa 100%);
+            border-bottom: 1px solid rgba(149, 191, 71, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #95bf47;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            white-space: nowrap;
+            line-height: 1;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: #4a5568;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            padding: 0.8rem 1.2rem;
+            border-radius: 10px;
+            white-space: nowrap;
+        }
+
+        .nav-links a:hover {
+            color: #95bf47;
+            background: rgba(149, 191, 71, 0.08);
+            transform: translateY(-1px);
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            min-width: 200px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            border-radius: 12px;
+            padding: 12px 0;
+            border: 1px solid rgba(149, 191, 71, 0.2);
+            z-index: 1000;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 0.7rem 1.2rem;
+            color: #4a5568;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            border-radius: 0;
+            font-size: 0.95rem;
+        }
+
+        .dropdown-content a:hover {
+            background: linear-gradient(135deg, #95bf47 0%, #7fa83a 100%);
+            color: white;
+            transform: none;
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #4a5568;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 0 20px;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                gap: 0;
+                padding: 20px 0;
+                box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links a {
+                padding: 1rem 40px;
+                border-radius: 0;
+                border-bottom: 1px solid #f1f5f9;
+            }
+
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            .dropdown-content {
+                position: static;
+                display: block;
+                box-shadow: none;
+                border: none;
+                padding: 0;
+                background: #f8f9fa;
+                margin-left: 20px;
+            }
+
+            .dropdown-content a {
+                padding: 0.8rem 40px;
+                font-size: 0.9rem;
+                color: #6b7280;
+            }
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2.5rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.25rem;
+            font-weight: 800;
+            margin-bottom: 0.75rem;
+            line-height: 1.2;
+        }
+
+        .hero .subtitle {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+
+        .main-content {
+            background: #fff;
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .coming-soon {
+            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+            border: 2px solid #22c55e;
+            border-radius: 12px;
+            padding: 3rem 2rem;
+            margin: 2rem 0;
+        }
+
+        .coming-soon h2 {
+            color: #16a34a;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .coming-soon p {
+            color: #166534;
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, #95bf47 0%, #7ca838 100%);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 4px 15px rgba(149, 191, 71, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(149, 191, 71, 0.4);
+        }
+
+        .breadcrumb {
+            background: #fff;
+            padding: 1rem 0;
+            font-size: 0.875rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .breadcrumb a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" class="logo">🚀&nbsp;ShopifyAppAuthority</a>
+            <ul class="nav-links">
+                <li><a href="/best-shopify-apps-2025-ultimate-guide/">Best Apps 2025</a></li>
+                <li class="dropdown">
+                    <a href="/app-categories/">Categories</a>
+                    <div class="dropdown-content">
+                        <a href="/best-shopify-apps-email-marketing/">Email Marketing</a>
+                        <a href="/best-shopify-apps-conversion-optimization/">Conversion & Sales</a>
+                        <a href="/reviews-social-proof-apps/">Reviews & Social Proof</a>
+                        <a href="/free-shopify-apps/">Free Apps</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="/store-size/">By Store Size</a>
+                    <div class="dropdown-content">
+                        <a href="/apps-for-small-stores/">Small Stores (0-1K orders/month)</a>
+                        <a href="/apps-for-medium-stores/">Medium Stores (1K-10K orders/month)</a>
+                        <a href="/apps-for-enterprise/">Enterprise (10K+ orders/month)</a>
+                    </div>
+                </li>
+                <li><a href="/affiliate-disclosure/">Disclosure</a></li>
+            </ul>
+            <button class="mobile-menu-toggle">☰</button>
+        </nav>
+    </header>
+
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="/">Home</a>
+            <span>›</span>
+            <a href="/app-categories/">Categories</a>
+            <span>›</span>
+            <span>Klaviyo Shopify</span>
+        </div>
+    </div>
+
+    <div class="hero">
+        <div class="container">
+            <h1>Klaviyo Shopify Integration Guide</h1>
+            <p class="subtitle">Complete setup guide and advanced strategies for 35%+ email revenue</p>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="container">
+            <div class="coming-soon">
+                <h2>📧 Deep Dive Guide Coming Soon</h2>
+                <p>Comprehensive Klaviyo + Shopify integration guide with advanced segmentation, automation workflows, and revenue optimization strategies.</p>
+                <a href="/best-email-marketing-apps-for-shopify/" class="cta-button">View Email Marketing Apps Guide →</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
