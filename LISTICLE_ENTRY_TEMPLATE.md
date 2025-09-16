@@ -58,16 +58,23 @@ This template documents the proven conversion-focused format developed for app e
 - **Opportunity cost:** "Every [action] you [do] is an opportunity cost..."
 - **Competitive pressure:** "Your customers are getting [better experience] elsewhere"
 
-### 5. Selling Points (Green Checkmarks)
+### 5. Selling Points (Green Checkmarks with Compelling Header)
 ```html
 <div class="selling-points">
+    <h4 class="selling-header">[Compelling reason header]:</h4>
     <div class="selling-point">
         <span class="check">✅</span>
-        <span class="point-text"><strong>[Benefit headline]</strong> - [Detailed explanation with specifics]</span>
+        <span class="point-text"><strong>[Benefit headline]</strong> - [Detailed explanation with <strong>strategic bolding</strong>]</span>
     </div>
     <!-- Repeat 3-4 times -->
 </div>
 ```
+
+**Header Examples:**
+- "Why Smart Store Owners Choose [App]:"
+- "Why [App] Dominates the Competition:"
+- "What Makes [App] Worth Every Penny:"
+- "Why Successful Stores Swear By [App]:"
 
 **Rules:**
 - **Always 4 selling points maximum**
@@ -75,6 +82,8 @@ This template documents the proven conversion-focused format developed for app e
 - Include specific details (numbers, quantities, guarantees)
 - No false claims or fabricated ROI data
 - Be specific and verifiable
+- **Strategic bolding:** Bold key phrases, numbers, and benefits for scanning
+- **Compelling header:** Create contrast with "The brutal truth" section
 
 **Examples:**
 - ✅ **Start FREE** - No credit card required, forever free plan available. [App] offers a free plan that includes [specific limits/features].
@@ -110,6 +119,16 @@ This template documents the proven conversion-focused format developed for app e
 - Mention pricing and plan details when relevant
 - Use semantic keywords (automation, conversion, revenue, etc.)
 
+### Strategic Bolding for Scanability
+Bold these types of phrases to improve readability and conversion:
+- **Numbers and quantities:** "500 monthly emails", "$0 to enterprise"
+- **Key benefits:** "forever free plan available", "set-and-forget sequences"
+- **Action phrases:** "get you profitable fast", "runs automatically"
+- **Differentiators:** "drag-and-drop editing", "no coding skills"
+- **Urgent elements:** "abandoned cart recovery", "flexible pricing tiers"
+
+**Goal:** Allow users to scan and get the key value props even if they don't read every word.
+
 ### Compliance Rules
 - **NO fabricated data:** No fake ROI percentages, testing claims, or made-up metrics
 - **NO false guarantees:** Don't promise specific results
@@ -134,6 +153,16 @@ This template documents the proven conversion-focused format developed for app e
     border-radius: 12px;
     padding: 2rem;
     margin: 2rem 0;
+}
+
+.selling-header {
+    color: #1a202c;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    border-bottom: 2px solid #95BF47;
+    padding-bottom: 0.75rem;
 }
 
 .selling-point {
