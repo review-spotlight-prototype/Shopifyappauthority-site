@@ -12,6 +12,9 @@
     <meta property="og:description" content="Discover the best Shopify apps for your ecommerce business with expert reviews and recommendations.">
     <meta property="og:url" content="https://shopifyappauthority.com">
     <meta property="og:type" content="website">
+
+    <!-- RSS Feed -->
+    <link rel="alternate" type="application/rss+xml" title="ShopifyAppAuthority RSS Feed" href="/feed.xml">
     
     <!-- Schema Markup -->
     <script type="application/ld+json">
@@ -199,17 +202,51 @@
             text-align: center;
         }
         
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: #333;
+            cursor: pointer;
+        }
+
+        .nav-links.mobile-open {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            padding: 1rem;
+            gap: 1rem;
+        }
+
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
             }
-            
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
             .hero h1 {
                 font-size: 2rem;
             }
-            
+
             .hero p {
                 font-size: 1rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .apps-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -218,12 +255,14 @@
     <header>
         <nav class="container">
             <div class="logo">ShopifyAppAuthority</div>
-            <ul class="nav-links">
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+            <ul class="nav-links" id="nav-links">
                 <li><a href="/">Home</a></li>
                 <li><a href="/best-shopify-apps-2025/">Best Apps 2025</a></li>
-                <li><a href="/categories/">Categories</a></li>
-                <li><a href="/reviews/">Reviews</a></li>
-                <li><a href="/about/">About</a></li>
+                <li><a href="/best-email-marketing-apps/">Email Marketing</a></li>
+                <li><a href="/best-review-apps/">Review Apps</a></li>
+                <li><a href="/klaviyo-review/">Klaviyo</a></li>
+                <li><a href="/gorgias-review/">Gorgias</a></li>
             </ul>
         </nav>
     </header>
@@ -291,17 +330,111 @@
     <footer>
         <div class="container">
             <p>&copy; 2025 ShopifyAppAuthority.com. All rights reserved.</p>
+            <p>We may earn commission from affiliate links. <a href="/affiliate-disclosure/" style="color: #95bf47;">Full disclosure</a></p>
             <p><a href="/privacy-policy/" style="color: #95bf47;">Privacy Policy</a> | <a href="/terms/" style="color: #95bf47;">Terms of Service</a></p>
         </div>
     </footer>
 
-    <!-- Google Analytics - Replace with your tracking ID -->
+    <!-- Mobile Navigation Script -->
+    <script>
+        function toggleMobileMenu() {
+            const navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('mobile-open');
+        }
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const navLinks = document.getElementById('nav-links');
+            const mobileBtn = document.querySelector('.mobile-menu-btn');
+
+            if (!navLinks.contains(event.target) && !mobileBtn.contains(event.target)) {
+                navLinks.classList.remove('mobile-open');
+            }
+        });
+    </script>
+
+    <!-- Enhanced Analytics Tracking -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'GA_MEASUREMENT_ID');
+        gtag('config', 'GA_MEASUREMENT_ID', {
+            enhanced_ecommerce: true,
+            link_attribution: true
+        });
+
+        // Enhanced affiliate link tracking
+        document.addEventListener('click', function(e) {
+            const target = e.target.closest('a');
+            if (!target) return;
+
+            const href = target.href;
+            if (!href) return;
+
+            // Track affiliate link clicks
+            if (href.includes('klaviyo.com') || href.includes('rechargepayments.com') ||
+                href.includes('gorgias.com') || href.includes('yotpo.com') ||
+                href.includes('omnisend.com') || href.includes('mailchimp.com') ||
+                href.includes('judge.me') || href.includes('stamped.io')) {
+
+                // Extract app name from URL
+                let appName = 'unknown';
+                if (href.includes('klaviyo')) appName = 'klaviyo';
+                else if (href.includes('recharge')) appName = 'recharge';
+                else if (href.includes('gorgias')) appName = 'gorgias';
+                else if (href.includes('yotpo')) appName = 'yotpo';
+                else if (href.includes('omnisend')) appName = 'omnisend';
+                else if (href.includes('mailchimp')) appName = 'mailchimp';
+                else if (href.includes('judge.me')) appName = 'judgeme';
+                else if (href.includes('stamped')) appName = 'stamped';
+
+                // Track the event
+                gtag('event', 'affiliate_click', {
+                    event_category: 'Affiliate',
+                    event_label: appName,
+                    app_name: appName,
+                    page_url: window.location.href,
+                    link_url: href
+                });
+
+                console.log('Affiliate click tracked:', appName);
+            }
+
+            // Track internal navigation
+            if (href.includes(window.location.hostname) || href.startsWith('/')) {
+                gtag('event', 'internal_navigation', {
+                    event_category: 'Navigation',
+                    event_label: href,
+                    source_page: window.location.pathname
+                });
+            }
+        });
+
+        // Track scroll depth
+        let scrollDepthTracked = false;
+        window.addEventListener('scroll', function() {
+            if (!scrollDepthTracked && window.scrollY / document.body.scrollHeight > 0.75) {
+                gtag('event', 'scroll_depth_75', {
+                    event_category: 'Engagement',
+                    event_label: window.location.pathname
+                });
+                scrollDepthTracked = true;
+            }
+        });
+
+        // Track time on page
+        let startTime = Date.now();
+        window.addEventListener('beforeunload', function() {
+            const timeOnPage = Math.round((Date.now() - startTime) / 1000);
+            if (timeOnPage > 30) { // Only track if more than 30 seconds
+                gtag('event', 'time_on_page', {
+                    event_category: 'Engagement',
+                    event_label: window.location.pathname,
+                    value: timeOnPage
+                });
+            }
+        });
     </script>
 </body>
 </html>
