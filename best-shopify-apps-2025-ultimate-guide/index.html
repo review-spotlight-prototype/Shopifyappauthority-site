@@ -202,13 +202,25 @@
             box-shadow: 0 2px 8px rgba(0,0,0,0.15);
         }
 
-        .conversion-visual {
-            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
-            border: 2px solid #e2e8f0;
-            border-radius: 12px;
-            padding: 2rem;
+        .app-image {
             margin: 2rem 0;
             text-align: center;
+        }
+
+        .app-screenshot {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            border: 1px solid #e2e8f0;
+        }
+
+        .image-caption {
+            margin-top: 0.75rem;
+            font-size: 0.9rem;
+            color: #6b7280;
+            font-style: italic;
         }
 
         .klaviyo-illustration {
@@ -621,13 +633,19 @@
                 text-align: center;
             }
 
-            .conversion-visual {
-                padding: 1rem;
-                margin: 1rem 0;
+            .app-image {
+                margin: 1.5rem 0;
             }
 
-            .conversion-visual svg {
-                height: 80px;
+            .app-screenshot {
+                border-radius: 8px;
+                box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            }
+
+            .image-caption {
+                font-size: 0.85rem;
+                margin-top: 0.5rem;
+                padding: 0 1rem;
             }
 
             /* Add bottom padding to last app item to account for sticky CTA */
@@ -718,39 +736,12 @@
                         <strong>Stop leaving money on the table.</strong> Every day you're not using Klaviyo is another day your competitors are stealing revenue you should be getting. While you're sending basic emails that get ignored, stores using Klaviyo are automatically recovering abandoned carts, targeting high-value customers, and turning browsers into buyers with surgical precision.
                     </div>
 
-                    <div class="conversion-visual">
-                        <svg viewBox="0 0 500 120" class="klaviyo-illustration">
-                            <!-- Email icon -->
-                            <rect x="30" y="45" width="80" height="40" rx="6" fill="#e2e8f0" stroke="#95BF47" stroke-width="2"/>
-                            <path d="M40 55 L70 70 L100 55" stroke="#95BF47" stroke-width="2" fill="none"/>
-                            <text x="70" y="100" text-anchor="middle" font-size="12" fill="#4a5568" font-weight="bold">Email</text>
-
-                            <!-- Arrow 1 -->
-                            <path d="M120 65 L160 65" stroke="#667eea" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
-
-                            <!-- Automation box -->
-                            <rect x="170" y="40" width="90" height="50" rx="8" fill="#667eea" opacity="0.1" stroke="#667eea" stroke-width="2"/>
-                            <text x="215" y="58" text-anchor="middle" font-size="12" fill="#667eea" font-weight="bold">Smart</text>
-                            <text x="215" y="72" text-anchor="middle" font-size="12" fill="#667eea" font-weight="bold">Targeting</text>
-                            <!-- Klaviyo logo -->
-                            <image x="195" y="75" width="40" height="13" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVhcsM2VCPjr34ru_7qV4aWhEtioi1t-MReQ&s" style="opacity: 0.9;"/>
-
-                            <!-- Arrow 2 -->
-                            <path d="M270 65 L310 65" stroke="#667eea" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
-
-                            <!-- Sales icon -->
-                            <circle cx="360" cy="65" r="30" fill="#95BF47" opacity="0.2" stroke="#95BF47" stroke-width="2"/>
-                            <text x="360" y="62" text-anchor="middle" font-size="20" fill="#95BF47">💰</text>
-                            <text x="360" y="76" text-anchor="middle" font-size="10" fill="#95BF47" font-weight="bold">SALES</text>
-                            <text x="360" y="105" text-anchor="middle" font-size="12" fill="#4a5568" font-weight="bold">Revenue</text>
-
-                            <!-- Arrow marker definition -->
-                            <defs>
-                                <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-                                    <polygon points="0 0, 10 3.5, 0 7" fill="#667eea"/>
-                                </marker>
-                            </defs>
-                        </svg>
+                    <!-- Image placeholder for stock photo -->
+                    <div class="app-image">
+                        <img src="https://via.placeholder.com/600x300/95BF47/ffffff?text=Email+Marketing+Dashboard"
+                             alt="Klaviyo email marketing dashboard showing automation workflows and revenue tracking"
+                             class="app-screenshot">
+                        <div class="image-caption">Klaviyo's powerful automation dashboard in action</div>
                     </div>
 
                     <div class="why-i-like">
@@ -820,7 +811,6 @@
                         <a href="https://www.klaviyo.com/partner/signup" class="cta-secondary" target="_blank">Start Free Trial - Get Klaviyo</a>
                     </div>
 
-                    <a href="https://www.klaviyo.com/partner/signup" class="cta-button cta-primary" target="_blank">Start Converting Emails Into Sales - Get Klaviyo Now</a>
                 </li>
 
                 <li class="app-item" id="recharge">
