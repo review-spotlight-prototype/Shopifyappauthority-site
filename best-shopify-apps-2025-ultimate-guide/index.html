@@ -331,36 +331,37 @@
             font-weight: 600;
         }
 
-        .app-meta-top {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-            gap: 1rem;
-            margin: 1rem 0 1.5rem 0;
-            padding: 1rem;
-            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-            border-radius: 8px;
-            border: 1px solid #e2e8f0;
+        .app-quick-info {
+            display: flex;
+            gap: 1.5rem;
+            margin: 0.5rem 0 1.5rem 0;
+            font-size: 0.9rem;
+            color: #4b5563;
+            flex-wrap: wrap;
         }
 
-        .meta-item-top {
-            text-align: center;
+        .quick-info-item {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
         }
 
-        .meta-item-top .meta-label {
-            font-size: 0.75rem;
-            font-weight: 600;
+        .quick-info-label {
+            font-weight: 500;
             color: #6b7280;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            display: block;
-            margin-bottom: 0.25rem;
         }
 
-        .meta-item-top .meta-value {
-            font-size: 0.95rem;
+        .quick-info-value {
             font-weight: 700;
-            color: #1f2937;
-            display: block;
+            color: #059669;
+        }
+
+        .quick-info-value.price {
+            color: #dc2626;
+        }
+
+        .quick-info-value.free {
+            color: #059669;
         }
 
         .app-description {
@@ -673,20 +674,15 @@
                 padding-bottom: 6rem;
             }
 
-            /* Optimize meta-top for mobile */
-            .app-meta-top {
-                grid-template-columns: 1fr;
-                gap: 0.75rem;
-                margin: 0.75rem 0 1.25rem 0;
-                padding: 0.75rem;
+            /* Optimize quick-info for mobile */
+            .app-quick-info {
+                gap: 1rem;
+                margin: 0.5rem 0 1.25rem 0;
+                font-size: 0.85rem;
             }
 
-            .meta-item-top .meta-label {
-                font-size: 0.7rem;
-            }
-
-            .meta-item-top .meta-value {
-                font-size: 0.9rem;
+            .quick-info-item {
+                gap: 0.2rem;
             }
 
             /* Optimize brutal truth section */
@@ -760,19 +756,18 @@
                     <div class="app-rank">1</div>
                     <h3>Klaviyo</h3>
                     <div class="app-category">Email Marketing & SMS</div>
-
-                    <div class="app-meta-top">
-                        <div class="meta-item-top">
-                            <span class="meta-label">Starting Price</span>
-                            <span class="meta-value">Free</span>
+                    <div class="app-quick-info">
+                        <div class="quick-info-item">
+                            <span class="quick-info-label">Starts:</span>
+                            <span class="quick-info-value free">FREE forever</span>
                         </div>
-                        <div class="meta-item-top">
-                            <span class="meta-label">Free Trial</span>
-                            <span class="meta-value">Forever</span>
+                        <div class="quick-info-item">
+                            <span class="quick-info-label">Includes:</span>
+                            <span class="quick-info-value">500 emails/month</span>
                         </div>
-                        <div class="meta-item-top">
-                            <span class="meta-label">Best For</span>
-                            <span class="meta-value">Email automation</span>
+                        <div class="quick-info-item">
+                            <span class="quick-info-label">Credit card:</span>
+                            <span class="quick-info-value free">Not required</span>
                         </div>
                     </div>
 
@@ -861,19 +856,18 @@
                     <div class="app-rank">2</div>
                     <h3>ReCharge</h3>
                     <div class="app-category">Subscriptions & Recurring Billing</div>
-
-                    <div class="app-meta-top">
-                        <div class="meta-item-top">
-                            <span class="meta-label">Starting Price</span>
-                            <span class="meta-value">$60/month</span>
+                    <div class="app-quick-info">
+                        <div class="quick-info-item">
+                            <span class="quick-info-label">Free trial:</span>
+                            <span class="quick-info-value free">14 days</span>
                         </div>
-                        <div class="meta-item-top">
-                            <span class="meta-label">Free Trial</span>
-                            <span class="meta-value">14 days</span>
+                        <div class="quick-info-item">
+                            <span class="quick-info-label">Then:</span>
+                            <span class="quick-info-value price">$60/month</span>
                         </div>
-                        <div class="meta-item-top">
-                            <span class="meta-label">Best For</span>
-                            <span class="meta-value">Consumables</span>
+                        <div class="quick-info-item">
+                            <span class="quick-info-label">ROI:</span>
+                            <span class="quick-info-value">3x higher LTV</span>
                         </div>
                     </div>
 
@@ -969,19 +963,18 @@
                     <div class="app-rank">3</div>
                     <h3>Gorgias</h3>
                     <div class="app-category">Customer Service & Support</div>
-
-                    <div class="app-meta-top">
-                        <div class="meta-item-top">
-                            <span class="meta-label">Starting Price</span>
-                            <span class="meta-value">$60/month</span>
+                    <div class="app-quick-info">
+                        <div class="quick-info-item">
+                            <span class="quick-info-label">Free trial:</span>
+                            <span class="quick-info-value free">7 days</span>
                         </div>
-                        <div class="meta-item-top">
-                            <span class="meta-label">Free Trial</span>
-                            <span class="meta-value">7 days</span>
+                        <div class="quick-info-item">
+                            <span class="quick-info-label">From:</span>
+                            <span class="quick-info-value price">$60/month</span>
                         </div>
-                        <div class="meta-item-top">
-                            <span class="meta-label">Best For</span>
-                            <span class="meta-value">High volume</span>
+                        <div class="quick-info-item">
+                            <span class="quick-info-label">Saves:</span>
+                            <span class="quick-info-value">70% response time</span>
                         </div>
                     </div>
 
@@ -1077,19 +1070,18 @@
                     <div class="app-rank">4</div>
                     <h3>Yotpo</h3>
                     <div class="app-category">Reviews & Loyalty</div>
-
-                    <div class="app-meta-top">
-                        <div class="meta-item-top">
-                            <span class="meta-label">Starting Price</span>
-                            <span class="meta-value">$79/month</span>
+                    <div class="app-quick-info">
+                        <div class="quick-info-item">
+                            <span class="quick-info-label">Free trial:</span>
+                            <span class="quick-info-value free">30 days</span>
                         </div>
-                        <div class="meta-item-top">
-                            <span class="meta-label">Free Trial</span>
-                            <span class="meta-value">30 days</span>
+                        <div class="quick-info-item">
+                            <span class="quick-info-label">From:</span>
+                            <span class="quick-info-value price">$79/month</span>
                         </div>
-                        <div class="meta-item-top">
-                            <span class="meta-label">Best For</span>
-                            <span class="meta-value">Visual products</span>
+                        <div class="quick-info-item">
+                            <span class="quick-info-label">Boost:</span>
+                            <span class="quick-info-value">3x ad performance</span>
                         </div>
                     </div>
                     <div class="app-description">
@@ -1190,19 +1182,18 @@
                     <div class="app-rank">5</div>
                     <h3>Triple Whale</h3>
                     <div class="app-category">Analytics & Attribution</div>
-
-                    <div class="app-meta-top">
-                        <div class="meta-item-top">
-                            <span class="meta-label">Starting Price</span>
-                            <span class="meta-value">$129/month</span>
+                    <div class="app-quick-info">
+                        <div class="quick-info-item">
+                            <span class="quick-info-label">Free trial:</span>
+                            <span class="quick-info-value free">7 days</span>
                         </div>
-                        <div class="meta-item-top">
-                            <span class="meta-label">Free Trial</span>
-                            <span class="meta-value">7 days</span>
+                        <div class="quick-info-item">
+                            <span class="quick-info-label">From:</span>
+                            <span class="quick-info-value price">$129/month</span>
                         </div>
-                        <div class="meta-item-top">
-                            <span class="meta-label">Best For</span>
-                            <span class="meta-value">Scaling ads</span>
+                        <div class="quick-info-item">
+                            <span class="quick-info-label">For:</span>
+                            <span class="quick-info-value">$50K+ ad spend</span>
                         </div>
                     </div>
                     <div class="app-description">
@@ -1303,19 +1294,18 @@
                     <div class="app-rank">6</div>
                     <h3>Privy</h3>
                     <div class="app-category">Email Capture & Pop-ups</div>
-
-                    <div class="app-meta-top">
-                        <div class="meta-item-top">
-                            <span class="meta-label">Starting Price</span>
-                            <span class="meta-value">$24/month</span>
+                    <div class="app-quick-info">
+                        <div class="quick-info-item">
+                            <span class="quick-info-label">Free trial:</span>
+                            <span class="quick-info-value free">15 days</span>
                         </div>
-                        <div class="meta-item-top">
-                            <span class="meta-label">Free Trial</span>
-                            <span class="meta-value">15 days</span>
+                        <div class="quick-info-item">
+                            <span class="quick-info-label">From:</span>
+                            <span class="quick-info-value price">$24/month</span>
                         </div>
-                        <div class="meta-item-top">
-                            <span class="meta-label">Best For</span>
-                            <span class="meta-value">List growth</span>
+                        <div class="quick-info-item">
+                            <span class="quick-info-label">Captures:</span>
+                            <span class="quick-info-value">15-20% visitors</span>
                         </div>
                     </div>
                     <div class="app-description">
