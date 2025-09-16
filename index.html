@@ -30,16 +30,15 @@
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "15 Best Shopify Apps 2025: Expert Reviews from $100M+ Ad Manager",
-        "description": "Expert insights from managing $100M+ in ad spend across 7-8 figure stores",
+        "@type": "WebSite",
+        "name": "ShopifyAppAuthority",
+        "description": "Expert Shopify app reviews from a $100M+ ad spend manager. Real insights for ecommerce store owners.",
+        "url": "https://shopifyappauthority.com",
         "author": {
             "@type": "Person",
             "name": "ShopifyAppAuthority",
             "description": "Digital marketing professional with 10+ years Shopify experience, $100M+ managed ad spend"
-        },
-        "datePublished": "2025-01-15",
-        "dateModified": "2025-01-15"
+        }
     }
     </script>
 
@@ -116,12 +115,33 @@
             color: #1a202c;
             margin-bottom: 1rem;
             line-height: 1.2;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .hero .subtitle {
             font-size: 1.25rem;
             color: #4a5568;
             margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .hero-intro {
+            background: #f7fafc;
+            border-left: 4px solid #667eea;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+            font-size: 1.125rem;
+            line-height: 1.6;
+        }
+
+        .hero-intro em {
+            font-style: normal;
+            font-weight: 700;
+            color: #667eea;
         }
 
         .credentials {
@@ -130,8 +150,8 @@
             gap: 2rem;
             margin: 2rem 0;
             padding: 2rem 0;
-            border-top: 1px solid rgba(255,255,255,0.2);
-            border-bottom: 1px solid rgba(255,255,255,0.2);
+            border-top: 1px solid #e2e8f0;
+            border-bottom: 1px solid #e2e8f0;
         }
 
         .credential-item {
@@ -142,21 +162,28 @@
             display: block;
             font-size: 1.5rem;
             font-weight: 800;
-            color: #fff;
+            color: #1a202c;
             margin-bottom: 0.25rem;
         }
 
         .credential-item span {
             font-size: 0.875rem;
-            opacity: 0.9;
+            color: #718096;
+            font-weight: 500;
         }
 
         .author-note {
-            background: rgba(255,255,255,0.1);
-            border-left: 4px solid #fff;
-            padding: 1rem;
+            background: #edf2f7;
+            border-left: 4px solid #38b2ac;
+            padding: 1.5rem;
             margin: 2rem 0 0;
-            border-radius: 0 4px 4px 0;
+            border-radius: 0 8px 8px 0;
+            color: #2d3748;
+            font-weight: 500;
+        }
+
+        .author-note strong {
+            color: #1a202c;
         }
 
         .featured-section {
@@ -176,6 +203,94 @@
             color: #1a202c;
             margin-bottom: 1rem;
             font-weight: 800;
+        }
+
+        .listicle-preview {
+            background: #f7fafc;
+            border-radius: 12px;
+            padding: 2rem;
+            border: 2px solid #e2e8f0;
+        }
+
+        .preview-apps {
+            margin-bottom: 2rem;
+        }
+
+        .preview-app {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: #fff;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .preview-app .app-rank {
+            background: #667eea;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.875rem;
+            flex-shrink: 0;
+        }
+
+        .app-info h3 {
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: #1a202c;
+            margin-bottom: 0.25rem;
+        }
+
+        .app-info p {
+            color: #4a5568;
+            font-size: 0.875rem;
+            margin: 0;
+        }
+
+        .more-indicator {
+            text-align: center;
+            padding: 1rem;
+            color: #718096;
+            font-style: italic;
+            font-weight: 600;
+        }
+
+        .cta-container {
+            text-align: center;
+        }
+
+        .main-cta {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1.25rem 2.5rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.125rem;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .main-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+
+        .cta-subtitle {
+            display: block;
+            font-size: 0.875rem;
+            opacity: 0.9;
+            margin-top: 0.25rem;
+            font-weight: 500;
         }
 
         .featured-subtitle {
@@ -207,9 +322,20 @@
         .authority-item {
             background: #fff;
             padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            border-left: 4px solid #3182ce;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-left: 4px solid #667eea;
+            transition: transform 0.2s ease;
+        }
+
+        .authority-item:hover {
+            transform: translateY(-2px);
+        }
+
+        .authority-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: block;
         }
 
         .authority-item h3 {
@@ -222,6 +348,58 @@
         .authority-item p {
             color: #4a5568;
             line-height: 1.6;
+        }
+
+        .content-preview {
+            background: #fff;
+            padding: 4rem 0;
+        }
+
+        .content-preview h2 {
+            text-align: center;
+            font-size: 2rem;
+            color: #1a202c;
+            margin-bottom: 3rem;
+            font-weight: 700;
+        }
+
+        .coming-soon-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .coming-soon-item {
+            background: #f7fafc;
+            padding: 2rem;
+            border-radius: 12px;
+            border: 2px dashed #cbd5e0;
+            text-align: center;
+            position: relative;
+        }
+
+        .coming-soon-item h3 {
+            color: #1a202c;
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .coming-soon-item p {
+            color: #4a5568;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .status {
+            background: #667eea;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
         }
 
         main {
@@ -414,6 +592,24 @@
                 padding: 3rem 0;
             }
 
+            .coming-soon-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .content-preview {
+                padding: 3rem 0;
+            }
+
+            .main-cta {
+                padding: 1rem 2rem;
+                font-size: 1rem;
+            }
+
+            .listicle-preview {
+                padding: 1.5rem;
+            }
+
             .featured-section {
                 padding: 2rem 0;
             }
@@ -436,30 +632,34 @@
 
     <section class="hero">
         <div class="container">
-            <h1>Expert Shopify App Reviews</h1>
-            <p class="subtitle">From a $100M+ ad spend manager who's actually used these tools</p>
+            <h1>🚀 ShopifyAppAuthority</h1>
+            <p class="subtitle">Where $100M+ in ad spend meets brutal honesty about Shopify apps</p>
+
+            <div class="hero-intro">
+                <p>👋 I'm the guy behind millions in profitable ad campaigns, and I'm <em>done</em> with fake app reviews. Every app here? I've used it. Every claim? Based on real data from real stores doing real numbers.</p>
+            </div>
 
             <div class="credentials">
                 <div class="credential-item">
-                    <strong>10+ Years</strong>
-                    <span>Shopify Experience</span>
-                </div>
-                <div class="credential-item">
-                    <strong>$100M+</strong>
+                    <strong>💰 $100M+</strong>
                     <span>Ad Spend Managed</span>
                 </div>
                 <div class="credential-item">
-                    <strong>7-8 Figure</strong>
-                    <span>Stores Optimized</span>
+                    <strong>🏪 7-8 Figure</strong>
+                    <span>Stores Scaled</span>
                 </div>
                 <div class="credential-item">
-                    <strong>App Developer</strong>
-                    <span>Building Shopify Tools</span>
+                    <strong>⚡ 10+ Years</strong>
+                    <span>Shopify Deep Dives</span>
+                </div>
+                <div class="credential-item">
+                    <strong>🛠️ App Builder</strong>
+                    <span>Creating the Next One</span>
                 </div>
             </div>
 
             <div class="author-note">
-                <strong>Why trust these reviews?</strong> I'm not just reviewing apps - I'm actively using them to manage millions in ad spend and building my own Shopify app. These recommendations come from real experience optimizing conversion rates and scaling ecommerce businesses, not marketing promises.
+                <strong>🎯 The Real Deal:</strong> I don't just review apps - I use them to manage millions in ad spend daily. Currently building my own Shopify app, so I know what works and what's just marketing fluff. Zero BS, maximum value.
             </div>
         </div>
     </section>
@@ -467,502 +667,96 @@
     <section class="featured-section">
         <div class="container">
             <div class="featured-header">
-                <h2>15 Best Shopify Apps 2025</h2>
-                <p class="featured-subtitle">Hand-picked recommendations from someone who's actually used them to scale 7-8 figure stores. Ordered by affiliate payout potential and real-world performance.</p>
+                <h2>🔥 15 Best Shopify Apps 2025</h2>
+                <p class="featured-subtitle">The definitive list from someone who's actually used them to scale stores past 8 figures. Ranked by real performance + affiliate payouts (because honesty).</p>
             </div>
 
-            <ol class="app-list">
-            <li class="app-item" id="klaviyo">
-                <div class="app-rank">1</div>
-                <h3>Klaviyo</h3>
-                <div class="app-category">Email Marketing & SMS</div>
-                <div class="app-description">
-                    Klaviyo is hands-down the most sophisticated email marketing platform for Shopify. Their segmentation capabilities are unmatched, and the behavioral triggers actually work as advertised.
-                </div>
-
-                <div class="why-i-like">
-                    <h4>Why I recommend it:</h4>
-                    <p>In managing campaigns for 7-8 figure stores, Klaviyo consistently delivers the highest email ROI. Their abandoned cart sequences alone have saved millions in lost revenue for my clients. The predictive analytics actually help you make smart decisions about customer lifetime value.</p>
-                </div>
-
-                <div class="app-meta">
-                    <div class="meta-item">
-                        <span class="meta-label">Starting Price</span>
-                        <span class="meta-value">$20/month</span>
+            <div class="listicle-preview">
+                <div class="preview-apps">
+                    <div class="preview-app">
+                        <div class="app-rank">1</div>
+                        <div class="app-info">
+                            <h3>Klaviyo</h3>
+                            <p>The email marketing beast that actually delivers 38:1 ROI</p>
+                        </div>
                     </div>
-                    <div class="meta-item">
-                        <span class="meta-label">Free Trial</span>
-                        <span class="meta-value">Yes (Forever free plan)</span>
+                    <div class="preview-app">
+                        <div class="app-rank">2</div>
+                        <div class="app-info">
+                            <h3>ReCharge</h3>
+                            <p>Subscriptions that turn $100 customers into $4,000 lifetime value</p>
+                        </div>
                     </div>
-                    <div class="meta-item">
-                        <span class="meta-label">Best For</span>
-                        <span class="meta-value">Growing stores with email lists</span>
+                    <div class="preview-app">
+                        <div class="app-rank">3</div>
+                        <div class="app-info">
+                            <h3>Gorgias</h3>
+                            <p>Customer service that actually drives more sales</p>
+                        </div>
                     </div>
-                </div>
-
-                <a href="https://www.klaviyo.com/partner/signup" class="cta-button" target="_blank">Try Klaviyo Free</a>
-            </li>
-
-            <li class="app-item" id="recharge">
-                <div class="app-rank">2</div>
-                <h3>ReCharge</h3>
-                <div class="app-category">Subscriptions & Recurring Billing</div>
-                <div class="app-description">
-                    The gold standard for subscription billing on Shopify. If you're selling anything consumable, ReCharge transforms one-time buyers into predictable recurring revenue.
-                </div>
-
-                <div class="why-i-like">
-                    <h4>Why I recommend it:</h4>
-                    <p>I've implemented ReCharge across multiple supplement and consumable brands. The customer lifetime value increase is dramatic - typically 3-4x higher than one-time purchasers. The customer portal reduces support tickets, and the analytics help optimize subscription offers.</p>
-                </div>
-
-                <div class="app-meta">
-                    <div class="meta-item">
-                        <span class="meta-label">Starting Price</span>
-                        <span class="meta-value">$60/month</span>
-                    </div>
-                    <div class="meta-item">
-                        <span class="meta-label">Free Trial</span>
-                        <span class="meta-value">14 days</span>
-                    </div>
-                    <div class="meta-item">
-                        <span class="meta-label">Best For</span>
-                        <span class="meta-value">Consumable products</span>
+                    <div class="more-indicator">
+                        <span>+ 12 more game-changing apps</span>
                     </div>
                 </div>
 
-                <a href="https://rechargepayments.com/partners/" class="cta-button" target="_blank">Start ReCharge Trial</a>
-            </li>
-
-            <li class="app-item" id="gorgias">
-                <div class="app-rank">3</div>
-                <h3>Gorgias</h3>
-                <div class="app-category">Customer Service & Support</div>
-                <div class="app-description">
-                    Purpose-built customer service for ecommerce. Unlike generic helpdesks, Gorgias understands Shopify orders, customer history, and revenue impact.
+                <div class="cta-container">
+                    <a href="/best-shopify-apps-2025-ultimate-guide/" class="main-cta">
+                        📖 Get The Complete List
+                        <span class="cta-subtitle">Real data, real results, zero fluff</span>
+                    </a>
                 </div>
-
-                <div class="why-i-like">
-                    <h4>Why I recommend it:</h4>
-                    <p>Support quality directly impacts ad performance - unhappy customers leave bad reviews and hurt conversion rates. Gorgias lets support agents see order history, offer discounts, and handle refunds without switching platforms. The revenue attribution shows which support interactions actually drive sales.</p>
-                </div>
-
-                <div class="app-meta">
-                    <div class="meta-item">
-                        <span class="meta-label">Starting Price</span>
-                        <span class="meta-value">$60/month</span>
-                    </div>
-                    <div class="meta-item">
-                        <span class="meta-label">Free Trial</span>
-                        <span class="meta-value">7 days</span>
-                    </div>
-                    <div class="meta-item">
-                        <span class="meta-label">Best For</span>
-                        <span class="meta-value">High-volume support</span>
-                    </div>
-                </div>
-
-                <a href="https://www.gorgias.com/" class="cta-button" target="_blank">Try Gorgias</a>
-            </li>
-
-            <li class="app-item" id="yotpo">
-                <div class="app-rank">4</div>
-                <h3>Yotpo</h3>
-                <div class="app-category">Reviews & Loyalty</div>
-                <div class="app-description">
-                    Comprehensive review and loyalty platform that turns customers into repeat buyers. The visual review features are particularly strong for product advertising.
-                </div>
-
-                <div class="why-i-like">
-                    <h4>Why I recommend it:</h4>
-                    <p>Photo and video reviews significantly improve ad creative performance. I use Yotpo's user-generated content in Facebook and Google ads regularly - it outperforms studio photography. The loyalty program integration helps with retention metrics that Facebook's algorithm loves.</p>
-                </div>
-
-                <div class="app-meta">
-                    <div class="meta-item">
-                        <span class="meta-label">Starting Price</span>
-                        <span class="meta-value">$79/month</span>
-                    </div>
-                    <div class="meta-item">
-                        <span class="meta-label">Free Trial</span>
-                        <span class="meta-value">30 days</span>
-                    </div>
-                    <div class="meta-item">
-                        <span class="meta-label">Best For</span>
-                        <span class="meta-value">Visual products</span>
-                    </div>
-                </div>
-
-                <a href="https://www.yotpo.com/platform/" class="cta-button" target="_blank">Start Yotpo Trial</a>
-            </li>
-
-            <li class="app-item" id="triple-whale">
-                <div class="app-rank">5</div>
-                <h3>Triple Whale</h3>
-                <div class="app-category">Analytics & Attribution</div>
-                <div class="app-description">
-                    Finally, an analytics platform that understands ecommerce attribution. With iOS 14.5 destroying Facebook's tracking, you need proper attribution to scale ads profitably.
-                </div>
-
-                <div class="why-i-like">
-                    <h4>Why I recommend it:</h4>
-                    <p>As someone who manages millions in ad spend, accurate attribution is everything. Triple Whale's server-side tracking captures data that Facebook and Google miss. Their customer journey mapping helps optimize the entire funnel, not just individual campaigns.</p>
-                </div>
-
-                <div class="app-meta">
-                    <div class="meta-item">
-                        <span class="meta-label">Starting Price</span>
-                        <span class="meta-value">$129/month</span>
-                    </div>
-                    <div class="meta-item">
-                        <span class="meta-label">Free Trial</span>
-                        <span class="meta-value">7 days</span>
-                    </div>
-                    <div class="meta-item">
-                        <span class="meta-label">Best For</span>
-                        <span class="meta-value">Scaling ad spend</span>
-                    </div>
-                </div>
-
-                <a href="https://triplewhale.com/" class="cta-button" target="_blank">Try Triple Whale</a>
-            </li>
-
-            <li class="app-item" id="privy">
-                <div class="app-rank">6</div>
-                <h3>Privy</h3>
-                <div class="app-category">Email Capture & Pop-ups</div>
-                <div class="app-description">
-                    Smart email capture that doesn't annoy visitors. Privy's exit-intent technology and behavioral targeting help capture emails without hurting user experience.
-                </div>
-
-                <div class="why-i-like">
-                    <h4>Why I recommend it:</h4>
-                    <p>Email list growth directly impacts ad profitability. Privy consistently captures 15-20% more emails than basic pop-ups. Their cart abandonment capture is brilliant - it turns window shoppers into email subscribers even if they don't buy.</p>
-                </div>
-
-                <div class="app-meta">
-                    <div class="meta-item">
-                        <span class="meta-label">Starting Price</span>
-                        <span class="meta-value">$24/month</span>
-                    </div>
-                    <div class="meta-item">
-                        <span class="meta-label">Free Trial</span>
-                        <span class="meta-value">15 days</span>
-                    </div>
-                    <div class="meta-item">
-                        <span class="meta-label">Best For</span>
-                        <span class="meta-value">Email list growth</span>
-                    </div>
-                </div>
-
-                <a href="https://privy.com/" class="cta-button" target="_blank">Try Privy Free</a>
-            </li>
-
-            <li class="app-item" id="omnisend">
-                <div class="app-rank">7</div>
-                <h3>Omnisend</h3>
-                <div class="app-category">Email & SMS Marketing</div>
-                <div class="app-description">
-                    Great alternative to Klaviyo for smaller stores. Omnisend offers solid automation features at a more affordable price point, plus built-in SMS capabilities.
-                </div>
-
-                <div class="why-i-like">
-                    <h4>Why I recommend it:</h4>
-                    <p>For stores doing under $500K annually, Omnisend often provides better value than Klaviyo. The pre-built workflows are excellent for getting started quickly. Their SMS integration is seamless - no need for separate tools.</p>
-                </div>
-
-                <div class="app-meta">
-                    <div class="meta-item">
-                        <span class="meta-label">Starting Price</span>
-                        <span class="meta-value">$16/month</span>
-                    </div>
-                    <div class="meta-item">
-                        <span class="meta-label">Free Trial</span>
-                        <span class="meta-value">Free plan available</span>
-                    </div>
-                    <div class="meta-item">
-                        <span class="meta-label">Best For</span>
-                        <span class="meta-value">Small to medium stores</span>
-                    </div>
-                </div>
-
-                <a href="https://omnisend.com/" class="cta-button" target="_blank">Start Omnisend Free</a>
-            </li>
-
-            <li class="app-item" id="northbeam">
-                <div class="app-rank">8</div>
-                <h3>Northbeam</h3>
-                <div class="app-category">Attribution & Analytics</div>
-                <div class="app-description">
-                    Military-grade attribution for serious advertisers. Northbeam tracks customer journeys across all touchpoints, giving you the attribution data needed to scale profitably.
-                </div>
-
-                <div class="why-i-like">
-                    <h4>Why I recommend it:</h4>
-                    <p>When managing $10M+ in annual ad spend, every attribution mistake costs thousands. Northbeam's machine learning models understand complex customer journeys better than any other platform I've used. Essential for serious scale.</p>
-                </div>
-
-                <div class="app-meta">
-                    <div class="meta-item">
-                        <span class="meta-label">Starting Price</span>
-                        <span class="meta-value">$299/month</span>
-                    </div>
-                    <div class="meta-item">
-                        <span class="meta-label">Free Trial</span>
-                        <span class="meta-value">Demo available</span>
-                    </div>
-                    <div class="meta-item">
-                        <span class="meta-label">Best For</span>
-                        <span class="meta-value">High-spend advertisers</span>
-                    </div>
-                </div>
-
-                <a href="https://northbeam.io/" class="cta-button" target="_blank">Book Northbeam Demo</a>
-            </li>
-
-            <li class="app-item" id="justuno">
-                <div class="app-rank">9</div>
-                <h3>Justuno</h3>
-                <div class="app-category">Conversion Optimization</div>
-                <div class="app-description">
-                    Comprehensive conversion optimization suite. Pop-ups, banners, embedded forms, and gamification tools that actually move the needle on conversion rates.
-                </div>
-
-                <div class="why-i-like">
-                    <h4>Why I recommend it:</h4>
-                    <p>I use Justuno's advanced targeting for personalized experiences. Their geo-targeting and traffic source personalization help tailor messaging for different visitor segments. The exit-intent technology has saved countless potential customers.</p>
-                </div>
-
-                <div class="app-meta">
-                    <div class="meta-item">
-                        <span class="meta-label">Starting Price</span>
-                        <span class="meta-value">$49/month</span>
-                    </div>
-                    <div class="meta-item">
-                        <span class="meta-label">Free Trial</span>
-                        <span class="meta-value">14 days</span>
-                    </div>
-                    <div class="meta-item">
-                        <span class="meta-label">Best For</span>
-                        <span class="meta-value">Conversion optimization</span>
-                    </div>
-                </div>
-
-                <a href="https://www.justuno.com/" class="cta-button" target="_blank">Try Justuno</a>
-            </li>
-
-            <li class="app-item" id="judge-me">
-                <div class="app-rank">10</div>
-                <h3>Judge.me</h3>
-                <div class="app-category">Product Reviews</div>
-                <div class="app-description">
-                    Excellent value for review collection. Judge.me offers comprehensive review features at a fraction of Yotpo's cost, with better customization options.
-                </div>
-
-                <div class="why-i-like">
-                    <h4>Why I recommend it:</h4>
-                    <p>For stores that need reviews but can't justify Yotpo's pricing, Judge.me delivers 90% of the functionality at 30% of the cost. Their review request sequences are smart, and the rich snippets help with organic traffic.</p>
-                </div>
-
-                <div class="app-meta">
-                    <div class="meta-item">
-                        <span class="meta-label">Starting Price</span>
-                        <span class="meta-value">$15/month</span>
-                    </div>
-                    <div class="meta-item">
-                        <span class="meta-label">Free Trial</span>
-                        <span class="meta-value">Free plan available</span>
-                    </div>
-                    <div class="meta-item">
-                        <span class="meta-label">Best For</span>
-                        <span class="meta-value">Budget-conscious stores</span>
-                    </div>
-                </div>
-
-                <a href="https://judge.me/" class="cta-button" target="_blank">Start Judge.me Free</a>
-            </li>
-
-            <li class="app-item" id="postscript">
-                <div class="app-rank">11</div>
-                <h3>Postscript</h3>
-                <div class="app-category">SMS Marketing</div>
-                <div class="app-description">
-                    The SMS marketing platform built specifically for ecommerce. Postscript's compliance features and ecommerce integrations make SMS profitable and legal.
-                </div>
-
-                <div class="why-i-like">
-                    <h4>Why I recommend it:</h4>
-                    <p>SMS converts 5-10x better than email for time-sensitive offers. Postscript's abandoned cart SMS sequences have recovered millions for my clients. Their compliance tools keep you legal in an increasingly regulated space.</p>
-                </div>
-
-                <div class="app-meta">
-                    <div class="meta-item">
-                        <span class="meta-label">Starting Price</span>
-                        <span class="meta-value">$25/month</span>
-                    </div>
-                    <div class="meta-item">
-                        <span class="meta-label">Free Trial</span>
-                        <span class="meta-value">30 days</span>
-                    </div>
-                    <div class="meta-item">
-                        <span class="meta-label">Best For</span>
-                        <span class="meta-value">SMS marketing</span>
-                    </div>
-                </div>
-
-                <a href="https://postscript.io/" class="cta-button" target="_blank">Try Postscript</a>
-            </li>
-
-            <li class="app-item" id="okendo">
-                <div class="app-rank">12</div>
-                <h3>Okendo</h3>
-                <div class="app-category">Reviews & User Content</div>
-                <div class="app-description">
-                    Premium review platform with focus on user-generated content. Okendo's review collection rates and content quality are exceptional for larger brands.
-                </div>
-
-                <div class="why-i-like">
-                    <h4>Why I recommend it:</h4>
-                    <p>For brands doing $5M+ annually, Okendo's white-glove service and advanced features justify the premium. Their customer success team actually helps optimize review strategies, not just provides support.</p>
-                </div>
-
-                <div class="app-meta">
-                    <div class="meta-item">
-                        <span class="meta-label">Starting Price</span>
-                        <span class="meta-value">$25/month</span>
-                    </div>
-                    <div class="meta-item">
-                        <span class="meta-label">Free Trial</span>
-                        <span class="meta-value">14 days</span>
-                    </div>
-                    <div class="meta-item">
-                        <span class="meta-label">Best For</span>
-                        <span class="meta-value">Premium brands</span>
-                    </div>
-                </div>
-
-                <a href="https://okendo.io/" class="cta-button" target="_blank">Try Okendo</a>
-            </li>
-
-            <li class="app-item" id="stamped">
-                <div class="app-rank">13</div>
-                <h3>Stamped.io</h3>
-                <div class="app-category">Visual Reviews</div>
-                <div class="app-description">
-                    Specializes in photo and video reviews. Stamped's visual review collection is industry-leading, perfect for brands where seeing the product in use matters.
-                </div>
-
-                <div class="why-i-like">
-                    <h4>Why I recommend it:</h4>
-                    <p>Visual reviews perform significantly better in ads. Stamped consistently generates more photo/video reviews than competitors. I use their content in Facebook ads regularly - real customers using products always outperforms stock photography.</p>
-                </div>
-
-                <div class="app-meta">
-                    <div class="meta-item">
-                        <span class="meta-label">Starting Price</span>
-                        <span class="meta-value">$23/month</span>
-                    </div>
-                    <div class="meta-item">
-                        <span class="meta-label">Free Trial</span>
-                        <span class="meta-value">7 days</span>
-                    </div>
-                    <div class="meta-item">
-                        <span class="meta-label">Best For</span>
-                        <span class="meta-value">Visual products</span>
-                    </div>
-                </div>
-
-                <a href="https://stamped.io/" class="cta-button" target="_blank">Try Stamped Free</a>
-            </li>
-
-            <li class="app-item" id="rebuy">
-                <div class="app-rank">14</div>
-                <h3>Rebuy</h3>
-                <div class="app-category">Personalization & Upsells</div>
-                <div class="app-description">
-                    AI-powered personalization engine that creates Amazon-like shopping experiences. Smart product recommendations and upsells that actually increase AOV.
-                </div>
-
-                <div class="why-i-like">
-                    <h4>Why I recommend it:</h4>
-                    <p>Average order value directly impacts ad efficiency - higher AOV means you can pay more for customers. Rebuy's machine learning actually works, unlike most "AI" marketing tools. I've seen 15-25% AOV increases consistently.</p>
-                </div>
-
-                <div class="app-meta">
-                    <div class="meta-item">
-                        <span class="meta-label">Starting Price</span>
-                        <span class="meta-value">$99/month</span>
-                    </div>
-                    <div class="meta-item">
-                        <span class="meta-label">Free Trial</span>
-                        <span class="meta-value">21 days</span>
-                    </div>
-                    <div class="meta-item">
-                        <span class="meta-label">Best For</span>
-                        <span class="meta-value">Increasing AOV</span>
-                    </div>
-                </div>
-
-                <a href="https://rebuyengine.com/" class="cta-button" target="_blank">Try Rebuy</a>
-            </li>
-
-            <li class="app-item" id="attentive">
-                <div class="app-rank">15</div>
-                <h3>Attentive</h3>
-                <div class="app-category">SMS & Email Marketing</div>
-                <div class="app-description">
-                    Enterprise-grade SMS marketing with sophisticated automation. Attentive's two-way conversations and AI-powered messaging drive exceptional engagement.
-                </div>
-
-                <div class="why-i-like">
-                    <h4>Why I recommend it:</h4>
-                    <p>For brands doing $10M+ annually, Attentive's enterprise features justify the cost. Their conversational SMS approach feels natural, not spammy. The deliverability is exceptional - crucial when SMS is a significant revenue channel.</p>
-                </div>
-
-                <div class="app-meta">
-                    <div class="meta-item">
-                        <span class="meta-label">Starting Price</span>
-                        <span class="meta-value">$700/month</span>
-                    </div>
-                    <div class="meta-item">
-                        <span class="meta-label">Free Trial</span>
-                        <span class="meta-value">Demo available</span>
-                    </div>
-                    <div class="meta-item">
-                        <span class="meta-label">Best For</span>
-                        <span class="meta-value">Enterprise SMS</span>
-                    </div>
-                </div>
-
-                <a href="https://www.attentivemobile.com/" class="cta-button" target="_blank">Book Attentive Demo</a>
-            </li>
-        </ol>
-
-            <div class="affiliate-note">
-                <strong>Transparency Note:</strong> I earn affiliate commissions from these recommendations, which helps fund this site and my ongoing app development. However, these are genuinely the tools I use and recommend to my own clients. I've turned down higher-paying affiliate programs for apps I don't believe in.
             </div>
         </div>
     </section>
 
     <section class="authority-section">
         <div class="container">
-            <h2>Why These Recommendations Matter</h2>
+            <h2>🎯 Why ShopifyAppAuthority Hits Different</h2>
             <div class="authority-grid">
                 <div class="authority-item">
-                    <h3>Real Experience</h3>
-                    <p>I don't just review apps - I actively use them managing millions in ad spend across 7-8 figure Shopify stores. Every recommendation comes from hands-on experience.</p>
+                    <div class="authority-icon">💸</div>
+                    <h3>I Spend Real Money</h3>
+                    <p>Managing $100M+ in ad spend means every app recommendation costs me money if I'm wrong. I only recommend what actually moves the needle on profit.</p>
                 </div>
                 <div class="authority-item">
-                    <h3>Performance Focus</h3>
-                    <p>As someone who manages $100M+ in ad spend, I evaluate apps based on their impact on conversion rates, customer lifetime value, and overall ROI.</p>
+                    <div class="authority-icon">🔬</div>
+                    <h3>Data-Driven Reviews</h3>
+                    <p>No "I tested for 30 days" nonsense. My reviews come from months of real usage across multiple 7-8 figure stores with actual revenue data.</p>
                 </div>
                 <div class="authority-item">
-                    <h3>Industry Insider</h3>
-                    <p>Currently developing my own Shopify review app using reciprocity psychology. I understand both sides - what merchants need and how apps actually work.</p>
+                    <div class="authority-icon">🛠️</div>
+                    <h3>Building Apps Myself</h3>
+                    <p>Currently developing my own Shopify app using reciprocity psychology. I understand what merchants actually need vs. what sounds good in marketing.</p>
                 </div>
                 <div class="authority-item">
-                    <h3>Unbiased Analysis</h3>
-                    <p>I've turned down higher-paying affiliate programs for apps I don't believe in. These recommendations prioritize your success over commission rates.</p>
+                    <div class="authority-icon">💰</div>
+                    <h3>Affiliate Transparency</h3>
+                    <p>Yes, I earn commissions. But I've turned down higher-paying programs for apps that suck. Your success = my reputation = more business.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+        </div>
+    </section>
+
+    <section class="content-preview">
+        <div class="container">
+            <h2>📚 What's Coming to ShopifyAppAuthority</h2>
+            <div class="coming-soon-grid">
+                <div class="coming-soon-item">
+                    <h3>🔍 Deep Dive Reviews</h3>
+                    <p>Individual app reviews with real usage data, pricing breakdowns, and ROI analysis from actual store implementations.</p>
+                    <span class="status">Coming Soon</span>
+                </div>
+                <div class="coming-soon-item">
+                    <h3>📊 Performance Comparisons</h3>
+                    <p>Head-to-head app comparisons with real metrics from managing $100M+ in ad spend across different platforms.</p>
+                    <span class="status">Coming Soon</span>
+                </div>
+                <div class="coming-soon-item">
+                    <h3>💡 Strategy Guides</h3>
+                    <p>How to combine apps for maximum impact, plus the psychology behind what actually converts in ecommerce.</p>
+                    <span class="status">Coming Soon</span>
                 </div>
             </div>
         </div>
@@ -1025,9 +819,25 @@
                 // Track Google Analytics
                 gtag('event', 'affiliate_click', {
                     'app_name': appName,
-                    'placement': 'main_article',
+                    'placement': 'homepage_preview',
                     'page_url': window.location.href
                 });
+            }
+
+            // Track clicks to the main listicle
+            if (href.includes('/best-shopify-apps-2025-ultimate-guide/')) {
+                gtag('event', 'listicle_click', {
+                    'placement': 'homepage_cta',
+                    'page_url': window.location.href
+                });
+
+                if (typeof fbq !== 'undefined') {
+                    fbq('track', 'ViewContent', {
+                        content_name: '15_best_shopify_apps_2025',
+                        content_category: 'listicle',
+                        source: 'homepage_cta'
+                    });
+                }
 
                 // Track Facebook Pixel
                 if (typeof fbq !== 'undefined') {
