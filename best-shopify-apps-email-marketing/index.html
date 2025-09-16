@@ -70,9 +70,9 @@
         }
 
         nav {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 40px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -158,12 +158,51 @@
         }
 
         @media (max-width: 768px) {
+            nav {
+                padding: 0 20px;
+            }
+
             .nav-links {
                 display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                gap: 0;
+                padding: 20px 0;
+                box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            }
+
+            .nav-links.active {
+                display: flex;
             }
 
             .mobile-menu-toggle {
                 display: block;
+            }
+
+            .nav-links a {
+                padding: 1rem 40px;
+                border-radius: 0;
+                border-bottom: 1px solid #f1f5f9;
+            }
+
+            .dropdown-content {
+                position: static;
+                display: block;
+                box-shadow: none;
+                border: none;
+                padding: 0;
+                background: #f8f9fa;
+                margin-left: 20px;
+            }
+
+            .dropdown-content a {
+                padding: 0.8rem 40px;
+                font-size: 0.9rem;
+                color: #6b7280;
             }
         }
 
@@ -535,6 +574,7 @@
         <nav>
             <a href="/" class="logo">🚀&nbsp;ShopifyAppAuthority</a>
             <ul class="nav-links">
+                <li><a href="/best-shopify-apps-2025-ultimate-guide/">Best Apps 2025</a></li>
                 <li class="dropdown">
                     <a href="/app-categories/">Categories</a>
                     <div class="dropdown-content">

@@ -57,30 +57,30 @@
             border-bottom: 1px solid rgba(149, 191, 71, 0.2);
             position: sticky;
             top: 0;
-            z-index: 100;
+            z-index: 1000;
             backdrop-filter: blur(10px);
-            background-color: rgba(255, 255, 255, 0.95);
         }
 
         nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1.25rem 0;
+            height: 70px;
         }
 
         .logo {
-            font-size: 1.6rem;
-            font-weight: 700;
-            background: linear-gradient(135deg, #95BF47 0%, #7ca838 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #95bf47;
             text-decoration: none;
-            display: flex;
+            display: inline-flex;
             align-items: center;
-            gap: 0.5rem;
-            transition: transform 0.2s;
+            gap: 6px;
+            white-space: nowrap;
+            line-height: 1;
         }
 
         .logo:hover {
@@ -90,8 +90,7 @@
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 0.5rem;
-            margin: 0;
+            gap: 50px;
             align-items: center;
         }
 
@@ -100,20 +99,20 @@
         }
 
         .nav-links a {
+            color: #4a5568;
             text-decoration: none;
-            color: #2d3748;
             font-weight: 500;
-            font-size: 0.9rem;
-            padding: 0.6rem 1rem;
-            border-radius: 8px;
-            transition: all 0.2s;
-            position: relative;
-            display: inline-block;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            padding: 0.8rem 1.2rem;
+            border-radius: 10px;
+            white-space: nowrap;
         }
 
         .nav-links a:hover {
-            color: #95BF47;
-            background: rgba(149, 191, 71, 0.1);
+            color: #95bf47;
+            background: rgba(149, 191, 71, 0.08);
+            transform: translateY(-1px);
         }
 
         .nav-dropdown {
@@ -130,49 +129,47 @@
         .dropdown-content {
             display: none;
             position: absolute;
-            top: calc(100% + 0.5rem);
-            left: 50%;
-            transform: translateX(-50%);
+            top: 100%;
+            left: 0;
             background: white;
-            min-width: 220px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+            min-width: 200px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
             border-radius: 12px;
-            padding: 0.5rem;
+            padding: 12px 0;
             z-index: 1000;
-            border: 1px solid rgba(0,0,0,0.08);
+            border: 1px solid rgba(149, 191, 71, 0.2);
             animation: slideDown 0.2s ease-out;
         }
 
         @keyframes slideDown {
             from {
                 opacity: 0;
-                transform: translateX(-50%) translateY(-10px);
+                transform: translateY(-10px);
             }
             to {
                 opacity: 1;
-                transform: translateX(-50%) translateY(0);
+                transform: translateY(0);
             }
         }
 
-        .nav-dropdown:hover .dropdown-content {
+        .dropdown:hover .dropdown-content {
             display: block;
         }
 
         .dropdown-content a {
             display: block;
-            padding: 0.6rem 1rem;
+            padding: 0.7rem 1.2rem;
             color: #4a5568;
-            border: none;
-            font-size: 0.875rem;
-            border-radius: 8px;
-            margin: 0.125rem 0;
-            transition: all 0.15s;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            border-radius: 0;
+            font-size: 0.95rem;
         }
 
         .dropdown-content a:hover {
-            background: linear-gradient(135deg, rgba(149, 191, 71, 0.1) 0%, rgba(149, 191, 71, 0.05) 100%);
-            color: #95BF47;
-            padding-left: 1.25rem;
+            background: linear-gradient(135deg, #95bf47 0%, #7fa83a 100%);
+            color: white;
+            transform: none;
         }
 
         .mobile-menu-toggle {
@@ -504,6 +501,38 @@
                 display: block;
             }
 
+            nav {
+                padding: 0 20px;
+            }
+
+            .nav-links {
+                gap: 0;
+                padding: 20px 0;
+                box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            }
+
+            .nav-links a {
+                padding: 1rem 40px;
+                border-radius: 0;
+                border-bottom: 1px solid #f1f5f9;
+            }
+
+            .dropdown-content {
+                position: static;
+                display: block;
+                box-shadow: none;
+                border: none;
+                padding: 0;
+                background: #f8f9fa;
+                margin-left: 20px;
+            }
+
+            .dropdown-content a {
+                padding: 0.8rem 40px;
+                font-size: 0.9rem;
+                color: #6b7280;
+            }
+
             .app-item {
                 padding: 2rem 1.5rem;
             }
@@ -517,7 +546,7 @@
 </head>
 <body>
     <header>
-        <nav class="container">
+        <nav>
             <a href="/" class="logo">🚀&nbsp;ShopifyAppAuthority</a>
             <ul class="nav-links">
                 <li><a href="/best-shopify-apps-2025-ultimate-guide/">Best Apps 2025</a></li>
@@ -530,18 +559,15 @@
                         <a href="/free-shopify-apps/">Free Apps</a>
                     </div>
                 </li>
-                <li class="nav-dropdown">
-                    <a href="#" aria-haspopup="true">Store Size</a>
+                <li class="dropdown">
+                    <a href="/store-size/">By Store Size</a>
                     <div class="dropdown-content">
-                        <a href="/startup-apps/">Startup ($0-100K)</a>
-                        <a href="/growing-apps/">Growing ($100K-1M)</a>
-                        <a href="/scaling-apps/">Scaling ($1M-10M)</a>
-                        <a href="/enterprise-apps/">Enterprise ($10M+)</a>
+                        <a href="/apps-for-small-stores/">Small Stores (0-1K orders/month)</a>
+                        <a href="/apps-for-medium-stores/">Medium Stores (1K-10K orders/month)</a>
+                        <a href="/apps-for-enterprise/">Enterprise (10K+ orders/month)</a>
                     </div>
                 </li>
-                <li><a href="/ai-powered-apps/">AI-Powered Apps</a></li>
-                <li><a href="/free-apps/">Free Apps</a></li>
-                <li><a href="/about/">About</a></li>
+                <li><a href="/affiliate-disclosure/">Disclosure</a></li>
             </ul>
             <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">☰</button>
         </nav>
@@ -1452,6 +1478,11 @@
                     });
                 }
             }
+        });
+
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
         });
     </script>
 </body>
