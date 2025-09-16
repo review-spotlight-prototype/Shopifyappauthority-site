@@ -202,30 +202,20 @@
             box-shadow: 0 2px 8px rgba(0,0,0,0.15);
         }
 
-        .app-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 1.5rem;
-            gap: 2rem;
-        }
-
-        .app-title-section h3 {
-            font-size: 1.75rem;
-            color: #1a202c;
-            margin-bottom: 0.5rem;
-            font-weight: 700;
-        }
-
-        .app-visual {
-            flex-shrink: 0;
-            width: 280px;
+        .conversion-visual {
+            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+            text-align: center;
         }
 
         .klaviyo-illustration {
             width: 100%;
             height: auto;
-            max-height: 100px;
+            max-width: 500px;
+            max-height: 180px;
         }
 
         /* Fallback for apps without visual */
@@ -395,15 +385,14 @@
                 gap: 1rem;
             }
 
-            .app-header {
-                flex-direction: column;
-                gap: 1rem;
+            .conversion-visual {
+                padding: 1.5rem 1rem;
+                margin: 1.5rem 0;
             }
 
-            .app-visual {
-                width: 100%;
-                max-width: 250px;
-                align-self: center;
+            .klaviyo-illustration {
+                max-width: 100%;
+                max-height: 140px;
             }
 
             .summary-grid {
@@ -450,48 +439,47 @@
             <ol class="app-list">
                 <li class="app-item" id="klaviyo">
                     <div class="app-rank">1</div>
-                    <div class="app-header">
-                        <div class="app-title-section">
-                            <h3>Klaviyo</h3>
-                            <div class="app-category">Email Marketing & SMS</div>
-                        </div>
-                        <div class="app-visual">
-                            <svg viewBox="0 0 300 120" class="klaviyo-illustration">
-                                <!-- Email icon -->
-                                <rect x="20" y="40" width="50" height="35" rx="5" fill="#e2e8f0" stroke="#95BF47" stroke-width="2"/>
-                                <path d="M25 45 L45 58 L65 45" stroke="#95BF47" stroke-width="2" fill="none"/>
-                                <text x="45" y="82" text-anchor="middle" font-size="10" fill="#4a5568">Email</text>
+                    <h3>Klaviyo</h3>
+                    <div class="app-category">Email Marketing & SMS</div>
 
-                                <!-- Arrow 1 -->
-                                <path d="M80 57 L110 57" stroke="#667eea" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
-
-                                <!-- Automation box -->
-                                <rect x="120" y="35" width="60" height="45" rx="8" fill="#667eea" opacity="0.1" stroke="#667eea" stroke-width="2"/>
-                                <text x="150" y="48" text-anchor="middle" font-size="9" fill="#667eea" font-weight="bold">Smart</text>
-                                <text x="150" y="60" text-anchor="middle" font-size="9" fill="#667eea" font-weight="bold">Targeting</text>
-                                <!-- Klaviyo logo -->
-                                <image x="135" y="65" width="30" height="10" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVhcsM2VCPjr34ru_7qV4aWhEtioi1t-MReQ&s" style="opacity: 0.8;"/>
-
-                                <!-- Arrow 2 -->
-                                <path d="M190 57 L220 57" stroke="#667eea" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
-
-                                <!-- Sales icon -->
-                                <circle cx="250" cy="57" r="25" fill="#95BF47" opacity="0.2" stroke="#95BF47" stroke-width="2"/>
-                                <text x="250" y="52" text-anchor="middle" font-size="16" fill="#95BF47">💰</text>
-                                <text x="250" y="67" text-anchor="middle" font-size="8" fill="#95BF47" font-weight="bold">SALES</text>
-                                <text x="250" y="90" text-anchor="middle" font-size="10" fill="#4a5568">Revenue</text>
-
-                                <!-- Arrow marker definition -->
-                                <defs>
-                                    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-                                        <polygon points="0 0, 10 3.5, 0 7" fill="#667eea"/>
-                                    </marker>
-                                </defs>
-                            </svg>
-                        </div>
-                    </div>
                     <div class="app-description">
                         <strong>Stop leaving money on the table.</strong> Every day you're not using Klaviyo is another day your competitors are stealing revenue you should be getting. While you're sending basic emails that get ignored, stores using Klaviyo are automatically recovering abandoned carts, targeting high-value customers, and turning browsers into buyers with surgical precision.
+                    </div>
+
+                    <div class="conversion-visual">
+                        <svg viewBox="0 0 500 180" class="klaviyo-illustration">
+                            <!-- Email icon -->
+                            <rect x="30" y="65" width="80" height="50" rx="8" fill="#e2e8f0" stroke="#95BF47" stroke-width="3"/>
+                            <path d="M40 75 L70 95 L100 75" stroke="#95BF47" stroke-width="3" fill="none"/>
+                            <text x="70" y="130" text-anchor="middle" font-size="14" fill="#4a5568" font-weight="bold">Email</text>
+
+                            <!-- Arrow 1 -->
+                            <path d="M125 90 L170 90" stroke="#667eea" stroke-width="4" fill="none" marker-end="url(#arrowhead)"/>
+
+                            <!-- Automation box -->
+                            <rect x="180" y="55" width="100" height="70" rx="12" fill="#667eea" opacity="0.1" stroke="#667eea" stroke-width="3"/>
+                            <text x="230" y="75" text-anchor="middle" font-size="14" fill="#667eea" font-weight="bold">Smart</text>
+                            <text x="230" y="92" text-anchor="middle" font-size="14" fill="#667eea" font-weight="bold">Targeting</text>
+                            <!-- Klaviyo logo -->
+                            <image x="210" y="100" width="40" height="13" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVhcsM2VCPjr34ru_7qV4aWhEtioi1t-MReQ&s" style="opacity: 0.9;"/>
+                            <text x="230" y="140" text-anchor="middle" font-size="12" fill="#4a5568" font-weight="bold">AI Engine</text>
+
+                            <!-- Arrow 2 -->
+                            <path d="M295 90 L340 90" stroke="#667eea" stroke-width="4" fill="none" marker-end="url(#arrowhead)"/>
+
+                            <!-- Sales icon -->
+                            <circle cx="400" cy="90" r="40" fill="#95BF47" opacity="0.2" stroke="#95BF47" stroke-width="3"/>
+                            <text x="400" y="85" text-anchor="middle" font-size="24" fill="#95BF47">💰</text>
+                            <text x="400" y="105" text-anchor="middle" font-size="12" fill="#95BF47" font-weight="bold">SALES</text>
+                            <text x="400" y="145" text-anchor="middle" font-size="14" fill="#4a5568" font-weight="bold">Revenue</text>
+
+                            <!-- Arrow marker definition -->
+                            <defs>
+                                <marker id="arrowhead" markerWidth="12" markerHeight="9" refX="11" refY="4.5" orient="auto">
+                                    <polygon points="0 0, 12 4.5, 0 9" fill="#667eea"/>
+                                </marker>
+                            </defs>
+                        </svg>
                     </div>
 
                     <div class="why-i-like">
