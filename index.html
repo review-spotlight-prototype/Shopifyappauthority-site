@@ -78,7 +78,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            height: 80px;
+            height: 70px;
         }
 
         .logo {
@@ -115,6 +115,43 @@
             transform: translateY(-1px);
         }
 
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            min-width: 200px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            border-radius: 12px;
+            padding: 12px 0;
+            border: 1px solid rgba(149, 191, 71, 0.2);
+            z-index: 1000;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 0.7rem 1.2rem;
+            color: #4a5568;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            border-radius: 0;
+            font-size: 0.95rem;
+        }
+
+        .dropdown-content a:hover {
+            background: linear-gradient(135deg, #95bf47 0%, #7fa83a 100%);
+            color: white;
+            transform: none;
+        }
 
 
         .mobile-menu-toggle {
@@ -175,6 +212,22 @@
                 padding: 1rem 40px;
                 border-radius: 0;
                 border-bottom: 1px solid #f1f5f9;
+            }
+
+            .dropdown-content {
+                position: static;
+                display: block;
+                box-shadow: none;
+                border: none;
+                padding: 0;
+                background: #f8f9fa;
+                margin-left: 20px;
+            }
+
+            .dropdown-content a {
+                padding: 0.8rem 40px;
+                font-size: 0.9rem;
+                color: #6b7280;
             }
         }
 
@@ -668,8 +721,23 @@
             <a href="/" class="logo">🚀 ShopifyAppAuthority</a>
             <ul class="nav-links">
                 <li><a href="/best-shopify-apps-2025-ultimate-guide/">Best Apps 2025</a></li>
-                <li><a href="/app-categories/">Categories</a></li>
-                <li><a href="/store-size/">By Store Size</a></li>
+                <li class="dropdown">
+                    <a href="/app-categories/">Categories</a>
+                    <div class="dropdown-content">
+                        <a href="/best-shopify-apps-email-marketing/">Email Marketing</a>
+                        <a href="/best-shopify-apps-conversion-optimization/">Conversion & Sales</a>
+                        <a href="/reviews-social-proof-apps/">Reviews & Social Proof</a>
+                        <a href="/free-shopify-apps/">Free Apps</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="/store-size/">By Store Size</a>
+                    <div class="dropdown-content">
+                        <a href="/apps-for-small-stores/">Small Stores (0-1K orders/month)</a>
+                        <a href="/apps-for-medium-stores/">Medium Stores (1K-10K orders/month)</a>
+                        <a href="/apps-for-enterprise/">Enterprise (10K+ orders/month)</a>
+                    </div>
+                </li>
                 <li><a href="/affiliate-disclosure/">Disclosure</a></li>
             </ul>
             <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">☰</button>
