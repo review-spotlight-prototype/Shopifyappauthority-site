@@ -202,6 +202,33 @@
             box-shadow: 0 2px 8px rgba(0,0,0,0.15);
         }
 
+        .app-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+            gap: 2rem;
+        }
+
+        .app-title-section h3 {
+            font-size: 1.75rem;
+            color: #1a202c;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .app-visual {
+            flex-shrink: 0;
+            width: 280px;
+        }
+
+        .klaviyo-illustration {
+            width: 100%;
+            height: auto;
+            max-height: 100px;
+        }
+
+        /* Fallback for apps without visual */
         .app-item h3 {
             font-size: 1.75rem;
             color: #1a202c;
@@ -368,6 +395,17 @@
                 gap: 1rem;
             }
 
+            .app-header {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .app-visual {
+                width: 100%;
+                max-width: 250px;
+                align-self: center;
+            }
+
             .summary-grid {
                 grid-template-columns: 1fr;
                 gap: 1rem;
@@ -412,8 +450,45 @@
             <ol class="app-list">
                 <li class="app-item" id="klaviyo">
                     <div class="app-rank">1</div>
-                    <h3>Klaviyo</h3>
-                    <div class="app-category">Email Marketing & SMS</div>
+                    <div class="app-header">
+                        <div class="app-title-section">
+                            <h3>Klaviyo</h3>
+                            <div class="app-category">Email Marketing & SMS</div>
+                        </div>
+                        <div class="app-visual">
+                            <svg viewBox="0 0 300 120" class="klaviyo-illustration">
+                                <!-- Email icon -->
+                                <rect x="20" y="40" width="50" height="35" rx="5" fill="#e2e8f0" stroke="#95BF47" stroke-width="2"/>
+                                <path d="M25 45 L45 58 L65 45" stroke="#95BF47" stroke-width="2" fill="none"/>
+                                <text x="45" y="82" text-anchor="middle" font-size="10" fill="#4a5568">Email</text>
+
+                                <!-- Arrow 1 -->
+                                <path d="M80 57 L110 57" stroke="#667eea" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+
+                                <!-- Automation box -->
+                                <rect x="120" y="35" width="60" height="45" rx="8" fill="#667eea" opacity="0.1" stroke="#667eea" stroke-width="2"/>
+                                <text x="150" y="52" text-anchor="middle" font-size="9" fill="#667eea" font-weight="bold">Smart</text>
+                                <text x="150" y="64" text-anchor="middle" font-size="9" fill="#667eea" font-weight="bold">Targeting</text>
+                                <text x="150" y="90" text-anchor="middle" font-size="8" fill="#4a5568">Klaviyo</text>
+
+                                <!-- Arrow 2 -->
+                                <path d="M190 57 L220 57" stroke="#667eea" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+
+                                <!-- Sales icon -->
+                                <circle cx="250" cy="57" r="25" fill="#95BF47" opacity="0.2" stroke="#95BF47" stroke-width="2"/>
+                                <text x="250" y="52" text-anchor="middle" font-size="16" fill="#95BF47">💰</text>
+                                <text x="250" y="67" text-anchor="middle" font-size="8" fill="#95BF47" font-weight="bold">SALES</text>
+                                <text x="250" y="90" text-anchor="middle" font-size="10" fill="#4a5568">Revenue</text>
+
+                                <!-- Arrow marker definition -->
+                                <defs>
+                                    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                                        <polygon points="0 0, 10 3.5, 0 7" fill="#667eea"/>
+                                    </marker>
+                                </defs>
+                            </svg>
+                        </div>
+                    </div>
                     <div class="app-description">
                         <strong>Stop leaving money on the table.</strong> Every day you're not using Klaviyo is another day your competitors are stealing revenue you should be getting. While you're sending basic emails that get ignored, stores using Klaviyo are automatically recovering abandoned carts, targeting high-value customers, and turning browsers into buyers with surgical precision.
                     </div>
