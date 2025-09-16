@@ -239,8 +239,8 @@
         .selling-point {
             display: flex;
             align-items: flex-start;
-            gap: 0.75rem;
-            margin-bottom: 1rem;
+            gap: 1rem;
+            margin-bottom: 2rem;
         }
 
         .selling-point:last-child {
@@ -251,9 +251,46 @@
             font-size: 1.25rem;
             color: #95BF47;
             flex-shrink: 0;
-            margin-top: 0.1rem;
+            margin-top: 0.2rem;
         }
 
+        .point-content {
+            flex: 1;
+        }
+
+        .point-header {
+            font-size: 1.125rem;
+            color: #1a202c;
+            margin-bottom: 0.5rem;
+        }
+
+        .point-bullets {
+            margin: 0;
+            padding-left: 1.25rem;
+            list-style: none;
+        }
+
+        .point-bullets li {
+            position: relative;
+            margin-bottom: 0.5rem;
+            color: #4a5568;
+            line-height: 1.5;
+        }
+
+        .point-bullets li:before {
+            content: "•";
+            color: #95BF47;
+            font-weight: bold;
+            position: absolute;
+            left: -1rem;
+        }
+
+        .point-bullets li strong {
+            color: #1a202c;
+            font-weight: 700;
+        }
+
+        /* Legacy support for old format */
         .point-text {
             font-size: 1rem;
             line-height: 1.5;
@@ -537,19 +574,51 @@
                         <h4 class="selling-header">Why Smart Store Owners Choose Klaviyo:</h4>
                         <div class="selling-point">
                             <span class="check">✅</span>
-                            <span class="point-text"><strong>Start FREE</strong> - No credit card required, <strong>forever free plan available</strong>. Klaviyo offers a free plan that includes <strong>500 monthly emails</strong> to up to <strong>250 active profiles</strong>, plus <strong>150 SMS credits</strong>, with no credit card required.</span>
+                            <div class="point-content">
+                                <div class="point-header"><strong>Start FREE</strong></div>
+                                <ul class="point-bullets">
+                                    <li>No credit card required</li>
+                                    <li><strong>Forever free plan available</strong></li>
+                                    <li><strong>500 monthly emails</strong> to <strong>250 active profiles</strong></li>
+                                    <li><strong>150 SMS credits</strong> included</li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="selling-point">
                             <span class="check">✅</span>
-                            <span class="point-text"><strong>Scales with you</strong> - From <strong>$0 to enterprise</strong> without switching platforms. As your email list grows, Klaviyo automatically scales with <strong>flexible pricing tiers</strong> that adapt to your business size, from <strong>small startups to multi-million dollar enterprises</strong>.</span>
+                            <div class="point-content">
+                                <div class="point-header"><strong>Scales with you</strong></div>
+                                <ul class="point-bullets">
+                                    <li>From <strong>$0 to enterprise</strong> without switching platforms</li>
+                                    <li><strong>Flexible pricing tiers</strong> adapt to your business size</li>
+                                    <li>Supports <strong>small startups to multi-million dollar enterprises</strong></li>
+                                    <li>Automatic scaling as your email list grows</li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="selling-point">
                             <span class="check">✅</span>
-                            <span class="point-text"><strong>Advanced automation</strong> - <strong>Set-and-forget email sequences</strong> that work 24/7. Klaviyo's pre-built automation workflows include <strong>abandoned cart recovery</strong>, <strong>welcome series</strong>, <strong>post-purchase follow-ups</strong>, and <strong>win-back campaigns</strong> that run automatically.</span>
+                            <div class="point-content">
+                                <div class="point-header"><strong>Advanced automation</strong></div>
+                                <ul class="point-bullets">
+                                    <li><strong>Set-and-forget email sequences</strong> that work 24/7</li>
+                                    <li><strong>Abandoned cart recovery</strong> sequences</li>
+                                    <li><strong>Welcome series</strong> and <strong>post-purchase follow-ups</strong></li>
+                                    <li><strong>Win-back campaigns</strong> run automatically</li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="selling-point">
                             <span class="check">✅</span>
-                            <span class="point-text"><strong>Zero learning curve</strong> - <strong>Pre-built templates get you profitable fast</strong>. Choose from <strong>hundreds of professionally designed email templates</strong> optimized for Shopify stores, with <strong>drag-and-drop editing</strong> that requires no coding skills.</span>
+                            <div class="point-content">
+                                <div class="point-header"><strong>Zero learning curve</strong></div>
+                                <ul class="point-bullets">
+                                    <li><strong>Pre-built templates get you profitable fast</strong></li>
+                                    <li><strong>Hundreds of professionally designed templates</strong></li>
+                                    <li>Optimized specifically for Shopify stores</li>
+                                    <li><strong>Drag-and-drop editing</strong> - no coding skills required</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
 

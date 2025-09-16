@@ -58,13 +58,21 @@ This template documents the proven conversion-focused format developed for app e
 - **Opportunity cost:** "Every [action] you [do] is an opportunity cost..."
 - **Competitive pressure:** "Your customers are getting [better experience] elsewhere"
 
-### 5. Selling Points (Green Checkmarks with Compelling Header)
+### 5. Selling Points (Clean Bullet Format with Green Checkmarks)
 ```html
 <div class="selling-points">
     <h4 class="selling-header">[Compelling reason header]:</h4>
     <div class="selling-point">
         <span class="check">✅</span>
-        <span class="point-text"><strong>[Benefit headline]</strong> - [Detailed explanation with <strong>strategic bolding</strong>]</span>
+        <div class="point-content">
+            <div class="point-header"><strong>[Benefit headline]</strong></div>
+            <ul class="point-bullets">
+                <li>[Key detail or feature]</li>
+                <li><strong>[Important benefit or number]</strong></li>
+                <li>[Supporting detail with <strong>strategic bolding</strong>]</li>
+                <li>[Final compelling point]</li>
+            </ul>
+        </div>
     </div>
     <!-- Repeat 3-4 times -->
 </div>
@@ -78,18 +86,37 @@ This template documents the proven conversion-focused format developed for app e
 
 **Rules:**
 - **Always 4 selling points maximum**
-- Lead with benefit, not feature
-- Include specific details (numbers, quantities, guarantees)
+- **3-4 bullet points per selling point** for optimal scanability
+- Lead with benefit headline, support with specific details
+- Include specific numbers, quantities, and verifiable claims
 - No false claims or fabricated ROI data
-- Be specific and verifiable
-- **Strategic bolding:** Bold key phrases, numbers, and benefits for scanning
-- **Compelling header:** Create contrast with "The brutal truth" section
+- **Strategic bolding:** Bold key phrases, numbers, and benefits
+- **Clean hierarchy:** Green check → Header → Bullets
 
-**Examples:**
-- ✅ **Start FREE** - No credit card required, forever free plan available. [App] offers a free plan that includes [specific limits/features].
-- ✅ **Scales with you** - From $0 to enterprise without switching platforms. [Specific scaling explanation].
-- ✅ **Advanced [core feature]** - [Specific automation/capability]. [Detailed explanation of what it includes].
-- ✅ **Zero learning curve** - [Ease of use benefit]. [Specific details about templates/simplicity].
+**Example Format:**
+✅ **Start FREE**
+• No credit card required
+• **Forever free plan available**
+• **500 monthly emails** to **250 active profiles**
+• **150 SMS credits** included
+
+✅ **Scales with you**
+• From **$0 to enterprise** without switching platforms
+• **Flexible pricing tiers** adapt to your business size
+• Supports **small startups to multi-million dollar enterprises**
+• Automatic scaling as your email list grows
+
+✅ **Advanced automation**
+• **Set-and-forget email sequences** that work 24/7
+• **Abandoned cart recovery** sequences
+• **Welcome series** and **post-purchase follow-ups**
+• **Win-back campaigns** run automatically
+
+✅ **Zero learning curve**
+• **Pre-built templates get you profitable fast**
+• **Hundreds of professionally designed templates**
+• Optimized specifically for Shopify stores
+• **Drag-and-drop editing** - no coding skills required
 
 ### 6. Call-to-Action
 ```html
