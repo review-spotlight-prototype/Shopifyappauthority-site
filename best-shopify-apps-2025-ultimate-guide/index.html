@@ -459,32 +459,38 @@
         }
 
         /* Mobile optimizations */
-        /* Mobile Optimization Styles */
-        .mobile-cta-early,
-        .mobile-cta-mid {
-            display: none;
+        /* Universal Progressive CTA Styles */
+        .cta-early,
+        .cta-mid {
             text-align: center;
             margin: 1.5rem 0;
             padding: 0 1rem;
         }
 
-        .mobile-only,
-        .mobile-enhanced {
-            min-height: 56px;
-            font-size: 1.1rem;
-            font-weight: 700;
-            padding: 1rem 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(149, 191, 71, 0.3);
-            transition: all 0.2s ease;
-        }
-
-        .mobile-enhanced {
+        .cta-secondary {
             background: linear-gradient(135deg, #95BF47 0%, #7BA832 100%);
+            color: white;
+            font-size: 1rem;
+            font-weight: 600;
+            padding: 0.875rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            display: inline-block;
+            min-height: 48px;
+            box-shadow: 0 3px 10px rgba(149, 191, 71, 0.3);
+            transition: all 0.2s ease;
+            border: none;
         }
 
-        .desktop-primary {
-            display: block;
+        .cta-secondary:hover {
+            background: linear-gradient(135deg, #7BA832 0%, #6B9528 100%);
+            transform: translateY(-1px);
+            box-shadow: 0 5px 15px rgba(149, 191, 71, 0.4);
+        }
+
+        .cta-primary {
+            background: linear-gradient(135deg, #95BF47 0%, #7BA832 100%);
+            font-weight: 700;
         }
 
         /* Sticky Mobile CTA */
@@ -562,15 +568,20 @@
                 gap: 1rem;
             }
 
-            /* Show mobile CTAs */
-            .mobile-cta-early,
-            .mobile-cta-mid {
-                display: block;
+            /* Optimize progressive CTAs for mobile */
+            .cta-early,
+            .cta-mid {
+                margin: 1.25rem 0;
             }
 
-            /* Hide desktop CTA on mobile */
-            .desktop-primary {
-                display: none;
+            .cta-secondary {
+                width: 100%;
+                min-height: 56px;
+                font-size: 1.1rem;
+                padding: 1rem 1.5rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
 
             /* Show sticky CTA */
@@ -747,9 +758,9 @@
                         <p>I've watched stores hemorrhage money for months using inferior email tools while their competitors with Klaviyo clean up. The abandoned cart sequences alone will make you sick when you realize how much money you've been leaving on the table. Every email blast you send with basic tools is an opportunity cost that compounds daily. Your customers are getting sophisticated, personalized experiences from other brands - if you're not matching that, you're losing them forever.</p>
                     </div>
 
-                    <!-- Mobile Progressive CTA -->
-                    <div class="mobile-cta-early">
-                        <a href="https://www.klaviyo.com/partner/signup" class="cta-button mobile-only" target="_blank">Start Free - Get Klaviyo Now</a>
+                    <!-- Progressive CTA Early -->
+                    <div class="cta-early">
+                        <a href="https://www.klaviyo.com/partner/signup" class="cta-secondary" target="_blank">Start Free - Get Klaviyo Now</a>
                     </div>
 
                     <div class="selling-points">
@@ -804,12 +815,12 @@
                         </div>
                     </div>
 
-                    <!-- Progressive CTA after selling points -->
-                    <div class="mobile-cta-mid">
-                        <a href="https://www.klaviyo.com/partner/signup" class="cta-button mobile-enhanced" target="_blank">Start Free Trial - Get Klaviyo</a>
+                    <!-- Progressive CTA Mid -->
+                    <div class="cta-mid">
+                        <a href="https://www.klaviyo.com/partner/signup" class="cta-secondary" target="_blank">Start Free Trial - Get Klaviyo</a>
                     </div>
 
-                    <a href="https://www.klaviyo.com/partner/signup" class="cta-button desktop-primary" target="_blank">Start Converting Emails Into Sales - Get Klaviyo Now</a>
+                    <a href="https://www.klaviyo.com/partner/signup" class="cta-button cta-primary" target="_blank">Start Converting Emails Into Sales - Get Klaviyo Now</a>
                 </li>
 
                 <li class="app-item" id="recharge">
@@ -824,6 +835,11 @@
                     <div class="why-i-like">
                         <h4>The brutal truth:</h4>
                         <p>I've watched brands struggle to scale because they're addicted to one-time sales. The numbers will make you sick when you realize how much recurring revenue you're missing. Every customer who could subscribe but doesn't is an opportunity cost that compounds monthly. Your competitors using ReCharge are building predictable revenue streams while you're stuck on the customer acquisition hamster wheel.</p>
+                    </div>
+
+                    <!-- Progressive CTA Early -->
+                    <div class="cta-early">
+                        <a href="https://rechargepayments.com/partners/" class="cta-secondary" target="_blank">Start Free - Get ReCharge Now</a>
                     </div>
 
                     <div class="selling-points">
@@ -878,7 +894,12 @@
                         </div>
                     </div>
 
-                    <a href="https://rechargepayments.com/partners/" class="cta-button" target="_blank">Start Building Recurring Revenue - Get ReCharge Now</a>
+                    <!-- Progressive CTA Mid -->
+                    <div class="cta-mid">
+                        <a href="https://rechargepayments.com/partners/" class="cta-secondary" target="_blank">Start Free Trial - Get ReCharge</a>
+                    </div>
+
+                    <a href="https://rechargepayments.com/partners/" class="cta-button cta-primary" target="_blank">Start Building Recurring Revenue - Get ReCharge Now</a>
 
                     <div class="app-meta">
                         <div class="meta-item">
@@ -907,6 +928,11 @@
                     <div class="why-i-like">
                         <h4>The brutal truth:</h4>
                         <p>I've seen stores hemorrhage revenue because they treated support as a cost center instead of a profit driver. Every support interaction that doesn't result in satisfaction is a future bad review waiting to happen. Your competitors using Gorgias aren't just solving problems faster - they're upselling during support calls and tracking which interactions actually drive revenue.</p>
+                    </div>
+
+                    <!-- Progressive CTA Early -->
+                    <div class="cta-early">
+                        <a href="https://www.gorgias.com/" class="cta-secondary" target="_blank">Start Free - Get Gorgias Now</a>
                     </div>
 
                     <div class="selling-points">
@@ -961,7 +987,12 @@
                         </div>
                     </div>
 
-                    <a href="https://www.gorgias.com/" class="cta-button" target="_blank">Turn Support Into Sales - Get Gorgias Now</a>
+                    <!-- Progressive CTA Mid -->
+                    <div class="cta-mid">
+                        <a href="https://www.gorgias.com/" class="cta-secondary" target="_blank">Start Free Trial - Get Gorgias</a>
+                    </div>
+
+                    <a href="https://www.gorgias.com/" class="cta-button cta-primary" target="_blank">Turn Support Into Sales - Get Gorgias Now</a>
 
                     <div class="app-meta">
                         <div class="meta-item">
