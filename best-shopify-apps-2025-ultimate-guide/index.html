@@ -331,16 +331,36 @@
             font-weight: 600;
         }
 
-        .app-tag {
-            background: #95BF47;
-            color: white;
-            font-size: 0.7rem;
-            font-weight: 700;
-            padding: 0.25rem 0.75rem;
-            border-radius: 12px;
-            display: inline-block;
-            margin-bottom: 1.5rem;
+        .app-meta-top {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0 1.5rem 0;
+            padding: 1rem;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .meta-item-top {
+            text-align: center;
+        }
+
+        .meta-item-top .meta-label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #6b7280;
+            text-transform: uppercase;
             letter-spacing: 0.5px;
+            display: block;
+            margin-bottom: 0.25rem;
+        }
+
+        .meta-item-top .meta-value {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #1f2937;
+            display: block;
         }
 
         .app-description {
@@ -653,10 +673,20 @@
                 padding-bottom: 6rem;
             }
 
-            /* Optimize app tags for mobile */
-            .app-tag {
-                font-size: 0.65rem;
-                padding: 0.2rem 0.6rem;
+            /* Optimize meta-top for mobile */
+            .app-meta-top {
+                grid-template-columns: 1fr;
+                gap: 0.75rem;
+                margin: 0.75rem 0 1.25rem 0;
+                padding: 0.75rem;
+            }
+
+            .meta-item-top .meta-label {
+                font-size: 0.7rem;
+            }
+
+            .meta-item-top .meta-value {
+                font-size: 0.9rem;
             }
 
             /* Optimize brutal truth section */
@@ -730,7 +760,21 @@
                     <div class="app-rank">1</div>
                     <h3>Klaviyo</h3>
                     <div class="app-category">Email Marketing & SMS</div>
-                    <div class="app-tag">EMAIL AUTOMATION</div>
+
+                    <div class="app-meta-top">
+                        <div class="meta-item-top">
+                            <span class="meta-label">Starting Price</span>
+                            <span class="meta-value">Free</span>
+                        </div>
+                        <div class="meta-item-top">
+                            <span class="meta-label">Free Trial</span>
+                            <span class="meta-value">Forever</span>
+                        </div>
+                        <div class="meta-item-top">
+                            <span class="meta-label">Best For</span>
+                            <span class="meta-value">Email automation</span>
+                        </div>
+                    </div>
 
                     <div class="app-description">
                         <strong>Stop leaving money on the table.</strong> Every day you're not using Klaviyo is another day your competitors are stealing revenue you should be getting. While you're sending basic emails that get ignored, stores using Klaviyo are automatically recovering abandoned carts, targeting high-value customers, and turning browsers into buyers with surgical precision.
@@ -817,7 +861,22 @@
                     <div class="app-rank">2</div>
                     <h3>ReCharge</h3>
                     <div class="app-category">Subscriptions & Recurring Billing</div>
-                    <div class="app-tag">SUBSCRIPTIONS</div>
+
+                    <div class="app-meta-top">
+                        <div class="meta-item-top">
+                            <span class="meta-label">Starting Price</span>
+                            <span class="meta-value">$60/month</span>
+                        </div>
+                        <div class="meta-item-top">
+                            <span class="meta-label">Free Trial</span>
+                            <span class="meta-value">14 days</span>
+                        </div>
+                        <div class="meta-item-top">
+                            <span class="meta-label">Best For</span>
+                            <span class="meta-value">Consumables</span>
+                        </div>
+                    </div>
+
                     <div class="app-description">
                         <strong>You're throwing away predictable revenue.</strong> Every one-time sale is money left on the table while competitors with subscriptions collect recurring payments month after month. Without ReCharge, you're trapped in the exhausting cycle of constantly hunting for new customers instead of maximizing the ones you already have.
                     </div>
@@ -910,7 +969,22 @@
                     <div class="app-rank">3</div>
                     <h3>Gorgias</h3>
                     <div class="app-category">Customer Service & Support</div>
-                    <div class="app-tag">SUPPORT</div>
+
+                    <div class="app-meta-top">
+                        <div class="meta-item-top">
+                            <span class="meta-label">Starting Price</span>
+                            <span class="meta-value">$60/month</span>
+                        </div>
+                        <div class="meta-item-top">
+                            <span class="meta-label">Free Trial</span>
+                            <span class="meta-value">7 days</span>
+                        </div>
+                        <div class="meta-item-top">
+                            <span class="meta-label">Best For</span>
+                            <span class="meta-value">High volume</span>
+                        </div>
+                    </div>
+
                     <div class="app-description">
                         <strong>Bad support is killing your conversions.</strong> Every frustrated customer leaves negative reviews that tank your ad performance and scare away future buyers. While you're drowning in support tickets across multiple platforms, competitors using Gorgias are turning support interactions into additional sales and building customer loyalty that scales.
                     </div>
@@ -1003,7 +1077,21 @@
                     <div class="app-rank">4</div>
                     <h3>Yotpo</h3>
                     <div class="app-category">Reviews & Loyalty</div>
-                    <div class="app-tag">REVIEWS</div>
+
+                    <div class="app-meta-top">
+                        <div class="meta-item-top">
+                            <span class="meta-label">Starting Price</span>
+                            <span class="meta-value">$79/month</span>
+                        </div>
+                        <div class="meta-item-top">
+                            <span class="meta-label">Free Trial</span>
+                            <span class="meta-value">30 days</span>
+                        </div>
+                        <div class="meta-item-top">
+                            <span class="meta-label">Best For</span>
+                            <span class="meta-value">Visual products</span>
+                        </div>
+                    </div>
                     <div class="app-description">
                         <strong>Your products look boring without reviews.</strong> While competitors showcase real customers using their products in photo and video reviews, you're stuck with empty product pages that scream "new store, don't trust us." Every sale you lose to Amazon or established competitors is because they have the social proof you're missing.
                     </div>
@@ -1102,7 +1190,21 @@
                     <div class="app-rank">5</div>
                     <h3>Triple Whale</h3>
                     <div class="app-category">Analytics & Attribution</div>
-                    <div class="app-tag">ANALYTICS</div>
+
+                    <div class="app-meta-top">
+                        <div class="meta-item-top">
+                            <span class="meta-label">Starting Price</span>
+                            <span class="meta-value">$129/month</span>
+                        </div>
+                        <div class="meta-item-top">
+                            <span class="meta-label">Free Trial</span>
+                            <span class="meta-value">7 days</span>
+                        </div>
+                        <div class="meta-item-top">
+                            <span class="meta-label">Best For</span>
+                            <span class="meta-value">Scaling ads</span>
+                        </div>
+                    </div>
                     <div class="app-description">
                         <strong>You're flying blind with broken attribution.</strong> iOS 14.5 destroyed Facebook's tracking, leaving you guessing which ads actually drive sales. While you're making budget decisions based on incomplete data, competitors using Triple Whale know exactly which campaigns, audiences, and creatives are profitable at scale.
                     </div>
@@ -1201,7 +1303,21 @@
                     <div class="app-rank">6</div>
                     <h3>Privy</h3>
                     <div class="app-category">Email Capture & Pop-ups</div>
-                    <div class="app-tag">POPUPS</div>
+
+                    <div class="app-meta-top">
+                        <div class="meta-item-top">
+                            <span class="meta-label">Starting Price</span>
+                            <span class="meta-value">$24/month</span>
+                        </div>
+                        <div class="meta-item-top">
+                            <span class="meta-label">Free Trial</span>
+                            <span class="meta-value">15 days</span>
+                        </div>
+                        <div class="meta-item-top">
+                            <span class="meta-label">Best For</span>
+                            <span class="meta-value">List growth</span>
+                        </div>
+                    </div>
                     <div class="app-description">
                         <strong>Your visitors are leaving without giving you their email.</strong> Every browser who bounces is a potential customer you'll never reach again. While competitors capture 15-20% of visitor emails with smart targeting, you're watching potential revenue walk away because you don't have a proper email capture strategy.
                     </div>
