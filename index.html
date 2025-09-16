@@ -67,76 +67,52 @@
             border-bottom: 1px solid rgba(149, 191, 71, 0.2);
             position: sticky;
             top: 0;
-            z-index: 100;
+            z-index: 1000;
             backdrop-filter: blur(10px);
-            background-color: rgba(255, 255, 255, 0.95);
         }
 
         nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1.25rem 0;
+            height: 70px;
         }
 
         .logo {
-            font-size: 1.6rem;
-            font-weight: 700;
-            background: linear-gradient(135deg, #95BF47 0%, #7ca838 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #95bf47;
             text-decoration: none;
             display: flex;
             align-items: center;
-            gap: 0.5rem;
-            transition: transform 0.2s;
-        }
-
-        .logo:hover {
-            transform: translateY(-1px);
+            gap: 8px;
         }
 
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 0.5rem;
-            margin: 0;
+            gap: 30px;
             align-items: center;
         }
 
-        .nav-links li {
-            position: relative;
-        }
-
         .nav-links a {
+            color: #4a5568;
             text-decoration: none;
-            color: #2d3748;
             font-weight: 500;
-            font-size: 0.9rem;
+            transition: all 0.3s ease;
             padding: 0.6rem 1rem;
             border-radius: 8px;
-            transition: all 0.2s;
-            position: relative;
-            display: inline-block;
         }
 
         .nav-links a:hover {
-            color: #95BF47;
+            color: #95bf47;
             background: rgba(149, 191, 71, 0.1);
-        }
-
-        .nav-links > li > a[href="/best-shopify-apps-2025-ultimate-guide/"] {
-            background: linear-gradient(135deg, #95BF47 0%, #7ca838 100%);
-            color: white;
-            font-weight: 600;
-            box-shadow: 0 4px 12px rgba(149, 191, 71, 0.25);
-        }
-
-        .nav-links > li > a[href="/best-shopify-apps-2025-ultimate-guide/"]:hover {
             transform: translateY(-1px);
-            box-shadow: 0 6px 16px rgba(149, 191, 71, 0.3);
         }
+
 
         .nav-dropdown {
             position: relative;
@@ -152,17 +128,15 @@
         .dropdown-content {
             display: none;
             position: absolute;
-            top: calc(100% + 0.5rem);
-            left: 50%;
-            transform: translateX(-50%);
+            top: 100%;
+            left: 0;
             background: white;
-            min-width: 220px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+            min-width: 200px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
             border-radius: 12px;
-            padding: 0.5rem;
+            padding: 12px 0;
+            border: 1px solid rgba(149, 191, 71, 0.2);
             z-index: 1000;
-            border: 1px solid rgba(0,0,0,0.08);
-            animation: slideDown 0.2s ease-out;
         }
 
         @keyframes slideDown {
@@ -182,19 +156,17 @@
 
         .dropdown-content a {
             display: block;
-            padding: 0.6rem 1rem;
+            padding: 0.7rem 1.2rem;
             color: #4a5568;
-            border: none;
-            font-size: 0.875rem;
-            border-radius: 8px;
-            margin: 0.125rem 0;
-            transition: all 0.15s;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            border-radius: 0;
         }
 
         .dropdown-content a:hover {
-            background: linear-gradient(135deg, rgba(149, 191, 71, 0.1) 0%, rgba(149, 191, 71, 0.05) 100%);
-            color: #95BF47;
-            padding-left: 1.25rem;
+            background: linear-gradient(135deg, #95bf47 0%, #7fa83a 100%);
+            color: white;
+            transform: none;
         }
 
         .mobile-menu-toggle {
