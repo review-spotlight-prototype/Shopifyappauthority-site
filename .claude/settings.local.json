@@ -6,7 +6,16 @@
       "Bash(git commit:*)",
       "Bash(git push:*)",
       "Bash(find:*)",
-      "WebSearch"
+      "WebSearch",
+      "Bash(python:*)",
+      "Bash(for app in \"Postscript\" \"Okendo\" \"Stamped\" \"Rebuy\" \"Attentive\")",
+      "Bash(do echo \"Finding $app...\")",
+      "Bash(grep:*)",
+      "Bash(done)",
+      "Bash(powershell:*)",
+      "Bash(perl:*)",
+      "Bash(chmod:*)",
+      "Bash(\"C:\\Projects\\Shopifyappauthority-site\\fix_emojis.sh\")"
     ],
     "deny": [],
     "ask": []
