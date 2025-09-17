@@ -344,8 +344,8 @@
         }
 
         .feature-card {
-            background: linear-gradient(135deg, #f0fff4 0%, #f7fafc 100%);
-            border: 2px solid #95BF47;
+            background: #ffffff;
+            border: 2px solid #10b981;
             border-radius: 12px;
             padding: 2rem;
         }
@@ -380,8 +380,8 @@
             content: "";
             position: absolute;
             left: 0;
-            color: #95BF47;
-            font-size: 1.1rem;
+            top: 0;
+            font-size: 1rem;
         }
 
         .pricing-section {
@@ -504,30 +504,39 @@
         }
 
         .setup-step {
-            background: #f7fafc;
-            border-radius: 12px;
+            background: #f8fafc;
             padding: 2rem;
-            position: relative;
+            border-radius: 12px;
+            border-left: 4px solid #7c3aed;
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
         }
 
         .step-number {
-            position: absolute;
-            top: -15px;
-            left: 20px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: #7c3aed;
             color: white;
-            width: 30px;
-            height: 30px;
+            width: 2.5rem;
+            height: 2.5rem;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-weight: bold;
+            font-size: 1.1rem;
+            flex-shrink: 0;
         }
 
-        .setup-step h3 {
-            color: #1a202c;
+        .step-content h3 {
+            color: #1f2937;
             margin-bottom: 1rem;
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+
+        .step-content p {
+            color: #4b5563;
+            line-height: 1.6;
         }
 
         .testimonial-section {
@@ -660,16 +669,16 @@
             content: "✅";
             position: absolute;
             left: 0;
-            color: #22c55e;
-            font-size: 1.1rem;
+            top: 0;
+            font-size: 1rem;
         }
 
         .cons ul li:before {
             content: "❌";
             position: absolute;
             left: 0;
-            color: #f87171;
-            font-size: 1.1rem;
+            top: 0;
+            font-size: 1rem;
         }
 
         @media (max-width: 768px) {
@@ -876,32 +885,42 @@
                 <div class="setup-steps">
                     <div class="setup-step">
                         <div class="step-number">1</div>
-                        <h3>Connect All Platforms</h3>
-                        <p>Link Facebook Ads, Google Ads, Shopify, and email platforms. Triple Whale automatically begins collecting server-side data to fix attribution gaps.</p>
+                        <div class="step-content">
+                            <h3>Connect All Platforms</h3>
+                            <p>Link Facebook Ads, Google Ads, Shopify, and email platforms. Triple Whale automatically begins collecting server-side data to fix attribution gaps.</p>
+                        </div>
                     </div>
 
                     <div class="setup-step">
                         <div class="step-number">2</div>
-                        <h3>Set Up Server-Side Tracking</h3>
-                        <p>Implement Triple Whale's pixel and server-side tracking system. This captures customer journeys that Facebook's pixel misses due to iOS restrictions.</p>
+                        <div class="step-content">
+                            <h3>Set Up Server-Side Tracking</h3>
+                            <p>Implement Triple Whale's pixel and server-side tracking system. This captures customer journeys that Facebook's pixel misses due to iOS restrictions.</p>
+                        </div>
                     </div>
 
                     <div class="setup-step">
                         <div class="step-number">3</div>
-                        <h3>Configure Attribution Models</h3>
-                        <p>Set up multi-touch attribution models that show the true customer journey. Configure lookback windows and attribution rules for your business model.</p>
+                        <div class="step-content">
+                            <h3>Configure Attribution Models</h3>
+                            <p>Set up multi-touch attribution models that show the true customer journey. Configure lookback windows and attribution rules for your business model.</p>
+                        </div>
                     </div>
 
                     <div class="setup-step">
                         <div class="step-number">4</div>
-                        <h3>Implement Scaling Intelligence</h3>
-                        <p>Activate automated alerts for creative fatigue, audience saturation, and scaling opportunities. Set up custom dashboards for your team's decision-making process.</p>
+                        <div class="step-content">
+                            <h3>Implement Scaling Intelligence</h3>
+                            <p>Activate automated alerts for creative fatigue, audience saturation, and scaling opportunities. Set up custom dashboards for your team's decision-making process.</p>
+                        </div>
                     </div>
 
                     <div class="setup-step">
                         <div class="step-number">5</div>
-                        <h3>Optimize Based on Real Data</h3>
-                        <p>Use true attribution data to reallocate budgets, pause underperforming creatives, and double down on profitable audiences. Scale with confidence using accurate ROAS.</p>
+                        <div class="step-content">
+                            <h3>Optimize Based on Real Data</h3>
+                            <p>Use true attribution data to reallocate budgets, pause underperforming creatives, and double down on profitable audiences. Scale with confidence using accurate ROAS.</p>
+                        </div>
                     </div>
                 </div>
             </section>

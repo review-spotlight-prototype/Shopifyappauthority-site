@@ -344,8 +344,8 @@
         }
 
         .feature-card {
-            background: linear-gradient(135deg, #f0fff4 0%, #f7fafc 100%);
-            border: 2px solid #95BF47;
+            background: #ffffff;
+            border: 2px solid #10b981;
             border-radius: 12px;
             padding: 2rem;
         }
@@ -380,8 +380,8 @@
             content: "✅";
             position: absolute;
             left: 0;
-            color: #95BF47;
-            font-size: 1.1rem;
+            top: 0;
+            font-size: 1rem;
         }
 
         .pricing-section {
@@ -504,30 +504,39 @@
         }
 
         .setup-step {
-            background: #f7fafc;
-            border-radius: 12px;
+            background: #f8fafc;
             padding: 2rem;
-            position: relative;
+            border-radius: 12px;
+            border-left: 4px solid #7c3aed;
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
         }
 
         .step-number {
-            position: absolute;
-            top: -15px;
-            left: 20px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: #7c3aed;
             color: white;
-            width: 30px;
-            height: 30px;
+            width: 2.5rem;
+            height: 2.5rem;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-weight: bold;
+            font-size: 1.1rem;
+            flex-shrink: 0;
         }
 
-        .setup-step h3 {
-            color: #1a202c;
+        .step-content h3 {
+            color: #1f2937;
             margin-bottom: 1rem;
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+
+        .step-content p {
+            color: #4b5563;
+            line-height: 1.6;
         }
 
         .testimonial-section {
@@ -653,16 +662,16 @@
             content: "✅";
             position: absolute;
             left: 0;
-            color: #22c55e;
-            font-size: 1.1rem;
+            top: 0;
+            font-size: 1rem;
         }
 
         .cons ul li:before {
             content: "❌";
             position: absolute;
             left: 0;
-            color: #f87171;
-            font-size: 1.1rem;
+            top: 0;
+            font-size: 1rem;
         }
 
         @media (max-width: 768px) {
@@ -869,32 +878,42 @@
                 <div class="setup-steps">
                     <div class="setup-step">
                         <div class="step-number">1</div>
-                        <h3>Enterprise Demo & Assessment</h3>
-                        <p>Schedule a demo with Northbeam's enterprise team to assess your attribution needs. They'll analyze your current ad spend and attribution gaps before proposing a solution.</p>
+                        <div class="step-content">
+                            <h3>Enterprise Demo & Assessment</h3>
+                            <p>Schedule a demo with Northbeam's enterprise team to assess your attribution needs. They'll analyze your current ad spend and attribution gaps before proposing a solution.</p>
+                        </div>
                     </div>
 
                     <div class="setup-step">
                         <div class="step-number">2</div>
-                        <h3>Technical Implementation</h3>
-                        <p>Work with their technical team to implement server-side tracking and integrate all advertising platforms. This ensures comprehensive data collection from day one.</p>
+                        <div class="step-content">
+                            <h3>Technical Implementation</h3>
+                            <p>Work with their technical team to implement server-side tracking and integrate all advertising platforms. This ensures comprehensive data collection from day one.</p>
+                        </div>
                     </div>
 
                     <div class="setup-step">
                         <div class="step-number">3</div>
-                        <h3>Attribution Model Configuration</h3>
-                        <p>Configure multi-touch attribution models based on your customer journey and business model. Set up incrementality testing frameworks for proving ad impact.</p>
+                        <div class="step-content">
+                            <h3>Attribution Model Configuration</h3>
+                            <p>Configure multi-touch attribution models based on your customer journey and business model. Set up incrementality testing frameworks for proving ad impact.</p>
+                        </div>
                     </div>
 
                     <div class="setup-step">
                         <div class="step-number">4</div>
-                        <h3>Dashboard Customization</h3>
-                        <p>Build custom reporting dashboards for your team and executives. Configure automated alerts for performance anomalies and scaling opportunities.</p>
+                        <div class="step-content">
+                            <h3>Dashboard Customization</h3>
+                            <p>Build custom reporting dashboards for your team and executives. Configure automated alerts for performance anomalies and scaling opportunities.</p>
+                        </div>
                     </div>
 
                     <div class="setup-step">
                         <div class="step-number">5</div>
-                        <h3>Scale with Confidence</h3>
-                        <p>Use true attribution data to make informed scaling decisions. Leverage AI-powered insights to optimize budget allocation and maximize profitable growth.</p>
+                        <div class="step-content">
+                            <h3>Scale with Confidence</h3>
+                            <p>Use true attribution data to make informed scaling decisions. Leverage AI-powered insights to optimize budget allocation and maximize profitable growth.</p>
+                        </div>
                     </div>
                 </div>
             </section>

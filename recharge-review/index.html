@@ -344,8 +344,8 @@
         }
 
         .feature-card {
-            background: linear-gradient(135deg, #f0fff4 0%, #f7fafc 100%);
-            border: 2px solid #95BF47;
+            background: #ffffff;
+            border: 2px solid #10b981;
             border-radius: 12px;
             padding: 2rem;
         }
@@ -380,8 +380,8 @@
             content: "✅";
             position: absolute;
             left: 0;
-            color: #95BF47;
-            font-size: 1.1rem;
+            top: 0;
+            font-size: 1rem;
         }
 
         .pricing-section {
@@ -504,30 +504,39 @@
         }
 
         .setup-step {
-            background: #f7fafc;
-            border-radius: 12px;
+            background: #f8fafc;
             padding: 2rem;
-            position: relative;
+            border-radius: 12px;
+            border-left: 4px solid #7c3aed;
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
         }
 
         .step-number {
-            position: absolute;
-            top: -15px;
-            left: 20px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: #7c3aed;
             color: white;
-            width: 30px;
-            height: 30px;
+            width: 2.5rem;
+            height: 2.5rem;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-weight: bold;
+            font-size: 1.1rem;
+            flex-shrink: 0;
         }
 
-        .setup-step h3 {
-            color: #1a202c;
+        .step-content h3 {
+            color: #1f2937;
             margin-bottom: 1rem;
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+
+        .step-content p {
+            color: #4b5563;
+            line-height: 1.6;
         }
 
         .testimonial-section {
@@ -653,16 +662,16 @@
             content: "✅";
             position: absolute;
             left: 0;
-            color: #22c55e;
-            font-size: 1.1rem;
+            top: 0;
+            font-size: 1rem;
         }
 
         .cons ul li:before {
             content: "❌";
             position: absolute;
             left: 0;
-            color: #f87171;
-            font-size: 1.1rem;
+            top: 0;
+            font-size: 1rem;
         }
 
         @media (max-width: 768px) {
@@ -869,32 +878,42 @@
                 <div class="setup-steps">
                     <div class="setup-step">
                         <div class="step-number">1</div>
-                        <h3>Install and Connect</h3>
-                        <p>Install ReCharge from the Shopify App Store and connect your store. The setup wizard guides you through initial configuration in under 15 minutes.</p>
+                        <div class="step-content">
+                            <h3>Install and Connect</h3>
+                            <p>Install ReCharge from the Shopify App Store and connect your store. The setup wizard guides you through initial configuration in under 15 minutes.</p>
+                        </div>
                     </div>
 
                     <div class="setup-step">
                         <div class="step-number">2</div>
-                        <h3>Configure Subscription Products</h3>
-                        <p>Set up your subscription offerings with flexible billing intervals. Choose from weekly, monthly, quarterly, or custom delivery schedules that match customer needs.</p>
+                        <div class="step-content">
+                            <h3>Configure Subscription Products</h3>
+                            <p>Set up your subscription offerings with flexible billing intervals. Choose from weekly, monthly, quarterly, or custom delivery schedules that match customer needs.</p>
+                        </div>
                     </div>
 
                     <div class="setup-step">
                         <div class="step-number">3</div>
-                        <h3>Customize Customer Portal</h3>
-                        <p>Design the self-service portal where customers manage their subscriptions. Customize branding and enable features like skip, pause, and product swapping.</p>
+                        <div class="step-content">
+                            <h3>Customize Customer Portal</h3>
+                            <p>Design the self-service portal where customers manage their subscriptions. Customize branding and enable features like skip, pause, and product swapping.</p>
+                        </div>
                     </div>
 
                     <div class="setup-step">
                         <div class="step-number">4</div>
-                        <h3>Test and Optimize</h3>
-                        <p>Run test transactions and optimize your checkout flow. A/B test subscription pricing and intervals to find what converts best for your customers.</p>
+                        <div class="step-content">
+                            <h3>Test and Optimize</h3>
+                            <p>Run test transactions and optimize your checkout flow. A/B test subscription pricing and intervals to find what converts best for your customers.</p>
+                        </div>
                     </div>
 
                     <div class="setup-step">
                         <div class="step-number">5</div>
-                        <h3>Launch and Scale</h3>
-                        <p>Go live with your subscription program and monitor analytics. Use ReCharge's reporting to identify growth opportunities and reduce churn rates.</p>
+                        <div class="step-content">
+                            <h3>Launch and Scale</h3>
+                            <p>Go live with your subscription program and monitor analytics. Use ReCharge's reporting to identify growth opportunities and reduce churn rates.</p>
+                        </div>
                     </div>
                 </div>
             </section>
