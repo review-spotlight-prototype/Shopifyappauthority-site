@@ -369,20 +369,11 @@
         }
 
         .feature-card li {
-            position: relative;
-            padding-left: 1.5rem;
             margin-bottom: 0.75rem;
             color: #4a5568;
             line-height: 1.6;
         }
 
-        .feature-card li:before {
-            content: "✅";
-            position: absolute;
-            left: 0;
-            top: 0;
-            font-size: 1rem;
-        }
 
         .pricing-section {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -498,9 +489,9 @@
 
         .setup-steps {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
-            margin-top: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
         }
 
         .setup-step {
