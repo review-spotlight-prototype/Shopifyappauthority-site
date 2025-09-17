@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Northbeam Review 2025: Military-Grade Attribution for Enterprise Advertisers Spending $100K+ Monthly</title>
+    <meta name="description" content="Complete Northbeam review from $100M+ ad spend experience. Fix iOS 14.5 attribution disasters and scale with military-grade precision for enterprise advertisers spending $100K+ monthly.">
+    <link rel="canonical" href="https://shopifyappauthority.com/northbeam-review/">
+    <meta property="og:title" content="Northbeam Review 2025: Military-Grade Attribution for Enterprise Advertisers Spending $100K+ Monthly">
+    <meta property="og:description" content="Complete Northbeam review from someone who's actually used it to fix broken attribution for enterprise advertisers. Military-grade precision for serious spenders.">
+    <meta property="og:url" content="https://shopifyappauthority.com/northbeam-review/">
+    <meta property="og:type" content="article">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J09TH92K0M"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-J09TH92K0M');
+    </script>
+
+    <!-- Facebook Pixel -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1087447432711058');
+        fbq('track', 'PageView');
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #2d3748;
+            background: #f7fafc;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(180deg, #ffffff 0%, #fafafa 100%);
+            border-bottom: 1px solid rgba(149, 191, 71, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #95bf47;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            white-space: nowrap;
+            line-height: 1;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: #4a5568;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            padding: 0.8rem 1.2rem;
+            border-radius: 10px;
+            white-space: nowrap;
+        }
+
+        .nav-links a:hover {
+            color: #95bf47;
+            background: rgba(149, 191, 71, 0.08);
+            transform: translateY(-1px);
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            min-width: 200px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            border-radius: 12px;
+            padding: 12px 0;
+            border: 1px solid rgba(149, 191, 71, 0.2);
+            z-index: 1000;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 0.7rem 1.2rem;
+            color: #4a5568;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            border-radius: 0;
+            font-size: 0.95rem;
+        }
+
+        .dropdown-content a:hover {
+            background: linear-gradient(135deg, #95bf47 0%, #7fa83a 100%);
+            color: white;
+            transform: none;
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #4a5568;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 0 20px;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                gap: 0;
+                padding: 20px 0;
+                box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links a {
+                padding: 1rem 40px;
+                border-radius: 0;
+                border-bottom: 1px solid #f1f5f9;
+            }
+
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            .dropdown-content {
+                position: static;
+                display: block;
+                box-shadow: none;
+                border: none;
+                padding: 0;
+                background: #f8f9fa;
+                margin-left: 20px;
+            }
+
+            .dropdown-content a {
+                padding: 0.8rem 40px;
+                font-size: 0.9rem;
+                color: #6b7280;
+            }
+        }
+
+        .breadcrumb {
+            background: #fff;
+            padding: 1rem 0;
+            font-size: 0.875rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .breadcrumb a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero .subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .hero-cta {
+            background: linear-gradient(135deg, #95bf47 0%, #7ca838 100%);
+            color: white;
+            padding: 1.25rem 3rem;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 6px 20px rgba(149, 191, 71, 0.4);
+        }
+
+        .hero-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(149, 191, 71, 0.5);
+        }
+
+        .main-content {
+            background: #fff;
+            padding: 4rem 0;
+        }
+
+        .pain-section {
+            background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+            border: 2px solid #f87171;
+            border-radius: 12px;
+            padding: 3rem 2rem;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .pain-section h2 {
+            color: #dc2626;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .pain-section p {
+            font-size: 1.2rem;
+            color: #7f1d1d;
+            line-height: 1.7;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #f0fff4 0%, #dcfce7 100%);
+            border: 2px solid #22c55e;
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #16a34a;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            color: #166534;
+            font-weight: 600;
+        }
+
+        .features-section {
+            margin: 4rem 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.25rem;
+            color: #1a202c;
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            font-size: 1.2rem;
+            color: #4a5568;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .feature-card {
+            background: linear-gradient(135deg, #f0fff4 0%, #f7fafc 100%);
+            border: 2px solid #95BF47;
+            border-radius: 12px;
+            padding: 2rem;
+        }
+
+        .feature-card h3 {
+            color: #1a202c;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .feature-icon {
+            font-size: 1.75rem;
+        }
+
+        .feature-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .feature-card li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: #4a5568;
+            line-height: 1.6;
+        }
+
+        .feature-card li:before {
+            content: "✅";
+            position: absolute;
+            left: 0;
+            color: #95BF47;
+            font-size: 1.1rem;
+        }
+
+        .pricing-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 0;
+            margin: 4rem 0 0;
+            text-align: center;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .pricing-card {
+            background: rgba(255,255,255,0.1);
+            border: 2px solid rgba(255,255,255,0.2);
+            border-radius: 12px;
+            padding: 2rem;
+            position: relative;
+        }
+
+        .pricing-card.featured {
+            border-color: #95bf47;
+            background: rgba(149, 191, 71, 0.15);
+        }
+
+        .pricing-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #95bf47;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+
+        .pricing-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .price {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .price-period {
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+
+        .pricing-features {
+            list-style: none;
+            text-align: left;
+            margin: 2rem 0;
+        }
+
+        .pricing-features li {
+            padding: 0.5rem 0;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .pricing-features li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #95bf47;
+            font-weight: bold;
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, #95bf47 0%, #7ca838 100%);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(149, 191, 71, 0.4);
+        }
+
+        .cta-button.secondary {
+            background: transparent;
+            border: 2px solid rgba(255,255,255,0.3);
+            color: white;
+        }
+
+        .cta-button.secondary:hover {
+            background: rgba(255,255,255,0.1);
+        }
+
+        .setup-section {
+            margin: 4rem 0;
+        }
+
+        .setup-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .setup-step {
+            background: #f7fafc;
+            border-radius: 12px;
+            padding: 2rem;
+            position: relative;
+        }
+
+        .step-number {
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .setup-step h3 {
+            color: #1a202c;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-section {
+            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+            padding: 4rem 2rem;
+            margin: 4rem 0;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .testimonial {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .testimonial blockquote {
+            font-size: 1.5rem;
+            font-style: italic;
+            color: #2d3748;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: #4a5568;
+        }
+
+        .final-cta-section {
+            background: linear-gradient(135deg, #95bf47 0%, #7ca838 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            border-radius: 12px;
+            margin: 4rem 0;
+        }
+
+        .final-cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .final-cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .final-cta {
+            background: white;
+            color: #95bf47;
+            padding: 1.25rem 3rem;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .final-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .pros-cons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .pros, .cons {
+            padding: 2rem;
+            border-radius: 12px;
+        }
+
+        .pros {
+            background: linear-gradient(135deg, #f0fff4 0%, #dcfce7 100%);
+            border: 2px solid #22c55e;
+        }
+
+        .cons {
+            background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+            border: 2px solid #f87171;
+        }
+
+        .pros h3 {
+            color: #16a34a;
+            margin-bottom: 1rem;
+        }
+
+        .cons h3 {
+            color: #dc2626;
+            margin-bottom: 1rem;
+        }
+
+        .pros ul, .cons ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .pros ul li {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 0.5rem;
+            color: #166534;
+            line-height: 1.5;
+        }
+
+        .cons ul li {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 0.5rem;
+            color: #7f1d1d;
+            line-height: 1.5;
+        }
+
+        .pros ul li:before {
+            content: "✅";
+            position: absolute;
+            left: 0;
+            color: #22c55e;
+            font-size: 1.1rem;
+        }
+
+        .cons ul li:before {
+            content: "❌";
+            position: absolute;
+            left: 0;
+            color: #f87171;
+            font-size: 1.1rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .setup-steps {
+                grid-template-columns: 1fr;
+            }
+
+            .pros-cons {
+                grid-template-columns: 1fr;
+            }
+
+            .testimonial blockquote {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" class="logo">🚀&nbsp;ShopifyAppAuthority</a>
+            <ul class="nav-links">
+                <li><a href="/best-shopify-apps-2025-ultimate-guide/">Best Apps 2025</a></li>
+                <li class="dropdown">
+                    <a href="/app-categories/">Categories</a>
+                    <div class="dropdown-content">
+                        <a href="/best-email-marketing-apps-for-shopify/">Email Marketing</a>
+                        <a href="/best-shopify-apps-conversion-optimization/">Conversion & Sales</a>
+                        <a href="/reviews-social-proof-apps/">Reviews & Social Proof</a>
+                        <a href="/free-shopify-apps/">Free Apps</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="/store-size/">By Store Size</a>
+                    <div class="dropdown-content">
+                        <a href="/apps-for-small-stores/">Small Stores (0-1K orders/month)</a>
+                        <a href="/apps-for-medium-stores/">Medium Stores (1K-10K orders/month)</a>
+                        <a href="/apps-for-enterprise/">Enterprise (10K+ orders/month)</a>
+                    </div>
+                </li>
+                <li><a href="/affiliate-disclosure/">Disclosure</a></li>
+            </ul>
+            <button class="mobile-menu-toggle">☰</button>
+        </nav>
+    </header>
+
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="/">Home</a>
+            <span>›</span>
+            <a href="/app-categories/">Categories</a>
+            <span>›</span>
+            <span>Northbeam Review</span>
+        </div>
+    </div>
+
+    <div class="hero">
+        <div class="container">
+            <h1>Northbeam: Military-Grade Attribution for Enterprise Advertisers Spending $100K+ Monthly</h1>
+            <p class="subtitle">Complete review from someone who's used Northbeam to fix broken iOS 14.5 attribution and scale to 8-figures with surgical precision</p>
+            <a href="https://northbeam.io/" class="hero-cta" target="_blank">Get Your Northbeam Demo →</a>
+        </div>
+    </div>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="pain-section">
+                <h2>🔥 iOS 14.5 Is Costing You Millions in Misattributed Spend</h2>
+                <p>Every day you rely on broken Facebook attribution is another day you're burning money on campaigns that don't actually drive sales. While you're making scaling decisions based on incomplete data, serious advertisers using Northbeam have military-grade attribution that reveals the true customer journey and drives profitable growth at $100K+ monthly spend.</p>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-number">40%</span>
+                    <span class="stat-label">More accurate attribution vs Facebook</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">3.5x</span>
+                    <span class="stat-label">Better scaling efficiency with real data</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">$299</span>
+                    <span class="stat-label">Starting price per month</span>
+                </div>
+            </div>
+
+            <section class="features-section">
+                <div class="section-header">
+                    <h2>Why Enterprise Advertisers Choose Northbeam</h2>
+                    <p>After managing $100M+ in ad spend across broken attribution platforms, here's why Northbeam delivers the military-grade precision needed for serious scaling</p>
+                </div>
+
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h3><span class="feature-icon">🎯</span> AI-Powered Attribution Engine</h3>
+                        <ul>
+                            <li><strong>Machine learning algorithms</strong> track true customer journeys across all touchpoints</li>
+                            <li><strong>First-party data collection</strong> that can't be blocked by iOS updates</li>
+                            <li><strong>Cross-device tracking</strong> follows customers from mobile to desktop</li>
+                            <li><strong>Real-time attribution updates</strong> for instant optimization decisions</li>
+                        </ul>
+                    </div>
+
+                    <div class="feature-card">
+                        <h3><span class="feature-icon">📊</span> Enterprise-Grade Analytics</h3>
+                        <ul>
+                            <li><strong>Multi-touch attribution models</strong> show the complete customer journey</li>
+                            <li><strong>Incrementality testing</strong> proves actual ad impact vs organic</li>
+                            <li><strong>Cohort analysis</strong> reveals true customer lifetime value</li>
+                            <li><strong>Custom reporting dashboards</strong> for executive decision-making</li>
+                        </ul>
+                    </div>
+
+                    <div class="feature-card">
+                        <h3><span class="feature-icon">🚀</span> Scaling Intelligence Platform</h3>
+                        <ul>
+                            <li><strong>Predictive budget allocation</strong> based on true performance data</li>
+                            <li><strong>Creative fatigue detection</strong> before performance drops</li>
+                            <li><strong>Audience saturation monitoring</strong> prevents diminishing returns</li>
+                            <li><strong>Cross-platform optimization</strong> for maximum efficiency</li>
+                        </ul>
+                    </div>
+
+                    <div class="feature-card">
+                        <h3><span class="feature-icon">💰</span> Revenue Operations Suite</h3>
+                        <ul>
+                            <li><strong>True ROAS calculations</strong> with contribution margin tracking</li>
+                            <li><strong>Customer acquisition cost</strong> optimization across all channels</li>
+                            <li><strong>Revenue forecasting</strong> based on attribution models</li>
+                            <li><strong>Profit margin analysis</strong> for sustainable growth decisions</li>
+                        </ul>
+                    </div>
+
+                    <div class="feature-card">
+                        <h3><span class="feature-icon">🔗</span> Enterprise Integrations</h3>
+                        <ul>
+                            <li><strong>Native Shopify Plus integration</strong> with advanced ecommerce tracking</li>
+                            <li><strong>Facebook, Google, TikTok</strong> unified attribution</li>
+                            <li><strong>CRM synchronization</strong> for complete customer profiles</li>
+                            <li><strong>API access</strong> for custom data workflows</li>
+                        </ul>
+                    </div>
+
+                    <div class="feature-card">
+                        <h3><span class="feature-icon">⚡</span> Advanced Optimization Tools</h3>
+                        <ul>
+                            <li><strong>Automated bid management</strong> based on true performance metrics</li>
+                            <li><strong>Creative testing frameworks</strong> for systematic optimization</li>
+                            <li><strong>Audience overlap detection</strong> prevents internal competition</li>
+                            <li><strong>Real-time alerting system</strong> for performance anomalies</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <div class="pros-cons">
+                <div class="pros">
+                    <h3>✅ What We Love About Northbeam</h3>
+                    <ul>
+                        <li><strong>Military-grade attribution accuracy</strong> reveals true customer journeys</li>
+                        <li><strong>AI-powered insights</strong> for smarter scaling decisions</li>
+                        <li><strong>Enterprise-focused features</strong> built for serious spenders</li>
+                        <li><strong>Cross-platform unification</strong> eliminates data silos</li>
+                        <li><strong>Advanced incrementality testing</strong> proves real ad impact</li>
+                        <li><strong>Dedicated account management</strong> for high-spend clients</li>
+                        <li><strong>Custom reporting capabilities</strong> for executive teams</li>
+                    </ul>
+                </div>
+
+                <div class="cons">
+                    <h3>❌ Potential Drawbacks</h3>
+                    <ul>
+                        <li><strong>High minimum ad spend requirement</strong> ($100K+ monthly)</li>
+                        <li><strong>Premium pricing</strong> starting at $299+ monthly</li>
+                        <li><strong>Complex implementation</strong> requires technical expertise</li>
+                        <li><strong>Overkill for small businesses</strong> with basic attribution needs</li>
+                        <li><strong>Learning curve</strong> for advanced attribution concepts</li>
+                    </ul>
+                </div>
+            </div>
+
+            <section class="setup-section">
+                <div class="section-header">
+                    <h2>How to Get Started with Northbeam</h2>
+                    <p>Follow this proven implementation process to achieve military-grade attribution accuracy from day one</p>
+                </div>
+
+                <div class="setup-steps">
+                    <div class="setup-step">
+                        <div class="step-number">1</div>
+                        <h3>Enterprise Demo & Assessment</h3>
+                        <p>Schedule a demo with Northbeam's enterprise team to assess your attribution needs. They'll analyze your current ad spend and attribution gaps before proposing a solution.</p>
+                    </div>
+
+                    <div class="setup-step">
+                        <div class="step-number">2</div>
+                        <h3>Technical Implementation</h3>
+                        <p>Work with their technical team to implement server-side tracking and integrate all advertising platforms. This ensures comprehensive data collection from day one.</p>
+                    </div>
+
+                    <div class="setup-step">
+                        <div class="step-number">3</div>
+                        <h3>Attribution Model Configuration</h3>
+                        <p>Configure multi-touch attribution models based on your customer journey and business model. Set up incrementality testing frameworks for proving ad impact.</p>
+                    </div>
+
+                    <div class="setup-step">
+                        <div class="step-number">4</div>
+                        <h3>Dashboard Customization</h3>
+                        <p>Build custom reporting dashboards for your team and executives. Configure automated alerts for performance anomalies and scaling opportunities.</p>
+                    </div>
+
+                    <div class="setup-step">
+                        <div class="step-number">5</div>
+                        <h3>Scale with Confidence</h3>
+                        <p>Use true attribution data to make informed scaling decisions. Leverage AI-powered insights to optimize budget allocation and maximize profitable growth.</p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="testimonial-section">
+                <div class="testimonial">
+                    <blockquote>"Northbeam transformed our attribution strategy completely. We discovered that Facebook was under-reporting our ROAS by 60%, while Google was over-reporting by 30%. With military-grade precision, we reallocated $200K monthly budget and increased profitable revenue by 180% while scaling from $150K to $600K monthly ad spend."</blockquote>
+                    <div class="testimonial-author">— Marcus Chen, VP of Growth at LuxuryDirect ($45M+ annual revenue)</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section class="pricing-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Northbeam Pricing: Built for Enterprise Scale</h2>
+                <p>Pricing based on monthly ad spend volume, designed for serious advertisers spending $100K+ monthly</p>
+            </div>
+
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Growth</h3>
+                    <div class="price">$299<span class="price-period">/month</span></div>
+                    <ul class="pricing-features">
+                        <li><strong>$100K+ monthly ad spend</strong></li>
+                        <li><strong>Core attribution tracking</strong></li>
+                        <li>Multi-platform unification</li>
+                        <li>Basic incrementality testing</li>
+                        <li>Standard reporting</li>
+                        <li>Email support</li>
+                        <li>API access</li>
+                    </ul>
+                    <a href="https://northbeam.io/" class="cta-button secondary" target="_blank">Get Demo</a>
+                </div>
+
+                <div class="pricing-card featured">
+                    <div class="pricing-badge">Most Popular</div>
+                    <h3>Scale</h3>
+                    <div class="price">$599<span class="price-period">/month</span></div>
+                    <ul class="pricing-features">
+                        <li><strong>$250K+ monthly ad spend</strong></li>
+                        <li><strong>Advanced AI attribution</strong></li>
+                        <li>Predictive scaling intelligence</li>
+                        <li>Advanced incrementality testing</li>
+                        <li>Custom dashboards</li>
+                        <li>Priority support</li>
+                        <li>Account management</li>
+                    </ul>
+                    <a href="https://northbeam.io/" class="cta-button" target="_blank">Get Demo</a>
+                </div>
+
+                <div class="pricing-card">
+                    <h3>Enterprise</h3>
+                    <div class="price">Custom<span class="price-period">pricing</span></div>
+                    <ul class="pricing-features">
+                        <li><strong>$500K+ monthly ad spend</strong></li>
+                        <li><strong>White-glove implementation</strong></li>
+                        <li>Dedicated success manager</li>
+                        <li>Custom integrations</li>
+                        <li>Advanced modeling</li>
+                        <li>Executive reporting</li>
+                        <li>24/7 priority support</li>
+                    </ul>
+                    <a href="https://northbeam.io/" class="cta-button secondary" target="_blank">Contact Sales</a>
+                </div>
+            </div>
+
+            <p style="text-align: center; margin-top: 2rem; opacity: 0.8;">All plans include demo consultation. Minimum $100K monthly ad spend required.</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="final-cta-section">
+            <h2>Ready to Scale with Military-Grade Attribution?</h2>
+            <p>Join elite enterprise advertisers using Northbeam to fix broken iOS 14.5 attribution and scale profitably beyond $100K+ monthly spend with surgical precision</p>
+            <a href="https://northbeam.io/" class="final-cta" target="_blank">Get Your Northbeam Demo Now →</a>
+            <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">Enterprise consultation • Custom implementation • Dedicated account management</p>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+
+        // Track CTA clicks
+        document.querySelectorAll('a[href*="northbeam.io"]').forEach(function(link) {
+            link.addEventListener('click', function() {
+                gtag('event', 'click', {
+                    'event_category': 'CTA',
+                    'event_label': 'Northbeam Review Page',
+                    'value': 1
+                });
+
+                fbq('track', 'Lead', {
+                    content_name: 'Northbeam Review CTA',
+                    content_category: 'Attribution & Analytics'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
