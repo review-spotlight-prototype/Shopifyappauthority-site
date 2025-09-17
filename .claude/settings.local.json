@@ -15,7 +15,9 @@
       "Bash(powershell:*)",
       "Bash(perl:*)",
       "Bash(chmod:*)",
-      "Bash(\"C:\\Projects\\Shopifyappauthority-site\\fix_emojis.sh\")"
+      "Bash(\"C:\\Projects\\Shopifyappauthority-site\\fix_emojis.sh\")",
+      "Bash(for app in \"privy\" \"northbeam\" \"justuno\")",
+      "Bash(do echo \"Checking $app...\")"
     ],
     "deny": [],
     "ask": []
