@@ -497,41 +497,49 @@
         }
 
         .setup-section {
-            margin: 4rem 0;
+            background: white;
+            padding: 4rem 0;
         }
 
         .setup-steps {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
-            margin-top: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
         }
 
         .setup-step {
-            background: #f7fafc;
-            border-radius: 12px;
+            background: #f8fafc;
             padding: 2rem;
-            position: relative;
+            border-radius: 12px;
+            border-left: 4px solid #7c3aed;
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
         }
 
         .step-number {
-            position: absolute;
-            top: -15px;
-            left: 20px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: #7c3aed;
             color: white;
-            width: 30px;
-            height: 30px;
+            width: 3rem;
+            height: 3rem;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-weight: bold;
+            font-size: 1.2rem;
+            flex-shrink: 0;
         }
 
         .setup-step h3 {
-            color: #1a202c;
-            margin-bottom: 1rem;
+            color: #1f2937;
+            margin-bottom: 0.5rem;
+        }
+
+        .setup-step p {
+            color: #6b7280;
+            line-height: 1.6;
         }
 
         .testimonial-section {
@@ -686,12 +694,28 @@
                 grid-template-columns: 1fr;
             }
 
-            .setup-steps {
+            .pros-cons {
                 grid-template-columns: 1fr;
             }
 
-            .pros-cons {
-                grid-template-columns: 1fr;
+            .setup-step {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 1rem;
+                padding: 1.5rem;
+            }
+
+            .setup-step .step-number {
+                margin-bottom: 0.5rem;
+            }
+
+            .setup-section {
+                padding: 3rem 0;
+            }
+
+            .container {
+                padding: 0 15px;
             }
 
             .testimonial blockquote {
@@ -864,46 +888,59 @@
                 </div>
             </div>
 
-            <section class="setup-section">
-                <div class="section-header">
-                    <h2>How to Get Started with Omnisend</h2>
-                    <p>Follow this proven setup process to start saving money while getting better email marketing results from day one</p>
-                </div>
+    <section class="setup-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>How to Get Started with Omnisend</h2>
+                <p>Follow this proven setup process to start saving money while getting better email marketing results from day one</p>
+            </div>
 
                 <div class="setup-steps">
                     <div class="setup-step">
                         <div class="step-number">1</div>
-                        <h3>Quick Installation</h3>
-                        <p>Install Omnisend from the Shopify App Store with one click. Your customer data and order history automatically sync within minutes.</p>
+                        <div>
+                            <h3>Quick Installation</h3>
+                            <p>Install Omnisend from the Shopify App Store with one click. Your customer data and order history automatically sync within minutes.</p>
+                        </div>
                     </div>
 
                     <div class="setup-step">
                         <div class="step-number">2</div>
-                        <h3>Activate Core Automations</h3>
-                        <p>Enable welcome series, abandoned cart, and post-purchase automation templates. These are pre-built and convert immediately without customization.</p>
+                        <div>
+                            <h3>Activate Core Automations</h3>
+                            <p>Enable welcome series, abandoned cart, and post-purchase automation templates. These are pre-built and convert immediately without customization.</p>
+                        </div>
                     </div>
 
                     <div class="setup-step">
                         <div class="step-number">3</div>
-                        <h3>Set Up Email Capture</h3>
-                        <p>Connect your signup forms and popups to Omnisend. The platform automatically segments new subscribers based on their behavior and preferences.</p>
+                        <div>
+                            <h3>Set Up Email Capture</h3>
+                            <p>Connect your signup forms and popups to Omnisend. The platform automatically segments new subscribers based on their behavior and preferences.</p>
+                        </div>
                     </div>
 
                     <div class="setup-step">
                         <div class="step-number">4</div>
-                        <h3>Configure SMS Marketing</h3>
-                        <p>Enable SMS campaigns to complement your email marketing. Omnisend intelligently chooses the best channel for each customer based on engagement.</p>
+                        <div>
+                            <h3>Configure SMS Marketing</h3>
+                            <p>Enable SMS campaigns to complement your email marketing. Omnisend intelligently chooses the best channel for each customer based on engagement.</p>
+                        </div>
                     </div>
 
                     <div class="setup-step">
                         <div class="step-number">5</div>
-                        <h3>Monitor and Optimize</h3>
-                        <p>Use Omnisend's simple analytics to track performance and revenue attribution. A/B test subject lines and content for continuous improvement.</p>
+                        <div>
+                            <h3>Monitor and Optimize</h3>
+                            <p>Use Omnisend's simple analytics to track performance and revenue attribution. A/B test subject lines and content for continuous improvement.</p>
+                        </div>
                     </div>
-                </div>
-            </section>
+            </div>
+        </div>
+    </section>
 
-            <div class="testimonial-section">
+    <div class="container">
+        <div class="testimonial-section">
                 <div class="testimonial">
                     <blockquote>"Switching from Klaviyo to Omnisend saved us $220 monthly while increasing our email revenue by 23%. The pre-built automations work better out-of-the-box than anything we custom-built. For stores under $500K, this is a no-brainer decision."</blockquote>
                     <div class="testimonial-author">👨‍💼 Michael Torres, Owner at Coastal Home Goods ($420K annual revenue)</div>
