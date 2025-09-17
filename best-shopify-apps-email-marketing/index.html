@@ -53,20 +53,26 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.7;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
             color: #2d3748;
-            background: #ffffff;
+            background: #f7fafc;
         }
 
-        /* Header */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
         header {
             background: linear-gradient(180deg, #ffffff 0%, #fafafa 100%);
             border-bottom: 1px solid rgba(149, 191, 71, 0.2);
             position: sticky;
             top: 0;
-            z-index: 1000;
+            z-index: 100;
             backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.95);
         }
 
         nav {
@@ -80,39 +86,60 @@
         }
 
         .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #95bf47;
+            font-size: 1.6rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #95BF47 0%, #7ca838 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
             text-decoration: none;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 0.5rem;
+            transition: transform 0.2s;
+        }
+
+        .logo:hover {
+            transform: translateY(-1px);
         }
 
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 30px;
+            gap: 50px;
             align-items: center;
+        }
+
+        .nav-links li {
+            position: relative;
         }
 
         .nav-links a {
             color: #4a5568;
             text-decoration: none;
             font-weight: 500;
+            font-size: 1rem;
             transition: all 0.3s ease;
-            padding: 0.6rem 1rem;
-            border-radius: 8px;
+            padding: 0.8rem 1.2rem;
+            border-radius: 10px;
+            white-space: nowrap;
         }
 
         .nav-links a:hover {
             color: #95bf47;
-            background: rgba(149, 191, 71, 0.1);
+            background: rgba(149, 191, 71, 0.08);
             transform: translateY(-1px);
         }
 
         .dropdown {
             position: relative;
+        }
+
+        .dropdown > a::after {
+            content: '▾';
+            margin-left: 0.25rem;
+            font-size: 0.75rem;
+            opacity: 0.6;
         }
 
         .dropdown-content {
@@ -121,12 +148,12 @@
             top: 100%;
             left: 0;
             background: white;
-            min-width: 200px;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            min-width: 220px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.12);
             border-radius: 12px;
             padding: 12px 0;
-            border: 1px solid rgba(149, 191, 71, 0.2);
             z-index: 1000;
+            border: 1px solid rgba(149, 191, 71, 0.2);
         }
 
         .dropdown:hover .dropdown-content {
@@ -140,6 +167,7 @@
             text-decoration: none;
             transition: all 0.2s ease;
             border-radius: 0;
+            font-size: 0.95rem;
         }
 
         .dropdown-content a:hover {
@@ -153,10 +181,11 @@
             background: none;
             border: none;
             font-size: 1.5rem;
-            cursor: pointer;
             color: #4a5568;
+            cursor: pointer;
         }
 
+        /* Mobile responsive navigation */
         @media (max-width: 768px) {
             nav {
                 padding: 0 20px;
@@ -179,14 +208,14 @@
                 display: flex;
             }
 
-            .mobile-menu-toggle {
-                display: block;
-            }
-
             .nav-links a {
                 padding: 1rem 40px;
                 border-radius: 0;
                 border-bottom: 1px solid #f1f5f9;
+            }
+
+            .mobile-menu-toggle {
+                display: block;
             }
 
             .dropdown-content {
@@ -206,69 +235,89 @@
             }
         }
 
-        /* Main Content */
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 0 20px;
+        .breadcrumb {
+            background: #fff;
+            padding: 1rem 0;
+            border-bottom: 1px solid #e2e8f0;
+            font-size: 0.875rem;
         }
 
-        .article-header {
-            text-align: left;
-            margin: 20px 0 40px 0;
+        .breadcrumb a {
+            color: #3182ce;
+            text-decoration: none;
         }
 
-        .meta-info {
-            font-size: 0.9rem;
+        .breadcrumb span {
             color: #718096;
-            margin-bottom: 10px;
+            margin: 0 0.5rem;
         }
 
-        h1 {
-            font-size: 2.5rem;
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2.5rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.25rem;
             font-weight: 800;
-            color: #1a202c;
-            margin-bottom: 20px;
+            margin-bottom: 0.75rem;
             line-height: 1.2;
         }
 
-        .subtitle {
-            font-size: 1.25rem;
-            color: #4a5568;
-            font-weight: 400;
-            line-height: 1.5;
+        .hero .subtitle {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            opacity: 0.9;
         }
 
-        /* App Cards */
-        .app-card {
-            background: white;
-            border-radius: 16px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            margin-bottom: 40px;
-            overflow: hidden;
+        .author-badge {
+            background: rgba(255,255,255,0.15);
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 50px;
+            padding: 1rem 2rem;
+            display: inline-block;
+            margin-top: 1rem;
+        }
+
+        .main-content {
+            background: #fff;
+            padding: 3rem 0;
+        }
+
+        .meta-subheadline {
+            text-align: left;
+            color: #9ca3af;
+            font-size: 0.8rem;
+            margin: 0.5rem 0 1.5rem 0;
+            padding: 0;
+        }
+
+        .app-list {
+            list-style: none;
+        }
+
+        .app-item {
             border: 1px solid #e2e8f0;
-            transition: all 0.3s ease;
+            border-radius: 12px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            background: #fff;
+            position: relative;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            transition: box-shadow 0.2s;
         }
 
-        .app-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        .app-item:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
 
-        .app-header {
-            padding: 30px 30px 20px 30px;
-            border-bottom: 1px solid #f7fafc;
-        }
-
-        .app-title-container {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 15px;
-        }
-
-        .rank-badge {
-            background: linear-gradient(135deg, #95bf47 0%, #7fa83a 100%);
+        .app-rank {
+            position: absolute;
+            top: -12px;
+            left: 25px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             width: 35px;
             height: 35px;
@@ -276,30 +325,64 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-weight: bold;
-            font-size: 1.1rem;
-            flex-shrink: 0;
-        }
-
-        .app-name {
-            font-size: 1.8rem;
             font-weight: 700;
-            color: #1a202c;
-            margin: 0;
-            flex-grow: 1;
+            font-size: 0.875rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
         }
 
-        .app-meta {
+        .app-item h3 {
+            font-size: 1.75rem;
+            color: #1a202c;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .app-category {
+            color: #667eea;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .app-quick-info {
             display: flex;
-            align-items: center;
-            gap: 20px;
+            gap: 1.5rem;
+            margin: 0.5rem 0 1.5rem 0;
             font-size: 0.9rem;
-            color: #718096;
-            margin-bottom: 15px;
+            color: #4b5563;
             flex-wrap: wrap;
         }
 
+        .quick-info-item {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .quick-info-label {
+            font-weight: 500;
+            color: #6b7280;
+        }
+
+        .quick-info-value {
+            font-weight: 700;
+            color: #059669;
+        }
+
+        .quick-info-value.price {
+            color: #dc2626;
+        }
+
+        .quick-info-value.free {
+            color: #059669;
+        }
+
         .ai-indicator {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
             background: linear-gradient(135deg, #8b5cf6 0%, #a78bfa 100%);
             color: white;
             font-size: 0.7rem;
@@ -308,120 +391,138 @@
             border-radius: 12px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
+            margin-left: 0.5rem;
+            box-shadow: 0 2px 4px rgba(139, 92, 246, 0.3);
         }
 
         .app-description {
-            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.125rem;
+            line-height: 1.7;
             color: #4a5568;
-            line-height: 1.6;
-            margin-bottom: 25px;
         }
 
-        .image-placeholder {
+        .why-i-like {
             background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
-            border: 2px dashed #cbd5e0;
-            border-radius: 8px;
-            padding: 40px 20px;
-            text-align: center;
-            color: #718096;
-            font-style: italic;
-            margin: 20px 0;
-        }
-
-        /* Content Sections */
-        .app-content {
-            padding: 0 30px 30px 30px;
-        }
-
-        .brutal-truth {
-            background: linear-gradient(135deg, #fef5e7 0%, #fed7aa 20%, #fef5e7 100%);
-            border-left: 4px solid #f59e0b;
-            padding: 20px;
-            margin: 25px 0;
+            border-left: 4px solid #667eea;
+            padding: 1.5rem;
+            margin: 2rem 0;
             border-radius: 0 8px 8px 0;
         }
 
-        .brutal-truth h4 {
-            color: #92400e;
-            font-size: 1.1rem;
-            margin-bottom: 10px;
-            font-weight: 600;
-        }
-
-        .why-recommended {
-            background: linear-gradient(135deg, #f0fff4 0%, #c6f6d5 20%, #f0fff4 100%);
-            border-left: 4px solid #95bf47;
-            padding: 20px;
-            margin: 25px 0;
-            border-radius: 0 8px 8px 0;
-        }
-
-        .why-recommended h4 {
-            color: #276749;
-            font-size: 1.1rem;
-            margin-bottom: 15px;
-            font-weight: 600;
+        .why-i-like h4 {
+            color: #2d3748;
+            margin-bottom: 0.75rem;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 0.05em;
         }
 
         .selling-points {
-            list-style: none;
-            padding: 0;
+            background: linear-gradient(135deg, #f0fff4 0%, #f7fafc 100%);
+            border: 2px solid #95BF47;
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
         }
 
-        .selling-points li {
+        .selling-header {
+            color: #1a202c;
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            border-bottom: 2px solid #95BF47;
+            padding-bottom: 0.75rem;
+        }
+
+        .selling-point {
             display: flex;
             align-items: flex-start;
-            margin-bottom: 12px;
-            font-size: 1rem;
-            line-height: 1.6;
+            gap: 1rem;
+            margin-bottom: 2rem;
         }
 
-        .selling-points li::before {
-            content: "✅";
-            margin-right: 12px;
-            font-size: 1.1rem;
+        .selling-point:last-child {
+            margin-bottom: 0;
+        }
+
+        .check {
+            font-size: 1.25rem;
+            color: #95BF47;
             flex-shrink: 0;
-            margin-top: 2px;
+            margin-top: 0.2rem;
         }
 
-        /* CTA Buttons */
-        .cta-container {
-            display: flex;
-            gap: 15px;
-            margin-top: 25px;
-            flex-wrap: wrap;
-        }
-
-        .cta-button {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 14px 28px;
-            background: linear-gradient(135deg, #95bf47 0%, #7fa83a 100%);
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
+        .point-content {
             flex: 1;
-            justify-content: center;
-            min-width: 200px;
         }
 
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(149, 191, 71, 0.3);
+        .point-header {
+            font-size: 1.125rem;
+            color: #1a202c;
+            margin-bottom: 0.5rem;
+        }
+
+        .point-bullets {
+            margin: 0;
+            padding-left: 1.25rem;
+            list-style: none;
+        }
+
+        .point-bullets li {
+            position: relative;
+            margin-bottom: 0.5rem;
+            color: #4a5568;
+            line-height: 1.5;
+        }
+
+        .point-bullets li:before {
+            content: "•";
+            color: #95BF47;
+            font-weight: bold;
+            position: absolute;
+            left: -1rem;
+        }
+
+        .point-bullets li strong {
+            color: #1a202c;
+            font-weight: 700;
+        }
+
+        /* Universal Progressive CTA Styles */
+        .cta-early,
+        .cta-mid {
+            text-align: center;
+            margin: 1.5rem 0;
+            padding: 0 1rem;
         }
 
         .cta-secondary {
-            background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);
+            background: linear-gradient(135deg, #95BF47 0%, #7BA832 100%);
+            color: white;
+            font-size: 1rem;
+            font-weight: 600;
+            padding: 0.875rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            display: inline-block;
+            min-height: 48px;
+            box-shadow: 0 3px 10px rgba(149, 191, 71, 0.3);
+            transition: all 0.2s ease;
+            border: none;
         }
 
         .cta-secondary:hover {
-            box-shadow: 0 8px 25px rgba(74, 85, 104, 0.3);
+            background: linear-gradient(135deg, #7BA832 0%, #6B9528 100%);
+            transform: translateY(-1px);
+            box-shadow: 0 5px 15px rgba(149, 191, 71, 0.4);
+        }
+
+        .cta-primary {
+            background: linear-gradient(135deg, #95BF47 0%, #7BA832 100%);
+            font-weight: 700;
         }
 
         /* Cookie Consent */
@@ -493,30 +594,74 @@
 
         /* Mobile Responsive */
         @media (max-width: 768px) {
-            h1 {
+            .hero h1 {
                 font-size: 2rem;
             }
 
-            .app-header, .app-content {
-                padding: 20px;
+            .hero .subtitle {
+                font-size: 1rem;
             }
 
-            .app-name {
-                font-size: 1.5rem;
+            .container {
+                padding: 0 15px;
             }
 
-            .app-meta {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 10px;
+            .app-item {
+                padding: 2rem 1.5rem;
             }
 
-            .cta-container {
-                flex-direction: column;
+            /* Optimize progressive CTAs for mobile */
+            .cta-early,
+            .cta-mid {
+                margin: 1.25rem 0;
             }
 
-            .cta-button {
-                min-width: auto;
+            .cta-secondary {
+                width: 100%;
+                min-height: 56px;
+                font-size: 1.1rem;
+                padding: 1rem 1.5rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            /* Optimize selling points for mobile */
+            .selling-points {
+                padding: 1.5rem;
+                margin: 1.5rem 0;
+            }
+
+            .selling-point {
+                margin-bottom: 1.5rem;
+                gap: 0.75rem;
+            }
+
+            .point-bullets {
+                padding-left: 1rem;
+            }
+
+            .point-bullets li {
+                margin-bottom: 0.4rem;
+                line-height: 1.4;
+                font-size: 0.95rem;
+            }
+
+            /* Optimize quick-info for mobile */
+            .app-quick-info {
+                gap: 1rem;
+                margin: 0.5rem 0 1.25rem 0;
+                font-size: 0.85rem;
+            }
+
+            .quick-info-item {
+                gap: 0.2rem;
+            }
+
+            /* Optimize brutal truth section */
+            .why-i-like {
+                padding: 1.25rem;
+                margin: 1.25rem 0;
             }
 
             .cookie-content {
@@ -598,336 +743,623 @@
         </nav>
     </header>
 
-    <main class="container">
-        <div class="article-header">
-            <div class="meta-info">Last Updated: January 15, 2025 • Reading Time: 16 minutes • Apps Covered: 8 hand-picked tools</div>
+    <section class="hero">
+        <div class="container">
             <h1>Best Shopify Email Marketing Apps 2025 (Expert-Tested by $100M+ Ad Manager)</h1>
             <p class="subtitle">Stop leaving money on the table. These are the exact email marketing apps I use to generate millions in revenue for Shopify stores. Increase your email conversions by 300%+ with the right automation tools.</p>
+            <div class="author-badge">
+                💪 From someone who's managed $100M+ in ad spend across 7-8 figure stores
+            </div>
         </div>
+    </section>
 
-        <!-- App #1: Klaviyo -->
-        <article class="app-card">
-            <div class="app-header">
-                <div class="app-title-container">
-                    <div class="rank-badge">1</div>
-                    <h2 class="app-name">Klaviyo</h2>
-                </div>
-                <div class="app-meta">
-                    <span class="ai-indicator">AI-Powered</span>
-                    <span><strong>Starting Price:</strong> $20/month</span>
-                    <span><strong>Free Trial:</strong> Forever free up to 250 contacts</span>
-                    <span><strong>Best For:</strong> Advanced automation & segmentation</span>
-                </div>
-                <p class="app-description">Your customers are buying from competitors because you're not in their inbox with the right message at the right time. Klaviyo turns email into your most profitable sales channel with AI-powered automation that actually converts.</p>
-
-                <div class="image-placeholder">Klaviyo's powerful automation dashboard showing revenue attribution and customer journeys</div>
+    <main class="main-content">
+        <div class="container">
+            <div class="meta-subheadline">
+                Last Updated: January 16, 2025 • Reading Time: 16 minutes • Apps Covered: 7 hand-picked tools
             </div>
+            <ol class="app-list">
+                <!-- App #1: Klaviyo -->
+                <li class="app-item" id="klaviyo">
+                    <div class="app-rank">1</div>
+                    <h3>Klaviyo</h3>
+                    <div class="app-category">Email Marketing & SMS</div>
+                    <div class="app-quick-info">
+                        <span class="ai-indicator">🤖 AI POWERED</span>
+                        <div class="quick-info-item">
+                            <span class="quick-info-label">Starts:</span>
+                            <span class="quick-info-value free">FREE forever</span>
+                        </div>
+                        <div class="quick-info-item">
+                            <span class="quick-info-label">Includes:</span>
+                            <span class="quick-info-value">500 emails/month</span>
+                        </div>
+                        <div class="quick-info-item">
+                            <span class="quick-info-label">Credit card:</span>
+                            <span class="quick-info-value free">Not required</span>
+                        </div>
+                    </div>
+                    <div class="app-description">
+                        <strong>Stop leaving money on the table.</strong> Every day you're not using Klaviyo is another day your competitors are stealing revenue you should be getting. While you're sending basic emails that get ignored, stores using Klaviyo are automatically recovering abandoned carts, targeting high-value customers, and turning browsers into buyers with surgical precision.
+                    </div>
+                    <div class="why-i-like">
+                        <h4>The brutal truth:</h4>
+                        <p>I've watched stores hemorrhage money for months using inferior email tools while their competitors with Klaviyo clean up. The abandoned cart sequences alone will make you sick when you realize how much money you've been leaving on the table. Every email blast you send with basic tools is an opportunity cost that compounds daily. Your customers are getting sophisticated, personalized experiences from other brands - if you're not matching that, you're losing them forever.</p>
+                    </div>
+                    <div class="cta-early">
+                        <a href="https://www.klaviyo.com/partner/signup" class="cta-secondary" target="_blank">Start Free - Get Klaviyo Now</a>
+                    </div>
+                    <div class="selling-points">
+                        <h4 class="selling-header">Why Smart Store Owners Choose Klaviyo:</h4>
+                        <div class="selling-point">
+                            <span class="check">✅</span>
+                            <div class="point-content">
+                                <div class="point-header"><strong>Start FREE</strong></div>
+                                <ul class="point-bullets">
+                                    <li>No credit card required</li>
+                                    <li><strong>Forever free plan available</strong></li>
+                                    <li><strong>500 monthly emails</strong> to <strong>250 active profiles</strong></li>
+                                    <li><strong>150 SMS credits</strong> included</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="selling-point">
+                            <span class="check">✅</span>
+                            <div class="point-content">
+                                <div class="point-header"><strong>AI-powered automation</strong></div>
+                                <ul class="point-bullets">
+                                    <li><strong>Set-and-forget email sequences</strong> that work 24/7</li>
+                                    <li><strong>AI send-time optimization</strong> delivers emails when customers are most likely to open</li>
+                                    <li><strong>Abandoned cart recovery</strong> sequences with smart product recommendations</li>
+                                    <li><strong>Predictive analytics</strong> identify high-value customers automatically</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="selling-point">
+                            <span class="check">✅</span>
+                            <div class="point-content">
+                                <div class="point-header"><strong>Scales with your business</strong></div>
+                                <ul class="point-bullets">
+                                    <li>From <strong>$0 to enterprise</strong> without switching platforms</li>
+                                    <li><strong>Flexible pricing tiers</strong> adapt to your business size</li>
+                                    <li>Supports <strong>small startups to multi-million dollar enterprises</strong></li>
+                                    <li>Automatic scaling as your email list grows</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="selling-point">
+                            <span class="check">✅</span>
+                            <div class="point-content">
+                                <div class="point-header"><strong>Zero learning curve</strong></div>
+                                <ul class="point-bullets">
+                                    <li><strong>Pre-built templates get you profitable fast</strong></li>
+                                    <li><strong>Hundreds of professionally designed templates</strong></li>
+                                    <li>Optimized specifically for Shopify stores</li>
+                                    <li><strong>Drag-and-drop editing</strong> - no coding skills required</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cta-mid">
+                        <a href="https://www.klaviyo.com/partner/signup" class="cta-secondary" target="_blank">Start Free Trial - Get Klaviyo</a>
+                    </div>
+                    <div style="text-align: center; margin: 1.5rem 0;">
+                        <a href="/klaviyo-review/" class="cta-secondary" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; font-size: 0.95rem; padding: 0.75rem 1.5rem;" target="_blank">Learn more about Klaviyo →</a>
+                    </div>
+                </li>
 
-            <div class="app-content">
-                <div class="brutal-truth">
-                    <h4>💡 The Brutal Truth</h4>
-                    <p>Most Shopify stores are hemorrhaging money because they treat email like an afterthought. While you're obsessing over Facebook ads, your email list is sitting there like a goldmine you refuse to dig. Klaviyo doesn't just send emails—it turns every subscriber into a predictable revenue stream.</p>
-                </div>
+                <!-- App #2: Mailchimp -->
+                <li class="app-item" id="mailchimp">
+                    <div class="app-rank">2</div>
+                    <h3>Mailchimp</h3>
+                    <div class="app-category">All-in-One Marketing Platform</div>
+                    <div class="app-quick-info">
+                        <span class="ai-indicator">🤖 AI POWERED</span>
+                        <div class="quick-info-item">
+                            <span class="quick-info-label">Starts:</span>
+                            <span class="quick-info-value free">FREE forever</span>
+                        </div>
+                        <div class="quick-info-item">
+                            <span class="quick-info-label">Includes:</span>
+                            <span class="quick-info-value">500 contacts</span>
+                        </div>
+                        <div class="quick-info-item">
+                            <span class="quick-info-label">Credit card:</span>
+                            <span class="quick-info-value free">Not required</span>
+                        </div>
+                    </div>
+                    <div class="app-description">
+                        <strong>You're making email marketing harder than it needs to be.</strong> While you're overthinking complex automation workflows, competitors using Mailchimp are launching profitable campaigns in minutes with beginner-friendly tools that actually convert. Stop procrastinating on email marketing because you think it's too complicated.
+                    </div>
+                    <div class="why-i-like">
+                        <h4>The brutal truth:</h4>
+                        <p>I've seen too many store owners paralyzed by "advanced" email platforms when they should be focusing on the fundamentals: building lists and sending emails that convert. Mailchimp removes every excuse. If you can't succeed with their platform, email marketing isn't your problem - execution is. Your competitors are outselling you with simple, consistent email campaigns while you're still "researching" the perfect tool.</p>
+                    </div>
+                    <div class="cta-early">
+                        <a href="https://mailchi.mp/4e4c4b4c9d9d/start-free" class="cta-secondary" target="_blank">Start Free - Get Mailchimp Now</a>
+                    </div>
+                    <div class="selling-points">
+                        <h4 class="selling-header">Why Beginners Choose Mailchimp:</h4>
+                        <div class="selling-point">
+                            <span class="check">✅</span>
+                            <div class="point-content">
+                                <div class="point-header"><strong>Easiest setup in the industry</strong></div>
+                                <ul class="point-bullets">
+                                    <li><strong>Pre-built ecommerce templates</strong> get you sending professional emails in under 30 minutes</li>
+                                    <li><strong>One-click Shopify integration</strong> syncs your customer data automatically</li>
+                                    <li>Visual drag-and-drop editor requires zero technical skills</li>
+                                    <li><strong>Smart recommendations</strong> guide you through best practices</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="selling-point">
+                            <span class="check">✅</span>
+                            <div class="point-content">
+                                <div class="point-header"><strong>AI optimization built-in</strong></div>
+                                <ul class="point-bullets">
+                                    <li><strong>AI-powered send time optimization</strong> automatically sends when your customers are most likely to buy</li>
+                                    <li><strong>Smart subject line suggestions</strong> boost open rates automatically</li>
+                                    <li><strong>Behavioral triggers</strong> automatically follow up on browsing and purchase behavior</li>
+                                    <li><strong>Content optimizer</strong> recommends improvements for better performance</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="selling-point">
+                            <span class="check">✅</span>
+                            <div class="point-content">
+                                <div class="point-header"><strong>All-in-one marketing platform</strong></div>
+                                <ul class="point-bullets">
+                                    <li><strong>Email, landing pages, social ads</strong> - all in one place</li>
+                                    <li><strong>Built-in CRM</strong> tracks customer relationships automatically</li>
+                                    <li><strong>Website builder</strong> creates professional sites without coding</li>
+                                    <li><strong>Marketing calendar</strong> plans campaigns across all channels</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="selling-point">
+                            <span class="check">✅</span>
+                            <div class="point-content">
+                                <div class="point-header"><strong>Built-in analytics that matter</strong></div>
+                                <ul class="point-bullets">
+                                    <li><strong>Revenue tracking</strong> shows exactly which emails drive sales</li>
+                                    <li><strong>E-commerce insights</strong> identify your highest-value customers</li>
+                                    <li><strong>Audience insights</strong> reveal what content resonates</li>
+                                    <li><strong>Performance comparisons</strong> benchmark against industry standards</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cta-mid">
+                        <a href="https://mailchi.mp/4e4c4b4c9d9d/start-free" class="cta-secondary" target="_blank">Start Free Trial - Get Mailchimp</a>
+                    </div>
+                </li>
 
-                <div class="why-recommended">
-                    <h4>🚀 Why Email Experts Recommend Klaviyo</h4>
-                    <ul class="selling-points">
-                        <li><strong>AI predictive analytics</strong> automatically segments customers by purchase probability and lifetime value</li>
-                        <li><strong>Advanced automation flows</strong> recover 30-40% more abandoned carts than basic email apps</li>
-                        <li><strong>Real-time revenue attribution</strong> shows exactly how much each email campaign generates</li>
-                        <li><strong>SMS integration</strong> lets you create omnichannel campaigns that convert 2-3x better</li>
-                    </ul>
-                </div>
+                <!-- App #3: Omnisend -->
+                <li class="app-item" id="omnisend">
+                    <div class="app-rank">3</div>
+                    <h3>Omnisend</h3>
+                    <div class="app-category">Omnichannel Marketing Automation</div>
+                    <div class="app-quick-info">
+                        <div class="quick-info-item">
+                            <span class="quick-info-label">Starts:</span>
+                            <span class="quick-info-value free">FREE forever</span>
+                        </div>
+                        <div class="quick-info-item">
+                            <span class="quick-info-label">Includes:</span>
+                            <span class="quick-info-value">250 contacts</span>
+                        </div>
+                        <div class="quick-info-item">
+                            <span class="quick-info-label">Then:</span>
+                            <span class="quick-info-value price">$16/month</span>
+                        </div>
+                    </div>
+                    <div class="app-description">
+                        <strong>Single-channel marketing is why your competitors are eating your lunch.</strong> While you're sending basic emails, they're hitting customers with coordinated messages across email, SMS, and push notifications that convert 25% better. Omnisend turns you into the competitor everyone else fears with omnichannel workflows that follow customers wherever they go.
+                    </div>
+                    <div class="why-i-like">
+                        <h4>The brutal truth:</h4>
+                        <p>I've watched stores plateau because they're stuck thinking in single channels. Your customers don't live in just email - they're on their phones getting texts, browsing social media, checking push notifications. Every single-channel campaign you send is a missed opportunity to maximize reach and frequency. Stores using Omnisend are building relationships across multiple touchpoints while you're hoping one email does all the work.</p>
+                    </div>
+                    <div class="cta-early">
+                        <a href="https://www.omnisend.com/signup" class="cta-secondary" target="_blank">Start Free - Get Omnisend Now</a>
+                    </div>
+                    <div class="selling-points">
+                        <h4 class="selling-header">Why Growth-Focused Stores Use Omnisend:</h4>
+                        <div class="selling-point">
+                            <span class="check">✅</span>
+                            <div class="point-content">
+                                <div class="point-header"><strong>True omnichannel automation</strong></div>
+                                <ul class="point-bullets">
+                                    <li><strong>Email + SMS workflows</strong> combine for 25% higher conversion rates</li>
+                                    <li><strong>Push notifications</strong> reach customers instantly on mobile</li>
+                                    <li><strong>Facebook and Google retargeting</strong> built into email sequences</li>
+                                    <li><strong>WhatsApp marketing</strong> for international customers</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="selling-point">
+                            <span class="check">✅</span>
+                            <div class="point-content">
+                                <div class="point-header"><strong>Ecommerce-focused features</strong></div>
+                                <ul class="point-bullets">
+                                    <li><strong>Product recommendation engine</strong> automatically suggests relevant items in every message</li>
+                                    <li><strong>Dynamic discount codes</strong> create urgency with personalized offers</li>
+                                    <li><strong>Scratch cards and gamification</strong> boost engagement beyond traditional emails</li>
+                                    <li><strong>Advanced segmentation</strong> targets customers based on purchase history and behavior</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="selling-point">
+                            <span class="check">✅</span>
+                            <div class="point-content">
+                                <div class="point-header"><strong>Visual automation builder</strong></div>
+                                <ul class="point-bullets">
+                                    <li><strong>Drag-and-drop workflow builder</strong> creates complex customer journeys without technical skills</li>
+                                    <li><strong>Pre-built automation templates</strong> for common ecommerce scenarios</li>
+                                    <li><strong>Split testing</strong> optimizes every step of your funnels</li>
+                                    <li><strong>Real-time performance tracking</strong> shows which paths convert best</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="selling-point">
+                            <span class="check">✅</span>
+                            <div class="point-content">
+                                <div class="point-header"><strong>Built for Shopify stores</strong></div>
+                                <ul class="point-bullets">
+                                    <li><strong>Deep Shopify integration</strong> syncs all customer data automatically</li>
+                                    <li><strong>Abandoned cart recovery</strong> with product images and dynamic pricing</li>
+                                    <li><strong>Browse abandonment</strong> catches customers before they leave</li>
+                                    <li><strong>Post-purchase upsells</strong> maximize order value automatically</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cta-mid">
+                        <a href="https://www.omnisend.com/signup" class="cta-secondary" target="_blank">Start Free Trial - Get Omnisend</a>
+                    </div>
+                </li>
 
-                <div class="cta-container">
-                    <a href="https://www.klaviyo.com/partner/signup" class="cta-button" onclick="trackClick('klaviyo', 'primary')" target="_blank">Start Converting Emails Into Sales - Get Klaviyo Now</a>
-                    <a href="/klaviyo-review/" class="cta-button cta-secondary" onclick="trackClick('klaviyo', 'secondary')" target="_blank">Learn more about Klaviyo</a>
-                </div>
-            </div>
-        </article>
+                <!-- App #4: Privy -->
+                <li class="app-item" id="privy">
+                    <div class="app-rank">4</div>
+                    <h3>Privy</h3>
+                    <div class="app-category">Email Capture & Pop-ups</div>
+                    <div class="app-quick-info">
+                        <div class="quick-info-item">
+                            <span class="quick-info-label">Starts:</span>
+                            <span class="quick-info-value free">FREE forever</span>
+                        </div>
+                        <div class="quick-info-item">
+                            <span class="quick-info-label">Includes:</span>
+                            <span class="quick-info-value">100 mailable contacts</span>
+                        </div>
+                        <div class="quick-info-item">
+                            <span class="quick-info-label">Then:</span>
+                            <span class="quick-info-value price">$24/month</span>
+                        </div>
+                    </div>
+                    <div class="app-description">
+                        <strong>You're watching money walk out the door.</strong> Every visitor who leaves without subscribing is revenue you'll never recover while competitors with Privy are converting 15-25% of browsers into email subscribers. Stop letting anonymous visitors slip away when you could be building a list that generates sales on autopilot.
+                    </div>
+                    <div class="why-i-like">
+                        <h4>The brutal truth:</h4>
+                        <p>I've seen stores lose thousands in potential revenue because they think pop-ups are "annoying" while their competitors are building massive email lists. The harsh reality: most of your visitors will never come back. Every visitor who doesn't subscribe is a lost opportunity that compounds daily. Stores using Privy are turning anonymous traffic into profitable relationships while you're hoping people remember to return.</p>
+                    </div>
+                    <div class="cta-early">
+                        <a href="https://www.privy.com/signup" class="cta-secondary" target="_blank">Start Free - Get Privy Now</a>
+                    </div>
+                    <div class="selling-points">
+                        <h4 class="selling-header">Why Smart Store Owners Choose Privy:</h4>
+                        <div class="selling-point">
+                            <span class="check">✅</span>
+                            <div class="point-content">
+                                <div class="point-header"><strong>High-converting capture forms</strong></div>
+                                <ul class="point-bullets">
+                                    <li><strong>Exit-intent technology</strong> captures visitors right before they leave</li>
+                                    <li><strong>Spin-to-win wheels</strong> gamify email capture for higher conversion rates</li>
+                                    <li><strong>Cart abandonment pop-ups</strong> recover sales before customers leave</li>
+                                    <li><strong>Mobile-optimized forms</strong> convert on every device</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="selling-point">
+                            <span class="check">✅</span>
+                            <div class="point-content">
+                                <div class="point-header"><strong>Behavioral targeting that works</strong></div>
+                                <ul class="point-bullets">
+                                    <li><strong>Page-specific targeting</strong> shows relevant offers based on what customers are viewing</li>
+                                    <li><strong>Time-based triggers</strong> engage visitors at the perfect moment</li>
+                                    <li><strong>Device targeting</strong> creates different experiences for mobile vs desktop</li>
+                                    <li><strong>Geo-targeting</strong> personalizes offers by location</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="selling-point">
+                            <span class="check">✅</span>
+                            <div class="point-content">
+                                <div class="point-header"><strong>Built-in email marketing</strong></div>
+                                <ul class="point-bullets">
+                                    <li><strong>Welcome series automation</strong> nurtures new subscribers immediately</li>
+                                    <li><strong>Abandoned cart emails</strong> recover lost sales automatically</li>
+                                    <li><strong>Newsletter campaigns</strong> keep subscribers engaged long-term</li>
+                                    <li><strong>Segmentation tools</strong> target different customer groups</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="selling-point">
+                            <span class="check">✅</span>
+                            <div class="point-content">
+                                <div class="point-header"><strong>Easy setup and optimization</strong></div>
+                                <ul class="point-bullets">
+                                    <li><strong>One-click Shopify integration</strong> syncs customer data automatically</li>
+                                    <li><strong>A/B testing built-in</strong> optimizes forms for maximum conversions</li>
+                                    <li><strong>Professional templates</strong> look great without design skills</li>
+                                    <li><strong>Real-time analytics</strong> track performance and ROI</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cta-mid">
+                        <a href="https://www.privy.com/signup" class="cta-secondary" target="_blank">Start Free Trial - Get Privy</a>
+                    </div>
+                </li>
 
-        <!-- App #2: Mailchimp -->
-        <article class="app-card">
-            <div class="app-header">
-                <div class="app-title-container">
-                    <div class="rank-badge">2</div>
-                    <h2 class="app-name">Mailchimp</h2>
-                </div>
-                <div class="app-meta">
-                    <span class="ai-indicator">AI-Powered</span>
-                    <span><strong>Starting Price:</strong> Free</span>
-                    <span><strong>Free Trial:</strong> Forever free up to 500 contacts</span>
-                    <span><strong>Best For:</strong> Beginners & content marketing</span>
-                </div>
-                <p class="app-description">You're making email marketing harder than it needs to be. Mailchimp's beginner-friendly platform gets you sending profitable emails in minutes, not months, with templates and automation that actually work for ecommerce.</p>
+                <!-- App #5: Drip -->
+                <li class="app-item" id="drip">
+                    <div class="app-rank">5</div>
+                    <h3>Drip</h3>
+                    <div class="app-category">ECRM Platform</div>
+                    <div class="app-quick-info">
+                        <div class="quick-info-item">
+                            <span class="quick-info-label">Free trial:</span>
+                            <span class="quick-info-value free">14 days</span>
+                        </div>
+                        <div class="quick-info-item">
+                            <span class="quick-info-label">From:</span>
+                            <span class="quick-info-value price">$39/month</span>
+                        </div>
+                        <div class="quick-info-item">
+                            <span class="quick-info-label">Best for:</span>
+                            <span class="quick-info-value">Advanced automation</span>
+                        </div>
+                    </div>
+                    <div class="app-description">
+                        <strong>Basic email tools are holding back your growth.</strong> While you're stuck with simple automation workflows, competitors using Drip are building sophisticated customer journeys based on behavior, purchase history, and lifecycle stages. Stop treating all customers the same when you could be personalizing every interaction for maximum revenue.
+                    </div>
+                    <div class="why-i-like">
+                        <h4>The brutal truth:</h4>
+                        <p>I've watched advanced stores hit revenue ceilings because their email platform couldn't match their sophistication. Drip isn't for beginners - it's for stores serious about turning email into a profit machine. If you're still sending batch-and-blast emails to your entire list, you're leaving massive revenue on the table. Your high-value customers deserve better than generic messages, and Drip delivers the personalization that drives loyalty.</p>
+                    </div>
+                    <div class="cta-early">
+                        <a href="https://www.drip.com/signup" class="cta-secondary" target="_blank">Start Free - Get Drip Now</a>
+                    </div>
+                    <div class="selling-points">
+                        <h4 class="selling-header">Why Advanced Stores Choose Drip:</h4>
+                        <div class="selling-point">
+                            <span class="check">✅</span>
+                            <div class="point-content">
+                                <div class="point-header"><strong>ECRM capabilities beyond email</strong></div>
+                                <ul class="point-bullets">
+                                    <li><strong>Customer lifetime value tracking</strong> identifies your most profitable segments</li>
+                                    <li><strong>Behavioral scoring</strong> ranks customers by engagement and purchase probability</li>
+                                    <li><strong>Advanced segmentation</strong> creates micro-audiences for laser-targeted campaigns</li>
+                                    <li><strong>Custom fields and properties</strong> track any data point that matters to your business</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="selling-point">
+                            <span class="check">✅</span>
+                            <div class="point-content">
+                                <div class="point-header"><strong>Advanced automation workflows</strong></div>
+                                <ul class="point-bullets">
+                                    <li><strong>Multi-path workflows</strong> create different journeys based on customer actions</li>
+                                    <li><strong>Event-driven triggers</strong> respond to any customer behavior in real-time</li>
+                                    <li><strong>Time delays and conditions</strong> create sophisticated timing strategies</li>
+                                    <li><strong>Goal tracking</strong> measures which paths drive the most revenue</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="selling-point">
+                            <span class="check">✅</span>
+                            <div class="point-content">
+                                <div class="point-header"><strong>Deep ecommerce integration</strong></div>
+                                <ul class="point-bullets">
+                                    <li><strong>Revenue per email tracking</strong> shows exactly which campaigns drive sales</li>
+                                    <li><strong>Product affinity scoring</strong> identifies which items customers are most likely to buy</li>
+                                    <li><strong>Inventory-based triggers</strong> promote items based on stock levels</li>
+                                    <li><strong>Cohort analysis</strong> tracks customer retention and lifetime value trends</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="selling-point">
+                            <span class="check">✅</span>
+                            <div class="point-content">
+                                <div class="point-header"><strong>Personalization at scale</strong></div>
+                                <ul class="point-bullets">
+                                    <li><strong>Dynamic content blocks</strong> show different products to different customers</li>
+                                    <li><strong>Liquid templating</strong> creates truly personalized experiences</li>
+                                    <li><strong>Predictive recommendations</strong> suggest products customers are most likely to buy</li>
+                                    <li><strong>Send time optimization</strong> delivers emails when each customer is most likely to engage</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cta-mid">
+                        <a href="https://www.drip.com/signup" class="cta-secondary" target="_blank">Start Free Trial - Get Drip</a>
+                    </div>
+                </li>
 
-                <div class="image-placeholder">Mailchimp's email builder showing drag-and-drop campaign creation and audience insights</div>
-            </div>
+                <!-- App #6: SendinBlue (Brevo) -->
+                <li class="app-item" id="sendinblue">
+                    <div class="app-rank">6</div>
+                    <h3>SendinBlue (Brevo)</h3>
+                    <div class="app-category">Email Marketing Automation</div>
+                    <div class="app-quick-info">
+                        <div class="quick-info-item">
+                            <span class="quick-info-label">Starts:</span>
+                            <span class="quick-info-value free">FREE forever</span>
+                        </div>
+                        <div class="quick-info-item">
+                            <span class="quick-info-label">Includes:</span>
+                            <span class="quick-info-value">300 emails/day</span>
+                        </div>
+                        <div class="quick-info-item">
+                            <span class="quick-info-label">Then:</span>
+                            <span class="quick-info-value price">$25/month</span>
+                        </div>
+                    </div>
+                    <div class="app-description">
+                        <strong>You're overpaying for email marketing features you don't need.</strong> While you're burning cash on expensive platforms, smart store owners using SendinBlue get enterprise-level automation, SMS marketing, and CRM features at a fraction of the cost. Stop letting pricing hold back your email marketing growth when you could get premium features for less.
+                    </div>
+                    <div class="why-i-like">
+                        <h4>The brutal truth:</h4>
+                        <p>I've seen too many stores choose expensive platforms because they think higher price equals better results. SendinBlue proves that wrong with powerful automation and deliverability that rivals platforms costing 3x more. Every month you overpay for email marketing is money stolen from ad spend or inventory investment. Smart operators maximize value everywhere, and SendinBlue delivers premium features without the premium price tag.</p>
+                    </div>
+                    <div class="cta-early">
+                        <a href="https://www.sendinblue.com/users/signup" class="cta-secondary" target="_blank">Start Free - Get SendinBlue Now</a>
+                    </div>
+                    <div class="selling-points">
+                        <h4 class="selling-header">Why Budget-Conscious Stores Choose SendinBlue:</h4>
+                        <div class="selling-point">
+                            <span class="check">✅</span>
+                            <div class="point-content">
+                                <div class="point-header"><strong>Unbeatable value pricing</strong></div>
+                                <ul class="point-bullets">
+                                    <li><strong>Forever free plan</strong> includes 300 emails per day to unlimited contacts</li>
+                                    <li><strong>Transparent pricing</strong> with no hidden fees or surprise charges</li>
+                                    <li><strong>Pay for what you use</strong> - pricing based on emails sent, not contacts stored</li>
+                                    <li><strong>Enterprise features</strong> available at small business prices</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="selling-point">
+                            <span class="check">✅</span>
+                            <div class="point-content">
+                                <div class="point-header"><strong>All-in-one marketing suite</strong></div>
+                                <ul class="point-bullets">
+                                    <li><strong>Email + SMS marketing</strong> in one platform without extra costs</li>
+                                    <li><strong>Built-in CRM</strong> manages customer relationships and sales pipeline</li>
+                                    <li><strong>Landing page builder</strong> creates high-converting opt-in pages</li>
+                                    <li><strong>Live chat widget</strong> engages visitors in real-time</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="selling-point">
+                            <span class="check">✅</span>
+                            <div class="point-content">
+                                <div class="point-header"><strong>Superior deliverability</strong></div>
+                                <ul class="point-bullets">
+                                    <li><strong>99%+ inbox placement</strong> ensures your emails actually reach customers</li>
+                                    <li><strong>Dedicated IP options</strong> for high-volume senders</li>
+                                    <li><strong>Advanced authentication</strong> protects sender reputation</li>
+                                    <li><strong>Real-time monitoring</strong> tracks delivery performance</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="selling-point">
+                            <span class="check">✅</span>
+                            <div class="point-content">
+                                <div class="point-header"><strong>Powerful automation features</strong></div>
+                                <ul class="point-bullets">
+                                    <li><strong>Visual workflow builder</strong> creates complex automation sequences</li>
+                                    <li><strong>Behavioral triggers</strong> respond to customer actions automatically</li>
+                                    <li><strong>Advanced segmentation</strong> targets customers based on any criteria</li>
+                                    <li><strong>A/B testing</strong> optimizes campaigns for maximum performance</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cta-mid">
+                        <a href="https://www.sendinblue.com/users/signup" class="cta-secondary" target="_blank">Start Free Trial - Get SendinBlue</a>
+                    </div>
+                </li>
 
-            <div class="app-content">
-                <div class="brutal-truth">
-                    <h4>💡 The Brutal Truth</h4>
-                    <p>You've been procrastinating on email marketing because "it's too complicated." Meanwhile, competitors with worse products are outselling you because they actually send emails. Mailchimp removes every excuse—if you can't succeed with their platform, email marketing isn't your problem.</p>
-                </div>
-
-                <div class="why-recommended">
-                    <h4>🚀 Why Beginners Choose Mailchimp</h4>
-                    <ul class="selling-points">
-                        <li><strong>Pre-built ecommerce templates</strong> get you sending professional emails in under 30 minutes</li>
-                        <li><strong>AI-powered send time optimization</strong> automatically sends when your customers are most likely to buy</li>
-                        <li><strong>Behavioral triggers</strong> automatically follow up on browsing and purchase behavior</li>
-                        <li><strong>Built-in analytics</strong> show exactly which emails drive sales without complex setup</li>
-                    </ul>
-                </div>
-
-                <div class="cta-container">
-                    <a href="#" class="cta-button" onclick="trackClick('mailchimp', 'primary')">Start Email Marketing Today - Get Mailchimp Free</a>
-                    <a href="#" class="cta-button cta-secondary" onclick="trackClick('mailchimp', 'secondary')">View Mailchimp Pricing</a>
-                </div>
-            </div>
-        </article>
-
-        <!-- App #3: Omnisend -->
-        <article class="app-card">
-            <div class="app-header">
-                <div class="app-title-container">
-                    <div class="rank-badge">3</div>
-                    <h2 class="app-name">Omnisend</h2>
-                </div>
-                <div class="app-meta">
-                    <span><strong>Starting Price:</strong> Free</span>
-                    <span><strong>Free Trial:</strong> Forever free up to 250 contacts</span>
-                    <span><strong>Best For:</strong> Omnichannel automation</span>
-                </div>
-                <p class="app-description">Your customers don't live in just one channel, so why does your marketing? Omnisend connects email, SMS, push notifications, and social media into automated workflows that follow customers wherever they go.</p>
-
-                <div class="image-placeholder">Omnisend's omnichannel automation workflow showing email, SMS, and push notification sequences</div>
-            </div>
-
-            <div class="app-content">
-                <div class="brutal-truth">
-                    <h4>💡 The Brutal Truth</h4>
-                    <p>Single-channel marketing is why your competitors are eating your lunch. While you're sending basic emails, they're hitting customers with coordinated messages across email, SMS, and push notifications. Omnisend turns you into the competitor everyone else fears.</p>
-                </div>
-
-                <div class="why-recommended">
-                    <h4>🚀 Why Growth-Focused Stores Use Omnisend</h4>
-                    <ul class="selling-points">
-                        <li><strong>Omnichannel workflows</strong> combine email and SMS for 25% higher conversion rates</li>
-                        <li><strong>Visual automation builder</strong> creates complex customer journeys without technical skills</li>
-                        <li><strong>Product recommendation engine</strong> automatically suggests relevant items in every message</li>
-                        <li><strong>Advanced segmentation</strong> targets customers based on purchase history and behavior</li>
-                    </ul>
-                </div>
-
-                <div class="cta-container">
-                    <a href="#" class="cta-button" onclick="trackClick('omnisend', 'primary')">Launch Omnichannel Campaigns - Start Omnisend Free</a>
-                    <a href="#" class="cta-button cta-secondary" onclick="trackClick('omnisend', 'secondary')">Compare Omnisend Plans</a>
-                </div>
-            </div>
-        </article>
-
-        <!-- App #4: Constant Contact -->
-        <article class="app-card">
-            <div class="app-header">
-                <div class="app-title-container">
-                    <div class="rank-badge">4</div>
-                    <h2 class="app-name">Constant Contact</h2>
-                </div>
-                <div class="app-meta">
-                    <span><strong>Starting Price:</strong> $12/month</span>
-                    <span><strong>Free Trial:</strong> 60 days free trial</span>
-                    <span><strong>Best For:</strong> Small businesses & events</span>
-                </div>
-                <p class="app-description">You need email marketing that just works without the complexity. Constant Contact delivers reliable, professional email campaigns with the kind of customer support that actually helps you succeed, not just answers tickets.</p>
-
-                <div class="image-placeholder">Constant Contact's email campaign dashboard showing easy-to-use templates and performance metrics</div>
-            </div>
-
-            <div class="app-content">
-                <div class="brutal-truth">
-                    <h4>💡 The Brutal Truth</h4>
-                    <p>You're intimidated by "advanced" email platforms because you think complexity equals results. Wrong. Most million-dollar stores use dead-simple strategies executed consistently. Constant Contact gives you the reliability to focus on what matters: selling more products.</p>
-                </div>
-
-                <div class="why-recommended">
-                    <h4>🚀 Why Reliable Stores Choose Constant Contact</h4>
-                    <ul class="selling-points">
-                        <li><strong>99% email deliverability</strong> ensures your messages actually reach customer inboxes</li>
-                        <li><strong>Live expert support</strong> helps you create campaigns that convert, not just send</li>
-                        <li><strong>Event marketing tools</strong> promote sales events and product launches effectively</li>
-                        <li><strong>Social media integration</strong> amplifies email campaigns across multiple channels</li>
-                    </ul>
-                </div>
-
-                <div class="cta-container">
-                    <a href="#" class="cta-button" onclick="trackClick('constant-contact', 'primary')">Get Reliable Email Marketing - Try Constant Contact 60 Days Free</a>
-                    <a href="#" class="cta-button cta-secondary" onclick="trackClick('constant-contact', 'secondary')">View Constant Contact Features</a>
-                </div>
-            </div>
-        </article>
-
-        <!-- App #5: Attentive -->
-        <article class="app-card">
-            <div class="app-header">
-                <div class="app-title-container">
-                    <div class="rank-badge">5</div>
-                    <h2 class="app-name">Attentive</h2>
-                </div>
-                <div class="app-meta">
-                    <span class="ai-indicator">AI-Powered</span>
-                    <span><strong>Starting Price:</strong> Contact for pricing</span>
-                    <span><strong>Free Trial:</strong> Demo available</span>
-                    <span><strong>Best For:</strong> High-volume SMS marketing</span>
-                </div>
-                <p class="app-description">Email open rates are dying, but SMS gets read within 3 minutes. Attentive turns text messaging into your highest-converting channel with AI that knows exactly when and what to send each customer.</p>
-
-                <div class="image-placeholder">Attentive's SMS campaign interface showing message flows and real-time conversion tracking</div>
-            </div>
-
-            <div class="app-content">
-                <div class="brutal-truth">
-                    <h4>💡 The Brutal Truth</h4>
-                    <p>You're missing out on the highest-converting marketing channel because you think SMS is "too aggressive." While you're politely waiting for email opens, aggressive competitors are generating 20-30% of their revenue from text messages. Stop being polite and start being profitable.</p>
-                </div>
-
-                <div class="why-recommended">
-                    <h4>🚀 Why High-Volume Stores Use Attentive</h4>
-                    <ul class="selling-points">
-                        <li><strong>AI message optimization</strong> automatically tests and improves SMS performance over time</li>
-                        <li><strong>Compliance management</strong> handles all SMS regulations so you never get in trouble</li>
-                        <li><strong>Advanced segmentation</strong> sends different messages based on purchase patterns and preferences</li>
-                        <li><strong>Two-way conversations</strong> enable customer service and sales through text messaging</li>
-                    </ul>
-                </div>
-
-                <div class="cta-container">
-                    <a href="#" class="cta-button" onclick="trackClick('attentive', 'primary')">Unlock SMS Revenue - Get Attentive Demo</a>
-                    <a href="#" class="cta-button cta-secondary" onclick="trackClick('attentive', 'secondary')">Learn About SMS Marketing</a>
-                </div>
-            </div>
-        </article>
-
-        <!-- App #6: ConvertKit -->
-        <article class="app-card">
-            <div class="app-header">
-                <div class="app-title-container">
-                    <div class="rank-badge">6</div>
-                    <h2 class="app-name">ConvertKit</h2>
-                </div>
-                <div class="app-meta">
-                    <span><strong>Starting Price:</strong> Free</span>
-                    <span><strong>Free Trial:</strong> Forever free up to 300 subscribers</span>
-                    <span><strong>Best For:</strong> Content creators & courses</span>
-                </div>
-                <p class="app-description">Your audience wants valuable content, not just product pitches. ConvertKit helps you build relationships through automated sequences that educate, engage, and convert subscribers into loyal customers over time.</p>
-
-                <div class="image-placeholder">ConvertKit's visual automation builder showing subscriber journey mapping and sequence creation</div>
-            </div>
-
-            <div class="app-content">
-                <div class="brutal-truth">
-                    <h4>💡 The Brutal Truth</h4>
-                    <p>You're treating every subscriber like they're ready to buy immediately. Newsflash: most aren't. ConvertKit understands that modern customers need education and trust-building before they purchase. Stop being pushy and start being helpful.</p>
-                </div>
-
-                <div class="why-recommended">
-                    <h4>🚀 Why Content-Driven Brands Use ConvertKit</h4>
-                    <ul class="selling-points">
-                        <li><strong>Visual automation builder</strong> creates complex subscriber journeys with simple drag-and-drop</li>
-                        <li><strong>Tag-based segmentation</strong> tracks interests and behaviors for personalized messaging</li>
-                        <li><strong>Landing page builder</strong> captures subscribers with high-converting opt-in forms</li>
-                        <li><strong>Creator-focused features</strong> support digital products, courses, and membership sites</li>
-                    </ul>
-                </div>
-
-                <div class="cta-container">
-                    <a href="#" class="cta-button" onclick="trackClick('convertkit', 'primary')">Build Your Audience - Start ConvertKit Free</a>
-                    <a href="#" class="cta-button cta-secondary" onclick="trackClick('convertkit', 'secondary')">Explore ConvertKit Features</a>
-                </div>
-            </div>
-        </article>
-
-        <!-- App #7: Sendlane -->
-        <article class="app-card">
-            <div class="app-header">
-                <div class="app-title-container">
-                    <div class="rank-badge">7</div>
-                    <h2 class="app-name">Sendlane</h2>
-                </div>
-                <div class="app-meta">
-                    <span class="ai-indicator">AI-Powered</span>
-                    <span><strong>Starting Price:</strong> $83/month</span>
-                    <span><strong>Free Trial:</strong> 14 days free trial</span>
-                    <span><strong>Best For:</strong> Data-driven optimization</span>
-                </div>
-                <p class="app-description">You're guessing what works instead of knowing what converts. Sendlane combines powerful automation with deep analytics that show exactly how every email impacts your bottom line, not just open rates.</p>
-
-                <div class="image-placeholder">Sendlane's advanced analytics dashboard showing revenue attribution and campaign performance data</div>
-            </div>
-
-            <div class="app-content">
-                <div class="brutal-truth">
-                    <h4>💡 The Brutal Truth</h4>
-                    <p>You're celebrating high open rates while your revenue stays flat. Open rates don't pay your bills—sales do. Sendlane obsesses over the metrics that matter: revenue per email, customer lifetime value, and actual conversions.</p>
-                </div>
-
-                <div class="why-recommended">
-                    <h4>🚀 Why Data-Obsessed Marketers Choose Sendlane</h4>
-                    <ul class="selling-points">
-                        <li><strong>Machine learning optimization</strong> automatically improves send times and subject lines</li>
-                        <li><strong>Deep revenue analytics</strong> track every dollar generated from email marketing campaigns</li>
-                        <li><strong>Advanced personalization</strong> creates unique experiences for every subscriber</li>
-                        <li><strong>Behavioral tracking</strong> triggers emails based on website activity and purchase patterns</li>
-                    </ul>
-                </div>
-
-                <div class="cta-container">
-                    <a href="#" class="cta-button" onclick="trackClick('sendlane', 'primary')">Optimize Email Revenue - Try Sendlane 14 Days Free</a>
-                    <a href="#" class="cta-button cta-secondary" onclick="trackClick('sendlane', 'secondary')">View Sendlane Analytics</a>
-                </div>
-            </div>
-        </article>
-
-        <!-- App #8: Postscript -->
-        <article class="app-card">
-            <div class="app-header">
-                <div class="app-title-container">
-                    <div class="rank-badge">8</div>
-                    <h2 class="app-name">Postscript</h2>
-                </div>
-                <div class="app-meta">
-                    <span><strong>Starting Price:</strong> $20/month</span>
-                    <span><strong>Free Trial:</strong> 14 days free trial</span>
-                    <span><strong>Best For:</strong> Shopify-native SMS</span>
-                </div>
-                <p class="app-description">Your Shopify store needs SMS marketing that actually understands ecommerce. Postscript was built specifically for Shopify, with native integrations that make SMS feel like a natural extension of your store.</p>
-
-                <div class="image-placeholder">Postscript's Shopify-integrated SMS dashboard showing customer segments and campaign automation</div>
-            </div>
-
-            <div class="app-content">
-                <div class="brutal-truth">
-                    <h4>💡 The Brutal Truth</h4>
-                    <p>You're using generic SMS tools that treat your ecommerce store like any other business. Postscript understands that ecommerce SMS needs product recommendations, abandoned cart recovery, and seamless Shopify integration—not just basic text blasts.</p>
-                </div>
-
-                <div class="why-recommended">
-                    <h4>🚀 Why Shopify Stores Love Postscript</h4>
-                    <ul class="selling-points">
-                        <li><strong>Native Shopify integration</strong> syncs customer data and purchase history automatically</li>
-                        <li><strong>Ecommerce-specific workflows</strong> recover abandoned carts and promote new arrivals effectively</li>
-                        <li><strong>Compliance automation</strong> handles SMS regulations and opt-out management seamlessly</li>
-                        <li><strong>Revenue attribution</strong> tracks exactly how much each SMS campaign generates</li>
-                    </ul>
-                </div>
-
-                <div class="cta-container">
-                    <a href="#" class="cta-button" onclick="trackClick('postscript', 'primary')">Launch Shopify SMS - Start Postscript 14 Days Free</a>
-                    <a href="#" class="cta-button cta-secondary" onclick="trackClick('postscript', 'secondary')">See Postscript Integration</a>
-                </div>
-            </div>
-        </article>
+                <!-- App #7: Constant Contact -->
+                <li class="app-item" id="constant-contact">
+                    <div class="app-rank">7</div>
+                    <h3>Constant Contact</h3>
+                    <div class="app-category">Small Business Email Marketing</div>
+                    <div class="app-quick-info">
+                        <div class="quick-info-item">
+                            <span class="quick-info-label">Free trial:</span>
+                            <span class="quick-info-value free">60 days</span>
+                        </div>
+                        <div class="quick-info-item">
+                            <span class="quick-info-label">From:</span>
+                            <span class="quick-info-value price">$12/month</span>
+                        </div>
+                        <div class="quick-info-item">
+                            <span class="quick-info-label">Best for:</span>
+                            <span class="quick-info-value">Simplicity & support</span>
+                        </div>
+                    </div>
+                    <div class="app-description">
+                        <strong>You need email marketing that just works without the complexity.</strong> While you're intimidated by advanced platforms with steep learning curves, competitors using Constant Contact are launching profitable campaigns with dead-simple tools and world-class support. Stop overthinking email marketing when reliability and results matter more than features.
+                    </div>
+                    <div class="why-i-like">
+                        <h4>The brutal truth:</h4>
+                        <p>I've watched store owners waste months trying to master complex email platforms when they should be focusing on building their business. Constant Contact proves that simple, executed consistently, beats complex and overwhelming every time. Most million-dollar stores use straightforward strategies, not complicated workflows. If you're spending more time learning your email tool than growing your business, you've got the wrong priorities.</p>
+                    </div>
+                    <div class="cta-early">
+                        <a href="https://www.constantcontact.com/signup" class="cta-secondary" target="_blank">Start Free - Get Constant Contact Now</a>
+                    </div>
+                    <div class="selling-points">
+                        <h4 class="selling-header">Why Reliable Stores Choose Constant Contact:</h4>
+                        <div class="selling-point">
+                            <span class="check">✅</span>
+                            <div class="point-content">
+                                <div class="point-header"><strong>Unmatched reliability and support</strong></div>
+                                <ul class="point-bullets">
+                                    <li><strong>99% email deliverability</strong> ensures your messages actually reach customer inboxes</li>
+                                    <li><strong>Live expert support</strong> helps you create campaigns that convert, not just send</li>
+                                    <li><strong>Phone support included</strong> - talk to real humans when you need help</li>
+                                    <li><strong>25+ years of experience</strong> - they've seen every email challenge</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="selling-point">
+                            <span class="check">✅</span>
+                            <div class="point-content">
+                                <div class="point-header"><strong>Beginner-friendly tools that work</strong></div>
+                                <ul class="point-bullets">
+                                    <li><strong>Drag-and-drop editor</strong> creates professional emails in minutes</li>
+                                    <li><strong>100+ mobile-responsive templates</strong> look great on every device</li>
+                                    <li><strong>Automated welcome series</strong> nurtures new subscribers immediately</li>
+                                    <li><strong>List-building tools</strong> grow your audience with signup forms and social integration</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="selling-point">
+                            <span class="check">✅</span>
+                            <div class="point-content">
+                                <div class="point-header"><strong>Perfect for events and promotions</strong></div>
+                                <ul class="point-bullets">
+                                    <li><strong>Event marketing tools</strong> promote sales events and product launches effectively</li>
+                                    <li><strong>Social media integration</strong> amplifies email campaigns across multiple channels</li>
+                                    <li><strong>Survey and poll tools</strong> gather customer feedback and insights</li>
+                                    <li><strong>Coupon and offer management</strong> creates compelling promotional campaigns</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="selling-point">
+                            <span class="check">✅</span>
+                            <div class="point-content">
+                                <div class="point-header"><strong>Real-time tracking and optimization</strong></div>
+                                <ul class="point-bullets">
+                                    <li><strong>Real-time reporting</strong> shows opens, clicks, and social shares instantly</li>
+                                    <li><strong>Contact insights</strong> reveal which subscribers are most engaged</li>
+                                    <li><strong>A/B testing</strong> optimizes subject lines and content for better performance</li>
+                                    <li><strong>Mobile app</strong> manages campaigns and tracks performance on the go</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cta-mid">
+                        <a href="https://www.constantcontact.com/signup" class="cta-secondary" target="_blank">Start Free Trial - Get Constant Contact</a>
+                    </div>
+                </li>
+            </ol>
+        </div>
     </main>
 
     <script>
