@@ -1,28 +1,13 @@
 {
   "permissions": {
     "allow": [
-      "Bash(mkdir:*)",
-      "Bash(git add:*)",
-      "Bash(git commit:*)",
-      "Bash(git push:*)",
-      "Bash(find:*)",
-      "WebSearch",
-      "Bash(python:*)",
-      "Bash(for app in \"Postscript\" \"Okendo\" \"Stamped\" \"Rebuy\" \"Attentive\")",
-      "Bash(do echo \"Finding $app...\")",
-      "Bash(grep:*)",
-      "Bash(done)",
-      "Bash(powershell:*)",
-      "Bash(perl:*)",
-      "Bash(chmod:*)",
-      "Bash(\"C:\\Projects\\Shopifyappauthority-site\\fix_emojis.sh\")",
-      "Bash(for app in \"privy\" \"northbeam\" \"justuno\")",
-      "Bash(do echo \"Checking $app...\")",
-      "Bash(git checkout:*)",
-      "Bash(for:*)",
-      "Bash(do echo \"=== $file ===\")",
-      "Bash(tail:*)",
-      "Bash(test:*)"
+      "Bash(while read file)",
+      "Bash(do if grep -q \"Categories</a>\" \"$file\")",
+      "Bash(then echo \"Need to update: $file\")",
+      "Bash(do file=\"$app-review/index.html\")",
+      "Bash(if [ -f \"$file\" ])",
+      "Bash(! grep -q \"Customer Service</a>\" \"$file\")",
+      "Bash(then echo \"Updating: $file\")"
     ],
     "deny": [],
     "ask": []
