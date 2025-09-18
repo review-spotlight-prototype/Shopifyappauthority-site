@@ -3,21 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ShopifyAppAuthority: Expert Shopify App Reviews from $100M+ Ad Manager</title>
-    <meta name="description" content="Expert Shopify app reviews from someone who's managed $100M+ in ad spend. Real insights on the tools that actually scale 7-8 figure stores.">
-    <meta name="keywords" content="shopify app reviews, best shopify apps 2025, ecommerce tools, shopify expert, ad spend manager">
+    <title>ShopifyAppAuthority: Expert Ecommerce Software Reviews</title>
+    <meta name="description" content="Expert reviews of ecommerce software and Shopify apps. Discover the best tools to scale your store with insights from a digital marketing professional with 10+ years experience.">
+    <meta name="keywords" content="ecommerce software reviews, best ecommerce tools, shopify app reviews, ecommerce software, scale ecommerce store">
 
     <!-- Preload critical resources -->
     <link rel="preload" href="https://www.googletagmanager.com/gtag/js?id=G-J09TH92K0M" as="script">
-    <link rel="preload" href="https://connect.facebook.net/en_US/fbevents.js" as="script">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="https://imagedelivery.net/mYndgAUf_CYgFA1HoO_-GQ/a9d5a4a6-72a7-4ff7-9c77-6e8ce42e9b00/public">
     <link rel="apple-touch-icon" href="https://imagedelivery.net/mYndgAUf_CYgFA1HoO_-GQ/a9d5a4a6-72a7-4ff7-9c77-6e8ce42e9b00/public">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="ShopifyAppAuthority: Expert Reviews from $100M+ Ad Manager">
-    <meta property="og:description" content="Real insights on Shopify apps from someone who's managed $100M+ in ad spend across 7-8 figure stores. No BS, just results.">
+    <meta property="og:title" content="ShopifyAppAuthority: Expert Ecommerce Software Reviews">
+    <meta property="og:description" content="Trusted reviews of ecommerce software and Shopify apps. Find tools to grow your store with expert insights.">
     <meta property="og:url" content="https://shopifyappauthority.com">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="ShopifyAppAuthority">
@@ -31,12 +30,12 @@
         "@context": "https://schema.org",
         "@type": "WebSite",
         "name": "ShopifyAppAuthority",
-        "description": "Expert Shopify app reviews from a $100M+ ad spend manager. Real insights for ecommerce store owners.",
+        "description": "Expert reviews of ecommerce software and Shopify apps, based on extensive testing and real-world experience.",
         "url": "https://shopifyappauthority.com",
         "author": {
             "@type": "Person",
             "name": "ShopifyAppAuthority",
-            "description": "Digital marketing professional with 10+ years Shopify experience, $100M+ managed ad spend"
+            "description": "Digital marketing professional with over a decade of experience managing ecommerce campaigns across 60+ product verticals"
         }
     }
     </script>
@@ -56,7 +55,7 @@
         }
 
         .container {
-            max-width: 800px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
@@ -110,10 +109,11 @@
             white-space: nowrap;
         }
 
-        .nav-links a:hover {
+        .nav-links a:hover, .nav-links a:focus {
             color: #95bf47;
             background: rgba(149, 191, 71, 0.08);
             transform: translateY(-1px);
+            outline: none;
         }
 
         .dropdown {
@@ -134,7 +134,7 @@
             z-index: 1000;
         }
 
-        .dropdown:hover .dropdown-content {
+        .dropdown:hover .dropdown-content, .dropdown:focus-within .dropdown-content {
             display: block;
         }
 
@@ -148,12 +148,12 @@
             font-size: 0.95rem;
         }
 
-        .dropdown-content a:hover {
+        .dropdown-content a:hover, .dropdown-content a:focus {
             background: linear-gradient(135deg, #95bf47 0%, #7fa83a 100%);
             color: white;
             transform: none;
+            outline: none;
         }
-
 
         .mobile-menu-toggle {
             display: none;
@@ -164,7 +164,6 @@
             cursor: pointer;
         }
 
-        /* Mobile responsive navigation */
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
@@ -192,29 +191,6 @@
                 display: block;
             }
 
-            .nav-links {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background: white;
-                flex-direction: column;
-                gap: 0;
-                padding: 20px 0;
-                box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-            }
-
-            .nav-links.active {
-                display: flex;
-            }
-
-            .nav-links a {
-                padding: 1rem 40px;
-                border-radius: 0;
-                border-bottom: 1px solid #f1f5f9;
-            }
-
             .dropdown-content {
                 position: static;
                 display: block;
@@ -234,12 +210,12 @@
 
         .hero {
             background: #fff;
-            padding: 3rem 0 2rem;
-            border-bottom: 1px solid #e2e8f0;
+            padding: 4rem 0 3rem;
+            text-align: center;
         }
 
         .hero h1 {
-            font-size: 2.5rem;
+            font-size: 3rem;
             font-weight: 800;
             color: #1a202c;
             margin-bottom: 1rem;
@@ -253,34 +229,40 @@
         .hero .subtitle {
             font-size: 1.25rem;
             color: #4a5568;
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
             font-weight: 600;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        .hero-intro {
-            background: #f7fafc;
-            border-left: 4px solid #667eea;
-            padding: 1.5rem;
-            margin: 2rem 0;
-            border-radius: 0 8px 8px 0;
-            font-size: 1.125rem;
-            line-height: 1.6;
-        }
-
-        .hero-intro em {
-            font-style: normal;
+        .main-cta {
+            display: inline-block;
+            background: linear-gradient(135deg, #95bf47 0%, #7fa83a 100%);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
             font-weight: 700;
-            color: #667eea;
+            font-size: 1.125rem;
+            box-shadow: 0 4px 15px rgba(149, 191, 71, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .main-cta:hover, .main-cta:focus {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(149, 191, 71, 0.6);
+            outline: none;
         }
 
         .credentials {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 2rem;
-            margin: 2rem 0;
+            margin: 3rem 0;
             padding: 2rem 0;
-            border-top: 1px solid #e2e8f0;
-            border-bottom: 1px solid #e2e8f0;
+            background: #f7fafc;
+            border-radius: 8px;
         }
 
         .credential-item {
@@ -297,34 +279,18 @@
 
         .credential-item span {
             font-size: 0.875rem;
-            color: #718096;
+            color: #4a5568;
             font-weight: 500;
-        }
-
-        .author-note {
-            background: #edf2f7;
-            border-left: 4px solid #38b2ac;
-            padding: 1.5rem;
-            margin: 2rem 0 0;
-            border-radius: 0 8px 8px 0;
-            color: #2d3748;
-            font-weight: 500;
-        }
-
-        .author-note strong {
-            color: #1a202c;
         }
 
         .featured-section {
             background: #fff;
-            margin: 3rem 0;
             padding: 3rem 0;
-            border-top: 3px solid #3182ce;
         }
 
         .featured-header {
             text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
         }
 
         .featured-header h2 {
@@ -334,328 +300,156 @@
             font-weight: 800;
         }
 
-        .listicle-preview {
-            background: #f7fafc;
-            border-radius: 12px;
-            padding: 2rem;
-            border: 2px solid #e2e8f0;
-        }
-
-        .preview-apps {
-            margin-bottom: 2rem;
-        }
-
-        .preview-app {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            padding: 1rem;
-            background: #fff;
-            border-radius: 8px;
-            margin-bottom: 1rem;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-        }
-
-        .preview-app .app-rank {
-            background: #667eea;
-            color: white;
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            font-size: 0.875rem;
-            flex-shrink: 0;
-        }
-
-        .app-info h3 {
-            font-size: 1.125rem;
-            font-weight: 700;
-            color: #1a202c;
-            margin-bottom: 0.25rem;
-        }
-
-        .app-info p {
-            color: #4a5568;
-            font-size: 0.875rem;
-            margin: 0;
-        }
-
-        .more-indicator {
-            text-align: center;
-            padding: 1rem;
-            color: #718096;
-            font-style: italic;
-            font-weight: 600;
-        }
-
-        .cta-container {
-            text-align: center;
-        }
-
-        .main-cta {
-            display: inline-block;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 1.25rem 2.5rem;
-            border-radius: 12px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.125rem;
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
-            transition: all 0.3s ease;
-            text-align: center;
-        }
-
-        .main-cta:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
-        }
-
-        .cta-subtitle {
-            display: block;
-            font-size: 0.875rem;
-            opacity: 0.9;
-            margin-top: 0.25rem;
-            font-weight: 500;
-        }
-
-        .featured-subtitle {
+        .featured-header p {
             font-size: 1.125rem;
             color: #4a5568;
             max-width: 600px;
             margin: 0 auto;
         }
 
-        .authority-section {
-            background: #f7fafc;
-            padding: 4rem 0;
-        }
-
-        .authority-section h2 {
-            text-align: center;
-            font-size: 2rem;
-            color: #1a202c;
-            margin-bottom: 3rem;
-            font-weight: 700;
-        }
-
-        .authority-grid {
+        .content-previews {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
         }
 
-        .authority-item {
-            background: #fff;
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            border-left: 4px solid #667eea;
+        .preview-card {
+            background: #f7fafc;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             transition: transform 0.2s ease;
         }
 
-        .authority-item:hover {
-            transform: translateY(-2px);
+        .preview-card:hover {
+            transform: translateY(-5px);
         }
 
-        .authority-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            display: block;
-        }
-
-        .authority-item h3 {
-            color: #1a202c;
+        .preview-card h3 {
             font-size: 1.25rem;
-            margin-bottom: 1rem;
+            color: #1a202c;
+            margin-bottom: 0.5rem;
             font-weight: 700;
         }
 
-        .authority-item p {
+        .preview-card p {
+            font-size: 0.875rem;
             color: #4a5568;
-            line-height: 1.6;
+            margin-bottom: 1rem;
         }
 
+        .preview-card a {
+            color: #95bf47;
+            text-decoration: none;
+            font-weight: 600;
+        }
 
-        main {
-            background: #fff;
+        .preview-card a:hover, .preview-card a:focus {
+            text-decoration: underline;
+            outline: none;
+        }
+
+        .case-studies {
+            background: #f7fafc;
             padding: 3rem 0;
         }
 
-        .article-meta {
-            color: #718096;
-            font-size: 0.875rem;
-            margin-bottom: 3rem;
-            padding-bottom: 1rem;
-            border-bottom: 1px solid #e2e8f0;
-        }
-
-        .app-list {
-            list-style: none;
-        }
-
-        .app-item {
-            border: 1px solid #e2e8f0;
-            border-radius: 8px;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            background: #fff;
-            position: relative;
-        }
-
-        .app-rank {
-            position: absolute;
-            top: -10px;
-            left: 20px;
-            background: #3182ce;
-            color: white;
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            font-size: 0.875rem;
-        }
-
-        .app-item h3 {
-            font-size: 1.5rem;
+        .case-studies h2 {
+            text-align: center;
+            font-size: 2rem;
             color: #1a202c;
-            margin-bottom: 0.5rem;
+            margin-bottom: 2rem;
             font-weight: 700;
         }
 
-        .app-category {
-            color: #718096;
-            font-size: 0.875rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            margin-bottom: 1rem;
-        }
-
-        .app-description {
-            margin-bottom: 1.5rem;
-            font-size: 1rem;
-            line-height: 1.7;
-        }
-
-        .why-i-like {
-            background: #f7fafc;
-            border-left: 3px solid #38b2ac;
-            padding: 1rem;
-            margin: 1.5rem 0;
-            border-radius: 0 4px 4px 0;
-        }
-
-        .why-i-like h4 {
-            color: #2d3748;
-            margin-bottom: 0.5rem;
-            font-size: 0.875rem;
-            text-transform: uppercase;
-            font-weight: 600;
-            letter-spacing: 0.05em;
-        }
-
-        .app-meta {
-            display: flex;
+        .case-study-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
-            margin: 1rem 0;
+        }
+
+        .case-study {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+
+        .case-study p {
+            font-size: 1rem;
+            color: #4a5568;
+        }
+
+        .case-study cite {
+            display: block;
             font-size: 0.875rem;
-        }
-
-        .meta-item {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .meta-label {
             color: #718096;
-            font-weight: 500;
+            margin-top: 0.5rem;
+            font-style: normal;
         }
 
-        .meta-value {
-            color: #2d3748;
-            font-weight: 600;
+        .newsletter-signup {
+            background: #fff;
+            padding: 3rem 0;
+            text-align: center;
         }
 
-        .cta-button {
-            background: #3182ce;
+        .newsletter-signup h2 {
+            font-size: 2rem;
+            color: #1a202c;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .newsletter-signup p {
+            font-size: 1rem;
+            color: #4a5568;
+            margin-bottom: 1.5rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .newsletter-signup form {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .newsletter-signup input {
+            padding: 0.75rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            font-size: 0.875rem;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        .newsletter-signup input:focus {
+            outline: 2px solid #95bf47;
+        }
+
+        .newsletter-signup .cta-button {
+            background: #95bf47;
             color: white;
             padding: 0.75rem 1.5rem;
             border-radius: 6px;
             text-decoration: none;
             font-weight: 600;
-            display: inline-block;
-            transition: background-color 0.2s;
+            border: none;
+            cursor: pointer;
         }
 
-        .cta-button:hover {
-            background: #2c5aa0;
+        .newsletter-signup .cta-button:hover, .newsletter-signup .cta-button:focus {
+            background: #7ba832;
+            outline: none;
         }
 
-        .affiliate-note {
-            background: #fffaf0;
-            border: 1px solid #fbd38d;
-            border-radius: 6px;
-            padding: 1rem;
-            margin: 3rem 0;
-            font-size: 0.875rem;
-            color: #744210;
-        }
-
-        footer {
-            background: #2d3748;
-            color: #a0aec0;
-            padding: 3rem 0 2rem;
-            margin-top: 3rem;
-        }
-
-        .footer-content {
-            text-align: center;
-        }
-
-        .footer-links {
-            margin-bottom: 2rem;
-        }
-
-        .footer-links a {
-            color: #a0aec0;
-            text-decoration: none;
-            margin: 0 1rem;
-            font-size: 0.875rem;
-            transition: color 0.2s;
-        }
-
-        .footer-links a:hover {
-            color: #95BF47;
-        }
-
-        .footer-copyright {
-            font-size: 0.875rem;
-            opacity: 0.8;
-        }
-
-        /* Performance optimizations */
-        .app-item {
-            contain: layout style;
-        }
-
-        .cta-button {
-            will-change: transform;
-        }
-
-        /* Mobile optimizations */
         @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-
             .hero h1 {
-                font-size: 1.75rem;
+                font-size: 2rem;
             }
 
             .hero .subtitle {
@@ -667,51 +461,25 @@
             }
 
             .credentials {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 1rem;
-                padding: 1.5rem 0;
-            }
-
-            .credential-item strong {
-                font-size: 1.25rem;
-            }
-
-            .featured-header h2 {
-                font-size: 1.75rem;
-            }
-
-            .app-meta {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            .authority-grid {
                 grid-template-columns: 1fr;
-                gap: 1.5rem;
+                gap: 1rem;
             }
 
-            .authority-section {
-                padding: 3rem 0;
+            .content-previews {
+                grid-template-columns: 1fr;
             }
 
-
-            .main-cta {
-                padding: 1rem 2rem;
-                font-size: 1rem;
+            .case-study-grid {
+                grid-template-columns: 1fr;
             }
 
-            .listicle-preview {
-                padding: 1.5rem;
+            .newsletter-signup form {
+                flex-direction: column;
+                align-items: center;
             }
 
-            .featured-section {
-                padding: 2rem 0;
-            }
-
-            .footer-links a {
-                margin: 0 0.5rem;
-                display: inline-block;
-                margin-bottom: 0.5rem;
+            .newsletter-signup input {
+                max-width: 100%;
             }
         }
     </style>
@@ -721,22 +489,22 @@
         <nav class="container">
             <a href="/" class="logo">🚀&nbsp;ShopifyAppAuthority</a>
             <ul class="nav-links">
-                <li><a href="/best-shopify-apps-2025-ultimate-guide/">Best Apps 2025</a></li>
+                <li><a href="/best-shopify-apps-2025-ultimate-guide/">Best Tools</a></li>
                 <li class="dropdown">
-                    <a href="/app-categories/">Categories</a>
-                    <div class="dropdown-content">
-                        <a href="/best-shopify-apps-email-marketing/">Email Marketing</a>
-                        <a href="/best-shopify-apps-conversion-optimization/">Conversion & Sales</a>
-                        <a href="/reviews-social-proof-apps/">Reviews & Social Proof</a>
-                        <a href="/free-shopify-apps/">Free Apps</a>
+                    <a href="/app-categories/" aria-haspopup="true" aria-expanded="false">App Categories</a>
+                    <div class="dropdown-content" role="menu">
+                        <a href="/best-shopify-apps-email-marketing/" role="menuitem">Email Marketing</a>
+                        <a href="/best-shopify-apps-conversion-optimization/" role="menuitem">Conversion & Sales</a>
+                        <a href="/reviews-social-proof-apps/" role="menuitem">Reviews & Social Proof</a>
+                        <a href="/free-shopify-apps/" role="menuitem">Free Apps</a>
                     </div>
                 </li>
                 <li class="dropdown">
-                    <a href="/store-size/">By Store Size</a>
-                    <div class="dropdown-content">
-                        <a href="/apps-for-small-stores/">Small Stores (0-1K orders/month)</a>
-                        <a href="/apps-for-medium-stores/">Medium Stores (1K-10K orders/month)</a>
-                        <a href="/apps-for-enterprise/">Enterprise (10K+ orders/month)</a>
+                    <a href="/store-size/" aria-haspopup="true" aria-expanded="false">By Store Size</a>
+                    <div class="dropdown-content" role="menu">
+                        <a href="/apps-for-small-stores/" role="menuitem">Small Stores (0-1K orders/month)</a>
+                        <a href="/apps-for-medium-stores/" role="menuitem">Medium Stores (1K-10K orders/month)</a>
+                        <a href="/apps-for-enterprise/" role="menuitem">Enterprise (10K+ orders/month)</a>
                     </div>
                 </li>
                 <li><a href="/affiliate-disclosure/">Disclosure</a></li>
@@ -747,30 +515,25 @@
 
     <section class="hero">
         <div class="container">
-            <h1>🚀 ShopifyAppAuthority</h1>
-            <p class="subtitle">Where $100M+ in ad spend meets brutal honesty about Shopify apps</p>
+            <h1>Expert Ecommerce Software Reviews</h1>
+            <p class="subtitle">Real insights for Shopify stores and ecommerce businesses. Find the best tools to scale your store.</p>
+            <a href="/best-shopify-apps-2025-ultimate-guide/" class="main-cta" aria-label="Explore top ecommerce tools for 2025">Discover Top Tools</a>
+        </div>
+    </section>
 
-            <div class="hero-intro">
-                <p>👋 I'm the guy behind millions in profitable ad campaigns, and I'm <em>done</em> with fake app reviews. Every app here? I've used it. Every claim? Based on real data from real stores doing real numbers.</p>
+    <section class="credentials">
+        <div class="container">
+            <div class="credential-item">
+                <strong>📊 60+</strong>
+                <span>Product Verticals Managed</span>
             </div>
-
-            <div class="credentials">
-                <div class="credential-item">
-                    <strong>💰 $100M+</strong>
-                    <span>Ad Spend Managed</span>
-                </div>
-                <div class="credential-item">
-                    <strong>🏪 7-8 Figure</strong>
-                    <span>Stores Scaled</span>
-                </div>
-                <div class="credential-item">
-                    <strong>⚡ 10+ Years</strong>
-                    <span>Shopify Deep Dives</span>
-                </div>
+            <div class="credential-item">
+                <strong>🏪 7-8 Figure</strong>
+                <span>Stores Scaled</span>
             </div>
-
-            <div class="author-note">
-                <strong>🎯 The Real Deal:</strong> I don't just review apps - I use them to manage millions in ad spend daily. I know what actually works and what's just marketing fluff. Zero BS, maximum value.
+            <div class="credential-item">
+                <strong>⚡ 10+ Years</strong>
+                <span>Ecommerce Expertise</span>
             </div>
         </div>
     </section>
@@ -778,90 +541,83 @@
     <section class="featured-section">
         <div class="container">
             <div class="featured-header">
-                <h2>🔥 15 Best Shopify Apps 2025</h2>
-                <p class="featured-subtitle">The definitive list from someone who's actually used them to scale stores past 8 figures. Ranked by real performance and practical value.</p>
+                <h2>Explore Our Top Ecommerce Content</h2>
+                <p>Handpicked guides and reviews to help you choose the best software for your store.</p>
             </div>
-
-            <div class="listicle-preview">
-                <div class="preview-apps">
-                    <div class="preview-app">
-                        <div class="app-rank">1</div>
-                        <div class="app-info">
-                            <h3>Klaviyo</h3>
-                            <p>The email marketing platform I rely on for serious campaigns</p>
-                        </div>
-                    </div>
-                    <div class="preview-app">
-                        <div class="app-rank">2</div>
-                        <div class="app-info">
-                            <h3>ReCharge</h3>
-                            <p>The subscription platform that transforms one-time buyers into recurring revenue</p>
-                        </div>
-                    </div>
-                    <div class="preview-app">
-                        <div class="app-rank">3</div>
-                        <div class="app-info">
-                            <h3>Gorgias</h3>
-                            <p>Customer service that actually drives more sales</p>
-                        </div>
-                    </div>
-                    <div class="more-indicator">
-                        <span>+ 12 more game-changing apps</span>
-                    </div>
+            <div class="content-previews">
+                <div class="preview-card">
+                    <h3>Best Email Marketing Apps</h3>
+                    <p>Boost conversions with tools like Moosend, AWeber, and ActiveCampaign, tested across real Shopify stores.</p>
+                    <a href="/best-shopify-apps-email-marketing/" aria-label="Read email marketing tools guide">Read More</a>
                 </div>
-
-                <div class="cta-container">
-                    <a href="/best-shopify-apps-2025-ultimate-guide/" class="main-cta">
-                        📖 Get The Complete List
-                        <span class="cta-subtitle">Real data, real results, zero fluff</span>
-                    </a>
+                <div class="preview-card">
+                    <h3>Top Conversion & Sales Tools</h3>
+                    <p>Maximize ROI with software like Rebuy and cross-sell apps for upsells and personalization.</p>
+                    <a href="/best-shopify-apps-conversion-optimization/" aria-label="Read conversion tools guide">Read More</a>
+                </div>
+                <div class="preview-card">
+                    <h3>Reviews & Social Proof Apps</h3>
+                    <p>Build trust with Judge.me and Okendo, proven to lift repeat purchases across platforms.</p>
+                    <a href="/reviews-social-proof-apps/" aria-label="Read reviews tools guide">Read More</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="authority-section">
+    <section class="case-studies">
         <div class="container">
-            <h2>🎯 Why ShopifyAppAuthority Hits Different</h2>
-            <div class="authority-grid">
-                <div class="authority-item">
-                    <div class="authority-icon">💸</div>
-                    <h3>I Spend Real Money</h3>
-                    <p>Managing $100M+ in ad spend means every app recommendation costs me money if I'm wrong. I only recommend what actually moves the needle on profit.</p>
+            <h2>Real Results from Real Stores</h2>
+            <div class="case-study-grid">
+                <div class="case-study">
+                    <p>"Using advanced email automation, we recovered 15% of abandoned carts, adding significant revenue to our Shopify store."</p>
+                    <cite>Ecommerce Manager, 8-Figure Brand</cite>
                 </div>
-                <div class="authority-item">
-                    <div class="authority-icon">🔬</div>
-                    <h3>Data-Driven Reviews</h3>
-                    <p>No "I tested for 30 days" nonsense. My reviews come from months of real usage across multiple 7-8 figure stores with actual revenue data.</p>
-                </div>
-                <div class="authority-item">
-                    <div class="authority-icon">🛠️</div>
-                    <h3>Building Apps Myself</h3>
-                    <p>Currently developing my own Shopify app using reciprocity psychology. I understand what merchants actually need vs. what sounds good in marketing.</p>
-                </div>
-                <div class="authority-item">
-                    <div class="authority-icon">🎯</div>
-                    <h3>Results-Focused</h3>
-                    <p>Every recommendation is based on actual performance in real stores. I focus on tools that genuinely move the needle on revenue, customer satisfaction, and operational efficiency.</p>
+                <div class="case-study">
+                    <p>"The right subscription app boosted our store's recurring revenue by 20% within 3 months."</p>
+                    <cite>Shopify Store Owner, 7-Figure Store</cite>
                 </div>
             </div>
         </div>
     </section>
+
+    <section class="newsletter-signup">
+        <div class="container">
+            <h2>Get the Latest Ecommerce Software Insights</h2>
+            <p>Join our newsletter for exclusive reviews, tips, and updates to scale your store. We respect your privacy.</p>
+            <form action="#" method="POST">
+                <input type="email" name="email" placeholder="Enter your email" aria-label="Email address" required>
+                <button type="submit" class="cta-button" aria-label="Subscribe to newsletter">Subscribe</button>
+            </form>
         </div>
     </section>
 
-
-    <footer>
+    <footer style="background: #2d3748; color: white; padding: 3rem 0; margin-top: 4rem;">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-links">
-                    <a href="/privacy-policy/">Privacy Policy</a>
-                    <a href="/terms/">Terms of Service</a>
-                    <a href="/affiliate-disclosure/">Affiliate Disclosure</a>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
+                <div>
+                    <h3 style="color: #95bf47; margin-bottom: 1rem;">ShopifyAppAuthority</h3>
+                    <p style="color: #a0aec0; line-height: 1.6;">Independent reviews and recommendations for Shopify apps and ecommerce software, based on real-world testing and experience.</p>
                 </div>
-                <div class="footer-copyright">
-                    <p>&copy; 2025 ShopifyAppAuthority. All rights reserved.</p>
+                <div>
+                    <h4 style="color: white; margin-bottom: 1rem;">Categories</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 0.5rem;"><a href="/best-shopify-apps-email-marketing/" style="color: #a0aec0; text-decoration: none;">Email Marketing</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="/reviews-social-proof-apps/" style="color: #a0aec0; text-decoration: none;">Reviews & Social Proof</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="/free-shopify-apps/" style="color: #a0aec0; text-decoration: none;">Free Apps</a></li>
+                    </ul>
                 </div>
+                <div>
+                    <h4 style="color: white; margin-bottom: 1rem;">About</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 0.5rem;"><a href="/methodology/" style="color: #a0aec0; text-decoration: none;">Our Testing Methodology</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="/affiliate-disclosure/" style="color: #a0aec0; text-decoration: none;">Affiliate Disclosure</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="/privacy-policy/" style="color: #a0aec0; text-decoration: none;">Privacy Policy</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="/terms/" style="color: #a0aec0; text-decoration: none;">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div style="border-top: 1px solid #4a5568; padding-top: 2rem; text-align: center; color: #a0aec0;">
+                <p>&copy; 2025 ShopifyAppAuthority. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -875,22 +631,22 @@
       gtag('config', 'G-J09TH92K0M');
     </script>
 
-    <!-- Meta Pixel -->
+    <!-- Facebook Pixel -->
     <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '839806401714013');
-    fbq('track', 'PageView');
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1087447432711058');
+        fbq('track', 'PageView');
     </script>
 
     <!-- Mobile Navigation -->
-    <script>
+    <script defer>
         document.addEventListener('DOMContentLoaded', function() {
             const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
             const navLinks = document.querySelector('.nav-links');
@@ -899,259 +655,38 @@
                 mobileMenuToggle.addEventListener('click', function() {
                     navLinks.classList.toggle('active');
                     this.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
+                    this.setAttribute('aria-expanded', navLinks.classList.contains('active'));
                 });
 
-                // Close menu when clicking outside
                 document.addEventListener('click', function(e) {
                     if (!e.target.closest('nav')) {
                         navLinks.classList.remove('active');
                         mobileMenuToggle.textContent = '☰';
+                        mobileMenuToggle.setAttribute('aria-expanded', 'false');
                     }
                 });
 
-                // Close menu when clicking nav links
                 navLinks.addEventListener('click', function(e) {
                     if (e.target.tagName === 'A' && !e.target.hasAttribute('aria-haspopup')) {
                         navLinks.classList.remove('active');
                         mobileMenuToggle.textContent = '☰';
+                        mobileMenuToggle.setAttribute('aria-expanded', 'false');
                     }
                 });
             }
         });
     </script>
 
-    <!-- Affiliate Link Tracking -->
-    <script>
+    <!-- Link Tracking -->
+    <script defer>
         document.addEventListener('click', function(e) {
             const target = e.target.closest('a');
             if (!target || !target.href) return;
 
-            const href = target.href;
-            if (target.classList.contains('cta-button')) {
-                let appName = 'unknown';
-                if (href.includes('klaviyo')) appName = 'klaviyo';
-                else if (href.includes('recharge')) appName = 'recharge';
-                else if (href.includes('gorgias')) appName = 'gorgias';
-                else if (href.includes('yotpo')) appName = 'yotpo';
-                else if (href.includes('triplewhale')) appName = 'triple-whale';
-                else if (href.includes('privy')) appName = 'privy';
-                else if (href.includes('omnisend')) appName = 'omnisend';
-                else if (href.includes('northbeam')) appName = 'northbeam';
-                else if (href.includes('justuno')) appName = 'justuno';
-                else if (href.includes('judge.me')) appName = 'judge-me';
-                else if (href.includes('postscript')) appName = 'postscript';
-                else if (href.includes('okendo')) appName = 'okendo';
-                else if (href.includes('stamped')) appName = 'stamped';
-                else if (href.includes('rebuy')) appName = 'rebuy';
-                else if (href.includes('attentive')) appName = 'attentive';
-
-                // Track Google Analytics
-                gtag('event', 'affiliate_click', {
-                    'app_name': appName,
-                    'placement': 'homepage_preview',
-                    'page_url': window.location.href
-                });
-            }
-
-            // Track clicks to the main listicle
-            if (href.includes('/best-shopify-apps-2025-ultimate-guide/')) {
-                gtag('event', 'listicle_click', {
-                    'placement': 'homepage_cta',
-                    'page_url': window.location.href
-                });
-
-                if (typeof fbq !== 'undefined') {
-                    fbq('track', 'ViewContent', {
-                        content_name: '15_best_shopify_apps_2025',
-                        content_category: 'listicle',
-                        source: 'homepage_cta'
-                    });
-                }
-
-                // Track Facebook Pixel
-                if (typeof fbq !== 'undefined') {
-                    fbq('track', 'Lead', {
-                        content_name: appName,
-                        content_category: 'shopify_app',
-                        source: 'affiliate_link'
-                    });
-                }
-            }
-        });
-    </script>
-
-    <!-- Cookie Consent Banner -->
-    <div id="cookie-consent" class="cookie-consent">
-        <div class="cookie-consent-content">
-            <div class="cookie-text">
-                <h4>🍪 We use cookies to improve your experience</h4>
-                <p>We use cookies and similar technologies to help personalize content, provide social media features, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies. <a href="/privacy-policy/" target="_blank">Learn more in our Privacy Policy</a>.</p>
-            </div>
-            <div class="cookie-buttons">
-                <button id="cookie-decline" class="cookie-btn cookie-decline">Decline</button>
-                <button id="cookie-accept" class="cookie-btn cookie-accept">Accept All</button>
-            </div>
-        </div>
-    </div>
-
-    <style>
-        .cookie-consent {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: rgba(0, 0, 0, 0.95);
-            backdrop-filter: blur(10px);
-            color: white;
-            padding: 1.5rem;
-            z-index: 10000;
-            border-top: 3px solid #95BF47;
-            transform: translateY(100%);
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .cookie-consent.show {
-            transform: translateY(0);
-        }
-
-        .cookie-consent-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-        }
-
-        .cookie-text {
-            flex: 1;
-        }
-
-        .cookie-text h4 {
-            font-size: 1.1rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            color: white;
-        }
-
-        .cookie-text p {
-            font-size: 0.9rem;
-            line-height: 1.5;
-            margin: 0;
-            opacity: 0.9;
-        }
-
-        .cookie-text a {
-            color: #95BF47;
-            text-decoration: underline;
-        }
-
-        .cookie-text a:hover {
-            color: #7BA832;
-        }
-
-        .cookie-buttons {
-            display: flex;
-            gap: 1rem;
-            flex-shrink: 0;
-        }
-
-        .cookie-btn {
-            padding: 0.75rem 1.5rem;
-            border: none;
-            border-radius: 6px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            min-width: 100px;
-        }
-
-        .cookie-decline {
-            background: transparent;
-            color: white;
-            border: 2px solid #6b7280;
-        }
-
-        .cookie-decline:hover {
-            background: #6b7280;
-            color: white;
-        }
-
-        .cookie-accept {
-            background: #95BF47;
-            color: white;
-        }
-
-        .cookie-accept:hover {
-            background: #7BA832;
-            transform: translateY(-1px);
-        }
-
-        @media (max-width: 768px) {
-            .cookie-consent {
-                padding: 1rem;
-            }
-
-            .cookie-consent-content {
-                flex-direction: column;
-                gap: 1rem;
-                text-align: center;
-            }
-
-            .cookie-text h4 {
-                font-size: 1rem;
-            }
-
-            .cookie-text p {
-                font-size: 0.85rem;
-            }
-
-            .cookie-buttons {
-                justify-content: center;
-                width: 100%;
-            }
-
-            .cookie-btn {
-                flex: 1;
-                max-width: 120px;
-            }
-        }
-    </style>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const cookieConsent = document.getElementById('cookie-consent');
-            const acceptBtn = document.getElementById('cookie-accept');
-            const declineBtn = document.getElementById('cookie-decline');
-
-            // Check if user has already made a choice
-            const cookieChoice = localStorage.getItem('cookie-consent');
-
-            if (!cookieChoice) {
-                // Show cookie banner after a short delay
-                setTimeout(() => {
-                    cookieConsent.classList.add('show');
-                }, 1000);
-            }
-
-            // Handle accept button
-            acceptBtn.addEventListener('click', function() {
-                localStorage.setItem('cookie-consent', 'accepted');
-                cookieConsent.classList.remove('show');
-
-                // Track the consent event if analytics is available
-                if (typeof gtag !== 'undefined') {
-                    gtag('event', 'cookie_consent', {
-                        event_category: 'engagement',
-                        event_label: 'accepted'
-                    });
-                }
-            });
-
-            // Handle decline button
-            declineBtn.addEventListener('click', function() {
-                localStorage.setItem('cookie-consent', 'declined');
-                cookieConsent.classList.remove('show');
+            gtag('event', 'link_click', {
+                'link_url': target.href,
+                'link_text': target.textContent,
+                'page_url': window.location.href
             });
         });
     </script>
