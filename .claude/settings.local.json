@@ -17,7 +17,8 @@
       "Bash(chmod:*)",
       "Bash(\"C:\\Projects\\Shopifyappauthority-site\\fix_emojis.sh\")",
       "Bash(for app in \"privy\" \"northbeam\" \"justuno\")",
-      "Bash(do echo \"Checking $app...\")"
+      "Bash(do echo \"Checking $app...\")",
+      "Bash(git checkout:*)"
     ],
     "deny": [],
     "ask": []
