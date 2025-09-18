@@ -21,7 +21,8 @@
       "Bash(git checkout:*)",
       "Bash(for:*)",
       "Bash(do echo \"=== $file ===\")",
-      "Bash(tail:*)"
+      "Bash(tail:*)",
+      "Bash(test:*)"
     ],
     "deny": [],
     "ask": []
