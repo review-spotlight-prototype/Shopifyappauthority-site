@@ -147,6 +147,181 @@
             background-color: #f8f9fa;
         }
 
+        /* Site Header Navigation Styles */
+        header {
+            background: linear-gradient(180deg, #ffffff 0%, #fafafa 100%);
+            border-bottom: 1px solid rgba(149, 191, 71, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.95);
+        }
+
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.6rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #95BF47 0%, #7ca838 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: transform 0.2s;
+        }
+
+        .logo:hover {
+            transform: translateY(-1px);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .nav-links li {
+            position: relative;
+        }
+
+        .nav-links a {
+            color: #4a5568;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            padding: 0.8rem 1.2rem;
+            border-radius: 10px;
+            white-space: nowrap;
+        }
+
+        .nav-links a:hover {
+            color: #95bf47;
+            background: rgba(149, 191, 71, 0.08);
+            transform: translateY(-1px);
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown > a::after {
+            content: '▾';
+            margin-left: 0.25rem;
+            font-size: 0.75rem;
+            opacity: 0.6;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            min-width: 220px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+            border-radius: 12px;
+            padding: 12px 0;
+            z-index: 1000;
+            border: 1px solid rgba(149, 191, 71, 0.2);
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 0.7rem 1.2rem;
+            color: #4a5568;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            border-radius: 0;
+            font-size: 0.95rem;
+        }
+
+        .dropdown-content a:hover {
+            background: linear-gradient(135deg, #95bf47 0%, #7fa83a 100%);
+            color: white;
+            transform: none;
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: #4a5568;
+            cursor: pointer;
+        }
+
+        /* Mobile responsive navigation */
+        @media (max-width: 768px) {
+            nav {
+                padding: 0 20px;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                gap: 0;
+                padding: 20px 0;
+                box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links a {
+                padding: 1rem 40px;
+                border-radius: 0;
+                border-bottom: 1px solid #f1f5f9;
+            }
+
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            .dropdown-content {
+                position: static;
+                display: none;
+                box-shadow: none;
+                border: none;
+                padding: 0;
+                background: #f8f9fa;
+                margin-left: 20px;
+            }
+
+            .dropdown.mobile-open .dropdown-content {
+                display: block;
+            }
+
+            .dropdown-content a {
+                padding: 0.8rem 40px;
+                font-size: 0.9rem;
+                color: #6b7280;
+            }
+        }
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -610,6 +785,37 @@
     </style>
 </head>
 <body>
+    <header>
+        <nav class="container">
+            <a href="/" class="logo">🚀&nbsp;ShopifyAppAuthority</a>
+            <ul class="nav-links">
+                <li><a href="/best-shopify-apps-2025-ultimate-guide/">Best Apps 2025</a></li>
+                <li class="dropdown">
+                    <a href="/app-categories/">Categories</a>
+                    <div class="dropdown-content">
+                        <a href="/best-shopify-apps-email-marketing/">Email Marketing</a>
+                        <a href="/best-shopify-apps-conversion-optimization/">Conversion & Sales</a>
+                        <a href="/reviews-social-proof-apps/">Reviews & Social Proof</a>
+                        <a href="/best-shopify-apps-customer-service/">Customer Service</a>
+                        <a href="/best-shopify-apps-crm-sales/">CRM & Sales</a>
+                        <a href="/best-shopify-apps-analytics-attribution/">Analytics & Attribution</a>
+                        <a href="/free-shopify-apps/">Free Apps</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="/store-size/">By Store Size</a>
+                    <div class="dropdown-content">
+                        <a href="/apps-for-small-stores/">Small Stores (0-1K orders/month)</a>
+                        <a href="/apps-for-medium-stores/">Medium Stores (1K-10K orders/month)</a>
+                        <a href="/apps-for-enterprise/">Enterprise (10K+ orders/month)</a>
+                    </div>
+                </li>
+                <li><a href="/affiliate-disclosure/">Disclosure</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">☰</button>
+        </nav>
+    </header>
+
     <div class="header">
         <div class="container">
             <div class="header-content">
@@ -925,5 +1131,29 @@
             <p>&copy; 2025 Shopify App Authority. Helping businesses choose the right tools for growth.</p>
         </div>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileToggle = document.querySelector('.mobile-menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+            const dropdowns = document.querySelectorAll('.dropdown');
+
+            if (mobileToggle) {
+                mobileToggle.addEventListener('click', function() {
+                    navLinks.classList.toggle('active');
+                });
+            }
+
+            // Handle dropdown toggles on mobile
+            dropdowns.forEach(dropdown => {
+                const dropdownLink = dropdown.querySelector('a');
+                dropdownLink.addEventListener('click', function(e) {
+                    if (window.innerWidth <= 768) {
+                        e.preventDefault();
+                        dropdown.classList.toggle('mobile-open');
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>

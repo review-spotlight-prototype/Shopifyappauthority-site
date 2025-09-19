@@ -524,9 +524,194 @@
                 font-size: 2rem;
             }
         }
+
+        /* Header */
+        header {
+            background: linear-gradient(180deg, #ffffff 0%, #fafafa 100%);
+            border-bottom: 1px solid rgba(149, 191, 71, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #95bf47;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            white-space: nowrap;
+            line-height: 1;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: #4a5568;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            padding: 0.8rem 1.2rem;
+            border-radius: 10px;
+            white-space: nowrap;
+        }
+
+        .nav-links a:hover {
+            color: #95bf47;
+            background: rgba(149, 191, 71, 0.08);
+            transform: translateY(-1px);
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            min-width: 200px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            border-radius: 12px;
+            padding: 12px 0;
+            border: 1px solid rgba(149, 191, 71, 0.2);
+            z-index: 1000;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 0.7rem 1.2rem;
+            color: #4a5568;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            border-radius: 0;
+            font-size: 0.95rem;
+        }
+
+        .dropdown-content a:hover {
+            background: linear-gradient(135deg, #95bf47 0%, #7fa83a 100%);
+            color: white;
+            transform: none;
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: #4a5568;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 0 20px;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: #f8f9fa;
+                flex-direction: column;
+                gap: 0;
+                padding: 20px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-links.mobile-open {
+                display: flex;
+            }
+
+            .nav-links a {
+                padding: 1rem;
+                width: 100%;
+                text-align: left;
+            }
+
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            .dropdown-content {
+                position: static;
+                display: none;
+                box-shadow: none;
+                border: none;
+                background: #f8f9fa;
+                margin-left: 20px;
+            }
+
+            .dropdown.mobile-open .dropdown-content {
+                display: block;
+            }
+
+            .dropdown-content a {
+                padding: 0.8rem 40px;
+                font-size: 0.9rem;
+                color: #6b7280;
+            }
+        }
     </style>
 </head>
 <body>
+    <header>
+        <nav class="container">
+            <a href="/" class="logo">🚀&nbsp;ShopifyAppAuthority</a>
+            <ul class="nav-links">
+                <li><a href="/best-shopify-apps-2025-ultimate-guide/">Best Tools</a></li>
+                <li class="dropdown">
+                    <a href="/app-categories/" aria-haspopup="true" aria-expanded="false">App Categories</a>
+                    <div class="dropdown-content" role="menu">
+                        <a href="/best-shopify-apps-email-marketing/" role="menuitem">Email Marketing</a>
+                        <a href="/best-shopify-apps-conversion-optimization/" role="menuitem">Conversion & Sales</a>
+                        <a href="/reviews-social-proof-apps/" role="menuitem">Reviews & Social Proof</a>
+                        <a href="/best-shopify-apps-customer-service/" role="menuitem">Customer Service</a>
+                        <a href="/best-shopify-apps-crm-sales/" role="menuitem">CRM & Sales</a>
+                        <a href="/best-shopify-apps-analytics-attribution/" role="menuitem">Analytics & Attribution</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" aria-haspopup="true" aria-expanded="false">By Store Size</a>
+                    <div class="dropdown-content" role="menu">
+                        <a href="/free-shopify-apps/" role="menuitem">Free Apps</a>
+                        <a href="#" role="menuitem">Small Business</a>
+                        <a href="#" role="menuitem">Enterprise</a>
+                    </div>
+                </li>
+                <li><a href="/about/">About</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">☰</button>
+        </nav>
+    </header>
+
     <div class="header">
         <div class="container">
             <div class="header-content">
@@ -918,5 +1103,30 @@
             <p>&copy; 2025 Shopify App Authority. Helping businesses choose the right tools for growth.</p>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileToggle = document.querySelector('.mobile-menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+            const dropdowns = document.querySelectorAll('.dropdown');
+
+            if (mobileToggle) {
+                mobileToggle.addEventListener('click', function() {
+                    navLinks.classList.toggle('mobile-open');
+                });
+            }
+
+            // Handle dropdown toggles on mobile
+            dropdowns.forEach(dropdown => {
+                const dropdownLink = dropdown.querySelector('a');
+                dropdownLink.addEventListener('click', function(e) {
+                    if (window.innerWidth <= 768) {
+                        e.preventDefault();
+                        dropdown.classList.toggle('mobile-open');
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
