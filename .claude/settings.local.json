@@ -8,7 +8,14 @@
       "Bash(if [ -f \"$file\" ])",
       "Bash(! grep -q \"Customer Service</a>\" \"$file\")",
       "Bash(then echo \"Updating: $file\")",
-      "Bash(then echo \"=== Processing $file ===\" rg 'target=\"\"\"\"_blank\"\"\"\"' \"$file\" --line-number --no-heading)"
+      "Bash(then echo \"=== Processing $file ===\" rg 'target=\"\"\"\"_blank\"\"\"\"' \"$file\" --line-number --no-heading)",
+      "Bash(do echo \"=== Processing $app-review ===\")",
+      "Bash(if [ -f \"$app-review/index.html\" ])",
+      "Bash(else echo \"File not found: $app-review/index.html\")",
+      "Bash(do echo \"=== $page ===\")",
+      "Bash(if grep -q \"Analytics & Attribution.*aria-haspopup\" \"$page\")",
+      "Bash(then echo \"Has standalone Analytics dropdown\")",
+      "Bash(else echo \"No standalone dropdown found\")"
     ],
     "deny": [],
     "ask": []
