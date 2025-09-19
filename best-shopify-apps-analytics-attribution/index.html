@@ -310,46 +310,85 @@
             border-radius: 2px;
         }
 
-        .apps-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 40px;
-            margin: 40px 0;
+        .app-list {
+            list-style: none;
         }
 
-        .app-card {
+        .app-item {
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
             background: white;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
+            position: relative;
+            transition: box-shadow 0.2s;
         }
 
-        .app-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        .app-item:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
 
-        .app-header {
-            padding: 40px;
-            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
-            border-bottom: 1px solid #dee2e6;
+        .app-rank {
+            position: absolute;
+            top: -12px;
+            left: 25px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
         }
 
-        .app-header h3 {
-            font-size: 2rem;
-            color: #2c3e50;
-            margin-bottom: 10px;
+        .app-item h3 {
+            font-size: 1.75rem;
+            color: #1a202c;
+            margin-bottom: 0.5rem;
         }
 
-        .app-tagline {
-            font-size: 1.2rem;
-            color: #6c757d;
-            margin-bottom: 20px;
+        .app-category {
+            color: #667eea;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
         }
 
-        .app-body {
-            padding: 40px;
+        .app-quick-info {
+            display: flex;
+            gap: 1.5rem;
+            margin: 0.5rem 0 1.5rem 0;
+            font-size: 0.9rem;
+            color: #4b5563;
+        }
+
+        .quick-info-item {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .quick-info-label {
+            font-weight: 500;
+            color: #6b7280;
+        }
+
+        .quick-info-value {
+            font-weight: 700;
+            color: #059669;
+        }
+
+        .quick-info-value.price {
+            color: #dc2626;
+        }
+
+        .quick-info-value.free {
+            color: #059669;
         }
 
         .best-for-box {
@@ -522,6 +561,20 @@
 
             .section h2 {
                 font-size: 2rem;
+            }
+
+            .app-item {
+                padding: 2rem 1.5rem;
+            }
+
+            .app-quick-info {
+                gap: 1rem;
+                margin: 0.5rem 0 1.25rem 0;
+                font-size: 0.85rem;
+            }
+
+            .quick-info-item {
+                gap: 0.2rem;
             }
         }
 
@@ -699,6 +752,14 @@
                     </div>
                 </li>
                 <li class="dropdown">
+                    <a href="/faqs/">Quick FAQs</a>
+                    <div class="dropdown-content">
+                        <a href="/faqs/email-marketing-faq/">Email Marketing FAQ</a>
+                        <a href="/faqs/analytics-attribution-faq/">Analytics & Attribution FAQ</a>
+                        <a href="/faqs/crm-sales-faq/">CRM & Sales FAQ</a>
+                    </div>
+                </li>
+                <li class="dropdown">
                     <a href="#" aria-haspopup="true" aria-expanded="false">By Store Size</a>
                     <div class="dropdown-content" role="menu">
                         <a href="/free-shopify-apps/" role="menuitem">Free Apps</a>
@@ -735,51 +796,11 @@
     </nav>
 
     <div class="container">
-        <section class="quick-answers-section">
-            <h2>Quick Answers About Analytics & Attribution Apps</h2>
-
-            <div class="qa-item">
-                <h3 class="qa-question">What analytics app should I install first on Shopify?</h3>
-                <div class="qa-answer">
-                    <strong>Start with Google Analytics 4 (free) for basic ecommerce tracking.</strong> Then add Hotjar for user behavior insights. This combination provides comprehensive data without overwhelming complexity or high costs.
-                </div>
-            </div>
-
-            <div class="qa-item">
-                <h3 class="qa-question">Do I need paid analytics tools if I have Google Analytics?</h3>
-                <div class="qa-answer">
-                    <strong>Yes, for deeper insights and optimization.</strong> Google Analytics shows what happened, but tools like Hotjar show how users behave, Mixpanel tracks specific events, and Kissmetrics focuses on customer lifetime value.
-                </div>
-            </div>
-
-            <div class="qa-item">
-                <h3 class="qa-question">Which analytics tool is best for conversion optimization?</h3>
-                <div class="qa-answer">
-                    <strong>Hotjar and Crazy Egg excel at conversion optimization.</strong> Their heatmaps and session recordings show exactly where users struggle on your site, making it easy to identify and fix conversion bottlenecks.
-                </div>
-            </div>
-
-            <div class="qa-item">
-                <h3 class="qa-question">How much should I spend on analytics tools monthly?</h3>
-                <div class="qa-answer">
-                    <strong>Start with $50-100/month for most stores.</strong> Hotjar Basic ($32/month) plus Google Analytics 4 (free) covers most needs. Scale up to advanced tools like Mixpanel or Kissmetrics as revenue grows.
-                </div>
-            </div>
-
-            <div class="qa-item">
-                <h3 class="qa-question">What's the difference between analytics and attribution tools?</h3>
-                <div class="qa-answer">
-                    <strong>Analytics track user behavior, attribution tracks marketing effectiveness.</strong> Analytics show what users do on your site, while attribution shows which marketing channels drive conversions and revenue.
-                </div>
-            </div>
-
-            <div class="qa-item">
-                <h3 class="qa-question">Do I need multiple analytics tools or just one?</h3>
-                <div class="qa-answer">
-                    <strong>Multiple tools provide different insights.</strong> Each tool specializes in different data types: Google Analytics for traffic, Hotjar for behavior, Mixpanel for events, Kissmetrics for customer journey analysis.
-                </div>
-            </div>
-        </section>
+        <div class="faq-link-box" style="background: linear-gradient(135deg, #f8f9fa, #e9ecef); border-radius: 12px; padding: 20px; margin: 30px 0; text-align: center; border: 1px solid rgba(149, 191, 71, 0.3);">
+            <h3 style="margin: 0 0 10px 0; color: #2d3748; font-size: 1.2rem;">Quick Questions? We've Got Answers!</h3>
+            <p style="margin: 0 0 15px 0; color: #4a5568;">Get instant answers to the most common analytics & attribution questions.</p>
+            <a href="/faqs/analytics-attribution-faq/" style="background: linear-gradient(135deg, #95bf47 0%, #7fa83a 100%); color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; display: inline-block;">View Analytics & Attribution FAQ →</a>
+        </div>
 
         <div class="content">
             <section class="section">
@@ -788,277 +809,337 @@
                     Data-driven decisions separate successful stores from the rest. These analytics and attribution tools help you understand customer behavior, optimize conversions, and prove marketing ROI.
                 </p>
 
-                <div id="apps" class="apps-grid">
-                    <div id="hotjar" class="app-card">
-                        <div class="app-header">
-                            <h3>Hotjar</h3>
-                            <p class="app-tagline">User behavior insights through heatmaps and session recordings</p>
-                        </div>
-                        <div class="app-body">
-                            <div class="best-for-box">
-                                <h4>🎯 Perfect For</h4>
-                                <p><strong>Stores wanting to see exactly how users interact with their site</strong></p>
-                                <ul>
-                                    <li>Store size: Any (freelancer to enterprise)</li>
-                                    <li>Budget: Free to $389/month</li>
-                                    <li>Focus: Conversion rate optimization</li>
-                                    <li>Goal: Understanding user behavior patterns</li>
-                                </ul>
+                <ol id="apps" class="app-list">
+                    <li class="app-item" id="hotjar">
+                        <div class="app-rank">1</div>
+                        <h3>Hotjar</h3>
+                        <div class="app-category">User Behavior Analytics</div>
+                        <div class="app-quick-info">
+                            <div class="quick-info-item">
+                                <span class="quick-info-label">Starts:</span>
+                                <span class="quick-info-value free">FREE</span>
                             </div>
-
-                            <p>Hotjar shows you exactly how users interact with your Shopify store through heatmaps, session recordings, and feedback polls. It's the easiest way to identify conversion bottlenecks and optimize user experience.</p>
-
-                            <div class="features-grid">
-                                <div class="feature-item">
-                                    <h5>Heatmaps</h5>
-                                    <p>See where users click, scroll, and spend time</p>
-                                </div>
-                                <div class="feature-item">
-                                    <h5>Session Recordings</h5>
-                                    <p>Watch real user sessions to identify problems</p>
-                                </div>
-                                <div class="feature-item">
-                                    <h5>Conversion Funnels</h5>
-                                    <p>Track where users drop off in checkout</p>
-                                </div>
-                                <div class="feature-item">
-                                    <h5>Feedback Polls</h5>
-                                    <p>Ask users why they didn't purchase</p>
-                                </div>
+                            <div class="quick-info-item">
+                                <span class="quick-info-label">Best for:</span>
+                                <span class="quick-info-value">Heatmaps & recordings</span>
                             </div>
-
-                            <div class="comparison-section">
-                                <h4>🔄 Choose Hotjar over Crazy Egg if...</h4>
-                                <p>You want comprehensive user behavior insights beyond just heatmaps. Hotjar's session recordings and feedback tools provide deeper insights into user experience issues.</p>
-                            </div>
-
-                            <div class="pricing-info">
-                                <h4>Pricing</h4>
-                                <p>Free plan for basic insights • Basic: $32/month • Business: $80/month • Scale: $171/month</p>
-                            </div>
-
-                            <div style="text-align: center;">
-                                <a href="/hotjar-review/" class="learn-more-btn">Learn More About Hotjar</a>
+                            <div class="quick-info-item">
+                                <span class="quick-info-label">Credit card:</span>
+                                <span class="quick-info-value free">Not required</span>
                             </div>
                         </div>
-                    </div>
 
-                    <div id="crazy-egg" class="app-card">
-                        <div class="app-header">
-                            <h3>Crazy Egg</h3>
-                            <p class="app-tagline">Simple heatmap and A/B testing for conversion optimization</p>
+                        <div class="best-for-box">
+                            <h4>🎯 Perfect For</h4>
+                            <p><strong>Stores wanting to see exactly how users interact with their site</strong></p>
+                            <ul>
+                                <li>Store size: Any (freelancer to enterprise)</li>
+                                <li>Budget: Free to $389/month</li>
+                                <li>Focus: Conversion rate optimization</li>
+                                <li>Goal: Understanding user behavior patterns</li>
+                            </ul>
                         </div>
-                        <div class="app-body">
-                            <div class="best-for-box">
-                                <h4>🎯 Perfect For</h4>
-                                <p><strong>Stores wanting simple, focused heatmap analytics with built-in A/B testing</strong></p>
-                                <ul>
-                                    <li>Store size: Small to medium businesses</li>
-                                    <li>Budget: $24 to $249/month</li>
-                                    <li>Focus: Quick conversion wins</li>
-                                    <li>Goal: Simple optimization without complexity</li>
-                                </ul>
+
+                        <p>Hotjar shows you exactly how users interact with your Shopify store through heatmaps, session recordings, and feedback polls. It's the easiest way to identify conversion bottlenecks and optimize user experience.</p>
+
+                        <div class="features-grid">
+                            <div class="feature-item">
+                                <h5>Heatmaps</h5>
+                                <p>See where users click, scroll, and spend time</p>
                             </div>
-
-                            <p>Crazy Egg focuses on the essentials: heatmaps and A/B testing. It's perfect for store owners who want actionable insights without overwhelming complexity or advanced features they won't use.</p>
-
-                            <div class="features-grid">
-                                <div class="feature-item">
-                                    <h5>Click Heatmaps</h5>
-                                    <p>Visual representation of user clicks</p>
-                                </div>
-                                <div class="feature-item">
-                                    <h5>Scroll Heatmaps</h5>
-                                    <p>See how far users scroll on pages</p>
-                                </div>
-                                <div class="feature-item">
-                                    <h5>A/B Testing</h5>
-                                    <p>Built-in testing without additional tools</p>
-                                </div>
-                                <div class="feature-item">
-                                    <h5>Snapshots</h5>
-                                    <p>Track changes in user behavior over time</p>
-                                </div>
+                            <div class="feature-item">
+                                <h5>Session Recordings</h5>
+                                <p>Watch real user sessions to identify problems</p>
                             </div>
-
-                            <div class="comparison-section">
-                                <h4>🔄 Choose Crazy Egg over Hotjar if...</h4>
-                                <p>You prefer simplicity and want built-in A/B testing. Crazy Egg offers a more streamlined interface and includes testing capabilities that Hotjar lacks.</p>
+                            <div class="feature-item">
+                                <h5>Conversion Funnels</h5>
+                                <p>Track where users drop off in checkout</p>
                             </div>
-
-                            <div class="pricing-info">
-                                <h4>Pricing</h4>
-                                <p>Basic: $24/month • Standard: $49/month • Plus: $99/month • Pro: $249/month</p>
-                            </div>
-
-                            <div style="text-align: center;">
-                                <a href="/crazy-egg-review/" class="learn-more-btn">Learn More About Crazy Egg</a>
+                            <div class="feature-item">
+                                <h5>Feedback Polls</h5>
+                                <p>Ask users why they didn't purchase</p>
                             </div>
                         </div>
-                    </div>
 
-                    <div id="google-analytics" class="app-card">
-                        <div class="app-header">
-                            <h3>Google Analytics 360</h3>
-                            <p class="app-tagline">Enterprise-grade analytics with advanced attribution modeling</p>
+                        <div class="comparison-section">
+                            <h4>🔄 Choose Hotjar over Crazy Egg if...</h4>
+                            <p>You want comprehensive user behavior insights beyond just heatmaps. Hotjar's session recordings and feedback tools provide deeper insights into user experience issues.</p>
                         </div>
-                        <div class="app-body">
-                            <div class="best-for-box">
-                                <h4>🎯 Perfect For</h4>
-                                <p><strong>Large stores needing enterprise analytics with custom attribution models</strong></p>
-                                <ul>
-                                    <li>Store size: Enterprise (10M+ hits/month)</li>
-                                    <li>Budget: $150,000/year minimum</li>
-                                    <li>Focus: Advanced analytics and attribution</li>
-                                    <li>Goal: Data-driven enterprise decision making</li>
-                                </ul>
+
+                        <div class="pricing-info">
+                            <h4>Pricing</h4>
+                            <p>Free plan for basic insights • Basic: $32/month • Business: $80/month • Scale: $171/month</p>
+                        </div>
+
+                        <div style="text-align: center;">
+                            <a href="/hotjar-review/" class="learn-more-btn">Learn More About Hotjar</a>
+                        </div>
+                    </li>
+
+                    <li class="app-item" id="crazy-egg">
+                        <div class="app-rank">2</div>
+                        <h3>Crazy Egg</h3>
+                        <div class="app-category">Heatmap Analytics & A/B Testing</div>
+                        <div class="app-quick-info">
+                            <div class="quick-info-item">
+                                <span class="quick-info-label">From:</span>
+                                <span class="quick-info-value price">$24/month</span>
                             </div>
-
-                            <p>Google Analytics 360 provides enterprise-grade analytics capabilities beyond the free GA4. It offers advanced attribution modeling, BigQuery integration, and premium support for large-scale operations.</p>
-
-                            <div class="features-grid">
-                                <div class="feature-item">
-                                    <h5>Advanced Attribution</h5>
-                                    <p>Custom attribution models beyond last-click</p>
-                                </div>
-                                <div class="feature-item">
-                                    <h5>BigQuery Integration</h5>
-                                    <p>Raw data export for advanced analysis</p>
-                                </div>
-                                <div class="feature-item">
-                                    <h5>Data-Driven Attribution</h5>
-                                    <p>Machine learning attribution models</p>
-                                </div>
-                                <div class="feature-item">
-                                    <h5>Advanced Audiences</h5>
-                                    <p>Sophisticated segmentation capabilities</p>
-                                </div>
+                            <div class="quick-info-item">
+                                <span class="quick-info-label">Best for:</span>
+                                <span class="quick-info-value">Simple optimization</span>
                             </div>
-
-                            <div class="comparison-section">
-                                <h4>🔄 Choose Google Analytics 360 over free GA4 if...</h4>
-                                <p>You need advanced attribution modeling, BigQuery data export, and enterprise-level support. Most stores under $10M annual revenue can use free GA4 effectively.</p>
-                            </div>
-
-                            <div class="pricing-info">
-                                <h4>Pricing</h4>
-                                <p>Starting at $150,000/year • Custom pricing based on data volume and needs</p>
-                            </div>
-
-                            <div style="text-align: center;">
-                                <a href="/google-analytics-360-review/" class="learn-more-btn">Learn More About GA360</a>
+                            <div class="quick-info-item">
+                                <span class="quick-info-label">Free trial:</span>
+                                <span class="quick-info-value free">30 days</span>
                             </div>
                         </div>
-                    </div>
 
-                    <div id="mixpanel" class="app-card">
-                        <div class="app-header">
-                            <h3>Mixpanel</h3>
-                            <p class="app-tagline">Event-based analytics for product and user behavior insights</p>
+                        <div class="best-for-box">
+                            <h4>🎯 Perfect For</h4>
+                            <p><strong>Stores wanting simple, focused heatmap analytics with built-in A/B testing</strong></p>
+                            <ul>
+                                <li>Store size: Small to medium businesses</li>
+                                <li>Budget: $24 to $249/month</li>
+                                <li>Focus: Quick conversion wins</li>
+                                <li>Goal: Simple optimization without complexity</li>
+                            </ul>
                         </div>
-                        <div class="app-body">
-                            <div class="best-for-box">
-                                <h4>🎯 Perfect For</h4>
-                                <p><strong>Stores tracking specific user actions and product engagement metrics</strong></p>
-                                <ul>
-                                    <li>Store size: Growth stage to enterprise</li>
-                                    <li>Budget: Free to $833+/month</li>
-                                    <li>Focus: Event tracking and user journeys</li>
-                                    <li>Goal: Product optimization and user engagement</li>
-                                </ul>
+
+                        <p>Crazy Egg focuses on the essentials: heatmaps and A/B testing. It's perfect for store owners who want actionable insights without overwhelming complexity or advanced features they won't use.</p>
+
+                        <div class="features-grid">
+                            <div class="feature-item">
+                                <h5>Click Heatmaps</h5>
+                                <p>Visual representation of user clicks</p>
                             </div>
-
-                            <p>Mixpanel excels at event-based analytics, tracking specific user actions rather than just page views. Perfect for understanding how users interact with specific features, products, and checkout processes.</p>
-
-                            <div class="features-grid">
-                                <div class="feature-item">
-                                    <h5>Event Tracking</h5>
-                                    <p>Track any user action or interaction</p>
-                                </div>
-                                <div class="feature-item">
-                                    <h5>User Journey Analysis</h5>
-                                    <p>Follow users through complex paths</p>
-                                </div>
-                                <div class="feature-item">
-                                    <h5>Cohort Analysis</h5>
-                                    <p>Track user groups over time</p>
-                                </div>
-                                <div class="feature-item">
-                                    <h5>A/B Testing</h5>
-                                    <p>Built-in experimentation platform</p>
-                                </div>
+                            <div class="feature-item">
+                                <h5>Scroll Heatmaps</h5>
+                                <p>See how far users scroll on pages</p>
                             </div>
-
-                            <div class="comparison-section">
-                                <h4>🔄 Choose Mixpanel over Google Analytics if...</h4>
-                                <p>You need detailed event tracking and user journey analysis. Mixpanel excels at tracking specific actions while GA focuses more on page-based analytics.</p>
+                            <div class="feature-item">
+                                <h5>A/B Testing</h5>
+                                <p>Built-in testing without additional tools</p>
                             </div>
-
-                            <div class="pricing-info">
-                                <h4>Pricing</h4>
-                                <p>Free for 1,000 monthly tracked users • Growth: $20/month • Enterprise: $833+/month</p>
-                            </div>
-
-                            <div style="text-align: center;">
-                                <a href="/mixpanel-review/" class="learn-more-btn">Learn More About Mixpanel</a>
+                            <div class="feature-item">
+                                <h5>Snapshots</h5>
+                                <p>Track changes in user behavior over time</p>
                             </div>
                         </div>
-                    </div>
 
-                    <div id="kissmetrics" class="app-card">
-                        <div class="app-header">
-                            <h3>Kissmetrics</h3>
-                            <p class="app-tagline">Customer journey analytics focused on revenue and lifetime value</p>
+                        <div class="comparison-section">
+                            <h4>🔄 Choose Crazy Egg over Hotjar if...</h4>
+                            <p>You prefer simplicity and want built-in A/B testing. Crazy Egg offers a more streamlined interface and includes testing capabilities that Hotjar lacks.</p>
                         </div>
-                        <div class="app-body">
-                            <div class="best-for-box">
-                                <h4>🎯 Perfect For</h4>
-                                <p><strong>Stores focusing on customer lifetime value and revenue attribution</strong></p>
-                                <ul>
-                                    <li>Store size: Mid-market to enterprise</li>
-                                    <li>Budget: $299 to $499+/month</li>
-                                    <li>Focus: Customer lifetime value optimization</li>
-                                    <li>Goal: Revenue-focused analytics and attribution</li>
-                                </ul>
+
+                        <div class="pricing-info">
+                            <h4>Pricing</h4>
+                            <p>Basic: $24/month • Standard: $49/month • Plus: $99/month • Pro: $249/month</p>
+                        </div>
+
+                        <div style="text-align: center;">
+                            <a href="/crazy-egg-review/" class="learn-more-btn">Learn More About Crazy Egg</a>
+                        </div>
+                    </li>
+
+                    <li class="app-item" id="google-analytics">
+                        <div class="app-rank">3</div>
+                        <h3>Google Analytics 360</h3>
+                        <div class="app-category">Enterprise Analytics Platform</div>
+                        <div class="app-quick-info">
+                            <div class="quick-info-item">
+                                <span class="quick-info-label">From:</span>
+                                <span class="quick-info-value price">$150,000/year</span>
                             </div>
-
-                            <p>Kissmetrics specializes in person-based analytics, tracking individual customer journeys from first visit to purchase and beyond. It's built specifically for ecommerce revenue optimization and customer lifetime value analysis.</p>
-
-                            <div class="features-grid">
-                                <div class="feature-item">
-                                    <h5>Person-Based Analytics</h5>
-                                    <p>Track individual customer journeys</p>
-                                </div>
-                                <div class="feature-item">
-                                    <h5>Revenue Attribution</h5>
-                                    <p>Connect marketing activities to revenue</p>
-                                </div>
-                                <div class="feature-item">
-                                    <h5>Customer Lifetime Value</h5>
-                                    <p>Track CLV across customer segments</p>
-                                </div>
-                                <div class="feature-item">
-                                    <h5>Cohort Revenue Analysis</h5>
-                                    <p>Revenue tracking by customer groups</p>
-                                </div>
+                            <div class="quick-info-item">
+                                <span class="quick-info-label">Best for:</span>
+                                <span class="quick-info-value">Enterprise attribution</span>
                             </div>
-
-                            <div class="comparison-section">
-                                <h4>🔄 Choose Kissmetrics over Mixpanel if...</h4>
-                                <p>Your primary focus is revenue attribution and customer lifetime value rather than general product analytics. Kissmetrics is built specifically for ecommerce revenue optimization.</p>
-                            </div>
-
-                            <div class="pricing-info">
-                                <h4>Pricing</h4>
-                                <p>Silver: $299/month • Gold: $499/month • Custom pricing for enterprise needs</p>
-                            </div>
-
-                            <div style="text-align: center;">
-                                <a href="/kissmetrics-review/" class="learn-more-btn">Learn More About Kissmetrics</a>
+                            <div class="quick-info-item">
+                                <span class="quick-info-label">Contact:</span>
+                                <span class="quick-info-value">Sales required</span>
                             </div>
                         </div>
-                    </div>
-                </div>
+
+                        <div class="best-for-box">
+                            <h4>🎯 Perfect For</h4>
+                            <p><strong>Large stores needing enterprise analytics with custom attribution models</strong></p>
+                            <ul>
+                                <li>Store size: Enterprise (10M+ hits/month)</li>
+                                <li>Budget: $150,000/year minimum</li>
+                                <li>Focus: Advanced analytics and attribution</li>
+                                <li>Goal: Data-driven enterprise decision making</li>
+                            </ul>
+                        </div>
+
+                        <p>Google Analytics 360 provides enterprise-grade analytics capabilities beyond the free GA4. It offers advanced attribution modeling, BigQuery integration, and premium support for large-scale operations.</p>
+
+                        <div class="features-grid">
+                            <div class="feature-item">
+                                <h5>Advanced Attribution</h5>
+                                <p>Custom attribution models beyond last-click</p>
+                            </div>
+                            <div class="feature-item">
+                                <h5>BigQuery Integration</h5>
+                                <p>Raw data export for advanced analysis</p>
+                            </div>
+                            <div class="feature-item">
+                                <h5>Data-Driven Attribution</h5>
+                                <p>Machine learning attribution models</p>
+                            </div>
+                            <div class="feature-item">
+                                <h5>Advanced Audiences</h5>
+                                <p>Sophisticated segmentation capabilities</p>
+                            </div>
+                        </div>
+
+                        <div class="comparison-section">
+                            <h4>🔄 Choose Google Analytics 360 over free GA4 if...</h4>
+                            <p>You need advanced attribution modeling, BigQuery data export, and enterprise-level support. Most stores under $10M annual revenue can use free GA4 effectively.</p>
+                        </div>
+
+                        <div class="pricing-info">
+                            <h4>Pricing</h4>
+                            <p>Starting at $150,000/year • Custom pricing based on data volume and needs</p>
+                        </div>
+
+                        <div style="text-align: center;">
+                            <a href="/google-analytics-360-review/" class="learn-more-btn">Learn More About GA360</a>
+                        </div>
+                    </li>
+
+                    <li class="app-item" id="mixpanel">
+                        <div class="app-rank">4</div>
+                        <h3>Mixpanel</h3>
+                        <div class="app-category">Event-Based Analytics</div>
+                        <div class="app-quick-info">
+                            <div class="quick-info-item">
+                                <span class="quick-info-label">Starts:</span>
+                                <span class="quick-info-value free">FREE</span>
+                            </div>
+                            <div class="quick-info-item">
+                                <span class="quick-info-label">Best for:</span>
+                                <span class="quick-info-value">User journey tracking</span>
+                            </div>
+                            <div class="quick-info-item">
+                                <span class="quick-info-label">Includes:</span>
+                                <span class="quick-info-value">1,000 tracked users</span>
+                            </div>
+                        </div>
+
+                        <div class="best-for-box">
+                            <h4>🎯 Perfect For</h4>
+                            <p><strong>Stores tracking specific user actions and product engagement metrics</strong></p>
+                            <ul>
+                                <li>Store size: Growth stage to enterprise</li>
+                                <li>Budget: Free to $833+/month</li>
+                                <li>Focus: Event tracking and user journeys</li>
+                                <li>Goal: Product optimization and user engagement</li>
+                            </ul>
+                        </div>
+
+                        <p>Mixpanel excels at event-based analytics, tracking specific user actions rather than just page views. Perfect for understanding how users interact with specific features, products, and checkout processes.</p>
+
+                        <div class="features-grid">
+                            <div class="feature-item">
+                                <h5>Event Tracking</h5>
+                                <p>Track any user action or interaction</p>
+                            </div>
+                            <div class="feature-item">
+                                <h5>User Journey Analysis</h5>
+                                <p>Follow users through complex paths</p>
+                            </div>
+                            <div class="feature-item">
+                                <h5>Cohort Analysis</h5>
+                                <p>Track user groups over time</p>
+                            </div>
+                            <div class="feature-item">
+                                <h5>A/B Testing</h5>
+                                <p>Built-in experimentation platform</p>
+                            </div>
+                        </div>
+
+                        <div class="comparison-section">
+                            <h4>🔄 Choose Mixpanel over Google Analytics if...</h4>
+                            <p>You need detailed event tracking and user journey analysis. Mixpanel excels at tracking specific actions while GA focuses more on page-based analytics.</p>
+                        </div>
+
+                        <div class="pricing-info">
+                            <h4>Pricing</h4>
+                            <p>Free for 1,000 monthly tracked users • Growth: $20/month • Enterprise: $833+/month</p>
+                        </div>
+
+                        <div style="text-align: center;">
+                            <a href="/mixpanel-review/" class="learn-more-btn">Learn More About Mixpanel</a>
+                        </div>
+                    </li>
+
+                    <li class="app-item" id="kissmetrics">
+                        <div class="app-rank">5</div>
+                        <h3>Kissmetrics</h3>
+                        <div class="app-category">Revenue Analytics & Attribution</div>
+                        <div class="app-quick-info">
+                            <div class="quick-info-item">
+                                <span class="quick-info-label">From:</span>
+                                <span class="quick-info-value price">$299/month</span>
+                            </div>
+                            <div class="quick-info-item">
+                                <span class="quick-info-label">Best for:</span>
+                                <span class="quick-info-value">Customer lifetime value</span>
+                            </div>
+                            <div class="quick-info-item">
+                                <span class="quick-info-label">Free trial:</span>
+                                <span class="quick-info-value free">14 days</span>
+                            </div>
+                        </div>
+
+                        <div class="best-for-box">
+                            <h4>🎯 Perfect For</h4>
+                            <p><strong>Stores focusing on customer lifetime value and revenue attribution</strong></p>
+                            <ul>
+                                <li>Store size: Mid-market to enterprise</li>
+                                <li>Budget: $299 to $499+/month</li>
+                                <li>Focus: Customer lifetime value optimization</li>
+                                <li>Goal: Revenue-focused analytics and attribution</li>
+                            </ul>
+                        </div>
+
+                        <p>Kissmetrics specializes in person-based analytics, tracking individual customer journeys from first visit to purchase and beyond. It's built specifically for ecommerce revenue optimization and customer lifetime value analysis.</p>
+
+                        <div class="features-grid">
+                            <div class="feature-item">
+                                <h5>Person-Based Analytics</h5>
+                                <p>Track individual customer journeys</p>
+                            </div>
+                            <div class="feature-item">
+                                <h5>Revenue Attribution</h5>
+                                <p>Connect marketing activities to revenue</p>
+                            </div>
+                            <div class="feature-item">
+                                <h5>Customer Lifetime Value</h5>
+                                <p>Track CLV across customer segments</p>
+                            </div>
+                            <div class="feature-item">
+                                <h5>Cohort Revenue Analysis</h5>
+                                <p>Revenue tracking by customer groups</p>
+                            </div>
+                        </div>
+
+                        <div class="comparison-section">
+                            <h4>🔄 Choose Kissmetrics over Mixpanel if...</h4>
+                            <p>Your primary focus is revenue attribution and customer lifetime value rather than general product analytics. Kissmetrics is built specifically for ecommerce revenue optimization.</p>
+                        </div>
+
+                        <div class="pricing-info">
+                            <h4>Pricing</h4>
+                            <p>Silver: $299/month • Gold: $499/month • Custom pricing for enterprise needs</p>
+                        </div>
+
+                        <div style="text-align: center;">
+                            <a href="/kissmetrics-review/" class="learn-more-btn">Learn More About Kissmetrics</a>
+                        </div>
+                    </li>
+                </ol>
             </section>
 
             <div class="decision-framework">
