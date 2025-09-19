@@ -7,7 +7,8 @@
       "Bash(do file=\"$app-review/index.html\")",
       "Bash(if [ -f \"$file\" ])",
       "Bash(! grep -q \"Customer Service</a>\" \"$file\")",
-      "Bash(then echo \"Updating: $file\")"
+      "Bash(then echo \"Updating: $file\")",
+      "Bash(then echo \"=== Processing $file ===\" rg 'target=\"\"\"\"_blank\"\"\"\"' \"$file\" --line-number --no-heading)"
     ],
     "deny": [],
     "ask": []
