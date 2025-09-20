@@ -288,6 +288,90 @@
             cursor: pointer;
         }
 
+        /* Navigation Styles */
+        .navigation {
+            background: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-menu {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .nav-menu a {
+            color: #2c3e50;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            border: 2px solid #e2e8f0;
+            background: white;
+            font-size: 0.95rem;
+            white-space: nowrap;
+        }
+
+        .nav-menu a:hover {
+            background: #10b981;
+            color: white;
+            border-color: #10b981;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+        }
+
+        /* Mobile styles */
+        @media (max-width: 768px) {
+            .navigation {
+                padding: 15px 0;
+                position: relative;
+                top: auto;
+            }
+
+            .nav-menu {
+                gap: 8px;
+                padding: 0 10px;
+            }
+
+            .nav-menu a {
+                font-size: 0.875rem;
+                padding: 6px 12px;
+                flex: 0 1 auto;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .navigation {
+                padding: 10px 0;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .nav-menu {
+                justify-content: flex-start;
+                flex-wrap: nowrap;
+                gap: 6px;
+                padding: 0 10px 5px;
+                min-width: max-content;
+            }
+
+            .nav-menu a {
+                font-size: 0.8rem;
+                padding: 5px 10px;
+                flex-shrink: 0;
+            }
+        }
+
         /* Hero Section */
         .hero {
             background: linear-gradient(135deg, #10b981 0%, #059669 100%);
@@ -1138,6 +1222,20 @@
             </div>
         </div>
     </section>
+
+    <nav class="navigation">
+        <div class="container">
+            <div class="nav-menu">
+                <a href="#judgeme">Judge.me</a>
+                <a href="#yotpo">Yotpo</a>
+                <a href="#okendo">Okendo</a>
+                <a href="#stamped">Stamped.io</a>
+                <a href="#trustpilot">Trustpilot</a>
+                <a href="#loox">Loox</a>
+                <a href="#riviws">Riviws</a>
+            </div>
+        </div>
+    </nav>
 
     <main class="main-content">
         <div class="container">
