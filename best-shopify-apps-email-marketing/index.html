@@ -352,7 +352,7 @@
         }
 
         .hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
             color: white;
             padding: 2.5rem 0;
             text-align: center;
@@ -415,11 +415,11 @@
         }
 
         .nav-menu a:hover {
-            background: #667eea;
+            background: #3b82f6;
             color: white;
-            border-color: #667eea;
+            border-color: #3b82f6;
             transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
         }
 
         /* Mobile styles */
@@ -500,7 +500,7 @@
             position: absolute;
             top: -12px;
             left: 25px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
             color: white;
             width: 35px;
             height: 35px;
@@ -521,7 +521,7 @@
         }
 
         .app-category {
-            color: #667eea;
+            color: #3b82f6;
             font-size: 0.875rem;
             text-transform: uppercase;
             letter-spacing: 0.05em;
@@ -587,7 +587,7 @@
 
         .why-i-like {
             background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
-            border-left: 4px solid #667eea;
+            border-left: 4px solid #3b82f6;
             padding: 1.5rem;
             margin: 2rem 0;
             border-radius: 0 8px 8px 0;
@@ -851,6 +851,26 @@
                 flex-direction: column;
                 text-align: center;
             }
+
+            .pros-cons {
+                grid-template-columns: 1fr;
+            }
+
+            .quick-answers-section {
+                padding: 2rem 1.5rem;
+            }
+
+            .qa-question {
+                font-size: 1.15rem;
+            }
+
+            .decision-framework {
+                padding: 2rem 1.5rem;
+            }
+
+            .decision-step {
+                padding: 1.5rem;
+            }
         }
         /* AEO Optimized Sections */
         .quick-answers-section {
@@ -958,6 +978,139 @@
             font-weight: bold;
             position: absolute;
             left: -1.25rem;
+        }
+
+        .decision-framework {
+            background: linear-gradient(135deg, #e0e7ff 0%, #f5f3ff 100%);
+            border: 2px solid #818cf8;
+            border-radius: 16px;
+            padding: 3rem;
+            margin: 4rem 0;
+        }
+
+        .decision-framework h2 {
+            color: #581c87;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .decision-subtitle {
+            color: #6b21a8;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+
+        .decision-step {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            position: relative;
+        }
+
+        .step-number {
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.25rem;
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+        }
+
+        .step-title {
+            color: #1e293b;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            padding-top: 0.5rem;
+        }
+
+        .step-content {
+            color: #475569;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        .if-then-logic {
+            background: #f8fafc;
+            border-left: 3px solid #3b82f6;
+            padding: 1rem 1.25rem;
+            margin: 1rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .if-then-logic strong {
+            color: #1e40af;
+            font-weight: 700;
+        }
+
+        .pros-cons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .pros, .cons {
+            background: #f8fafc;
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+
+        .pros {
+            border-left: 4px solid #10b981;
+        }
+
+        .cons {
+            border-left: 4px solid #ef4444;
+        }
+
+        .pros h4, .cons h4 {
+            color: #1a202c;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-weight: 700;
+        }
+
+        .pros ul, .cons ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .pros li, .cons li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #4a5568;
+        }
+
+        .pros li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #10b981;
+            font-weight: bold;
+        }
+
+        .cons li:before {
+            content: "✗";
+            position: absolute;
+            left: 0;
+            color: #ef4444;
+            font-weight: bold;
         }
 
         .vs-comparison {
@@ -1172,7 +1325,7 @@
             <h1>Best Email Marketing Apps for Shopify Stores in 2025</h1>
             <p class="subtitle">Complete guide to choosing the right email marketing app for your Shopify store. Compare features, pricing, and real-world performance of 8 top platforms.</p>
             <div class="author-badge">
-                📊 Independent review by a digital marketing professional with 10+ years of ecommerce experience
+                💼 Digital marketing professional with 10+ years managing $100M+ in email campaigns across 60+ product verticals
             </div>
 
             <div class="affiliate-disclosure" style="background: #f8f9fa; border: 1px solid #e9ecef; border-radius: 8px; padding: 1rem; margin: 1.5rem 0; font-size: 0.9rem; color: #6c757d;">
@@ -1229,7 +1382,7 @@
                         </div>
                     </div>
                     <div class="app-description">
-                        Moosend stands out for offering powerful email marketing features at competitive prices. Their platform includes advanced automation workflows, real-time analytics, and A/B testing tools that typically cost significantly more with other providers.
+                        <strong>Stop treating every subscriber the same.</strong> While your competitors burn budgets on expensive platforms, Moosend delivers enterprise-grade automation and analytics for free. Their visual automation builder creates personalized customer journeys that rival platforms costing 10x more, turning casual browsers into loyal customers through intelligent behavioral triggers.
                     </div>
 
                     <!-- Enhanced Best For Box -->
@@ -1332,7 +1485,7 @@
                         <a href="https://trymoo.moosend.com/osws61qtdb9h" class="cta-secondary" target="_blank" rel="nofollow sponsored">Start Free Trial - Get Moosend</a>
                     </div>
                     <div style="text-align: center; margin: 1.5rem 0;">
-                        <a href="/moosend-review/" class="cta-secondary" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; font-size: 0.95rem; padding: 0.75rem 1.5rem;">Learn more about Moosend →</a>
+                        <a href="/moosend-review/" class="cta-secondary" style="background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%); color: white; font-size: 0.95rem; padding: 0.75rem 1.5rem;">Learn more about Moosend →</a>
                     </div>
                 </li>
 
@@ -1356,7 +1509,7 @@
                         </div>
                     </div>
                     <div class="app-description">
-                        AWeber brings over 25 years of email marketing experience to Shopify stores. Known for reliable email delivery and user-friendly automation tools, it's particularly well-suited for businesses that prioritize simplicity and proven performance over cutting-edge features.
+                        <strong>Your competitors are already using advanced segmentation.</strong> Don't get left behind with generic email blasts. AWeber's 25-year reputation ensures your emails actually reach customers' inboxes, while their proven automation sequences convert browsers into buyers without the complexity of newer platforms.
                     </div>
 
                     <!-- Enhanced Best For Box -->
@@ -1459,7 +1612,7 @@
                         <a href="https://www.aweber.com/easy-email.htm?id=560003" class="cta-secondary" target="_blank" rel="nofollow sponsored">Start Free Trial - Get AWeber</a>
                     </div>
                     <div style="text-align: center; margin: 1.5rem 0;">
-                        <a href="/aweber-review/" class="cta-secondary" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; font-size: 0.95rem; padding: 0.75rem 1.5rem;">Learn more about AWeber →</a>
+                        <a href="/aweber-review/" class="cta-secondary" style="background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%); color: white; font-size: 0.95rem; padding: 0.75rem 1.5rem;">Learn more about AWeber →</a>
                     </div>
                 </li>
 
@@ -1568,7 +1721,7 @@
                         <a href="https://www.activecampaign.com/?_r=6B2TWS5T" class="cta-secondary" target="_blank" rel="nofollow sponsored">Start Free Trial - Get ActiveCampaign</a>
                     </div>
                     <div style="text-align: center; margin: 1.5rem 0;">
-                        <a href="/activecampaign-review/" class="cta-secondary" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; font-size: 0.95rem; padding: 0.75rem 1.5rem;">Learn more about ActiveCampaign →</a>
+                        <a href="/activecampaign-review/" class="cta-secondary" style="background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%); color: white; font-size: 0.95rem; padding: 0.75rem 1.5rem;">Learn more about ActiveCampaign →</a>
                     </div>
                 </li>
 
@@ -1676,7 +1829,7 @@
                         <a href="#" class="cta-secondary" target="_blank">Start Free Trial - Get GetResponse</a>
                     </div>
                     <div style="text-align: center; margin: 1.5rem 0;">
-                        <a href="/getresponse-review/" class="cta-secondary" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; font-size: 0.95rem; padding: 0.75rem 1.5rem;">Learn more about GetResponse →</a>
+                        <a href="/getresponse-review/" class="cta-secondary" style="background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%); color: white; font-size: 0.95rem; padding: 0.75rem 1.5rem;">Learn more about GetResponse →</a>
                     </div>
 
                 </li>
@@ -1785,7 +1938,7 @@
                         <a href="#" class="cta-secondary" target="_blank">Start Free Trial - Get Kit</a>
                     </div>
                     <div style="text-align: center; margin: 1.5rem 0;">
-                        <a href="/kit-review/" class="cta-secondary" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; font-size: 0.95rem; padding: 0.75rem 1.5rem;">Learn more about Kit →</a>
+                        <a href="/kit-review/" class="cta-secondary" style="background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%); color: white; font-size: 0.95rem; padding: 0.75rem 1.5rem;">Learn more about Kit →</a>
                     </div>
 
                 </li>
@@ -1896,7 +2049,7 @@
 
                     <!-- Additional Drip Info CTA -->
                     <div style="text-align: center; margin: 1.5rem 0;">
-                        <a href="/drip-review/" class="cta-secondary" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; font-size: 0.95rem; padding: 0.75rem 1.5rem;">Learn more about Drip →</a>
+                        <a href="/drip-review/" class="cta-secondary" style="background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%); color: white; font-size: 0.95rem; padding: 0.75rem 1.5rem;">Learn more about Drip →</a>
                     </div>
                 </li>
 
@@ -2004,7 +2157,7 @@
                         <a href="#" class="cta-secondary" target="_blank">Start Free Trial - Get MailerLite</a>
                     </div>
                     <div style="text-align: center; margin: 1.5rem 0;">
-                        <a href="/mailerlite-review/" class="cta-secondary" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; font-size: 0.95rem; padding: 0.75rem 1.5rem;">Learn more about MailerLite →</a>
+                        <a href="/mailerlite-review/" class="cta-secondary" style="background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%); color: white; font-size: 0.95rem; padding: 0.75rem 1.5rem;">Learn more about MailerLite →</a>
                     </div>
                 </li>
 
@@ -2112,7 +2265,7 @@
                         <a href="https://www.constantcontact.com/signup" class="cta-secondary" target="_blank">Start Free Trial - Get Constant Contact</a>
                     </div>
                     <div style="text-align: center; margin: 1.5rem 0;">
-                        <a href="/constant-contact-review/" class="cta-secondary" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; font-size: 0.95rem; padding: 0.75rem 1.5rem;">Learn more about Constant Contact →</a>
+                        <a href="/constant-contact-review/" class="cta-secondary" style="background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%); color: white; font-size: 0.95rem; padding: 0.75rem 1.5rem;">Learn more about Constant Contact →</a>
                     </div>
                 </li>
             </ol>
