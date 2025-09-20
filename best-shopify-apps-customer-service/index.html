@@ -259,6 +259,90 @@
             color: #6c757d;
         }
 
+        /* Navigation Styles */
+        .navigation {
+            background: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-menu {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .nav-menu a {
+            color: #2c3e50;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            border: 2px solid #e2e8f0;
+            background: white;
+            font-size: 0.95rem;
+            white-space: nowrap;
+        }
+
+        .nav-menu a:hover {
+            background: #667eea;
+            color: white;
+            border-color: #667eea;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+        }
+
+        /* Mobile styles */
+        @media (max-width: 768px) {
+            .navigation {
+                padding: 15px 0;
+                position: relative;
+                top: auto;
+            }
+
+            .nav-menu {
+                gap: 8px;
+                padding: 0 10px;
+            }
+
+            .nav-menu a {
+                font-size: 0.875rem;
+                padding: 6px 12px;
+                flex: 0 1 auto;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .navigation {
+                padding: 10px 0;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .nav-menu {
+                justify-content: flex-start;
+                flex-wrap: nowrap;
+                gap: 6px;
+                padding: 0 10px 5px;
+                min-width: max-content;
+            }
+
+            .nav-menu a {
+                font-size: 0.8rem;
+                padding: 5px 10px;
+                flex-shrink: 0;
+            }
+        }
+
         .main-content {
             background: white;
             padding: 2rem 0;
@@ -649,6 +733,18 @@
         </div>
     </section>
 
+    <nav class="navigation">
+        <div class="container">
+            <div class="nav-menu">
+                <a href="#zendesk">Zendesk</a>
+                <a href="#help-scout">Help Scout</a>
+                <a href="#freshdesk">Freshdesk</a>
+                <a href="#livechat">LiveChat</a>
+                <a href="#intercom">Intercom</a>
+            </div>
+        </div>
+    </nav>
+
     <main class="main-content">
         <div class="container">
             <div class="meta-subheadline">
@@ -657,7 +753,7 @@
 
             <ol class="app-list">
                 <!-- App #1: Zendesk -->
-                <li class="app-item">
+                <li class="app-item" id="zendesk">
                     <div class="app-header">
                         <h2 class="app-name">Zendesk</h2>
                         <p class="app-tagline">Enterprise-grade customer service platform with advanced ticketing and automation</p>
@@ -711,7 +807,7 @@
                 </li>
 
                 <!-- App #2: Help Scout -->
-                <li class="app-item">
+                <li class="app-item" id="help-scout">
                     <div class="app-header">
                         <h2 class="app-name">Help Scout</h2>
                         <p class="app-tagline">User-friendly help desk software that feels like email but works like a team</p>
@@ -765,7 +861,7 @@
                 </li>
 
                 <!-- App #3: Freshdesk -->
-                <li class="app-item">
+                <li class="app-item" id="freshdesk">
                     <div class="app-header">
                         <h2 class="app-name">Freshdesk</h2>
                         <p class="app-tagline">Modern help desk software with built-in automation and multi-channel support</p>
@@ -819,7 +915,7 @@
                 </li>
 
                 <!-- App #4: LiveChat -->
-                <li class="app-item">
+                <li class="app-item" id="livechat">
                     <div class="app-header">
                         <h2 class="app-name">LiveChat</h2>
                         <p class="app-tagline">Real-time customer support through live chat with integrated ticketing</p>
@@ -873,7 +969,7 @@
                 </li>
 
                 <!-- App #5: Intercom -->
-                <li class="app-item">
+                <li class="app-item" id="intercom">
                     <div class="app-header">
                         <h2 class="app-name">Intercom</h2>
                         <p class="app-tagline">Conversational support platform combining chat, automation, and customer engagement</p>
