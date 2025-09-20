@@ -213,26 +213,34 @@
 
         .nav-menu {
             display: flex;
-            justify-content: space-around;
+            justify-content: center;
+            align-items: center;
             flex-wrap: wrap;
+            gap: 10px;
             max-width: 800px;
             margin: 0 auto;
+            padding: 0 20px;
         }
 
         .nav-menu a {
             color: #2c3e50;
             text-decoration: none;
             font-weight: 500;
-            padding: 10px 20px;
+            padding: 8px 16px;
             border-radius: 25px;
             transition: all 0.3s ease;
-            border: 2px solid transparent;
+            border: 2px solid #e2e8f0;
+            background: white;
+            font-size: 0.95rem;
+            white-space: nowrap;
         }
 
         .nav-menu a:hover {
             background: #667eea;
             color: white;
             border-color: #667eea;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
         }
 
         .content {
@@ -554,9 +562,43 @@
                 margin: 20px 10px;
             }
 
+            .navigation {
+                padding: 15px 0;
+                position: relative;
+                top: auto;
+            }
+
             .nav-menu {
-                flex-direction: column;
-                gap: 10px;
+                gap: 8px;
+                padding: 0 10px;
+            }
+
+            .nav-menu a {
+                font-size: 0.875rem;
+                padding: 6px 12px;
+                flex: 0 1 auto;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .navigation {
+                padding: 10px 0;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .nav-menu {
+                justify-content: flex-start;
+                flex-wrap: nowrap;
+                gap: 6px;
+                padding: 0 10px 5px;
+                min-width: max-content;
+            }
+
+            .nav-menu a {
+                font-size: 0.8rem;
+                padding: 5px 10px;
+                flex-shrink: 0;
             }
 
             .section h2 {
