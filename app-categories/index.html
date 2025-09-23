@@ -300,18 +300,44 @@
             box-shadow: 0 12px 40px rgba(0,0,0,0.15);
         }
 
-        .article-image {
-            height: 200px;
-            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
-            border: 2px dashed #cbd5e0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #718096;
-            font-style: italic;
-            font-size: 0.9rem;
+        .article-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
             text-align: center;
-            padding: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .article-header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+            animation: shimmer 3s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .article-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            display: block;
+            position: relative;
+            z-index: 1;
+        }
+
+        .article-header h2 {
+            position: relative;
+            z-index: 1;
+            font-size: 1.3rem;
+            margin: 0;
         }
 
         .article-content {
@@ -514,6 +540,24 @@
                 {
                     "@type": "Article",
                     "position": 5,
+                    "name": "Best Customer Service Apps for Shopify Stores 2025",
+                    "url": "https://shopifyappauthority.com/best-shopify-apps-customer-service/"
+                },
+                {
+                    "@type": "Article",
+                    "position": 6,
+                    "name": "Best Shopify CRM & Sales Apps 2025",
+                    "url": "https://shopifyappauthority.com/best-shopify-apps-crm-sales/"
+                },
+                {
+                    "@type": "Article",
+                    "position": 7,
+                    "name": "Best Shopify Analytics & Attribution Apps 2025",
+                    "url": "https://shopifyappauthority.com/best-shopify-apps-analytics-attribution/"
+                },
+                {
+                    "@type": "Article",
+                    "position": 8,
                     "name": "Best Free Shopify Apps 2025",
                     "url": "https://shopifyappauthority.com/free-shopify-apps/"
                 }
@@ -590,8 +634,9 @@
         <div class="articles-grid">
             <!-- Ultimate Guide -->
             <article class="article-card">
-                <div class="article-image">
-                    Featured image: Ultimate Shopify apps guide showing top 15 apps with conversion metrics and ROI data
+                <div class="article-header">
+                    <span class="article-icon">🚀</span>
+                    <h2>Ultimate Guide</h2>
                 </div>
                 <div class="article-content">
                     <div class="article-meta">
@@ -612,8 +657,9 @@
 
             <!-- Email Marketing -->
             <article class="article-card">
-                <div class="article-image">
-                    Featured image: Email marketing dashboard showing automation workflows and revenue attribution across multiple platforms
+                <div class="article-header">
+                    <span class="article-icon">📧</span>
+                    <h2>Email Marketing</h2>
                 </div>
                 <div class="article-content">
                     <div class="article-meta">
@@ -632,10 +678,11 @@
                 </div>
             </article>
 
-            <!-- Conversion Optimization -->
+            <!-- Conversion & Sales -->
             <article class="article-card">
-                <div class="article-image">
-                    Featured image: Conversion optimization tools showing A/B tests, popup campaigns, and sales funnel analytics
+                <div class="article-header">
+                    <span class="article-icon">📈</span>
+                    <h2>Conversion & Sales</h2>
                 </div>
                 <div class="article-content">
                     <div class="article-meta">
@@ -656,8 +703,9 @@
 
             <!-- Reviews & Social Proof -->
             <article class="article-card">
-                <div class="article-image">
-                    Featured image: Social proof widgets showing customer reviews, ratings, and user-generated content across product pages
+                <div class="article-header">
+                    <span class="article-icon">⭐</span>
+                    <h2>Reviews & Social Proof</h2>
                 </div>
                 <div class="article-content">
                     <div class="article-meta">
@@ -676,10 +724,80 @@
                 </div>
             </article>
 
+            <!-- Customer Service -->
+            <article class="article-card">
+                <div class="article-header">
+                    <span class="article-icon">💬</span>
+                    <h2>Customer Service</h2>
+                </div>
+                <div class="article-content">
+                    <div class="article-meta">
+                        <span class="article-count">5 Apps</span>
+                        <span>January 2025</span>
+                    </div>
+                    <h2 class="article-title">
+                        <a href="/best-shopify-apps-customer-service/">Best Customer Service Apps for Shopify Stores 2025</a>
+                    </h2>
+                    <p class="article-description">
+                        Expert-tested customer service apps that improve support efficiency by 70%+. Compare top platforms including LiveChat, Help Scout, and Freshdesk.
+                    </p>
+                    <a href="/best-shopify-apps-customer-service/" class="read-more">
+                        Improve Support →
+                    </a>
+                </div>
+            </article>
+
+            <!-- CRM & Sales Apps -->
+            <article class="article-card">
+                <div class="article-header">
+                    <span class="article-icon">🤝</span>
+                    <h2>CRM & Sales Apps</h2>
+                </div>
+                <div class="article-content">
+                    <div class="article-meta">
+                        <span class="article-count">7 Apps</span>
+                        <span>January 2025</span>
+                    </div>
+                    <h2 class="article-title">
+                        <a href="/best-shopify-apps-crm-sales/">Best Shopify CRM & Sales Apps 2025</a>
+                    </h2>
+                    <p class="article-description">
+                        Streamline your sales process and build better customer relationships. CRM tools that increase sales team efficiency by 50%+ and improve customer retention.
+                    </p>
+                    <a href="/best-shopify-apps-crm-sales/" class="read-more">
+                        Manage Customers →
+                    </a>
+                </div>
+            </article>
+
+            <!-- Analytics & Attribution -->
+            <article class="article-card">
+                <div class="article-header">
+                    <span class="article-icon">📊</span>
+                    <h2>Analytics & Attribution</h2>
+                </div>
+                <div class="article-content">
+                    <div class="article-meta">
+                        <span class="article-count">6 Apps</span>
+                        <span>January 2025</span>
+                    </div>
+                    <h2 class="article-title">
+                        <a href="/best-shopify-apps-analytics-attribution/">Best Shopify Analytics & Attribution Apps 2025</a>
+                    </h2>
+                    <p class="article-description">
+                        Make data-driven decisions with accurate tracking and attribution. Apps that provide crystal-clear ROI insights and optimize your marketing spend.
+                    </p>
+                    <a href="/best-shopify-apps-analytics-attribution/" class="read-more">
+                        Track Performance →
+                    </a>
+                </div>
+            </article>
+
             <!-- Free Apps -->
             <article class="article-card">
-                <div class="article-image">
-                    Featured image: Free Shopify apps dashboard showing zero-cost tools for SEO, marketing, and store optimization
+                <div class="article-header">
+                    <span class="article-icon">🆓</span>
+                    <h2>Free Apps</h2>
                 </div>
                 <div class="article-content">
                     <div class="article-meta">
