@@ -824,7 +824,11 @@
                 content: ' -';
             }
         }
-    </style>
+    
+        .hidden {
+            display: none !important;
+        }
+        </style>
 </head>
 <body>
     <header class="site-header">
@@ -1566,6 +1570,26 @@
                 document.getElementById('cookieBanner').style.display = 'block';
             }
         }
+
+        
+        // Enhanced cookie popup functionality - click anywhere to accept
+        document.addEventListener('DOMContentLoaded', function() {
+            const cookieConsent = document.getElementById('cookieConsent');
+            if (cookieConsent) {
+                // Add click anywhere to accept functionality
+                cookieConsent.addEventListener('click', function() {
+                    acceptCookies();
+                });
+
+                // Prevent event bubbling on buttons
+                const buttons = cookieConsent.querySelectorAll('button');
+                buttons.forEach(function(button) {
+                    button.addEventListener('click', function(e) {
+                        e.stopPropagation();
+                    });
+                });
+            }
+        });
 
         function acceptCookies() {
             localStorage.setItem('cookieConsent', 'accepted');
