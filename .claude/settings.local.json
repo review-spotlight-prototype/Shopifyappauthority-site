@@ -9,7 +9,8 @@
       "Bash(grep:*)",
       "Bash(start test-cookie-consent.html)",
       "Bash(python:*)",
-      "Bash(del test-cookie-consent.html fix-cookie-consent.py)"
+      "Bash(del test-cookie-consent.html fix-cookie-consent.py)",
+      "Bash(start cookie-debug.html)"
     ],
     "deny": [],
     "ask": []
