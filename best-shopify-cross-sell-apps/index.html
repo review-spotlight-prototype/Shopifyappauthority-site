@@ -130,12 +130,7 @@
         checkCookieConsent();
     }
 
-    // Simple click anywhere on popup to accept (backup functionality)
-    document.addEventListener('click', function(e) {
-        if (e.target.closest('#cookieConsent') && !e.target.closest('.cookie-button')) {
-            acceptAllCookies();
-        }
-    });
+    // Removed automatic click-to-accept to prevent accidental dismissal
 
 })()); 
     // Simple wrapper functions for button compatibility
