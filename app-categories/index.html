@@ -1292,68 +1292,7 @@
         // Cookie consent functionality
         
         
-        // Simple, reliable cookie popup functionality
-        function acceptCookies() {
-            localStorage.setItem('cookieConsent', 'accepted');
-            var popup = document.getElementById('cookieConsent');
-            if (popup) {
-                popup.style.display = 'none';
-            }
 
-            // Enable tracking if gtag exists
-            if (typeof gtag !== 'undefined') {
-                gtag('consent', 'update', {
-                    'analytics_storage': 'granted',
-                    'ad_storage': 'granted'
-                });
-            }
-
-            // Enable Facebook tracking if fbq exists
-            if (typeof fbq !== 'undefined') {
-                fbq('track', 'CookieConsent', {consent_type: 'accepted'});
-            }
-        }
-
-        function rejectCookies() {
-            localStorage.setItem('cookieConsent', 'rejected');
-            var popup = document.getElementById('cookieConsent');
-            if (popup) {
-                popup.style.display = 'none';
-            }
-
-            // Disable tracking if gtag exists
-            if (typeof gtag !== 'undefined') {
-                gtag('consent', 'update', {
-                    'analytics_storage': 'denied',
-                    'ad_storage': 'denied'
-                });
-            }
-        }
-
-        // Check if user already made a choice and hide popup
-        window.addEventListener('load', function() {
-            var consent = localStorage.getItem('cookieConsent');
-            var popup = document.getElementById('cookieConsent');
-
-            if (consent && popup) {
-                popup.style.display = 'none';
-
-                if (consent === 'accepted' && typeof gtag !== 'undefined') {
-                    gtag('consent', 'update', {
-                        'analytics_storage': 'granted',
-                        'ad_storage': 'granted'
-                    });
-                }
-            }
-        });
-
-        // Simple click anywhere on popup to accept
-        document.addEventListener('DOMContentLoaded', function() {
-            var popup = document.getElementById('cookieConsent');
-            if (popup) {
-                popup.addEventListener('click', acceptCookies);
-            }
-        });
                 }
             }
         });
@@ -1463,7 +1402,10 @@
                     });
                 }
             });
-        });</script>
+        });
+    // Initialize cookie consent on page load
+    window.addEventListener('DOMContentLoaded', checkCookieConsent);
+</script>
 
     <footer style="background: #2d3748; color: white; padding: 3rem 0; margin-top: 4rem;">
         <div class="container">
