@@ -1231,7 +1231,130 @@
                 });
             }
         });
-    </script>
+    </script><script>
+// Cookie Consent - Legal Compliance System
+(function() {
+    'use strict';
+
+    function acceptAllCookies() {
+        localStorage.setItem('cookieConsent', 'accepted');
+        localStorage.setItem('cookieConsentTimestamp', new Date().getTime());
+        hideCookiePopup();
+
+        // Enable analytics tracking
+        if (typeof gtag !== 'undefined') {
+            gtag('consent', 'update', {
+                'analytics_storage': 'granted',
+                'ad_storage': 'granted',
+                'personalization_storage': 'granted'
+            });
+        }
+
+        // Enable Facebook tracking
+        if (typeof fbq !== 'undefined') {
+            fbq('track', 'CookieConsent', {consent_type: 'accepted'});
+        }
+
+        console.log('Cookies accepted - analytics enabled');
+    }
+
+    function rejectAllCookies() {
+        localStorage.setItem('cookieConsent', 'rejected');
+        localStorage.setItem('cookieConsentTimestamp', new Date().getTime());
+        hideCookiePopup();
+
+        // Disable analytics tracking
+        if (typeof gtag !== 'undefined') {
+            gtag('consent', 'update', {
+                'analytics_storage': 'denied',
+                'ad_storage': 'denied',
+                'personalization_storage': 'denied'
+            });
+        }
+
+        console.log('Cookies rejected - analytics disabled');
+    }
+
+    function hideCookiePopup() {
+        var popup = document.getElementById('cookieConsent');
+        if (popup) {
+            popup.style.display = 'none';
+            popup.classList.add('cookie-hidden');
+        }
+    }
+
+    function showCookiePopup() {
+        var popup = document.getElementById('cookieConsent');
+        if (popup) {
+            popup.style.display = 'block';
+            popup.classList.remove('cookie-hidden');
+        }
+    }
+
+    function checkCookieConsent() {
+        var consent = localStorage.getItem('cookieConsent');
+        var timestamp = localStorage.getItem('cookieConsentTimestamp');
+
+        // Check if consent is older than 1 year (legal requirement)
+        if (timestamp) {
+            var consentAge = new Date().getTime() - parseInt(timestamp);
+            var oneYear = 365 * 24 * 60 * 60 * 1000; // 1 year in milliseconds
+
+            if (consentAge > oneYear) {
+                // Reset expired consent
+                localStorage.removeItem('cookieConsent');
+                localStorage.removeItem('cookieConsentTimestamp');
+                consent = null;
+            }
+        }
+
+        if (!consent) {
+            showCookiePopup();
+        } else {
+            hideCookiePopup();
+
+            // Apply consent preferences
+            if (consent === 'accepted') {
+                if (typeof gtag !== 'undefined') {
+                    gtag('consent', 'update', {
+                        'analytics_storage': 'granted',
+                        'ad_storage': 'granted',
+                        'personalization_storage': 'granted'
+                    });
+                }
+            } else {
+                if (typeof gtag !== 'undefined') {
+                    gtag('consent', 'update', {
+                        'analytics_storage': 'denied',
+                        'ad_storage': 'denied',
+                        'personalization_storage': 'denied'
+                    });
+                }
+            }
+        }
+    }
+
+    // Make functions globally available
+    window.acceptAllCookies = acceptAllCookies;
+    window.rejectAllCookies = rejectAllCookies;
+
+    // Initialize on page load
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', checkCookieConsent);
+    } else {
+        checkCookieConsent();
+    }
+
+    // Simple click anywhere on popup to accept (backup functionality)
+    document.addEventListener('click', function(e) {
+        if (e.target.closest('#cookieConsent') && !e.target.closest('.cookie-button')) {
+            acceptAllCookies();
+        }
+    });
+
+})();
+</script>
+
 
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-J09TH92K0M"></script>
