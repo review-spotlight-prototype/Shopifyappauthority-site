@@ -1459,7 +1459,33 @@
         }
     });
 
-})();
+})()); 
+    // Simple wrapper functions for button compatibility
+    function acceptCookies() {
+        if (typeof acceptAllCookies === 'function') {
+            acceptAllCookies();
+        } else {
+            localStorage.setItem('cookieConsent', 'accepted');
+            localStorage.setItem('cookieConsentTimestamp', new Date().getTime());
+            var popup = document.getElementById('cookieConsent');
+            if (popup) {
+                popup.style.display = 'none';
+            }
+        }
+    }
+
+    function rejectCookies() {
+        if (typeof rejectAllCookies === 'function') {
+            rejectAllCookies();
+        } else {
+            localStorage.setItem('cookieConsent', 'rejected');
+            localStorage.setItem('cookieConsentTimestamp', new Date().getTime());
+            var popup = document.getElementById('cookieConsent');
+            if (popup) {
+                popup.style.display = 'none';
+            }
+        }
+    }
 </script>
 
 

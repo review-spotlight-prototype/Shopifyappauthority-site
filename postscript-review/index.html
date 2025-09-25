@@ -1498,12 +1498,70 @@
                 <a href="/privacy-policy/" style="color: #95bf47; text-decoration: underline; margin-left: 8px;">Privacy Policy</a>
             </div>
             <div class="cookie-buttons">
-                <button class="cookie-button accept-all" onclick="acceptAllCookies()">Accept All</button>
-                <button class="cookie-button reject-all" onclick="rejectAllCookies()">Reject All</button>
+                <button class="cookie-button accept-all" onclick="acceptCookies()">Accept All</button>
+                <button class="cookie-button reject-all" onclick="rejectCookies()">Reject All</button>
             </div>
         </div>
     </div>
 
+
+
+<script>
+// Simple cookie consent functions
+function acceptCookies() {
+    localStorage.setItem('cookieConsent', 'accepted');
+    localStorage.setItem('cookieConsentTimestamp', new Date().getTime());
+    var popup = document.getElementById('cookieConsent');
+    if (popup) {
+        popup.style.display = 'none';
+        popup.classList.add('cookie-hidden');
+    }
+
+    // Enable analytics if gtag exists
+    if (typeof gtag !== 'undefined') {
+        gtag('consent', 'update', {
+            'analytics_storage': 'granted',
+            'ad_storage': 'granted'
+        });
+    }
+}
+
+function rejectCookies() {
+    localStorage.setItem('cookieConsent', 'rejected');
+    localStorage.setItem('cookieConsentTimestamp', new Date().getTime());
+    var popup = document.getElementById('cookieConsent');
+    if (popup) {
+        popup.style.display = 'none';
+        popup.classList.add('cookie-hidden');
+    }
+
+    // Disable analytics if gtag exists
+    if (typeof gtag !== 'undefined') {
+        gtag('consent', 'update', {
+            'analytics_storage': 'denied',
+            'ad_storage': 'denied'
+        });
+    }
+}
+
+// Check for existing consent on page load
+window.addEventListener('load', function() {
+    var consent = localStorage.getItem('cookieConsent');
+    var popup = document.getElementById('cookieConsent');
+
+    if (consent && popup) {
+        popup.style.display = 'none';
+        popup.classList.add('cookie-hidden');
+    }
+});
+
+// Click anywhere on popup to accept (backup)
+document.addEventListener('click', function(e) {
+    if (e.target.closest('#cookieConsent') && !e.target.closest('.cookie-button')) {
+        acceptCookies();
+    }
+});
+</script>
 
 </body>
 </html>
