@@ -1,16 +1,11 @@
 {
   "permissions": {
     "allow": [
+      "Bash(mkdir:*)",
       "Bash(git add:*)",
       "Bash(git commit:*)",
       "Bash(git push:*)",
-      "Bash(python:*)",
-      "Bash(find:*)",
-      "Bash(for:*)",
-      "Bash(do if [ -f \"$file\" ])",
-      "Bash(then if ! grep -q \"By Store Size\" \"$file\")",
-      "Bash(fi)",
-      "Bash(done)"
+      "WebSearch"
     ],
     "deny": [],
     "ask": []
