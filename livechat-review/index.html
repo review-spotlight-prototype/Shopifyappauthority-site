@@ -377,9 +377,213 @@
             }
         }
             
-    </style>
+            /* Navigation Styles */
+        .site-header {
+            background: linear-gradient(180deg, #ffffff 0%, #fafafa 100%);
+            border-bottom: 1px solid rgba(149, 191, 71, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        .site-nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #95bf47;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            white-space: nowrap;
+            line-height: 1;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: #4a5568;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            padding: 0.8rem 1.2rem;
+            border-radius: 10px;
+            white-space: nowrap;
+        }
+
+        .nav-links a:hover, .nav-links a:focus {
+            background-color: rgba(149, 191, 71, 0.1);
+            color: #95bf47;
+            transform: translateY(-2px);
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown > a::after {
+            content: ' ↓';
+            font-size: 0.8em;
+            color: #95bf47;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            min-width: 280px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            border-radius: 12px;
+            padding: 0.8rem 0;
+            z-index: 1001;
+            border: 1px solid rgba(149, 191, 71, 0.2);
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: #4a5568;
+            padding: 0.7rem 1.5rem;
+            text-decoration: none;
+            display: block;
+            font-size: 0.95rem;
+            transition: all 0.2s ease;
+            border-radius: 0;
+        }
+
+        .dropdown-content a:hover {
+            background-color: rgba(149, 191, 71, 0.1);
+            color: #95bf47;
+            transform: translateX(5px);
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            color: #95bf47;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .site-nav {
+                padding: 0 20px;
+                flex-wrap: wrap;
+                position: relative;
+            }
+
+            .logo {
+                font-size: 1.4rem;
+            }
+
+            .mobile-menu-toggle {
+                display: block;
+                order: 2;
+            }
+
+            .nav-links {
+                display: none;
+                width: 100%;
+                order: 3;
+                flex-direction: column;
+                gap: 0;
+                background: white;
+                border-top: 1px solid rgba(149, 191, 71, 0.2);
+                padding: 1rem 0;
+                margin-top: 1rem;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links a {
+                padding: 1rem 1.5rem;
+                border-radius: 0;
+                width: 100%;
+                text-align: left;
+            }
+
+            .dropdown-content {
+                position: static;
+                display: none;
+                box-shadow: none;
+                border: none;
+                background: #f8f9fa;
+                margin-left: 1rem;
+            }
+
+            .dropdown.active .dropdown-content {
+                display: block;
+            }
+
+            .dropdown > a::after {
+                content: ' +';
+            }
+
+            .dropdown.active > a::after {
+                content: ' -';
+            }
+        }
+</style>
 </head>
 <body>
+    <header class="site-header">
+        <nav class="site-nav">
+            <a href="/" class="logo">🚀&nbsp;ShopifyAppAuthority</a>
+            <ul class="nav-links">
+                <li><a href="/best-shopify-apps-2025-ultimate-guide/">Best Tools</a></li>
+                <li class="dropdown">
+                    <a href="/app-categories/" aria-haspopup="true" aria-expanded="false">App Categories</a>
+                    <div class="dropdown-content" role="menu">
+                        <a href="/best-shopify-apps-email-marketing/" role="menuitem">Email Marketing</a>
+                        <a href="/best-shopify-apps-conversion-optimization/" role="menuitem">Conversion & Sales</a>
+                        <a href="/reviews-social-proof-apps/" role="menuitem">Reviews & Social Proof</a>
+                        <a href="/best-shopify-apps-customer-service/" role="menuitem">Customer Service</a>
+                        <a href="/best-shopify-apps-crm-sales/" role="menuitem">CRM & Sales Apps</a>
+                        <a href="/best-shopify-apps-analytics-attribution/" role="menuitem">Analytics & Attribution</a>
+                        <a href="/free-shopify-apps/" role="menuitem">Free Apps</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="/faqs/" aria-haspopup="true" aria-expanded="false">Quick FAQs</a>
+                    <div class="dropdown-content" role="menu">
+                        <a href="/faqs/email-marketing-faq/" role="menuitem">Email Marketing FAQ</a>
+                        <a href="/faqs/crm-sales-faq/" role="menuitem">CRM & Sales FAQ</a>
+                        <a href="/faqs/analytics-attribution-faq/" role="menuitem">Analytics & Attribution FAQ</a>
+                    </div>
+                </li>
+                <li><a href="/methodology/">Methodology</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+                ☰
+            </button>
+        </nav>
+    </header>
+
+
     
 
 
@@ -540,14 +744,7 @@
         document.addEventListener('DOMContentLoaded', function() {
             const mobileToggle = document.querySelector('.mobile-menu-toggle');
             const navLinks = document.querySelector('.nav-links');
-            const dropdowns = document.querySelectorAll('.dropdown');
-
-            // Mobile menu toggle
-            if (mobileToggle && navLinks) {
-                mobileToggle.addEventListener('click', function() {
-                    navLinks.classList.toggle('active');
-                });
-            }
+            const dropdowns = document.querySelectorAll('
 
             // Mobile dropdown toggles
             dropdowns.forEach(dropdown => {
