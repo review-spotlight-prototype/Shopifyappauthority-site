@@ -83,12 +83,12 @@ def enhance_rocket_colors(image_url, output_path):
         new_image = Image.new('RGBA', (size, size), (0, 0, 0, 0))
         draw = ImageDraw.Draw(new_image)
 
-        # Draw dark purple circle background
-        purple_color = (42, 1, 52, 255)  # #2A0134
-        draw.ellipse([0, 0, size-1, size-1], fill=purple_color)
+        # Draw dark emerald green circle background
+        emerald_color = (6, 78, 59, 255)  # #064E3B (dark emerald green)
+        draw.ellipse([0, 0, size-1, size-1], fill=emerald_color)
 
         # Add a subtle bright border to help separation
-        border_color = (80, 20, 100, 255)  # Slightly lighter purple
+        border_color = (16, 108, 89, 255)  # Slightly lighter emerald green
         draw.ellipse([2, 2, size-3, size-3], outline=border_color, width=3)
 
         # Calculate position to center the enhanced rocket
