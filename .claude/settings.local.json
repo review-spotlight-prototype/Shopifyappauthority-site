@@ -10,7 +10,8 @@
       "Bash(start test-cookie-consent.html)",
       "Bash(python:*)",
       "Bash(del test-cookie-consent.html fix-cookie-consent.py)",
-      "Bash(start cookie-debug.html)"
+      "Bash(start cookie-debug.html)",
+      "Bash(curl:*)"
     ],
     "deny": [],
     "ask": []

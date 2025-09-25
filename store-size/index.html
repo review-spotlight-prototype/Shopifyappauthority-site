@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="/assets/cookie-consent.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopify Apps by Store Size - Find Apps Perfect for Your Business Stage | ShopifyAppAuthority</title>
@@ -8,65 +9,33 @@
     <meta name="keywords" content="shopify apps by store size, small store shopify apps, enterprise shopify apps, shopify apps for different business sizes">
     <meta name="author" content="ShopifyAppAuthority">
     <meta name="robots" content="index, follow">
-
     <!-- Open Graph -->
     <meta property="og:title" content="Shopify Apps by Store Size - Find Apps Perfect for Your Business Stage">
     <meta property="og:description" content="Find Shopify apps tailored to your store size and monthly order volume. Expert recommendations for every business stage.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://shopifyappauthority.com/store-size/">
     <meta property="og:site_name" content="ShopifyAppAuthority">
-
     <!-- Canonical URL -->
     <link rel="canonical" href="https://shopifyappauthority.com/store-size/">
-
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="https://imagedelivery.net/mYndgAUf_CYgFA1HoO_-GQ/a9d5a4a6-72a7-4ff7-9c77-6e8ce42e9b00/public">
+    <link rel="icon" type="image/png" href="https://imagedelivery.net/mYndgAUf_CYgFA1HoO_-GQ/43e7272a-fb53-44aa-f0f2-7656a83bc700/public">
     <link rel="apple-touch-icon" href="https://imagedelivery.net/mYndgAUf_CYgFA1HoO_-GQ/a9d5a4a6-72a7-4ff7-9c77-6e8ce42e9b00/public">
-
     <!-- Google Analytics --><script>
 // Cookie Consent - Legal Compliance System
 (function() {
     'use strict';
-
-    function acceptAllCookies() {
-        localStorage.setItem('cookieConsent', 'accepted');
-        localStorage.setItem('cookieConsentTimestamp', new Date().getTime());
-        hideCookiePopup();
-
-        // Enable analytics tracking
-        if (typeof gtag !== 'undefined') {
-            gtag('consent', 'update', {
-                'analytics_storage': 'granted',
-                'ad_storage': 'granted',
-                'personalization_storage': 'granted'
-            });
+    );
         }
-
         // Enable Facebook tracking
         if (typeof fbq !== 'undefined') {
             fbq('track', 'CookieConsent', {consent_type: 'accepted'});
         }
-
         console.log('Cookies accepted - analytics enabled');
     }
-
-    function rejectAllCookies() {
-        localStorage.setItem('cookieConsent', 'rejected');
-        localStorage.setItem('cookieConsentTimestamp', new Date().getTime());
-        hideCookiePopup();
-
-        // Disable analytics tracking
-        if (typeof gtag !== 'undefined') {
-            gtag('consent', 'update', {
-                'analytics_storage': 'denied',
-                'ad_storage': 'denied',
-                'personalization_storage': 'denied'
-            });
+    );
         }
-
         console.log('Cookies rejected - analytics disabled');
     }
-
     function hideCookiePopup() {
         var popup = document.getElementById('cookieConsent');
         if (popup) {
@@ -74,7 +43,6 @@
             popup.classList.add('cookie-hidden');
         }
     }
-
     function showCookiePopup() {
         var popup = document.getElementById('cookieConsent');
         if (popup) {
@@ -82,29 +50,11 @@
             popup.classList.remove('cookie-hidden');
         }
     }
-
-    function checkCookieConsent() {
-        var consent = localStorage.getItem('cookieConsent');
-        var timestamp = localStorage.getItem('cookieConsentTimestamp');
-
-        // Check if consent is older than 1 year (legal requirement)
-        if (timestamp) {
-            var consentAge = new Date().getTime() - parseInt(timestamp);
-            var oneYear = 365 * 24 * 60 * 60 * 1000; // 1 year in milliseconds
-
-            if (consentAge > oneYear) {
-                // Reset expired consent
-                localStorage.removeItem('cookieConsent');
-                localStorage.removeItem('cookieConsentTimestamp');
-                consent = null;
-            }
         }
-
         if (!consent) {
             showCookiePopup();
         } else {
             hideCookiePopup();
-
             // Apply consent preferences
             if (consent === 'accepted') {
                 if (typeof gtag !== 'undefined') {
@@ -125,41 +75,30 @@
             }
         }
     }
-
     // Make functions globally available
     window.acceptAllCookies = acceptAllCookies;
     window.rejectAllCookies = rejectAllCookies;
-
     // Initialize on page load
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', checkCookieConsent);
     } else {
         checkCookieConsent();
     }
-
     // Removed automatic click-to-accept to prevent accidental dismissal
-
 })()); 
     // Simple wrapper functions for button compatibility
-    function acceptCookies() {
-        if (typeof acceptAllCookies === 'function') {
-            acceptAllCookies();
-        } else {
-            localStorage.setItem('cookieConsent', 'accepted');
-            localStorage.setItem('cookieConsentTimestamp', new Date().getTime());
+     else {
+            ;
+            .getTime());
             var popup = document.getElementById('cookieConsent');
             if (popup) {
                 popup.style.display = 'none';
             }
         }
     }
-
-    function rejectCookies() {
-        if (typeof rejectAllCookies === 'function') {
-            rejectAllCookies();
-        } else {
-            localStorage.setItem('cookieConsent', 'rejected');
-            localStorage.setItem('cookieConsentTimestamp', new Date().getTime());
+     else {
+            ;
+            .getTime());
             var popup = document.getElementById('cookieConsent');
             if (popup) {
                 popup.style.display = 'none';
@@ -167,7 +106,6 @@
         }
     }
 </script>
-
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-J09TH92K0M"></script>
     <!-- Microsoft Clarity -->
     <script type="text/javascript">
@@ -183,7 +121,6 @@
         gtag('js', new Date());
         gtag('config', 'G-J09TH92K0M');
     </script>
-
     <!-- Facebook Pixel -->
     <script>
         !function(f,b,e,v,n,t,s)
@@ -197,72 +134,37 @@
         fbq('init', '1087447432711058');
         fbq('track', 'PageView');
     </script>
-
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             line-height: 1.7;
             color: #2d3748;
             background: #ffffff;
         }
-
         /* Header */
-        
-
-        
-
-        
-
-        
-
-        
-
-        
-
-        
-
-        
-
-        
-
-        
-
-        
-
-        
-
         @media (max-width: 768px) {
-            
-
-            
         }
-
         /* Main Content */
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
-
         .page-
-
         .breadcrumb {
             font-size: 0.9rem;
             color: #718096;
             margin-bottom: 20px;
         }
-
         .breadcrumb a {
             color: #95bf47;
             text-decoration: none;
         }
-
         h1 {
             font-size: 3rem;
             font-weight: 800;
@@ -270,7 +172,6 @@
             margin-bottom: 20px;
             line-height: 1.2;
         }
-
         .subtitle {
             font-size: 1.3rem;
             color: #4a5568;
@@ -279,7 +180,6 @@
             max-width: 700px;
             margin: 0 auto;
         }
-
         /* Store Size Cards */
         .store-sizes-grid {
             display: grid;
@@ -287,7 +187,6 @@
             gap: 40px;
             margin: 60px 0;
         }
-
         .store-size-card {
             background: white;
             border-radius: 16px;
@@ -297,51 +196,42 @@
             transition: all 0.3s ease;
             text-align: center;
         }
-
         .store-size-card:hover {
             transform: translateY(-4px);
             box-shadow: 0 12px 40px rgba(0,0,0,0.15);
         }
-
         .card-
-
         .size-icon {
             font-size: 3rem;
             margin-bottom: 20px;
             display: block;
         }
-
         .size-title {
             font-size: 1.8rem;
             font-weight: 700;
             color: #1a202c;
             margin-bottom: 10px;
         }
-
         .size-range {
             font-size: 1.1rem;
             color: #4a5568;
             font-weight: 500;
         }
-
         .card-content {
             padding: 30px;
         }
-
         .size-description {
             color: #4a5568;
             line-height: 1.6;
             margin-bottom: 25px;
             font-size: 1.05rem;
         }
-
         .features-list {
             list-style: none;
             padding: 0;
             margin: 25px 0;
             text-align: left;
         }
-
         .features-list li {
             display: flex;
             align-items: flex-start;
@@ -349,7 +239,6 @@
             font-size: 0.95rem;
             color: #4a5568;
         }
-
         .features-list li::before {
             content: "✓";
             color: #95bf47;
@@ -358,7 +247,6 @@
             flex-shrink: 0;
             margin-top: 2px;
         }
-
         .coming-soon {
             display: inline-flex;
             align-items: center;
@@ -373,7 +261,6 @@
             cursor: default;
             transition: all 0.3s ease;
         }
-
         .view-guide {
             display: inline-flex;
             align-items: center;
@@ -387,20 +274,16 @@
             font-size: 1rem;
             transition: all 0.3s ease;
         }
-
         .view-guide:hover {
             transform: translateY(-2px);
             box-shadow: 0 8px 25px rgba(149, 191, 71, 0.3);
         }
-
         /* Featured Card (Small Stores) */
         .store-size-card.featured {
             border: 2px solid #95bf47;
             transform: scale(1.02);
         }
-
         .store-size-card.featured .card-
-
         .featured-badge {
             position: absolute;
             top: -10px;
@@ -415,59 +298,17 @@
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
-
-        /* Cookie Consent */
-        .cookie-consent {
-            position: fixed !important;
-            bottom: 0 !important;
-            left: 0 !important;
-            right: 0 !important;
-            background: rgba(26, 32, 44, 0.95) !important;
-            color: white !important;
-            padding: 20px !important;
-            z-index: 99999 !important;
-            backdrop-filter: blur(10px);
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            cursor: pointer;
-            box-sizing: border-box !important;
-        }
-
-        .cookie-hidden {
-            display: none !important;
-            visibility: hidden !important;
-        }
-
-        /* Mobile optimization for cookies popup */
-        @media (max-width: 768px) {
-            .cookie-consent {
-                padding: 15px !important;
-                font-size: 14px !important;
-            }
-
-        .cookie-hidden {
-            display: none !important;
-            visibility: hidden !important;
-        }
-
-            .cookie-content {
-                flex-direction: column !important;
-                gap: 15px !important;
-                text-align: center !important;
-            }
-
             .cookie-buttons {
                 width: 100% !important;
                 justify-content: center !important;
                 gap: 10px !important;
             }
-
             .cookie-button {
                 min-width: 120px !important;
                 padding: 12px 20px !important;
                 font-size: 14px !important;
             }
         }
-
         .cookie-content {
             max-width: 1200px;
             margin: 0 auto;
@@ -477,18 +318,15 @@
             gap: 20px;
             flex-wrap: wrap;
         }
-
         .cookie-text {
             flex: 1;
             min-width: 300px;
         }
-
         .cookie-buttons {
             display: flex;
             gap: 10px;
             flex-wrap: wrap;
         }
-
         .cookie-button {
             padding: 10px 20px;
             border: none;
@@ -497,54 +335,43 @@
             font-weight: 500;
             transition: all 0.3s ease;
         }
-
         .accept-all {
             background: #95bf47;
             color: white;
         }
-
         .accept-all:hover {
             background: #7fa83a;
         }
-
         .reject-all {
             background: transparent;
             color: white;
             border: 1px solid rgba(255, 255, 255, 0.3);
         }
-
         .reject-all:hover {
             background: rgba(255, 255, 255, 0.1);
         }
-
         .hidden { display: none !important; visibility: hidden !important; }
-
         /* Mobile Responsive */
         @media (max-width: 768px) {
             h1 {
                 font-size: 2.2rem;
             }
-
             .store-sizes-grid {
                 grid-template-columns: 1fr;
                 gap: 30px;
                 margin: 40px 0;
             }
-
             .store-size-card.featured {
                 transform: none;
             }
-
             .card-content {
                 padding: 25px;
             }
-
             .cookie-content {
                 flex-direction: column;
                 text-align: center;
             }
         }
-            
             header {
             background: linear-gradient(180deg, #ffffff 0%, #fafafa 100%);
             border-bottom: 1px solid rgba(149, 191, 71, 0.2);
@@ -553,7 +380,6 @@
             z-index: 1000;
             backdrop-filter: blur(10px);
         }
-
         .site-nav {
             max-width: 1400px;
             margin: 0 auto;
@@ -563,7 +389,6 @@
             align-items: center;
             height: 70px;
         }
-
         .logo {
             font-size: 1.8rem;
             font-weight: bold;
@@ -575,14 +400,12 @@
             white-space: nowrap;
             line-height: 1;
         }
-
         .nav-links {
             display: flex;
             list-style: none;
             gap: 50px;
             align-items: center;
         }
-
         .nav-links a {
             color: #4a5568;
             text-decoration: none;
@@ -593,23 +416,19 @@
             border-radius: 10px;
             white-space: nowrap;
         }
-
         .nav-links a:hover, .nav-links a:focus {
             background-color: rgba(149, 191, 71, 0.1);
             color: #95bf47;
             transform: translateY(-2px);
         }
-
         .dropdown {
             position: relative;
         }
-
         .dropdown > a::after {
             content: ' ↓';
             font-size: 0.8em;
             color: #95bf47;
         }
-
         .dropdown-content {
             display: none;
             position: absolute;
@@ -623,11 +442,9 @@
             z-index: 1001;
             border: 1px solid rgba(149, 191, 71, 0.2);
         }
-
         .dropdown:hover .dropdown-content {
             display: block;
         }
-
         .dropdown-content a {
             color: #4a5568;
             padding: 0.7rem 1.5rem;
@@ -637,13 +454,11 @@
             transition: all 0.2s ease;
             border-radius: 0;
         }
-
         .dropdown-content a:hover {
             background-color: rgba(149, 191, 71, 0.1);
             color: #95bf47;
             transform: translateX(5px);
         }
-
         .mobile-menu-toggle {
             display: none;
             background: none;
@@ -653,15 +468,11 @@
             cursor: pointer;
             padding: 0.5rem;
         }
-
         @media (max-width: 768px) {
-            
-
             .mobile-menu-toggle {
                 display: block;
                 order: 2;
             }
-
             .nav-links {
                 display: none;
                 width: 100%;
@@ -673,18 +484,15 @@
                 padding: 1rem 0;
                 margin-top: 1rem;
             }
-
             .nav-links.active {
                 display: flex;
             }
-
             .nav-links a {
                 padding: 1rem 1.5rem;
                 border-radius: 0;
                 width: 100%;
                 text-align: left;
             }
-
             .dropdown-content {
                 position: static;
                 display: none;
@@ -693,16 +501,13 @@
                 background: #f8f9fa;
                 margin-left: 1rem;
             }
-
             .dropdown.active .dropdown-content,
             .dropdown.mobile-open .dropdown-content {
                 display: block;
             }
-
             .dropdown > a::after {
                 content: ' +';
             }
-
             .dropdown.active > a::after,
             .dropdown.mobile-open > a::after {
                 content: ' -';
@@ -717,7 +522,6 @@
             z-index: 1000;
             backdrop-filter: blur(10px);
         }
-
         .site-nav {
             max-width: 1400px;
             margin: 0 auto;
@@ -727,7 +531,6 @@
             align-items: center;
             height: 70px;
         }
-
         .logo {
             font-size: 1.8rem;
             font-weight: bold;
@@ -739,7 +542,6 @@
             white-space: nowrap;
             line-height: 1;
         }
-
         .nav-links {
             display: flex;
             list-style: none;
@@ -748,7 +550,6 @@
             margin: 0;
             padding: 0;
         }
-
         .nav-links a {
             color: #4a5568;
             text-decoration: none;
@@ -759,23 +560,19 @@
             border-radius: 10px;
             white-space: nowrap;
         }
-
         .nav-links a:hover, .nav-links a:focus {
             background-color: rgba(149, 191, 71, 0.1);
             color: #95bf47;
             transform: translateY(-2px);
         }
-
         .dropdown {
             position: relative;
         }
-
         .dropdown > a::after {
             content: ' ↓';
             font-size: 0.8em;
             color: #95bf47;
         }
-
         .dropdown-content {
             display: none;
             position: absolute;
@@ -789,11 +586,9 @@
             z-index: 1001;
             border: 1px solid rgba(149, 191, 71, 0.2);
         }
-
         .dropdown:hover .dropdown-content {
             display: block;
         }
-
         .dropdown-content a {
             color: #4a5568;
             padding: 0.7rem 1.5rem;
@@ -803,13 +598,11 @@
             transition: all 0.2s ease;
             border-radius: 0;
         }
-
         .dropdown-content a:hover {
             background-color: rgba(149, 191, 71, 0.1);
             color: #95bf47;
             transform: translateX(5px);
         }
-
         .mobile-menu-toggle {
             display: none;
             background: none;
@@ -819,23 +612,19 @@
             cursor: pointer;
             padding: 0.5rem;
         }
-
         @media (max-width: 768px) {
             .site-nav {
                 padding: 0 20px;
                 flex-wrap: wrap;
                 position: relative;
             }
-
             .logo {
                 font-size: 1.4rem;
             }
-
             .mobile-menu-toggle {
                 display: block;
                 order: 2;
             }
-
             .nav-links {
                 display: none;
                 width: 100%;
@@ -847,18 +636,15 @@
                 padding: 1rem 0;
                 margin-top: 1rem;
             }
-
             .nav-links.active {
                 display: flex;
             }
-
             .nav-links a {
                 padding: 1rem 1.5rem;
                 border-radius: 0;
                 width: 100%;
                 text-align: left;
             }
-
             .dropdown-content {
                 position: static;
                 display: none;
@@ -867,48 +653,39 @@
                 background: #f8f9fa;
                 margin-left: 1rem;
             }
-
             .dropdown.active .dropdown-content,
             .dropdown.mobile-open .dropdown-content {
                 display: block;
             }
-
             .dropdown > a::after {
                 content: ' +';
             }
-
             .dropdown.active > a::after,
             .dropdown.mobile-open > a::after {
                 content: ' -';
             }
         }
-    
         /* Fix for anchor link offset due to sticky header */
         html {
             scroll-padding-top: 100px;
         }
-
         /* Alternative method for older browsers */
         [id]:target {
             scroll-margin-top: 100px;
         }
-
         /* Mobile scroll offset adjustments */
         @media (max-width: 768px) {
             html {
                 scroll-padding-top: 80px;
             }
-
             [id]:target {
                 scroll-margin-top: 80px;
             }
         }
-
         /* Smooth scrolling for better UX */
         html {
             scroll-behavior: smooth;
         }
-        
         /* Enhanced mobile menu functionality */
         @media (max-width: 768px) {
             .mobile-menu-toggle {
@@ -916,7 +693,6 @@
                 z-index: 1001 !important;
                 position: relative !important;
             }
-
             .nav-links {
                 position: absolute !important;
                 top: 100% !important;
@@ -928,12 +704,10 @@
                 overflow: hidden !important;
                 transition: all 0.3s ease !important;
             }
-
             .nav-links.active {
                 max-height: 500px !important;
                 overflow-y: auto !important;
             }
-
             .dropdown-content {
                 position: static !important;
                 box-shadow: none !important;
@@ -943,7 +717,6 @@
                 overflow: hidden !important;
                 transition: all 0.3s ease !important;
             }
-
             .dropdown.active .dropdown-content,
             .dropdown.mobile-open .dropdown-content {
                 max-height: 300px !important;
@@ -951,7 +724,6 @@
             }
         }
         </style>
-
     <!-- JSON-LD Schema -->
     <script type="application/ld+json">
     {
@@ -972,6 +744,7 @@
 </head>
 <body>
     <header class="site-header">
+    <link rel="stylesheet" href="/assets/cookie-consent.css">
         <nav class="site-nav">
             <a href="/" class="logo">🚀&nbsp;ShopifyAppAuthority</a>
             <ul class="nav-links">
@@ -1004,28 +777,9 @@
             </button>
         </nav>
     </header>
-
-
-    
-
-
     <!-- Cookie Consent -->
-    <div id="cookieConsent" class="cookie-consent">
-        <div class="cookie-content">
-            <div class="cookie-text">
-                <strong>🍪 We use cookies to enhance your experience.</strong>
-                This site uses cookies for analytics and affiliate tracking. By continuing to browse, you consent to our use of cookies.
-                <a href="/privacy-policy/" style="color: #95bf47; text-decoration: underline;">Learn more</a>
-            </div>
-            <div class="cookie-buttons">
-                <button class="cookie-button accept-all" onclick="acceptCookies()">Accept All</button>
-                <button class="cookie-button reject-all" onclick="rejectCookies()">Reject All</button>
-            </div>
-        </div>
     </div>
-
-    
-
+    </div>
     <main class="container">
         <div class="page-header">
             <div class="breadcrumb">
@@ -1034,7 +788,6 @@
             <h1>Apps by Store Size</h1>
             <p class="subtitle">Different business stages need different tools. Find Shopify apps perfectly matched to your store's size, monthly order volume, and growth stage.</p>
         </div>
-
         <div class="store-sizes-grid">
             <!-- Small Stores -->
             <div class="store-size-card featured">
@@ -1060,7 +813,6 @@
                     </span>
                 </div>
             </div>
-
             <!-- Medium Stores -->
             <div class="store-size-card">
                 <div class="card-header">
@@ -1084,7 +836,6 @@
                     </span>
                 </div>
             </div>
-
             <!-- Enterprise -->
             <div class="store-size-card">
                 <div class="card-header">
@@ -1109,7 +860,6 @@
                 </div>
             </div>
         </div>
-
         <!-- Recommendation Box -->
         <div style="background: linear-gradient(135deg, #f0fff4 0%, #c6f6d5 20%, #f0fff4 100%); border-left: 4px solid #95bf47; padding: 30px; margin: 60px 0; border-radius: 8px; text-align: center;">
             <h3 style="color: #276749; font-size: 1.5rem; margin-bottom: 15px;">Not Sure Which Category Fits Your Store?</h3>
@@ -1121,38 +871,28 @@
             </a>
         </div>
     </main>
-
     <script>
         // Cookie consent functionality
-        
-        
-
                 }
             }
         });
-
         // Mobile menu toggle
         document.querySelector(');
-
         // Track store size page visits
         gtag('event', 'page_view', {
             'page_title': 'Store Size Categories',
             'page_location': window.location.href,
             'content_group1': 'store_size_page'
         });
-
         fbq('track', 'ViewContent', {
             content_type: 'category',
             content_name: 'Store Size Categories'
         });
-    
-
         // Mobile menu functionality
         document.addEventListener('DOMContentLoaded', function() {
             const mobileToggle = document.querySelector('.mobile-menu-toggle');
             const navLinks = document.querySelector('.nav-links');
             const dropdowns = document.querySelectorAll('.dropdown');
-
             // Mobile menu toggle button
             if (mobileToggle) {
                 mobileToggle.addEventListener('click', function(e) {
@@ -1168,28 +908,24 @@
                     dropdownLink.addEventListener('click', function(e) {
                         if (window.innerWidth <= 768) {
                             e.preventDefault();
-
                             // Close other dropdowns
                             dropdowns.forEach(otherDropdown => {
                                 if (otherDropdown !== dropdown) {
                                     otherDropdown.classList.remove('mobile-open');
                                 }
                             });
-
                             // Toggle current dropdown
                             dropdown.classList.toggle('mobile-open');
                         }
                     });
                 }
             });
-
             // Close mobile menu when clicking outside
             document.addEventListener('click', function(e) {
                 if (!e.target.closest('.site-nav') && navLinks.classList.contains('active')) {
                     navLinks.classList.remove('active');
                 }
             });
-
             // Close mobile menu on window resize
             window.addEventListener('resize', function() {
                 if (window.innerWidth > 768) {
@@ -1203,7 +939,6 @@
     // Initialize cookie consent on page load
     window.addEventListener('DOMContentLoaded', checkCookieConsent);
 </script>
-
     <footer style="background: #2d3748; color: white; padding: 3rem 0; margin-top: 4rem;">
         <div class="container">
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
@@ -1233,5 +968,6 @@
             </div>
         </div>
     </footer>
+    <script src="/assets/cookie-consent.js"></script>
 </body>
 </html>

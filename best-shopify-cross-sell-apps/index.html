@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="/assets/cookie-consent.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>8 Best Shopify Cross-Sell Apps 2025 (Bundle Products That Actually Sell)</title>
@@ -11,55 +12,25 @@
     <meta property="og:url" content="https://shopifyappauthority.com/best-shopify-cross-sell-apps/">
     <meta property="og:type" content="article">
     <meta property="og:image" content="https://shopifyappauthority.com/images/best-shopify-cross-sell-apps-2025.jpg">
-
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="https://imagedelivery.net/mYndgAUf_CYgFA1HoO_-GQ/a9d5a4a6-72a7-4ff7-9c77-6e8ce42e9b00/public">
+    <link rel="icon" type="image/png" href="https://imagedelivery.net/mYndgAUf_CYgFA1HoO_-GQ/43e7272a-fb53-44aa-f0f2-7656a83bc700/public">
     <link rel="apple-touch-icon" href="https://imagedelivery.net/mYndgAUf_CYgFA1HoO_-GQ/a9d5a4a6-72a7-4ff7-9c77-6e8ce42e9b00/public">
-
     <!-- Google Analytics --><script>
 // Cookie Consent - Legal Compliance System
 (function() {
     'use strict';
-
-    function acceptAllCookies() {
-        localStorage.setItem('cookieConsent', 'accepted');
-        localStorage.setItem('cookieConsentTimestamp', new Date().getTime());
-        hideCookiePopup();
-
-        // Enable analytics tracking
-        if (typeof gtag !== 'undefined') {
-            gtag('consent', 'update', {
-                'analytics_storage': 'granted',
-                'ad_storage': 'granted',
-                'personalization_storage': 'granted'
-            });
+    );
         }
-
         // Enable Facebook tracking
         if (typeof fbq !== 'undefined') {
             fbq('track', 'CookieConsent', {consent_type: 'accepted'});
         }
-
         console.log('Cookies accepted - analytics enabled');
     }
-
-    function rejectAllCookies() {
-        localStorage.setItem('cookieConsent', 'rejected');
-        localStorage.setItem('cookieConsentTimestamp', new Date().getTime());
-        hideCookiePopup();
-
-        // Disable analytics tracking
-        if (typeof gtag !== 'undefined') {
-            gtag('consent', 'update', {
-                'analytics_storage': 'denied',
-                'ad_storage': 'denied',
-                'personalization_storage': 'denied'
-            });
+    );
         }
-
         console.log('Cookies rejected - analytics disabled');
     }
-
     function hideCookiePopup() {
         var popup = document.getElementById('cookieConsent');
         if (popup) {
@@ -67,7 +38,6 @@
             popup.classList.add('cookie-hidden');
         }
     }
-
     function showCookiePopup() {
         var popup = document.getElementById('cookieConsent');
         if (popup) {
@@ -75,29 +45,11 @@
             popup.classList.remove('cookie-hidden');
         }
     }
-
-    function checkCookieConsent() {
-        var consent = localStorage.getItem('cookieConsent');
-        var timestamp = localStorage.getItem('cookieConsentTimestamp');
-
-        // Check if consent is older than 1 year (legal requirement)
-        if (timestamp) {
-            var consentAge = new Date().getTime() - parseInt(timestamp);
-            var oneYear = 365 * 24 * 60 * 60 * 1000; // 1 year in milliseconds
-
-            if (consentAge > oneYear) {
-                // Reset expired consent
-                localStorage.removeItem('cookieConsent');
-                localStorage.removeItem('cookieConsentTimestamp');
-                consent = null;
-            }
         }
-
         if (!consent) {
             showCookiePopup();
         } else {
             hideCookiePopup();
-
             // Apply consent preferences
             if (consent === 'accepted') {
                 if (typeof gtag !== 'undefined') {
@@ -118,41 +70,30 @@
             }
         }
     }
-
     // Make functions globally available
     window.acceptAllCookies = acceptAllCookies;
     window.rejectAllCookies = rejectAllCookies;
-
     // Initialize on page load
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', checkCookieConsent);
     } else {
         checkCookieConsent();
     }
-
     // Removed automatic click-to-accept to prevent accidental dismissal
-
 })()); 
     // Simple wrapper functions for button compatibility
-    function acceptCookies() {
-        if (typeof acceptAllCookies === 'function') {
-            acceptAllCookies();
-        } else {
-            localStorage.setItem('cookieConsent', 'accepted');
-            localStorage.setItem('cookieConsentTimestamp', new Date().getTime());
+     else {
+            ;
+            .getTime());
             var popup = document.getElementById('cookieConsent');
             if (popup) {
                 popup.style.display = 'none';
             }
         }
     }
-
-    function rejectCookies() {
-        if (typeof rejectAllCookies === 'function') {
-            rejectAllCookies();
-        } else {
-            localStorage.setItem('cookieConsent', 'rejected');
-            localStorage.setItem('cookieConsentTimestamp', new Date().getTime());
+     else {
+            ;
+            .getTime());
             var popup = document.getElementById('cookieConsent');
             if (popup) {
                 popup.style.display = 'none';
@@ -160,7 +101,6 @@
         }
     }
 </script>
-
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-J09TH92K0M"></script>
     <!-- Microsoft Clarity -->
     <script type="text/javascript">
@@ -176,7 +116,6 @@
         gtag('js', new Date());
         gtag('config', 'G-J09TH92K0M');
     </script>
-
     <!-- Facebook Pixel -->
     <script>
         !function(f,b,e,v,n,t,s)
@@ -191,32 +130,24 @@
         fbq('track', 'PageView');
     </script>
     <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1087447432711058&ev=PageView&noscript=1"/></noscript>
-
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
             color: #2d3748;
             background: #fafafa;
         }
-
         .container {
             max-width: 900px;
             margin: 0 auto;
             padding: 0 20px;
         }
-
         /* Header */
-        
-
-        
-
         .logo {
             font-size: 1.8rem;
             font-weight: bold;
@@ -228,43 +159,11 @@
             white-space: nowrap;
             line-height: 1;
         }
-
-        
-
-        
-
-        
-
-        
-
-        
-
-        
-
-        
-
-        
-
-        
-
         @media (max-width: 768px) {
-            
-
-            
-
             .nav-links.active {
                 display: flex;
             }
-
-            
-
-            
-
-            
-
-            
         }
-
         /* Hero Section */
         .hero {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -272,26 +171,22 @@
             padding: 2.5rem 0;
             text-align: center;
         }
-
         .hero h1 {
             font-size: 2.25rem;
             font-weight: 800;
             margin-bottom: 0.75rem;
             line-height: 1.2;
         }
-
         .hero .subtitle {
             font-size: 1.1rem;
             margin-bottom: 1rem;
             opacity: 0.9;
         }
-
         /* Main Content */
         .main-content {
             background: #fff;
             padding: 3rem 0;
         }
-
         .meta-subheadline {
             text-align: left;
             color: #9ca3af;
@@ -301,7 +196,6 @@
             letter-spacing: 0.05em;
             text-transform: uppercase;
         }
-
         /* App List and Items - Exact Top 15 Format */
         .app-list {
             list-style: none;
@@ -505,7 +399,6 @@
             color: #1a202c;
             font-weight: 700;
         }
-
         /* Schema and SEO */
         .breadcrumb {
             background: #fff;
@@ -513,48 +406,21 @@
             font-size: 0.875rem;
             border-bottom: 1px solid #e2e8f0;
         }
-
         .breadcrumb a {
             color: #667eea;
             text-decoration: none;
         }
-
         .breadcrumb a:hover {
             text-decoration: underline;
         }
-
-        /* Cookie Consent */
-        .cookie-banner {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: #2d3748;
-            color: white;
-            padding: 1rem;
-            z-index: 1000;
-            display: none;
-        }
-
-        .cookie-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 1rem;
-        }
-
         .cookie-text {
             flex: 1;
             font-size: 0.9rem;
         }
-
         .cookie-buttons {
             display: flex;
             gap: 1rem;
         }
-
         .cookie-btn {
             padding: 0.5rem 1rem;
             border: none;
@@ -563,21 +429,17 @@
             font-weight: 500;
             transition: opacity 0.2s;
         }
-
         .accept-btn {
             background: #95bf47;
             color: white;
         }
-
         .decline-btn {
             background: #6b7280;
             color: white;
         }
-
         .cookie-btn:hover {
             opacity: 0.9;
         }
-
         /* Mobile Optimizations - Match Top 15 Format */
         @media (max-width: 768px) {
             .container { padding: 0 15px; }
@@ -596,7 +458,6 @@
             .hero h1 { font-size: 1.75rem; }
             .cookie-content { flex-direction: column; text-align: center; }
         }
-            
             header {
             background: linear-gradient(180deg, #ffffff 0%, #fafafa 100%);
             border-bottom: 1px solid rgba(149, 191, 71, 0.2);
@@ -605,7 +466,6 @@
             z-index: 1000;
             backdrop-filter: blur(10px);
         }
-
         .site-nav {
             max-width: 1400px;
             margin: 0 auto;
@@ -615,7 +475,6 @@
             align-items: center;
             height: 70px;
         }
-
         .logo {
             font-size: 1.8rem;
             font-weight: bold;
@@ -627,14 +486,12 @@
             white-space: nowrap;
             line-height: 1;
         }
-
         .nav-links {
             display: flex;
             list-style: none;
             gap: 50px;
             align-items: center;
         }
-
         .nav-links a {
             color: #4a5568;
             text-decoration: none;
@@ -645,23 +502,19 @@
             border-radius: 10px;
             white-space: nowrap;
         }
-
         .nav-links a:hover, .nav-links a:focus {
             background-color: rgba(149, 191, 71, 0.1);
             color: #95bf47;
             transform: translateY(-2px);
         }
-
         .dropdown {
             position: relative;
         }
-
         .dropdown > a::after {
             content: ' ↓';
             font-size: 0.8em;
             color: #95bf47;
         }
-
         .dropdown-content {
             display: none;
             position: absolute;
@@ -675,11 +528,9 @@
             z-index: 1001;
             border: 1px solid rgba(149, 191, 71, 0.2);
         }
-
         .dropdown:hover .dropdown-content {
             display: block;
         }
-
         .dropdown-content a {
             color: #4a5568;
             padding: 0.7rem 1.5rem;
@@ -689,13 +540,11 @@
             transition: all 0.2s ease;
             border-radius: 0;
         }
-
         .dropdown-content a:hover {
             background-color: rgba(149, 191, 71, 0.1);
             color: #95bf47;
             transform: translateX(5px);
         }
-
         .mobile-menu-toggle {
             display: none;
             background: none;
@@ -705,15 +554,11 @@
             cursor: pointer;
             padding: 0.5rem;
         }
-
         @media (max-width: 768px) {
-            
-
             .mobile-menu-toggle {
                 display: block;
                 order: 2;
             }
-
             .nav-links {
                 display: none;
                 width: 100%;
@@ -725,18 +570,15 @@
                 padding: 1rem 0;
                 margin-top: 1rem;
             }
-
             .nav-links.active {
                 display: flex;
             }
-
             .nav-links a {
                 padding: 1rem 1.5rem;
                 border-radius: 0;
                 width: 100%;
                 text-align: left;
             }
-
             .dropdown-content {
                 position: static;
                 display: none;
@@ -745,16 +587,13 @@
                 background: #f8f9fa;
                 margin-left: 1rem;
             }
-
             .dropdown.active .dropdown-content,
             .dropdown.mobile-open .dropdown-content {
                 display: block;
             }
-
             .dropdown > a::after {
                 content: ' +';
             }
-
             .dropdown.active > a::after,
             .dropdown.mobile-open > a::after {
                 content: ' -';
@@ -769,7 +608,6 @@
             z-index: 1000;
             backdrop-filter: blur(10px);
         }
-
         .site-nav {
             max-width: 1400px;
             margin: 0 auto;
@@ -779,7 +617,6 @@
             align-items: center;
             height: 70px;
         }
-
         .logo {
             font-size: 1.8rem;
             font-weight: bold;
@@ -791,7 +628,6 @@
             white-space: nowrap;
             line-height: 1;
         }
-
         .nav-links {
             display: flex;
             list-style: none;
@@ -800,7 +636,6 @@
             margin: 0;
             padding: 0;
         }
-
         .nav-links a {
             color: #4a5568;
             text-decoration: none;
@@ -811,23 +646,19 @@
             border-radius: 10px;
             white-space: nowrap;
         }
-
         .nav-links a:hover, .nav-links a:focus {
             background-color: rgba(149, 191, 71, 0.1);
             color: #95bf47;
             transform: translateY(-2px);
         }
-
         .dropdown {
             position: relative;
         }
-
         .dropdown > a::after {
             content: ' ↓';
             font-size: 0.8em;
             color: #95bf47;
         }
-
         .dropdown-content {
             display: none;
             position: absolute;
@@ -841,11 +672,9 @@
             z-index: 1001;
             border: 1px solid rgba(149, 191, 71, 0.2);
         }
-
         .dropdown:hover .dropdown-content {
             display: block;
         }
-
         .dropdown-content a {
             color: #4a5568;
             padding: 0.7rem 1.5rem;
@@ -855,13 +684,11 @@
             transition: all 0.2s ease;
             border-radius: 0;
         }
-
         .dropdown-content a:hover {
             background-color: rgba(149, 191, 71, 0.1);
             color: #95bf47;
             transform: translateX(5px);
         }
-
         .mobile-menu-toggle {
             display: none;
             background: none;
@@ -871,23 +698,19 @@
             cursor: pointer;
             padding: 0.5rem;
         }
-
         @media (max-width: 768px) {
             .site-nav {
                 padding: 0 20px;
                 flex-wrap: wrap;
                 position: relative;
             }
-
             .logo {
                 font-size: 1.4rem;
             }
-
             .mobile-menu-toggle {
                 display: block;
                 order: 2;
             }
-
             .nav-links {
                 display: none;
                 width: 100%;
@@ -899,18 +722,15 @@
                 padding: 1rem 0;
                 margin-top: 1rem;
             }
-
             .nav-links.active {
                 display: flex;
             }
-
             .nav-links a {
                 padding: 1rem 1.5rem;
                 border-radius: 0;
                 width: 100%;
                 text-align: left;
             }
-
             .dropdown-content {
                 position: static;
                 display: none;
@@ -919,50 +739,40 @@
                 background: #f8f9fa;
                 margin-left: 1rem;
             }
-
             .dropdown.active .dropdown-content,
             .dropdown.mobile-open .dropdown-content {
                 display: block;
             }
-
             .dropdown > a::after {
                 content: ' +';
             }
-
             .dropdown.active > a::after,
             .dropdown.mobile-open > a::after {
                 content: ' -';
             }
         }
-    
         .hidden { display: none !important; visibility: hidden !important; }
-        
         /* Fix for anchor link offset due to sticky header */
         html {
             scroll-padding-top: 100px;
         }
-
         /* Alternative method for older browsers */
         [id]:target {
             scroll-margin-top: 100px;
         }
-
         /* Mobile scroll offset adjustments */
         @media (max-width: 768px) {
             html {
                 scroll-padding-top: 80px;
             }
-
             [id]:target {
                 scroll-margin-top: 80px;
             }
         }
-
         /* Smooth scrolling for better UX */
         html {
             scroll-behavior: smooth;
         }
-        
         /* Enhanced mobile menu functionality */
         @media (max-width: 768px) {
             .mobile-menu-toggle {
@@ -970,7 +780,6 @@
                 z-index: 1001 !important;
                 position: relative !important;
             }
-
             .nav-links {
                 position: absolute !important;
                 top: 100% !important;
@@ -982,12 +791,10 @@
                 overflow: hidden !important;
                 transition: all 0.3s ease !important;
             }
-
             .nav-links.active {
                 max-height: 500px !important;
                 overflow-y: auto !important;
             }
-
             .dropdown-content {
                 position: static !important;
                 box-shadow: none !important;
@@ -997,53 +804,23 @@
                 overflow: hidden !important;
                 transition: all 0.3s ease !important;
             }
-
             .dropdown.active .dropdown-content,
             .dropdown.mobile-open .dropdown-content {
                 max-height: 300px !important;
                 overflow-y: auto !important;
             }
         }
-        /* Cookie Consent - Required for Legal Compliance */
-        .cookie-consent {
-            position: fixed !important;
-            bottom: 0 !important;
-            left: 0 !important;
-            right: 0 !important;
-            background: rgba(26, 32, 44, 0.95) !important;
-            color: white !important;
-            padding: 20px !important;
-            z-index: 99999 !important;
-            backdrop-filter: blur(10px);
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            cursor: pointer;
-            box-sizing: border-box !important;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-        }
-
-        .cookie-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
         .cookie-text {
             flex: 1;
             min-width: 300px;
             font-size: 14px;
             line-height: 1.5;
         }
-
         .cookie-buttons {
             display: flex;
             gap: 10px;
             flex-wrap: wrap;
         }
-
         .cookie-button {
             padding: 10px 20px;
             border: none;
@@ -1054,54 +831,30 @@
             font-size: 14px;
             min-width: 100px;
         }
-
         .accept-all {
             background: #95bf47;
             color: white;
         }
-
         .accept-all:hover {
             background: #7fa83a;
         }
-
         .reject-all {
             background: transparent;
             color: white;
             border: 1px solid rgba(255, 255, 255, 0.3);
         }
-
         .reject-all:hover {
             background: rgba(255, 255, 255, 0.1);
         }
-
-        .cookie-hidden {
-            display: none !important;
-        }
-
-        /* Mobile optimization for cookies popup */
-        @media (max-width: 768px) {
-            .cookie-consent {
-                padding: 15px !important;
-                font-size: 13px !important;
-            }
-
-            .cookie-content {
-                flex-direction: column !important;
-                gap: 15px !important;
-                text-align: center !important;
-            }
-
             .cookie-text {
                 min-width: auto !important;
                 font-size: 13px !important;
             }
-
             .cookie-buttons {
                 width: 100% !important;
                 justify-content: center !important;
                 gap: 10px !important;
             }
-
             .cookie-button {
                 min-width: 120px !important;
                 padding: 12px 20px !important;
@@ -1112,6 +865,7 @@
 </head>
 <body>
     <header class="site-header">
+    <link rel="stylesheet" href="/assets/cookie-consent.css">
         <nav class="site-nav">
             <a href="/" class="logo">🚀&nbsp;ShopifyAppAuthority</a>
             <ul class="nav-links">
@@ -1144,13 +898,6 @@
             </button>
         </nav>
     </header>
-
-
-    
-
-
-    
-
     <div class="breadcrumb">
         <div class="container">
             <a href="/">Home</a>
@@ -1160,18 +907,15 @@
             <span>Best Shopify Cross-Sell Apps</span>
         </div>
     </div>
-
     <div class="hero">
         <div class="container">
             <h1>8 Best Shopify Cross-Sell Apps 2025</h1>
             <p class="subtitle">Bundle products that customers actually want together and boost AOV by 20-35%</p>
         </div>
     </div>
-
     <div class="main-content">
         <div class="container">
             <div class="meta-subheadline">Based on $100M+ ad spend • Updated January 2025 • 8 Apps Reviewed</div>
-
             <!-- App 1: Frequently Bought Together -->
             <div class="app-item">
                 <div class="app-header">
@@ -1187,16 +931,13 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="app-tagline">
                     "The Amazon-style bundle creator that analyzes your actual sales data to find products customers naturally buy together"
                 </div>
-
                 <div class="brutal-truth">
                     <h4>🔥 The Brutal Truth</h4>
                     <p>Random product bundles are a waste of time. This app analyzes your actual order history to find products that customers genuinely purchase together, then presents them as irresistible bundles with built-in discounts. Data beats guesswork every time.</p>
                 </div>
-
                 <div class="selling-points">
                     <div class="selling-point">
                         <span class="check">✅</span>
@@ -1241,14 +982,12 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="cta-mid">
                     <h4>Create bundles customers actually want</h4>
                     <p>Data-driven product combinations for 25%+ AOV increase</p>
                     <a href="https://apps.shopify.com/frequently-bought-together?utm_source=shopifyappauthority&utm_medium=affiliate&utm_campaign=cross_sell_guide" class="cta-button" target="_blank">Start Free Trial →</a>
                 </div>
             </div>
-
             <!-- App 2: Bundle Builder -->
             <div class="app-item">
                 <div class="app-header">
@@ -1264,16 +1003,13 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="app-tagline">
                     "The flexible bundle creator that lets customers build their own product combinations with dynamic pricing"
                 </div>
-
                 <div class="brutal-truth">
                     <h4>🔥 The Brutal Truth</h4>
                     <p>Most cross-sell apps force customers into pre-made bundles they might not want. Bundle Builder lets customers create their own combinations while you control the discount tiers. This customer choice leads to higher satisfaction and bigger orders.</p>
                 </div>
-
                 <div class="selling-points">
                     <div class="selling-point">
                         <span class="check">✅</span>
@@ -1318,14 +1054,12 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="cta-mid">
                     <h4>Let customers build their perfect bundles</h4>
                     <p>Interactive bundle building for higher satisfaction and AOV</p>
                     <a href="https://apps.shopify.com/bundle-builder?utm_source=shopifyappauthority&utm_medium=affiliate&utm_campaign=cross_sell_guide" class="cta-button" target="_blank">Start Free Trial →</a>
                 </div>
             </div>
-
             <!-- App 3: ReConvert -->
             <div class="app-item">
                 <div class="app-header">
@@ -1341,16 +1075,13 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="app-tagline">
                     "The post-purchase cross-sell specialist that shows complementary products when customers are ready to buy more"
                 </div>
-
                 <div class="brutal-truth">
                     <h4>🔥 The Brutal Truth</h4>
                     <p>The best time to cross-sell isn't before the purchase - it's right after. ReConvert capitalizes on post-purchase momentum when customers are feeling good about their buying decision and are open to adding complementary products.</p>
                 </div>
-
                 <div class="selling-points">
                     <div class="selling-point">
                         <span class="check">✅</span>
@@ -1395,14 +1126,12 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="cta-mid">
                     <h4>Maximize post-purchase opportunities</h4>
                     <p>Cross-sell when customers are most receptive to buying more</p>
                     <a href="https://apps.shopify.com/reconvert-post-purchase-upsell?utm_source=shopifyappauthority&utm_medium=affiliate&utm_campaign=cross_sell_guide" class="cta-button" target="_blank">Start Free Trial →</a>
                 </div>
             </div>
-
             <!-- App 4: Product Bundles & Cross Sell -->
             <div class="app-item">
                 <div class="app-header">
@@ -1418,16 +1147,13 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="app-tagline">
                     "The comprehensive bundling solution that handles everything from simple cross-sells to complex multi-tier bundles"
                 </div>
-
                 <div class="brutal-truth">
                     <h4>🔥 The Brutal Truth</h4>
                     <p>This app tries to do everything, which means it can be overwhelming for beginners but powerful for advanced users. If you want maximum control over bundle logic and don't mind a learning curve, it's excellent.</p>
                 </div>
-
                 <div class="selling-points">
                     <div class="selling-point">
                         <span class="check">✅</span>
@@ -1472,14 +1198,12 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="cta-mid">
                     <h4>Master complex bundling strategies</h4>
                     <p>Advanced bundle control for sophisticated cross-selling</p>
                     <a href="https://apps.shopify.com/product-bundles-cross-sell?utm_source=shopifyappauthority&utm_medium=affiliate&utm_campaign=cross_sell_guide" class="cta-button" target="_blank">Start Free Trial →</a>
                 </div>
             </div>
-
             <!-- App 5: Wiser -->
             <div class="app-item">
                 <div class="app-header">
@@ -1498,16 +1222,13 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="app-tagline">
                     "The AI cross-sell master that learns customer preferences to suggest complementary products they actually want"
                 </div>
-
                 <div class="brutal-truth">
                     <h4>🔥 The Brutal Truth</h4>
                     <p>Wiser excels at both upselling AND cross-selling, but its cross-sell recommendations are particularly impressive. The AI studies customer behavior patterns to suggest complementary products with scary accuracy.</p>
                 </div>
-
                 <div class="selling-points">
                     <div class="selling-point">
                         <span class="check">✅</span>
@@ -1552,14 +1273,12 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="cta-mid">
                     <h4>Let AI find your perfect product pairings</h4>
                     <p>Smart cross-sells that customers actually want to buy</p>
                     <a href="https://apps.shopify.com/wiser-ai-upsell-cross-sell?utm_source=shopifyappauthority&utm_medium=affiliate&utm_campaign=cross_sell_guide" class="cta-button" target="_blank">Start Free Trial →</a>
                 </div>
             </div>
-
             <!-- App 6: CrossSell & Upsell Pro -->
             <div class="app-item">
                 <div class="app-header">
@@ -1575,16 +1294,13 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="app-tagline">
                     "The professional cross-sell solution focused on creating high-converting product recommendation widgets"
                 </div>
-
                 <div class="brutal-truth">
                     <h4>🔥 The Brutal Truth</h4>
                     <p>This app specializes in beautiful, conversion-optimized cross-sell widgets but lacks some of the advanced AI features of competitors. Great if you want professional-looking recommendations without complexity.</p>
                 </div>
-
                 <div class="selling-points">
                     <div class="selling-point">
                         <span class="check">✅</span>
@@ -1629,14 +1345,12 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="cta-mid">
                     <h4>Professional cross-sell widgets that convert</h4>
                     <p>Beautiful, customizable recommendation displays</p>
                     <a href="https://apps.shopify.com/crosssell-upsell-pro?utm_source=shopifyappauthority&utm_medium=affiliate&utm_campaign=cross_sell_guide" class="cta-button" target="_blank">Start Free Trial →</a>
                 </div>
             </div>
-
             <!-- App 7: Also Bought -->
             <div class="app-item">
                 <div class="app-header">
@@ -1652,16 +1366,13 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="app-tagline">
                     "The simple but effective cross-sell app that focuses on 'customers who bought this also bought' recommendations"
                 </div>
-
                 <div class="brutal-truth">
                     <h4>🔥 The Brutal Truth</h4>
                     <p>Also Bought does one thing well - it shows what other customers actually purchased alongside the current product. No fancy AI, just solid social proof-based cross-selling that works.</p>
                 </div>
-
                 <div class="selling-points">
                     <div class="selling-point">
                         <span class="check">✅</span>
@@ -1706,14 +1417,12 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="cta-mid">
                     <h4>Simple, effective social proof cross-selling</h4>
                     <p>Let real customer behavior drive your recommendations</p>
                     <a href="https://apps.shopify.com/also-bought?utm_source=shopifyappauthority&utm_medium=affiliate&utm_campaign=cross_sell_guide" class="cta-button" target="_blank">Start Free Trial →</a>
                 </div>
             </div>
-
             <!-- App 8: Cross Sell & Upsell by Booster -->
             <div class="app-item">
                 <div class="app-header">
@@ -1729,16 +1438,13 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="app-tagline">
                     "The budget-friendly cross-sell option that covers all the basics without premium pricing"
                 </div>
-
                 <div class="brutal-truth">
                     <h4>🔥 The Brutal Truth</h4>
                     <p>This is the app for stores just starting with cross-selling. It lacks advanced features but covers the basics well and won't cost you a fortune while you're testing what product combinations work best.</p>
                 </div>
-
                 <div class="selling-points">
                     <div class="selling-point">
                         <span class="check">✅</span>
@@ -1783,30 +1489,17 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="cta-mid">
                     <h4>Start cross-selling today for free</h4>
                     <p>Perfect for testing product combinations without investment</p>
                     <a href="https://apps.shopify.com/cross-sell-upsell-booster?utm_source=shopifyappauthority&utm_medium=affiliate&utm_campaign=cross_sell_guide" class="cta-button" target="_blank">Install Free App →</a>
                 </div>
             </div>
-
         </div>
     </div>
-
     <!-- Cookie Consent Banner -->
-    <div class="cookie-banner" id="cookieBanner">
-        <div class="cookie-content">
-            <div class="cookie-text">
-                We use cookies to enhance your browsing experience and analyze our traffic. Some cookies are necessary for the website to function, while others help us understand how you interact with our site.
-            </div>
-            <div class="cookie-buttons">
-                <button class="cookie-btn accept-btn" onclick="acceptCookies()">Accept All</button>
-                <button class="cookie-btn decline-btn" onclick="declineCookies()">Decline</button>
-            </div>
-        </div>
     </div>
-
+    </div>
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -1833,25 +1526,14 @@
         }
     }
     </script>
-
     <script>
         // Cookie Consent Management
         function showCookieBanner() {
-            if (!localStorage.getItem('cookieConsent')) {
+            if (!) {
                 document.getElementById('cookieBanner').style.display = 'block';
             }
         }
-
-        
         // Enhanced cookie popup functionality - click anywhere to accept
-        document.addEventListener('DOMContentLoaded', function() {
-            const cookieConsent = document.getElementById('cookieConsent');
-            if (cookieConsent) {
-                // Add click anywhere to accept functionality
-                cookieConsent.addEventListener('click', function() {
-                    acceptCookies();
-                });
-
                 // Prevent event bubbling on buttons
                 const buttons = cookieConsent.querySelectorAll('button');
                 buttons.forEach(function(button) {
@@ -1861,35 +1543,15 @@
                 });
             }
         });
-
-        function acceptCookies() {
-            localStorage.setItem('cookieConsent', 'accepted');
-            document.getElementById('cookieBanner').style.display = 'none';
-
-            // Enable Google Analytics
-            gtag('consent', 'update', {
-                'analytics_storage': 'granted'
-            });
-
+        );
             // Enable Facebook Pixel
             fbq('consent', 'grant');
         }
-
-        function declineCookies() {
-            localStorage.setItem('cookieConsent', 'declined');
-            document.getElementById('cookieBanner').style.display = 'none';
-        }
-
         // Initialize cookie banner
-        document.addEventListener('DOMContentLoaded', function() {
-            showCookieBanner();
-        });
-
         // Track CTA clicks for conversion optimization
         document.querySelectorAll('.cta-button').forEach(button => {
             button.addEventListener('click', function() {
                 const appName = this.closest('.app-item').querySelector('.app-title').textContent;
-
                 // Google Analytics event
                 if (typeof gtag !== 'undefined') {
                     gtag('event', 'click_affiliate_link', {
@@ -1898,7 +1560,6 @@
                         'source': 'cross_sell_guide'
                     });
                 }
-
                 // Facebook Pixel event
                 if (typeof fbq !== 'undefined') {
                     fbq('track', 'Lead', {
@@ -1908,17 +1569,13 @@
                 }
             }
         });
-
         // Mobile menu toggle
         document.querySelector(');
-    
-
         // Mobile menu functionality
         document.addEventListener('DOMContentLoaded', function() {
             const mobileToggle = document.querySelector('.mobile-menu-toggle');
             const navLinks = document.querySelector('.nav-links');
             const dropdowns = document.querySelectorAll('.dropdown');
-
             // Mobile menu toggle button
             if (mobileToggle) {
                 mobileToggle.addEventListener('click', function(e) {
@@ -1934,28 +1591,24 @@
                     dropdownLink.addEventListener('click', function(e) {
                         if (window.innerWidth <= 768) {
                             e.preventDefault();
-
                             // Close other dropdowns
                             dropdowns.forEach(otherDropdown => {
                                 if (otherDropdown !== dropdown) {
                                     otherDropdown.classList.remove('mobile-open');
                                 }
                             });
-
                             // Toggle current dropdown
                             dropdown.classList.toggle('mobile-open');
                         }
                     });
                 }
             });
-
             // Close mobile menu when clicking outside
             document.addEventListener('click', function(e) {
                 if (!e.target.closest('.site-nav') && navLinks.classList.contains('active')) {
                     navLinks.classList.remove('active');
                 }
             });
-
             // Close mobile menu on window resize
             window.addEventListener('resize', function() {
                 if (window.innerWidth > 768) {
@@ -1969,5 +1622,6 @@
     // Initialize cookie consent on page load
     window.addEventListener('DOMContentLoaded', checkCookieConsent);
 </script>
+    <script src="/assets/cookie-consent.js"></script>
 </body>
 </html>

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="/assets/cookie-consent.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Best Analytics & Attribution Apps for Shopify Stores in 2025</title>
@@ -8,30 +9,24 @@
     <meta name="keywords" content="shopify analytics apps, attribution tracking, google analytics, hotjar, mixpanel, ecommerce analytics">
     <meta name="author" content="ShopifyAppAuthority">
     <meta name="robots" content="index, follow">
-
     <!-- Open Graph -->
     <meta property="og:title" content="Best Analytics & Attribution Apps for Shopify Stores in 2025">
     <meta property="og:description" content="Complete guide to choosing the right Analytics & Attribution app for your Shopify store. Compare features, pricing, and real-world performance of 5 top platforms.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://shopifyappauthority.com/best-shopify-apps-analytics-attribution/">
     <meta property="og:site_name" content="ShopifyAppAuthority">
-
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Best Analytics & Attribution Apps for Shopify Stores in 2025">
     <meta name="twitter:description" content="Complete guide to choosing the right Analytics & Attribution app for your Shopify store. Compare features, pricing, and real-world performance of 5 top platforms.">
-
     <!-- Security Headers -->
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta name="referrer" content="strict-origin-when-cross-origin">
-
     <!-- Canonical URL -->
     <link rel="canonical" href="https://shopifyappauthority.com/best-shopify-apps-analytics-attribution/">
-
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="https://imagedelivery.net/mYndgAUf_CYgFA1HoO_-GQ/a9d5a4a6-72a7-4ff7-9c77-6e8ce42e9b00/public">
+    <link rel="icon" type="image/png" href="https://imagedelivery.net/mYndgAUf_CYgFA1HoO_-GQ/43e7272a-fb53-44aa-f0f2-7656a83bc700/public">
     <link rel="apple-touch-icon" href="https://imagedelivery.net/mYndgAUf_CYgFA1HoO_-GQ/a9d5a4a6-72a7-4ff7-9c77-6e8ce42e9b00/public">
-
     <!-- Article Schema Markup -->
     <script type="application/ld+json">
     {
@@ -56,7 +51,6 @@
         }
     }
     </script>
-
     <!-- FAQ Schema -->
     <script type="application/ld+json">
     {
@@ -114,7 +108,6 @@
         ]
     }
     </script>
-
     <!-- Breadcrumb Schema -->
     <script type="application/ld+json">
     {
@@ -140,46 +133,18 @@
 // Cookie Consent - Legal Compliance System
 (function() {
     'use strict';
-
-    function acceptAllCookies() {
-        localStorage.setItem('cookieConsent', 'accepted');
-        localStorage.setItem('cookieConsentTimestamp', new Date().getTime());
-        hideCookiePopup();
-
-        // Enable analytics tracking
-        if (typeof gtag !== 'undefined') {
-            gtag('consent', 'update', {
-                'analytics_storage': 'granted',
-                'ad_storage': 'granted',
-                'personalization_storage': 'granted'
-            });
+    );
         }
-
         // Enable Facebook tracking
         if (typeof fbq !== 'undefined') {
             fbq('track', 'CookieConsent', {consent_type: 'accepted'});
         }
-
         console.log('Cookies accepted - analytics enabled');
     }
-
-    function rejectAllCookies() {
-        localStorage.setItem('cookieConsent', 'rejected');
-        localStorage.setItem('cookieConsentTimestamp', new Date().getTime());
-        hideCookiePopup();
-
-        // Disable analytics tracking
-        if (typeof gtag !== 'undefined') {
-            gtag('consent', 'update', {
-                'analytics_storage': 'denied',
-                'ad_storage': 'denied',
-                'personalization_storage': 'denied'
-            });
+    );
         }
-
         console.log('Cookies rejected - analytics disabled');
     }
-
     function hideCookiePopup() {
         var popup = document.getElementById('cookieConsent');
         if (popup) {
@@ -187,7 +152,6 @@
             popup.classList.add('cookie-hidden');
         }
     }
-
     function showCookiePopup() {
         var popup = document.getElementById('cookieConsent');
         if (popup) {
@@ -195,29 +159,11 @@
             popup.classList.remove('cookie-hidden');
         }
     }
-
-    function checkCookieConsent() {
-        var consent = localStorage.getItem('cookieConsent');
-        var timestamp = localStorage.getItem('cookieConsentTimestamp');
-
-        // Check if consent is older than 1 year (legal requirement)
-        if (timestamp) {
-            var consentAge = new Date().getTime() - parseInt(timestamp);
-            var oneYear = 365 * 24 * 60 * 60 * 1000; // 1 year in milliseconds
-
-            if (consentAge > oneYear) {
-                // Reset expired consent
-                localStorage.removeItem('cookieConsent');
-                localStorage.removeItem('cookieConsentTimestamp');
-                consent = null;
-            }
         }
-
         if (!consent) {
             showCookiePopup();
         } else {
             hideCookiePopup();
-
             // Apply consent preferences
             if (consent === 'accepted') {
                 if (typeof gtag !== 'undefined') {
@@ -238,41 +184,30 @@
             }
         }
     }
-
     // Make functions globally available
     window.acceptAllCookies = acceptAllCookies;
     window.rejectAllCookies = rejectAllCookies;
-
     // Initialize on page load
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', checkCookieConsent);
     } else {
         checkCookieConsent();
     }
-
     // Removed automatic click-to-accept to prevent accidental dismissal
-
 })()); 
     // Simple wrapper functions for button compatibility
-    function acceptCookies() {
-        if (typeof acceptAllCookies === 'function') {
-            acceptAllCookies();
-        } else {
-            localStorage.setItem('cookieConsent', 'accepted');
-            localStorage.setItem('cookieConsentTimestamp', new Date().getTime());
+     else {
+            ;
+            .getTime());
             var popup = document.getElementById('cookieConsent');
             if (popup) {
                 popup.style.display = 'none';
             }
         }
     }
-
-    function rejectCookies() {
-        if (typeof rejectAllCookies === 'function') {
-            rejectAllCookies();
-        } else {
-            localStorage.setItem('cookieConsent', 'rejected');
-            localStorage.setItem('cookieConsentTimestamp', new Date().getTime());
+     else {
+            ;
+            .getTime());
             var popup = document.getElementById('cookieConsent');
             if (popup) {
                 popup.style.display = 'none';
@@ -280,8 +215,6 @@
         }
     }
 </script>
-
-
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-J09TH92K0M"></script>
     <script>
@@ -290,7 +223,6 @@
         gtag('js', new Date());
         gtag('config', 'G-J09TH92K0M');
     </script>
-
     <!-- Facebook Pixel -->
     <script>
         !function(f,b,e,v,n,t,s)
@@ -304,7 +236,6 @@
         fbq('init', '1087447432711058');
         fbq('track', 'PageView');
     </script>
-
     <style>
         /* Base Styles */
         * {
@@ -312,25 +243,18 @@
             padding: 0;
             box-sizing: border-box;
         }
-
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
             color: #2d3748;
             background: #f7fafc;
         }
-
         .container {
             max-width: 900px;
             margin: 0 auto;
             padding: 0 20px;
         }
-
         /* Header Navigation */
-        
-
-        
-
         .logo {
             font-size: 1.6rem;
             font-weight: 700;
@@ -344,25 +268,6 @@
             gap: 0.5rem;
             transition: transform 0.2s;
         }
-
-        
-
-        
-
-        
-
-        
-
-        
-
-        
-
-        
-
-        
-
-        
-
         /* Hero Section with Preserved Graph Background */
         .hero {
             background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%);
@@ -372,7 +277,6 @@
             position: relative;
             overflow: hidden;
         }
-
         .hero::before {
             content: '';
             position: absolute;
@@ -383,25 +287,21 @@
             background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
             pointer-events: none;
         }
-
         .hero-content {
             position: relative;
             z-index: 1;
         }
-
         .hero h1 {
             font-size: 2.25rem;
             font-weight: 800;
             margin-bottom: 0.75rem;
             line-height: 1.2;
         }
-
         .hero .subtitle {
             font-size: 1.1rem;
             margin-bottom: 1rem;
             opacity: 0.9;
         }
-
         .author-badge {
             background: rgba(255,255,255,0.15);
             border: 1px solid rgba(255,255,255,0.3);
@@ -410,17 +310,14 @@
             display: inline-block;
             margin-top: 1rem;
         }
-
         /* Quick Navigation */
         .quick-
-
         .nav-buttons {
             display: flex;
             justify-content: center;
             gap: 0.5rem;
             flex-wrap: wrap;
         }
-
         .nav-button {
             background: #f8fafc;
             color: #8b5cf6;
@@ -432,19 +329,16 @@
             font-weight: 500;
             transition: all 0.3s ease;
         }
-
         .nav-button:hover {
             background: #8b5cf6;
             color: white;
             transform: translateY(-1px);
         }
-
         /* Main Content */
         .main-content {
             background: #fff;
             padding: 3rem 0;
         }
-
         .meta-subheadline {
             text-align: left;
             color: #9ca3af;
@@ -452,7 +346,6 @@
             margin: 0.5rem 0 1.5rem 0;
             padding: 0;
         }
-
         /* FAQ Link Box */
         .faq-link-box {
             background: linear-gradient(135deg, #f8f9fa, #e9ecef);
@@ -462,18 +355,15 @@
             text-align: center;
             border: 1px solid rgba(139, 92, 246, 0.3);
         }
-
         .faq-link-box h3 {
             margin: 0 0 10px 0;
             color: #2d3748;
             font-size: 1.2rem;
         }
-
         .faq-link-box p {
             margin: 0 0 15px 0;
             color: #4a5568;
         }
-
         .faq-link-box a {
             background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%);
             color: white;
@@ -483,12 +373,10 @@
             font-weight: 600;
             display: inline-block;
         }
-
         /* App Items */
         .app-list {
             list-style: none;
         }
-
         .app-item {
             border: 1px solid #e2e8f0;
             border-radius: 12px;
@@ -499,11 +387,9 @@
             box-shadow: 0 2px 4px rgba(0,0,0,0.05);
             transition: box-shadow 0.2s;
         }
-
         .app-item:hover {
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
-
         .app-rank {
             position: absolute;
             top: -12px;
@@ -520,14 +406,12 @@
             font-size: 0.875rem;
             box-shadow: 0 2px 8px rgba(0,0,0,0.15);
         }
-
         .app-item h3 {
             font-size: 1.75rem;
             color: #1a202c;
             margin-bottom: 0.5rem;
             font-weight: 700;
         }
-
         .app-category {
             color: #8b5cf6;
             font-size: 0.875rem;
@@ -536,7 +420,6 @@
             margin-bottom: 0.5rem;
             font-weight: 600;
         }
-
         .app-quick-info {
             display: flex;
             gap: 1.5rem;
@@ -545,38 +428,31 @@
             color: #4b5563;
             flex-wrap: wrap;
         }
-
         .quick-info-item {
             display: flex;
             align-items: center;
             gap: 0.25rem;
         }
-
         .quick-info-label {
             font-weight: 500;
             color: #6b7280;
         }
-
         .quick-info-value {
             font-weight: 700;
             color: #059669;
         }
-
         .quick-info-value.price {
             color: #dc2626;
         }
-
         .quick-info-value.free {
             color: #059669;
         }
-
         .app-description {
             margin-bottom: 1.5rem;
             font-size: 1.125rem;
             line-height: 1.7;
             color: #4a5568;
         }
-
         /* Best For Box */
         .best-for-box {
             background: linear-gradient(135deg, #fef3c7 0%, #fef9e7 100%);
@@ -587,7 +463,6 @@
             position: relative;
             overflow: hidden;
         }
-
         .best-for-box::before {
             content: '⭐';
             position: absolute;
@@ -596,7 +471,6 @@
             font-size: 2rem;
             opacity: 0.5;
         }
-
         .best-for-box h4 {
             color: #92400e;
             font-size: 0.9rem;
@@ -605,27 +479,23 @@
             margin-bottom: 0.75rem;
             font-weight: 700;
         }
-
         .best-for-box p {
             color: #451a03;
             font-size: 1.05rem;
             line-height: 1.6;
             margin: 0;
         }
-
         .best-for-box ul {
             margin: 0.75rem 0 0 0;
             padding-left: 1.5rem;
             list-style: none;
         }
-
         .best-for-box li {
             position: relative;
             margin-bottom: 0.5rem;
             color: #451a03;
             font-size: 0.95rem;
         }
-
         .best-for-box li:before {
             content: '✓';
             color: #f59e0b;
@@ -633,7 +503,6 @@
             position: absolute;
             left: -1.25rem;
         }
-
         /* Comparison Section */
         .vs-comparison {
             background: #f1f5f9;
@@ -642,7 +511,6 @@
             margin: 1.5rem 0;
             border-radius: 0 8px 8px 0;
         }
-
         .vs-comparison h5 {
             color: #8b5cf6;
             font-size: 0.9rem;
@@ -651,19 +519,16 @@
             margin-bottom: 0.75rem;
             font-weight: 700;
         }
-
         .vs-comparison p {
             color: #334155;
             font-size: 1rem;
             line-height: 1.6;
             margin: 0;
         }
-
         .vs-comparison strong {
             color: #0f172a;
             font-weight: 700;
         }
-
         /* Why I Like Section */
         .why-i-like {
             background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
@@ -672,7 +537,6 @@
             margin: 2rem 0;
             border-radius: 0 8px 8px 0;
         }
-
         .why-i-like h4 {
             color: #2d3748;
             margin-bottom: 0.75rem;
@@ -681,7 +545,6 @@
             font-weight: 700;
             letter-spacing: 0.05em;
         }
-
         /* Pros/Cons */
         .pros-cons {
             display: grid;
@@ -689,21 +552,17 @@
             gap: 2rem;
             margin: 2rem 0;
         }
-
         .pros, .cons {
             background: #f8fafc;
             padding: 1.5rem;
             border-radius: 8px;
         }
-
         .pros {
             border-left: 4px solid #10b981;
         }
-
         .cons {
             border-left: 4px solid #ef4444;
         }
-
         .pros h4, .cons h4 {
             color: #1a202c;
             margin-bottom: 1rem;
@@ -712,19 +571,16 @@
             letter-spacing: 0.05em;
             font-weight: 700;
         }
-
         .pros ul, .cons ul {
             list-style: none;
             padding: 0;
         }
-
         .pros li, .cons li {
             position: relative;
             padding-left: 1.5rem;
             margin-bottom: 0.5rem;
             color: #4a5568;
         }
-
         .pros li:before {
             content: "✓";
             position: absolute;
@@ -732,7 +588,6 @@
             color: #10b981;
             font-weight: bold;
         }
-
         .cons li:before {
             content: "✗";
             position: absolute;
@@ -740,7 +595,6 @@
             color: #ef4444;
             font-weight: bold;
         }
-
         /* Selling Points */
         .selling-points {
             background: linear-gradient(135deg, #f0fff4 0%, #f7fafc 100%);
@@ -749,46 +603,37 @@
             padding: 2rem;
             margin: 2rem 0;
         }
-
         .selling-
-
         .selling-point {
             display: flex;
             align-items: flex-start;
             gap: 1rem;
             margin-bottom: 2rem;
         }
-
         .selling-point:last-child {
             margin-bottom: 0;
         }
-
         .check {
             font-size: 1.25rem;
             color: #8b5cf6;
             flex-shrink: 0;
             margin-top: 0.2rem;
         }
-
         .point-content {
             flex: 1;
         }
-
         .point-
-
         .point-bullets {
             margin: 0;
             padding-left: 1.25rem;
             list-style: none;
         }
-
         .point-bullets li {
             position: relative;
             margin-bottom: 0.5rem;
             color: #4a5568;
             line-height: 1.5;
         }
-
         .point-bullets li:before {
             content: "•";
             color: #8b5cf6;
@@ -796,12 +641,10 @@
             position: absolute;
             left: -1rem;
         }
-
         .point-bullets li strong {
             color: #1a202c;
             font-weight: 700;
         }
-
         /* CTAs */
         .cta-early,
         .cta-mid {
@@ -809,7 +652,6 @@
             margin: 1.5rem 0;
             padding: 0 1rem;
         }
-
         .cta-secondary {
             background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%);
             color: white;
@@ -824,13 +666,11 @@
             transition: all 0.2s ease;
             border: none;
         }
-
         .cta-secondary:hover {
             background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%);
             transform: translateY(-1px);
             box-shadow: 0 5px 15px rgba(139, 92, 246, 0.4);
         }
-
         /* Decision Framework */
         .decision-framework {
             background: linear-gradient(135deg, #e0e7ff 0%, #f5f3ff 100%);
@@ -839,21 +679,18 @@
             padding: 3rem;
             margin: 4rem 0;
         }
-
         .decision-framework h2 {
             color: #312e81;
             font-size: 2rem;
             margin-bottom: 1rem;
             font-weight: 800;
         }
-
         .decision-subtitle {
             color: #4c1d95;
             font-size: 1.1rem;
             margin-bottom: 2rem;
             font-style: italic;
         }
-
         .decision-step {
             background: white;
             border-radius: 12px;
@@ -862,7 +699,6 @@
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
             position: relative;
         }
-
         .step-number {
             position: absolute;
             top: -15px;
@@ -879,7 +715,6 @@
             font-size: 1.25rem;
             box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
         }
-
         .step-title {
             color: #1e293b;
             font-size: 1.3rem;
@@ -887,13 +722,11 @@
             font-weight: 700;
             padding-top: 0.5rem;
         }
-
         .step-content {
             color: #475569;
             font-size: 1.05rem;
             line-height: 1.7;
         }
-
         .if-then-logic {
             background: #f8fafc;
             border-left: 3px solid #818cf8;
@@ -901,12 +734,10 @@
             margin: 1rem 0;
             border-radius: 0 8px 8px 0;
         }
-
         .if-then-logic strong {
             color: #4c1d95;
             font-weight: 700;
         }
-
         /* FAQ Section */
         .faq-section {
             margin: 3rem 0;
@@ -914,82 +745,36 @@
             background: #f8f9fa;
             border-radius: 12px;
         }
-
         .faq-section h2 {
             color: #1a202c;
             margin-bottom: 2rem;
             font-size: 2rem;
             font-weight: 700;
         }
-
         .faq-item {
             margin-bottom: 2rem;
         }
-
         .faq-item h3 {
             color: #2d3748;
             font-size: 1.2rem;
             margin-bottom: 0.5rem;
             font-weight: 600;
         }
-
         .faq-item p {
             color: #4a5568;
             line-height: 1.7;
         }
-
-        /* Cookie Consent */
-        .cookie-consent {
-            position: fixed !important;
-            bottom: 0 !important;
-            left: 0 !important;
-            right: 0 !important;
-            background: rgba(26, 32, 44, 0.95) !important;
-            color: white !important;
-            padding: 20px !important;
-            z-index: 99999 !important;
-            backdrop-filter: blur(10px);
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            cursor: pointer;
-            box-sizing: border-box !important;
-        }
-
-        .cookie-hidden {
-            display: none !important;
-            visibility: hidden !important;
-        }
-
-        /* Mobile optimization for cookies popup */
-        @media (max-width: 768px) {
-            .cookie-consent {
-                padding: 15px !important;
-                font-size: 14px !important;
-            }
-
-        .cookie-hidden {
-            display: none !important;
-            visibility: hidden !important;
-        }
-
-            .cookie-content {
-                flex-direction: column !important;
-                gap: 15px !important;
-                text-align: center !important;
-            }
-
             .cookie-buttons {
                 width: 100% !important;
                 justify-content: center !important;
                 gap: 10px !important;
             }
-
             .cookie-button {
                 min-width: 120px !important;
                 padding: 12px 20px !important;
                 font-size: 14px !important;
             }
         }
-
         .cookie-content {
             max-width: 1200px;
             margin: 0 auto;
@@ -999,18 +784,15 @@
             gap: 20px;
             flex-wrap: wrap;
         }
-
         .cookie-text {
             flex: 1;
             min-width: 300px;
         }
-
         .cookie-buttons {
             display: flex;
             gap: 10px;
             flex-wrap: wrap;
         }
-
         .cookie-button {
             padding: 10px 20px;
             border: none;
@@ -1019,89 +801,59 @@
             font-weight: 500;
             transition: all 0.3s ease;
         }
-
         .accept-all {
             background: #8b5cf6;
             color: white;
         }
-
         .accept-all:hover {
             background: #7c3aed;
         }
-
         .reject-all {
             background: transparent;
             color: white;
             border: 1px solid rgba(255, 255, 255, 0.3);
         }
-
         .reject-all:hover {
             background: rgba(255, 255, 255, 0.1);
         }
-
         .hidden { display: none !important; visibility: hidden !important; }
-
         /* Mobile Responsive */
         @media (max-width: 768px) {
-            
-
-            
-
             .nav-links.active {
                 display: flex;
             }
-
             .nav-links > li {
                 border-bottom: 1px solid #f1f5f9;
             }
-
             .nav-links > li > a {
                 padding: 1rem 20px;
                 border-radius: 0;
                 display: block;
                 font-weight: 500;
             }
-
-            
-
-            
-
-            
-
-            
-
-            
-
             .hero h1 {
                 font-size: 2rem;
             }
-
             .hero .subtitle {
                 font-size: 1rem;
             }
-
             .container {
                 padding: 0 15px;
             }
-
             .app-item {
                 padding: 2rem 1.5rem;
             }
-
             .pros-cons {
                 grid-template-columns: 1fr;
                 gap: 1rem;
             }
-
             .pros, .cons {
                 padding: 1rem;
             }
-
             .pros li, .cons li {
                 font-size: 0.9rem;
                 line-height: 1.4;
             }
-
             .cta-secondary {
                 width: 100%;
                 min-height: 56px;
@@ -1111,64 +863,51 @@
                 align-items: center;
                 justify-content: center;
             }
-
             .selling-points {
                 padding: 1.5rem;
                 margin: 1.5rem 0;
             }
-
             .selling-point {
                 margin-bottom: 1.5rem;
                 gap: 0.75rem;
             }
-
             .point-bullets {
                 padding-left: 1rem;
             }
-
             .point-bullets li {
                 margin-bottom: 0.4rem;
                 line-height: 1.4;
                 font-size: 0.95rem;
             }
-
             .app-quick-info {
                 gap: 1rem;
                 margin: 0.5rem 0 1.25rem 0;
                 font-size: 0.85rem;
             }
-
             .quick-info-item {
                 gap: 0.2rem;
             }
-
             .why-i-like {
                 padding: 1.25rem;
                 margin: 1.25rem 0;
             }
-
             .cookie-content {
                 flex-direction: column;
                 text-align: center;
             }
-
             .decision-framework {
                 padding: 2rem 1.5rem;
             }
-
             .decision-step {
                 padding: 1.5rem;
             }
-
             .quick-
-
             .nav-buttons {
                 justify-content: flex-start;
                 padding: 0 20px;
                 min-width: max-content;
             }
         }
-            
             header {
             background: linear-gradient(180deg, #ffffff 0%, #fafafa 100%);
             border-bottom: 1px solid rgba(149, 191, 71, 0.2);
@@ -1177,7 +916,6 @@
             z-index: 1000;
             backdrop-filter: blur(10px);
         }
-
         .site-nav {
             max-width: 1400px;
             margin: 0 auto;
@@ -1187,7 +925,6 @@
             align-items: center;
             height: 70px;
         }
-
         .logo {
             font-size: 1.8rem;
             font-weight: bold;
@@ -1199,14 +936,12 @@
             white-space: nowrap;
             line-height: 1;
         }
-
         .nav-links {
             display: flex;
             list-style: none;
             gap: 50px;
             align-items: center;
         }
-
         .nav-links a {
             color: #4a5568;
             text-decoration: none;
@@ -1217,23 +952,19 @@
             border-radius: 10px;
             white-space: nowrap;
         }
-
         .nav-links a:hover, .nav-links a:focus {
             background-color: rgba(149, 191, 71, 0.1);
             color: #95bf47;
             transform: translateY(-2px);
         }
-
         .dropdown {
             position: relative;
         }
-
         .dropdown > a::after {
             content: ' ↓';
             font-size: 0.8em;
             color: #95bf47;
         }
-
         .dropdown-content {
             display: none;
             position: absolute;
@@ -1247,11 +978,9 @@
             z-index: 1001;
             border: 1px solid rgba(149, 191, 71, 0.2);
         }
-
         .dropdown:hover .dropdown-content {
             display: block;
         }
-
         .dropdown-content a {
             color: #4a5568;
             padding: 0.7rem 1.5rem;
@@ -1261,13 +990,11 @@
             transition: all 0.2s ease;
             border-radius: 0;
         }
-
         .dropdown-content a:hover {
             background-color: rgba(149, 191, 71, 0.1);
             color: #95bf47;
             transform: translateX(5px);
         }
-
         .mobile-menu-toggle {
             display: none;
             background: none;
@@ -1277,15 +1004,11 @@
             cursor: pointer;
             padding: 0.5rem;
         }
-
         @media (max-width: 768px) {
-            
-
             .mobile-menu-toggle {
                 display: block;
                 order: 2;
             }
-
             .nav-links {
                 display: none;
                 width: 100%;
@@ -1297,18 +1020,15 @@
                 padding: 1rem 0;
                 margin-top: 1rem;
             }
-
             .nav-links.active {
                 display: flex;
             }
-
             .nav-links a {
                 padding: 1rem 1.5rem;
                 border-radius: 0;
                 width: 100%;
                 text-align: left;
             }
-
             .dropdown-content {
                 position: static;
                 display: none;
@@ -1317,16 +1037,13 @@
                 background: #f8f9fa;
                 margin-left: 1rem;
             }
-
             .dropdown.active .dropdown-content,
             .dropdown.mobile-open .dropdown-content {
                 display: block;
             }
-
             .dropdown > a::after {
                 content: ' +';
             }
-
             .dropdown.active > a::after,
             .dropdown.mobile-open > a::after {
                 content: ' -';
@@ -1341,7 +1058,6 @@
             z-index: 1000;
             backdrop-filter: blur(10px);
         }
-
         .site-nav {
             max-width: 1400px;
             margin: 0 auto;
@@ -1351,7 +1067,6 @@
             align-items: center;
             height: 70px;
         }
-
         .logo {
             font-size: 1.8rem;
             font-weight: bold;
@@ -1363,7 +1078,6 @@
             white-space: nowrap;
             line-height: 1;
         }
-
         .nav-links {
             display: flex;
             list-style: none;
@@ -1372,7 +1086,6 @@
             margin: 0;
             padding: 0;
         }
-
         .nav-links a {
             color: #4a5568;
             text-decoration: none;
@@ -1383,23 +1096,19 @@
             border-radius: 10px;
             white-space: nowrap;
         }
-
         .nav-links a:hover, .nav-links a:focus {
             background-color: rgba(149, 191, 71, 0.1);
             color: #95bf47;
             transform: translateY(-2px);
         }
-
         .dropdown {
             position: relative;
         }
-
         .dropdown > a::after {
             content: ' ↓';
             font-size: 0.8em;
             color: #95bf47;
         }
-
         .dropdown-content {
             display: none;
             position: absolute;
@@ -1413,11 +1122,9 @@
             z-index: 1001;
             border: 1px solid rgba(149, 191, 71, 0.2);
         }
-
         .dropdown:hover .dropdown-content {
             display: block;
         }
-
         .dropdown-content a {
             color: #4a5568;
             padding: 0.7rem 1.5rem;
@@ -1427,13 +1134,11 @@
             transition: all 0.2s ease;
             border-radius: 0;
         }
-
         .dropdown-content a:hover {
             background-color: rgba(149, 191, 71, 0.1);
             color: #95bf47;
             transform: translateX(5px);
         }
-
         .mobile-menu-toggle {
             display: none;
             background: none;
@@ -1443,23 +1148,19 @@
             cursor: pointer;
             padding: 0.5rem;
         }
-
         @media (max-width: 768px) {
             .site-nav {
                 padding: 0 20px;
                 flex-wrap: wrap;
                 position: relative;
             }
-
             .logo {
                 font-size: 1.4rem;
             }
-
             .mobile-menu-toggle {
                 display: block;
                 order: 2;
             }
-
             .nav-links {
                 display: none;
                 width: 100%;
@@ -1471,18 +1172,15 @@
                 padding: 1rem 0;
                 margin-top: 1rem;
             }
-
             .nav-links.active {
                 display: flex;
             }
-
             .nav-links a {
                 padding: 1rem 1.5rem;
                 border-radius: 0;
                 width: 100%;
                 text-align: left;
             }
-
             .dropdown-content {
                 position: static;
                 display: none;
@@ -1491,48 +1189,39 @@
                 background: #f8f9fa;
                 margin-left: 1rem;
             }
-
             .dropdown.active .dropdown-content,
             .dropdown.mobile-open .dropdown-content {
                 display: block;
             }
-
             .dropdown > a::after {
                 content: ' +';
             }
-
             .dropdown.active > a::after,
             .dropdown.mobile-open > a::after {
                 content: ' -';
             }
         }
-    
         /* Fix for anchor link offset due to sticky header */
         html {
             scroll-padding-top: 100px;
         }
-
         /* Alternative method for older browsers */
         [id]:target {
             scroll-margin-top: 100px;
         }
-
         /* Mobile scroll offset adjustments */
         @media (max-width: 768px) {
             html {
                 scroll-padding-top: 80px;
             }
-
             [id]:target {
                 scroll-margin-top: 80px;
             }
         }
-
         /* Smooth scrolling for better UX */
         html {
             scroll-behavior: smooth;
         }
-        
         /* Enhanced mobile menu functionality */
         @media (max-width: 768px) {
             .mobile-menu-toggle {
@@ -1540,7 +1229,6 @@
                 z-index: 1001 !important;
                 position: relative !important;
             }
-
             .nav-links {
                 position: absolute !important;
                 top: 100% !important;
@@ -1552,12 +1240,10 @@
                 overflow: hidden !important;
                 transition: all 0.3s ease !important;
             }
-
             .nav-links.active {
                 max-height: 500px !important;
                 overflow-y: auto !important;
             }
-
             .dropdown-content {
                 position: static !important;
                 box-shadow: none !important;
@@ -1567,7 +1253,6 @@
                 overflow: hidden !important;
                 transition: all 0.3s ease !important;
             }
-
             .dropdown.active .dropdown-content,
             .dropdown.mobile-open .dropdown-content {
                 max-height: 300px !important;
@@ -1576,9 +1261,9 @@
         }
         </style>
 </head>
-
 <body>
     <header class="site-header">
+    <link rel="stylesheet" href="/assets/cookie-consent.css">
         <nav class="site-nav">
             <a href="/" class="logo">🚀&nbsp;ShopifyAppAuthority</a>
             <ul class="nav-links">
@@ -1611,28 +1296,9 @@
             </button>
         </nav>
     </header>
-
-
-    
-
-
     <!-- Cookie Consent -->
-    <div id="cookieConsent" class="cookie-consent">
-        <div class="cookie-content">
-            <div class="cookie-text">
-                <strong>🍪 We use cookies to enhance your experience.</strong>
-                This site uses cookies for analytics and affiliate tracking. By continuing to browse, you consent to our use of cookies.
-                <a href="/privacy-policy/" style="color: #8b5cf6; text-decoration: underline;">Learn more</a>
-            </div>
-            <div class="cookie-buttons">
-                <button class="cookie-button accept-all" onclick="acceptCookies()">Accept All</button>
-                <button class="cookie-button reject-all" onclick="rejectCookies()">Reject All</button>
-            </div>
-        </div>
     </div>
-
-    
-
+    </div>
     <section class="hero">
         <div class="container">
             <div class="hero-content">
@@ -1641,12 +1307,9 @@
                 <div class="author-badge">
                     📊 Digital marketing professional with 10+ years managing $100M+ in Analytics & Attribution campaigns across multiple verticals
                 </div>
-
-                
             </div>
         </div>
     </section>
-
     <!-- Quick Navigation -->
     <div class="quick-nav">
         <div class="container">
@@ -1659,20 +1322,17 @@
             </div>
         </div>
     </div>
-
     <main class="main-content">
         <div class="container">
             <div class="meta-subheadline">
                 Published: 2025-01-20 • Last Updated: 2025-01-20 • Reading Time: 15 minutes
             </div>
-
             <!-- FAQ Link Box -->
             <div class="faq-link-box">
                 <h3>Quick Questions? We've Got Answers!</h3>
                 <p>Get instant answers to the most common Analytics & Attribution questions.</p>
                 <a href="/faqs/analytics-attribution-faq/">View Analytics & Attribution FAQ →</a>
             </div>
-
             <ol class="app-list">
                 <li class="app-item" id="hotjar">
                     <div class="app-rank">1</div>
@@ -1692,11 +1352,9 @@
                             <span class="quick-info-value free">Not required</span>
                         </div>
                     </div>
-
                     <div class="app-description">
                         The gold standard for understanding how users actually interact with your store. Hotjar reveals the hidden friction points that kill conversions through heatmaps, session recordings, and user feedback tools.
                     </div>
-
                     <!-- Best For Box -->
                     <div class="best-for-box">
                         <h4>🎯 Perfect For</h4>
@@ -1709,23 +1367,19 @@
                             <li>Focus: Conversion rate optimization and UX improvement</li>
                         </ul>
                     </div>
-
                     <!-- Comparison Section -->
                     <div class="vs-comparison">
                         <h5>🔄 How Hotjar Compares</h5>
                         <p><strong>Choose Hotjar over Crazy Egg if</strong> you want comprehensive user behavior insights beyond just heatmaps. Hotjar's session recordings and feedback tools provide deeper insights into user experience issues that pure heatmap tools miss.</p>
                     </div>
-
                     <div class="why-i-like">
                         <h4>💡 Why Analytics Experts Choose Hotjar</h4>
                         <p>After managing $100M+ in campaigns, I've learned that traditional analytics tell you what happened, but Hotjar shows you why it happened. The session recordings alone have saved clients thousands by revealing mobile checkout issues that Google Analytics couldn't detect.</p>
                     </div>
-
                     <!-- Early CTA -->
                     <div class="cta-early">
                         <a href="https://www.hotjar.com/" class="cta-secondary" target="_blank" rel="nofollow sponsored" onclick="trackClick('Hotjar', 'early_cta')">Start Free - Get Hotjar Now</a>
                     </div>
-
                     <!-- Pros/Cons -->
                     <div class="pros-cons">
                         <div class="pros">
@@ -1748,7 +1402,6 @@
                             </ul>
                         </div>
                     </div>
-
                     <!-- Selling Points -->
                     <div class="selling-points">
                         <h4 class="selling-header">Why Smart Store Owners Choose Hotjar:</h4>
@@ -1786,18 +1439,15 @@
                             </div>
                         </div>
                     </div>
-
                     <!-- Mid CTA -->
                     <div class="cta-mid">
                         <a href="https://www.hotjar.com/" class="cta-secondary" target="_blank" rel="nofollow sponsored" onclick="trackClick('Hotjar', 'mid_cta')">Start Free Trial - Get Hotjar</a>
                     </div>
-
                     <!-- Review Link -->
                     <div style="text-align: center; margin: 1.5rem 0;">
                         <a href="/hotjar-review/" class="cta-secondary" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; font-size: 0.95rem; padding: 0.75rem 1.5rem;">Learn more about Hotjar →</a>
                     </div>
                 </li>
-
                 <li class="app-item" id="crazy-egg">
                     <div class="app-rank">2</div>
                     <h3>Crazy Egg</h3>
@@ -1816,11 +1466,9 @@
                             <span class="quick-info-value free">30 days</span>
                         </div>
                     </div>
-
                     <div class="app-description">
                         The streamlined choice for store owners who want powerful optimization tools without complexity. Crazy Egg combines essential heatmaps with built-in A/B testing in one clean interface.
                     </div>
-
                     <!-- Best For Box -->
                     <div class="best-for-box">
                         <h4>🎯 Perfect For</h4>
@@ -1833,23 +1481,19 @@
                             <li>Focus: Quick conversion wins without complexity</li>
                         </ul>
                     </div>
-
                     <!-- Comparison Section -->
                     <div class="vs-comparison">
                         <h5>🔄 How Crazy Egg Compares</h5>
                         <p><strong>Choose Crazy Egg over Hotjar if</strong> you prefer simplicity and want built-in A/B testing. Crazy Egg offers a more streamlined interface and includes testing capabilities that Hotjar lacks, making it perfect for solo entrepreneurs who want quick results.</p>
                     </div>
-
                     <div class="why-i-like">
                         <h4>💡 Why Conversion Experts Choose Crazy Egg</h4>
                         <p>Crazy Egg's founder Neil Patel built this specifically for marketers who hate complex tools. After testing dozens of optimization platforms, I appreciate how Crazy Egg gives you actionable insights without drowning you in data you'll never use.</p>
                     </div>
-
                     <!-- Early CTA -->
                     <div class="cta-early">
                         <a href="https://www.crazyegg.com/" class="cta-secondary" target="_blank" rel="nofollow sponsored" onclick="trackClick('Crazy Egg', 'early_cta')">Start Free - Get Crazy Egg Now</a>
                     </div>
-
                     <!-- Pros/Cons -->
                     <div class="pros-cons">
                         <div class="pros">
@@ -1872,7 +1516,6 @@
                             </ul>
                         </div>
                     </div>
-
                     <!-- Selling Points -->
                     <div class="selling-points">
                         <h4 class="selling-header">Why Smart Store Owners Choose Crazy Egg:</h4>
@@ -1910,18 +1553,15 @@
                             </div>
                         </div>
                     </div>
-
                     <!-- Mid CTA -->
                     <div class="cta-mid">
                         <a href="https://www.crazyegg.com/" class="cta-secondary" target="_blank" rel="nofollow sponsored" onclick="trackClick('Crazy Egg', 'mid_cta')">Start Free Trial - Get Crazy Egg</a>
                     </div>
-
                     <!-- Review Link -->
                     <div style="text-align: center; margin: 1.5rem 0;">
                         <a href="/crazy-egg-review/" class="cta-secondary" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; font-size: 0.95rem; padding: 0.75rem 1.5rem;">Learn more about Crazy Egg →</a>
                     </div>
                 </li>
-
                 <li class="app-item" id="google-analytics-360">
                     <div class="app-rank">3</div>
                     <h3>Google Analytics 360</h3>
@@ -1940,11 +1580,9 @@
                             <span class="quick-info-value">Sales required</span>
                         </div>
                     </div>
-
                     <div class="app-description">
                         The enterprise powerhouse for stores processing millions in revenue. Google Analytics 360 provides advanced attribution modeling, BigQuery integration, and enterprise-grade analytics that free GA4 simply cannot match.
                     </div>
-
                     <!-- Best For Box -->
                     <div class="best-for-box">
                         <h4>🎯 Perfect For</h4>
@@ -1957,23 +1595,19 @@
                             <li>Focus: Advanced attribution modeling and data warehouse integration</li>
                         </ul>
                     </div>
-
                     <!-- Comparison Section -->
                     <div class="vs-comparison">
                         <h5>🔄 How Google Analytics 360 Compares</h5>
                         <p><strong>Choose GA360 over free GA4 if</strong> you need advanced attribution modeling, BigQuery data export, and enterprise-level support. Most stores under $10M annual revenue can use free GA4 effectively, but GA360 becomes essential for complex attribution analysis.</p>
                     </div>
-
                     <div class="why-i-like">
                         <h4>💡 Why Enterprise Teams Choose GA360</h4>
                         <p>Managing $100M+ campaigns taught me that free analytics tools hit walls at enterprise scale. GA360's data-driven attribution has helped clients discover that their "worst" channels were actually driving 40% more revenue than last-click attribution showed.</p>
                     </div>
-
                     <!-- Early CTA -->
                     <div class="cta-early">
                         <a href="https://marketingplatform.google.com/about/analytics-360/" class="cta-secondary" target="_blank" rel="nofollow sponsored" onclick="trackClick('Google Analytics 360', 'early_cta')">Contact Sales - Get GA360 Demo</a>
                     </div>
-
                     <!-- Pros/Cons -->
                     <div class="pros-cons">
                         <div class="pros">
@@ -1996,7 +1630,6 @@
                             </ul>
                         </div>
                     </div>
-
                     <!-- Selling Points -->
                     <div class="selling-points">
                         <h4 class="selling-header">Why Enterprise Teams Choose Google Analytics 360:</h4>
@@ -2034,18 +1667,15 @@
                             </div>
                         </div>
                     </div>
-
                     <!-- Mid CTA -->
                     <div class="cta-mid">
                         <a href="https://marketingplatform.google.com/about/analytics-360/" class="cta-secondary" target="_blank" rel="nofollow sponsored" onclick="trackClick('Google Analytics 360', 'mid_cta')">Contact Sales - Schedule GA360 Demo</a>
                     </div>
-
                     <!-- Review Link -->
                     <div style="text-align: center; margin: 1.5rem 0;">
                         <a href="/google-analytics-360-review/" class="cta-secondary" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; font-size: 0.95rem; padding: 0.75rem 1.5rem;">Learn more about Google Analytics 360 →</a>
                     </div>
                 </li>
-
                 <li class="app-item" id="mixpanel">
                     <div class="app-rank">4</div>
                     <h3>Mixpanel</h3>
@@ -2064,11 +1694,9 @@
                             <span class="quick-info-value">1,000 tracked users</span>
                         </div>
                     </div>
-
                     <div class="app-description">
                         The power tool for understanding user behavior at the granular level. Mixpanel tracks specific events and user journeys, making it perfect for stores that need to understand exactly how customers interact with products and features.
                     </div>
-
                     <!-- Best For Box -->
                     <div class="best-for-box">
                         <h4>🎯 Perfect For</h4>
@@ -2081,23 +1709,19 @@
                             <li>Focus: Event tracking, user journeys, and product optimization</li>
                         </ul>
                     </div>
-
                     <!-- Comparison Section -->
                     <div class="vs-comparison">
                         <h5>🔄 How Mixpanel Compares</h5>
                         <p><strong>Choose Mixpanel over Google Analytics if</strong> you need detailed event tracking and user journey analysis. Mixpanel excels at tracking specific actions (button clicks, feature usage, product views) while GA focuses more on page-based analytics and traffic sources.</p>
                     </div>
-
                     <div class="why-i-like">
                         <h4>💡 Why Product Teams Choose Mixpanel</h4>
                         <p>After analyzing user behavior for $100M+ in campaigns, I've learned that page views don't tell the full story. Mixpanel's event tracking revealed that our "high-converting" pages actually had terrible user engagement - visitors were leaving without meaningful interaction.</p>
                     </div>
-
                     <!-- Early CTA -->
                     <div class="cta-early">
                         <a href="https://mixpanel.com/" class="cta-secondary" target="_blank" rel="nofollow sponsored" onclick="trackClick('Mixpanel', 'early_cta')">Start Free - Get Mixpanel Now</a>
                     </div>
-
                     <!-- Pros/Cons -->
                     <div class="pros-cons">
                         <div class="pros">
@@ -2120,7 +1744,6 @@
                             </ul>
                         </div>
                     </div>
-
                     <!-- Selling Points -->
                     <div class="selling-points">
                         <h4 class="selling-header">Why Smart Store Owners Choose Mixpanel:</h4>
@@ -2158,18 +1781,15 @@
                             </div>
                         </div>
                     </div>
-
                     <!-- Mid CTA -->
                     <div class="cta-mid">
                         <a href="https://mixpanel.com/" class="cta-secondary" target="_blank" rel="nofollow sponsored" onclick="trackClick('Mixpanel', 'mid_cta')">Start Free Trial - Get Mixpanel</a>
                     </div>
-
                     <!-- Review Link -->
                     <div style="text-align: center; margin: 1.5rem 0;">
                         <a href="/mixpanel-review/" class="cta-secondary" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; font-size: 0.95rem; padding: 0.75rem 1.5rem;">Learn more about Mixpanel →</a>
                     </div>
                 </li>
-
                 <li class="app-item" id="kissmetrics">
                     <div class="app-rank">5</div>
                     <h3>Kissmetrics</h3>
@@ -2188,11 +1808,9 @@
                             <span class="quick-info-value free">14 days</span>
                         </div>
                     </div>
-
                     <div class="app-description">
                         The revenue-focused analytics platform built specifically for ecommerce. Kissmetrics specializes in person-based tracking, customer lifetime value analysis, and connecting every marketing touchpoint to actual revenue.
                     </div>
-
                     <!-- Best For Box -->
                     <div class="best-for-box">
                         <h4>🎯 Perfect For</h4>
@@ -2205,23 +1823,19 @@
                             <li>Focus: Customer lifetime value and revenue-focused analytics</li>
                         </ul>
                     </div>
-
                     <!-- Comparison Section -->
                     <div class="vs-comparison">
                         <h5>🔄 How Kissmetrics Compares</h5>
                         <p><strong>Choose Kissmetrics over Mixpanel if</strong> your primary focus is revenue attribution and customer lifetime value rather than general product analytics. Kissmetrics is built specifically for ecommerce revenue optimization and connects every action to dollar amounts.</p>
                     </div>
-
                     <div class="why-i-like">
                         <h4>💡 Why Revenue Teams Choose Kissmetrics</h4>
                         <p>Managing $100M+ in campaigns taught me that most analytics tools focus on vanity metrics. Kissmetrics connects every click to actual revenue, helping one client discover their "low-converting" email campaigns actually drove 60% more lifetime value than their "high-converting" ads.</p>
                     </div>
-
                     <!-- Early CTA -->
                     <div class="cta-early">
                         <a href="https://www.kissmetrics.io/" class="cta-secondary" target="_blank" rel="nofollow sponsored" onclick="trackClick('Kissmetrics', 'early_cta')">Start Free - Get Kissmetrics Now</a>
                     </div>
-
                     <!-- Pros/Cons -->
                     <div class="pros-cons">
                         <div class="pros">
@@ -2244,7 +1858,6 @@
                             </ul>
                         </div>
                     </div>
-
                     <!-- Selling Points -->
                     <div class="selling-points">
                         <h4 class="selling-header">Why Smart Store Owners Choose Kissmetrics:</h4>
@@ -2282,19 +1895,16 @@
                             </div>
                         </div>
                     </div>
-
                     <!-- Mid CTA -->
                     <div class="cta-mid">
                         <a href="https://www.kissmetrics.io/" class="cta-secondary" target="_blank" rel="nofollow sponsored" onclick="trackClick('Kissmetrics', 'mid_cta')">Start Free Trial - Get Kissmetrics</a>
                     </div>
-
                     <!-- Review Link -->
                     <div style="text-align: center; margin: 1.5rem 0;">
                         <a href="/kissmetrics-review/" class="cta-secondary" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; font-size: 0.95rem; padding: 0.75rem 1.5rem;">Learn more about Kissmetrics →</a>
                     </div>
                 </li>
             </ol>
-
             <!-- FAQ Section -->
             <section class="faq-section">
                 <h2>Frequently Asked Questions</h2>
@@ -2323,12 +1933,10 @@
                     <p>Yes, different tools serve different purposes. Use Google Analytics for overall tracking, Hotjar for user behavior, and specialized tools like Mixpanel for event tracking or Kissmetrics for customer lifetime value.</p>
                 </div>
             </section>
-
             <!-- Decision Framework -->
             <section class="decision-framework">
                 <h2>Your Analytics & Attribution App Decision Framework</h2>
                 <p class="decision-subtitle">Follow this step-by-step process to choose the perfect Analytics & Attribution platform for your Shopify store</p>
-
                 <div class="decision-step">
                     <div class="step-number">1</div>
                     <h3 class="step-title">Establish Your Analytics Foundation</h3>
@@ -2338,7 +1946,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="decision-step">
                     <div class="step-number">2</div>
                     <h3 class="step-title">Add User Behavior Insights</h3>
@@ -2348,7 +1955,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="decision-step">
                     <div class="step-number">3</div>
                     <h3 class="step-title">Consider Advanced Event Tracking</h3>
@@ -2358,7 +1964,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="decision-step">
                     <div class="step-number">4</div>
                     <h3 class="step-title">Evaluate Revenue Focus Needs</h3>
@@ -2368,7 +1973,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="decision-step">
                     <div class="step-number">5</div>
                     <h3 class="step-title">Scale to Enterprise Requirements</h3>
@@ -2378,7 +1982,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div style="background: white; border-radius: 12px; padding: 2rem; margin-top: 2rem; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
                     <h3 style="color: #4c1d95; margin-bottom: 1rem;">🎯 Quick Recommendation</h3>
                     <p style="font-size: 1.15rem; line-height: 1.7; color: #334155;">Start with free Google Analytics 4 + Hotjar free plan for your foundation. Add Mixpanel if you need detailed event tracking, or Kissmetrics if customer lifetime value is your primary focus. Only consider GA360 if you're processing $10M+ annually and need enterprise attribution.</p>
@@ -2389,16 +1992,11 @@
                     <strong>Affiliate Disclosure:</strong> This page contains affiliate links. If you purchase through our links, we may earn a commission at no additional cost to you. Our reviews remain honest and unbiased.
                 </div>
     </main>
-
     <script>
         // Cookie consent functionality
-        
-        
-
                 }
             }
         });
-
         // Click tracking for affiliate links
         function trackClick(appName, buttonType) {
             gtag('event', 'click', {
@@ -2407,19 +2005,16 @@
                 'custom_parameter_1': buttonType,
                 'custom_parameter_2': 'analytics_apps'
             });
-
             fbq('track', 'Lead', {
                 content_name: appName,
                 content_category: 'analytics_apps'
             });
         }
-
         // Mobile navigation functionality
         document.addEventListener('DOMContentLoaded', function() {
             const mobileToggle = document.querySelector('.mobile-menu-toggle');
             const navLinks = document.querySelector('.nav-links');
             const dropdowns = document.querySelectorAll('.dropdown');
-
             // Mobile menu toggle button
             if (mobileToggle) {
                 mobileToggle.addEventListener('click', function(e) {
@@ -2444,7 +2039,6 @@
                     });
                 }
             });
-
             document.addEventListener('click', function(e) {
                 if (window.innerWidth <= 768) {
                     if (!e.target.closest('nav')) {
@@ -2457,7 +2051,6 @@
             });
         });
     </script>
-
     <footer style="background: #2d3748; color: white; padding: 3rem 0; margin-top: 4rem;">
         <div class="container">
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
@@ -2488,7 +2081,6 @@
             </div>
         </div>
     </footer>
-
     <!-- Microsoft Clarity -->
     <script type="text/javascript">
         (function(c,l,a,r,i,t,y){
@@ -2496,14 +2088,11 @@
             t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
             y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
         })(window, document, "clarity", "script", "tegdksjizw");
-    
-
         // Mobile menu functionality
         document.addEventListener('DOMContentLoaded', function() {
             const mobileToggle = document.querySelector('.mobile-menu-toggle');
             const navLinks = document.querySelector('.nav-links');
             const dropdowns = document.querySelectorAll('.dropdown');
-
             // Mobile menu toggle button
             if (mobileToggle) {
                 mobileToggle.addEventListener('click', function(e) {
@@ -2519,28 +2108,24 @@
                     dropdownLink.addEventListener('click', function(e) {
                         if (window.innerWidth <= 768) {
                             e.preventDefault();
-
                             // Close other dropdowns
                             dropdowns.forEach(otherDropdown => {
                                 if (otherDropdown !== dropdown) {
                                     otherDropdown.classList.remove('mobile-open');
                                 }
                             });
-
                             // Toggle current dropdown
                             dropdown.classList.toggle('mobile-open');
                         }
                     });
                 }
             });
-
             // Close mobile menu when clicking outside
             document.addEventListener('click', function(e) {
                 if (!e.target.closest('.site-nav') && navLinks.classList.contains('active')) {
                     navLinks.classList.remove('active');
                 }
             });
-
             // Close mobile menu on window resize
             window.addEventListener('resize', function() {
                 if (window.innerWidth > 768) {
@@ -2554,5 +2139,6 @@
     // Initialize cookie consent on page load
     window.addEventListener('DOMContentLoaded', checkCookieConsent);
 </script>
+    <script src="/assets/cookie-consent.js"></script>
 </body>
 </html>

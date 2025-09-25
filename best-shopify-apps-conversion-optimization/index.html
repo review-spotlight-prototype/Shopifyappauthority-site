@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="/assets/cookie-consent.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>5 Best Shopify Conversion Optimization Apps (2025) - Boost Sales by 40%</title>
@@ -8,30 +9,24 @@
     <meta name="keywords" content="best shopify conversion optimization apps, shopify CRO apps, conversion rate optimization, shopify sales apps, shopify checkout optimization">
     <meta name="author" content="ShopifyAppAuthority">
     <meta name="robots" content="index, follow">
-
     <!-- Canonical URL -->
     <link rel="canonical" href="https://shopifyappauthority.com/best-shopify-apps-conversion-optimization/">
-
     <!-- Open Graph -->
     <meta property="og:title" content="5 Best Shopify Conversion Optimization Apps (2025) - Boost Sales by 40%">
     <meta property="og:description" content="Boost your Shopify store's conversion rate with these proven CRO apps. Expert reviews of 5 top tools to increase sales and optimize your checkout process.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://shopifyappauthority.com/best-shopify-apps-conversion-optimization/">
     <meta property="og:site_name" content="ShopifyAppAuthority">
-
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="5 Best Shopify Conversion Optimization Apps (2025) - Boost Sales by 40%">
     <meta name="twitter:description" content="Boost your Shopify store's conversion rate with these proven CRO apps. Expert reviews of 5 top tools to increase sales and optimize your checkout process.">
-
     <!-- Security Headers -->
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta name="referrer" content="strict-origin-when-cross-origin">
-
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="https://imagedelivery.net/mYndgAUf_CYgFA1HoO_-GQ/a9d5a4a6-72a7-4ff7-9c77-6e8ce42e9b00/public">
+    <link rel="icon" type="image/png" href="https://imagedelivery.net/mYndgAUf_CYgFA1HoO_-GQ/43e7272a-fb53-44aa-f0f2-7656a83bc700/public">
     <link rel="apple-touch-icon" href="https://imagedelivery.net/mYndgAUf_CYgFA1HoO_-GQ/a9d5a4a6-72a7-4ff7-9c77-6e8ce42e9b00/public">
-
     <!-- Article Schema Markup -->
     <script type="application/ld+json">
     {
@@ -56,7 +51,6 @@
         }
     }
     </script>
-
     <!-- FAQ Schema -->
     <script type="application/ld+json">
     {
@@ -98,7 +92,6 @@
         ]
     }
     </script>
-
     <!-- Breadcrumb Schema -->
     <script type="application/ld+json">
     {
@@ -124,46 +117,18 @@
 // Cookie Consent - Legal Compliance System
 (function() {
     'use strict';
-
-    function acceptAllCookies() {
-        localStorage.setItem('cookieConsent', 'accepted');
-        localStorage.setItem('cookieConsentTimestamp', new Date().getTime());
-        hideCookiePopup();
-
-        // Enable analytics tracking
-        if (typeof gtag !== 'undefined') {
-            gtag('consent', 'update', {
-                'analytics_storage': 'granted',
-                'ad_storage': 'granted',
-                'personalization_storage': 'granted'
-            });
+    );
         }
-
         // Enable Facebook tracking
         if (typeof fbq !== 'undefined') {
             fbq('track', 'CookieConsent', {consent_type: 'accepted'});
         }
-
         console.log('Cookies accepted - analytics enabled');
     }
-
-    function rejectAllCookies() {
-        localStorage.setItem('cookieConsent', 'rejected');
-        localStorage.setItem('cookieConsentTimestamp', new Date().getTime());
-        hideCookiePopup();
-
-        // Disable analytics tracking
-        if (typeof gtag !== 'undefined') {
-            gtag('consent', 'update', {
-                'analytics_storage': 'denied',
-                'ad_storage': 'denied',
-                'personalization_storage': 'denied'
-            });
+    );
         }
-
         console.log('Cookies rejected - analytics disabled');
     }
-
     function hideCookiePopup() {
         var popup = document.getElementById('cookieConsent');
         if (popup) {
@@ -171,7 +136,6 @@
             popup.classList.add('cookie-hidden');
         }
     }
-
     function showCookiePopup() {
         var popup = document.getElementById('cookieConsent');
         if (popup) {
@@ -179,29 +143,11 @@
             popup.classList.remove('cookie-hidden');
         }
     }
-
-    function checkCookieConsent() {
-        var consent = localStorage.getItem('cookieConsent');
-        var timestamp = localStorage.getItem('cookieConsentTimestamp');
-
-        // Check if consent is older than 1 year (legal requirement)
-        if (timestamp) {
-            var consentAge = new Date().getTime() - parseInt(timestamp);
-            var oneYear = 365 * 24 * 60 * 60 * 1000; // 1 year in milliseconds
-
-            if (consentAge > oneYear) {
-                // Reset expired consent
-                localStorage.removeItem('cookieConsent');
-                localStorage.removeItem('cookieConsentTimestamp');
-                consent = null;
-            }
         }
-
         if (!consent) {
             showCookiePopup();
         } else {
             hideCookiePopup();
-
             // Apply consent preferences
             if (consent === 'accepted') {
                 if (typeof gtag !== 'undefined') {
@@ -222,41 +168,30 @@
             }
         }
     }
-
     // Make functions globally available
     window.acceptAllCookies = acceptAllCookies;
     window.rejectAllCookies = rejectAllCookies;
-
     // Initialize on page load
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', checkCookieConsent);
     } else {
         checkCookieConsent();
     }
-
     // Removed automatic click-to-accept to prevent accidental dismissal
-
 })()); 
     // Simple wrapper functions for button compatibility
-    function acceptCookies() {
-        if (typeof acceptAllCookies === 'function') {
-            acceptAllCookies();
-        } else {
-            localStorage.setItem('cookieConsent', 'accepted');
-            localStorage.setItem('cookieConsentTimestamp', new Date().getTime());
+     else {
+            ;
+            .getTime());
             var popup = document.getElementById('cookieConsent');
             if (popup) {
                 popup.style.display = 'none';
             }
         }
     }
-
-    function rejectCookies() {
-        if (typeof rejectAllCookies === 'function') {
-            rejectAllCookies();
-        } else {
-            localStorage.setItem('cookieConsent', 'rejected');
-            localStorage.setItem('cookieConsentTimestamp', new Date().getTime());
+     else {
+            ;
+            .getTime());
             var popup = document.getElementById('cookieConsent');
             if (popup) {
                 popup.style.display = 'none';
@@ -264,8 +199,6 @@
         }
     }
 </script>
-
-
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-J09TH92K0M"></script>
     <script>
@@ -274,7 +207,6 @@
         gtag('js', new Date());
         gtag('config', 'G-J09TH92K0M');
     </script>
-
     <!-- Facebook Pixel -->
     <script>
         !function(f,b,e,v,n,t,s)
@@ -288,7 +220,6 @@
         fbq('init', '1087447432711058');
         fbq('track', 'PageView');
     </script>
-
     <style>
         /* Base Styles */
         * {
@@ -296,25 +227,18 @@
             padding: 0;
             box-sizing: border-box;
         }
-
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
             color: #2d3748;
             background: #f7fafc;
         }
-
         .container {
             max-width: 900px;
             margin: 0 auto;
             padding: 0 20px;
         }
-
         /* Header Navigation */
-        
-
-        
-
         .logo {
             font-size: 1.6rem;
             font-weight: 700;
@@ -328,25 +252,6 @@
             gap: 0.5rem;
             transition: transform 0.2s;
         }
-
-        
-
-        
-
-        
-
-        
-
-        
-
-        
-
-        
-
-        
-
-        
-
         /* Hero Section */
         .hero {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -354,20 +259,17 @@
             padding: 2.5rem 0;
             text-align: center;
         }
-
         .hero h1 {
             font-size: 2.25rem;
             font-weight: 800;
             margin-bottom: 0.75rem;
             line-height: 1.2;
         }
-
         .hero .subtitle {
             font-size: 1.1rem;
             margin-bottom: 1rem;
             opacity: 0.9;
         }
-
         .author-badge {
             background: rgba(255,255,255,0.15);
             border: 1px solid rgba(255,255,255,0.3);
@@ -376,13 +278,11 @@
             display: inline-block;
             margin-top: 1rem;
         }
-
         /* Main Content */
         .main-content {
             background: #fff;
             padding: 3rem 0;
         }
-
         .meta-subheadline {
             text-align: left;
             color: #9ca3af;
@@ -390,7 +290,6 @@
             margin: 0.5rem 0 1.5rem 0;
             padding: 0;
         }
-
         /* FAQ Link Box */
         .faq-link-box {
             background: linear-gradient(135deg, #f8f9fa, #e9ecef);
@@ -400,18 +299,15 @@
             text-align: center;
             border: 1px solid rgba(149, 191, 71, 0.3);
         }
-
         .faq-link-box h3 {
             margin: 0 0 10px 0;
             color: #2d3748;
             font-size: 1.2rem;
         }
-
         .faq-link-box p {
             margin: 0 0 15px 0;
             color: #4a5568;
         }
-
         .faq-link-box a {
             background: linear-gradient(135deg, #95bf47 0%, #7fa83a 100%);
             color: white;
@@ -421,12 +317,10 @@
             font-weight: 600;
             display: inline-block;
         }
-
         /* App Items */
         .app-list {
             list-style: none;
         }
-
         .app-item {
             border: 1px solid #e2e8f0;
             border-radius: 12px;
@@ -437,11 +331,9 @@
             box-shadow: 0 2px 4px rgba(0,0,0,0.05);
             transition: box-shadow 0.2s;
         }
-
         .app-item:hover {
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
-
         .app-rank {
             position: absolute;
             top: -12px;
@@ -458,14 +350,12 @@
             font-size: 0.875rem;
             box-shadow: 0 2px 8px rgba(0,0,0,0.15);
         }
-
         .app-item h3 {
             font-size: 1.75rem;
             color: #1a202c;
             margin-bottom: 0.5rem;
             font-weight: 700;
         }
-
         .app-category {
             color: #667eea;
             font-size: 0.875rem;
@@ -474,7 +364,6 @@
             margin-bottom: 0.5rem;
             font-weight: 600;
         }
-
         .app-quick-info {
             display: flex;
             gap: 1.5rem;
@@ -483,38 +372,31 @@
             color: #4b5563;
             flex-wrap: wrap;
         }
-
         .quick-info-item {
             display: flex;
             align-items: center;
             gap: 0.25rem;
         }
-
         .quick-info-label {
             font-weight: 500;
             color: #6b7280;
         }
-
         .quick-info-value {
             font-weight: 700;
             color: #059669;
         }
-
         .quick-info-value.price {
             color: #dc2626;
         }
-
         .quick-info-value.free {
             color: #059669;
         }
-
         .app-description {
             margin-bottom: 1.5rem;
             font-size: 1.125rem;
             line-height: 1.7;
             color: #4a5568;
         }
-
         /* Best For Box */
         .best-for-box {
             background: linear-gradient(135deg, #fef3c7 0%, #fef9e7 100%);
@@ -525,7 +407,6 @@
             position: relative;
             overflow: hidden;
         }
-
         .best-for-box::before {
             content: '⭐';
             position: absolute;
@@ -534,7 +415,6 @@
             font-size: 2rem;
             opacity: 0.5;
         }
-
         .best-for-box h4 {
             color: #92400e;
             font-size: 0.9rem;
@@ -543,27 +423,23 @@
             margin-bottom: 0.75rem;
             font-weight: 700;
         }
-
         .best-for-box p {
             color: #451a03;
             font-size: 1.05rem;
             line-height: 1.6;
             margin: 0;
         }
-
         .best-for-box ul {
             margin: 0.75rem 0 0 0;
             padding-left: 1.5rem;
             list-style: none;
         }
-
         .best-for-box li {
             position: relative;
             margin-bottom: 0.5rem;
             color: #451a03;
             font-size: 0.95rem;
         }
-
         .best-for-box li:before {
             content: '✓';
             color: #f59e0b;
@@ -571,7 +447,6 @@
             position: absolute;
             left: -1.25rem;
         }
-
         /* Comparison Section */
         .vs-comparison {
             background: #f1f5f9;
@@ -580,7 +455,6 @@
             margin: 1.5rem 0;
             border-radius: 0 8px 8px 0;
         }
-
         .vs-comparison h5 {
             color: #667eea;
             font-size: 0.9rem;
@@ -589,19 +463,16 @@
             margin-bottom: 0.75rem;
             font-weight: 700;
         }
-
         .vs-comparison p {
             color: #334155;
             font-size: 1rem;
             line-height: 1.6;
             margin: 0;
         }
-
         .vs-comparison strong {
             color: #0f172a;
             font-weight: 700;
         }
-
         /* Why I Like Section */
         .why-i-like {
             background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
@@ -610,7 +481,6 @@
             margin: 2rem 0;
             border-radius: 0 8px 8px 0;
         }
-
         .why-i-like h4 {
             color: #2d3748;
             margin-bottom: 0.75rem;
@@ -619,7 +489,6 @@
             font-weight: 700;
             letter-spacing: 0.05em;
         }
-
         /* Pros/Cons */
         .pros-cons {
             display: grid;
@@ -627,21 +496,17 @@
             gap: 2rem;
             margin: 2rem 0;
         }
-
         .pros, .cons {
             background: #f8fafc;
             padding: 1.5rem;
             border-radius: 8px;
         }
-
         .pros {
             border-left: 4px solid #10b981;
         }
-
         .cons {
             border-left: 4px solid #ef4444;
         }
-
         .pros h4, .cons h4 {
             color: #1a202c;
             margin-bottom: 1rem;
@@ -650,19 +515,16 @@
             letter-spacing: 0.05em;
             font-weight: 700;
         }
-
         .pros ul, .cons ul {
             list-style: none;
             padding: 0;
         }
-
         .pros li, .cons li {
             position: relative;
             padding-left: 1.5rem;
             margin-bottom: 0.5rem;
             color: #4a5568;
         }
-
         .pros li:before {
             content: "✓";
             position: absolute;
@@ -670,7 +532,6 @@
             color: #10b981;
             font-weight: bold;
         }
-
         .cons li:before {
             content: "✗";
             position: absolute;
@@ -678,7 +539,6 @@
             color: #ef4444;
             font-weight: bold;
         }
-
         /* Selling Points */
         .selling-points {
             background: linear-gradient(135deg, #f0fff4 0%, #f7fafc 100%);
@@ -687,46 +547,37 @@
             padding: 2rem;
             margin: 2rem 0;
         }
-
         .selling-
-
         .selling-point {
             display: flex;
             align-items: flex-start;
             gap: 1rem;
             margin-bottom: 2rem;
         }
-
         .selling-point:last-child {
             margin-bottom: 0;
         }
-
         .check {
             font-size: 1.25rem;
             color: #95BF47;
             flex-shrink: 0;
             margin-top: 0.2rem;
         }
-
         .point-content {
             flex: 1;
         }
-
         .point-
-
         .point-bullets {
             margin: 0;
             padding-left: 1.25rem;
             list-style: none;
         }
-
         .point-bullets li {
             position: relative;
             margin-bottom: 0.5rem;
             color: #4a5568;
             line-height: 1.5;
         }
-
         .point-bullets li:before {
             content: "•";
             color: #95BF47;
@@ -734,12 +585,10 @@
             position: absolute;
             left: -1rem;
         }
-
         .point-bullets li strong {
             color: #1a202c;
             font-weight: 700;
         }
-
         /* CTAs */
         .cta-early,
         .cta-mid {
@@ -747,7 +596,6 @@
             margin: 1.5rem 0;
             padding: 0 1rem;
         }
-
         .cta-secondary {
             background: linear-gradient(135deg, #95BF47 0%, #7BA832 100%);
             color: white;
@@ -762,13 +610,11 @@
             transition: all 0.2s ease;
             border: none;
         }
-
         .cta-secondary:hover {
             background: linear-gradient(135deg, #7BA832 0%, #6B9528 100%);
             transform: translateY(-1px);
             box-shadow: 0 5px 15px rgba(149, 191, 71, 0.4);
         }
-
         /* Decision Framework */
         .decision-framework {
             background: linear-gradient(135deg, #e0e7ff 0%, #f5f3ff 100%);
@@ -777,21 +623,18 @@
             padding: 3rem;
             margin: 4rem 0;
         }
-
         .decision-framework h2 {
             color: #312e81;
             font-size: 2rem;
             margin-bottom: 1rem;
             font-weight: 800;
         }
-
         .decision-subtitle {
             color: #4c1d95;
             font-size: 1.1rem;
             margin-bottom: 2rem;
             font-style: italic;
         }
-
         .decision-step {
             background: white;
             border-radius: 12px;
@@ -800,7 +643,6 @@
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
             position: relative;
         }
-
         .step-number {
             position: absolute;
             top: -15px;
@@ -817,7 +659,6 @@
             font-size: 1.25rem;
             box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
         }
-
         .step-title {
             color: #1e293b;
             font-size: 1.3rem;
@@ -825,13 +666,11 @@
             font-weight: 700;
             padding-top: 0.5rem;
         }
-
         .step-content {
             color: #475569;
             font-size: 1.05rem;
             line-height: 1.7;
         }
-
         .if-then-logic {
             background: #f8fafc;
             border-left: 3px solid #818cf8;
@@ -839,12 +678,10 @@
             margin: 1rem 0;
             border-radius: 0 8px 8px 0;
         }
-
         .if-then-logic strong {
             color: #4c1d95;
             font-weight: 700;
         }
-
         /* FAQ Section */
         .faq-section {
             margin: 3rem 0;
@@ -852,82 +689,36 @@
             background: #f8f9fa;
             border-radius: 12px;
         }
-
         .faq-section h2 {
             color: #1a202c;
             margin-bottom: 2rem;
             font-size: 2rem;
             font-weight: 700;
         }
-
         .faq-item {
             margin-bottom: 2rem;
         }
-
         .faq-item h3 {
             color: #2d3748;
             font-size: 1.2rem;
             margin-bottom: 0.5rem;
             font-weight: 600;
         }
-
         .faq-item p {
             color: #4a5568;
             line-height: 1.7;
         }
-
-        /* Cookie Consent */
-        .cookie-consent {
-            position: fixed !important;
-            bottom: 0 !important;
-            left: 0 !important;
-            right: 0 !important;
-            background: rgba(26, 32, 44, 0.95) !important;
-            color: white !important;
-            padding: 20px !important;
-            z-index: 99999 !important;
-            backdrop-filter: blur(10px);
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            cursor: pointer;
-            box-sizing: border-box !important;
-        }
-
-        .cookie-hidden {
-            display: none !important;
-            visibility: hidden !important;
-        }
-
-        /* Mobile optimization for cookies popup */
-        @media (max-width: 768px) {
-            .cookie-consent {
-                padding: 15px !important;
-                font-size: 14px !important;
-            }
-
-        .cookie-hidden {
-            display: none !important;
-            visibility: hidden !important;
-        }
-
-            .cookie-content {
-                flex-direction: column !important;
-                gap: 15px !important;
-                text-align: center !important;
-            }
-
             .cookie-buttons {
                 width: 100% !important;
                 justify-content: center !important;
                 gap: 10px !important;
             }
-
             .cookie-button {
                 min-width: 120px !important;
                 padding: 12px 20px !important;
                 font-size: 14px !important;
             }
         }
-
         .cookie-content {
             max-width: 1200px;
             margin: 0 auto;
@@ -937,18 +728,15 @@
             gap: 20px;
             flex-wrap: wrap;
         }
-
         .cookie-text {
             flex: 1;
             min-width: 300px;
         }
-
         .cookie-buttons {
             display: flex;
             gap: 10px;
             flex-wrap: wrap;
         }
-
         .cookie-button {
             padding: 10px 20px;
             border: none;
@@ -957,89 +745,59 @@
             font-weight: 500;
             transition: all 0.3s ease;
         }
-
         .accept-all {
             background: #95bf47;
             color: white;
         }
-
         .accept-all:hover {
             background: #7fa83a;
         }
-
         .reject-all {
             background: transparent;
             color: white;
             border: 1px solid rgba(255, 255, 255, 0.3);
         }
-
         .reject-all:hover {
             background: rgba(255, 255, 255, 0.1);
         }
-
         .hidden { display: none !important; visibility: hidden !important; }
-
         /* Mobile Responsive */
         @media (max-width: 768px) {
-            
-
-            
-
             .nav-links.active {
                 display: flex;
             }
-
             .nav-links > li {
                 border-bottom: 1px solid #f1f5f9;
             }
-
             .nav-links > li > a {
                 padding: 1rem 20px;
                 border-radius: 0;
                 display: block;
                 font-weight: 500;
             }
-
-            
-
-            
-
-            
-
-            
-
-            
-
             .hero h1 {
                 font-size: 2rem;
             }
-
             .hero .subtitle {
                 font-size: 1rem;
             }
-
             .container {
                 padding: 0 15px;
             }
-
             .app-item {
                 padding: 2rem 1.5rem;
             }
-
             .pros-cons {
                 grid-template-columns: 1fr;
                 gap: 1rem;
             }
-
             .pros, .cons {
                 padding: 1rem;
             }
-
             .pros li, .cons li {
                 font-size: 0.9rem;
                 line-height: 1.4;
             }
-
             .cta-secondary {
                 width: 100%;
                 min-height: 56px;
@@ -1049,56 +807,45 @@
                 align-items: center;
                 justify-content: center;
             }
-
             .selling-points {
                 padding: 1.5rem;
                 margin: 1.5rem 0;
             }
-
             .selling-point {
                 margin-bottom: 1.5rem;
                 gap: 0.75rem;
             }
-
             .point-bullets {
                 padding-left: 1rem;
             }
-
             .point-bullets li {
                 margin-bottom: 0.4rem;
                 line-height: 1.4;
                 font-size: 0.95rem;
             }
-
             .app-quick-info {
                 gap: 1rem;
                 margin: 0.5rem 0 1.25rem 0;
                 font-size: 0.85rem;
             }
-
             .quick-info-item {
                 gap: 0.2rem;
             }
-
             .why-i-like {
                 padding: 1.25rem;
                 margin: 1.25rem 0;
             }
-
             .cookie-content {
                 flex-direction: column;
                 text-align: center;
             }
-
             .decision-framework {
                 padding: 2rem 1.5rem;
             }
-
             .decision-step {
                 padding: 1.5rem;
             }
         }
-            
             header {
             background: linear-gradient(180deg, #ffffff 0%, #fafafa 100%);
             border-bottom: 1px solid rgba(149, 191, 71, 0.2);
@@ -1107,7 +854,6 @@
             z-index: 1000;
             backdrop-filter: blur(10px);
         }
-
         .site-nav {
             max-width: 1400px;
             margin: 0 auto;
@@ -1117,7 +863,6 @@
             align-items: center;
             height: 70px;
         }
-
         .logo {
             font-size: 1.8rem;
             font-weight: bold;
@@ -1129,14 +874,12 @@
             white-space: nowrap;
             line-height: 1;
         }
-
         .nav-links {
             display: flex;
             list-style: none;
             gap: 50px;
             align-items: center;
         }
-
         .nav-links a {
             color: #4a5568;
             text-decoration: none;
@@ -1147,23 +890,19 @@
             border-radius: 10px;
             white-space: nowrap;
         }
-
         .nav-links a:hover, .nav-links a:focus {
             background-color: rgba(149, 191, 71, 0.1);
             color: #95bf47;
             transform: translateY(-2px);
         }
-
         .dropdown {
             position: relative;
         }
-
         .dropdown > a::after {
             content: ' ↓';
             font-size: 0.8em;
             color: #95bf47;
         }
-
         .dropdown-content {
             display: none;
             position: absolute;
@@ -1177,11 +916,9 @@
             z-index: 1001;
             border: 1px solid rgba(149, 191, 71, 0.2);
         }
-
         .dropdown:hover .dropdown-content {
             display: block;
         }
-
         .dropdown-content a {
             color: #4a5568;
             padding: 0.7rem 1.5rem;
@@ -1191,13 +928,11 @@
             transition: all 0.2s ease;
             border-radius: 0;
         }
-
         .dropdown-content a:hover {
             background-color: rgba(149, 191, 71, 0.1);
             color: #95bf47;
             transform: translateX(5px);
         }
-
         .mobile-menu-toggle {
             display: none;
             background: none;
@@ -1207,15 +942,11 @@
             cursor: pointer;
             padding: 0.5rem;
         }
-
         @media (max-width: 768px) {
-            
-
             .mobile-menu-toggle {
                 display: block;
                 order: 2;
             }
-
             .nav-links {
                 display: none;
                 width: 100%;
@@ -1227,18 +958,15 @@
                 padding: 1rem 0;
                 margin-top: 1rem;
             }
-
             .nav-links.active {
                 display: flex;
             }
-
             .nav-links a {
                 padding: 1rem 1.5rem;
                 border-radius: 0;
                 width: 100%;
                 text-align: left;
             }
-
             .dropdown-content {
                 position: static;
                 display: none;
@@ -1247,16 +975,13 @@
                 background: #f8f9fa;
                 margin-left: 1rem;
             }
-
             .dropdown.active .dropdown-content,
             .dropdown.mobile-open .dropdown-content {
                 display: block;
             }
-
             .dropdown > a::after {
                 content: ' +';
             }
-
             .dropdown.active > a::after,
             .dropdown.mobile-open > a::after {
                 content: ' -';
@@ -1271,7 +996,6 @@
             z-index: 1000;
             backdrop-filter: blur(10px);
         }
-
         .site-nav {
             max-width: 1400px;
             margin: 0 auto;
@@ -1281,7 +1005,6 @@
             align-items: center;
             height: 70px;
         }
-
         .logo {
             font-size: 1.8rem;
             font-weight: bold;
@@ -1293,7 +1016,6 @@
             white-space: nowrap;
             line-height: 1;
         }
-
         .nav-links {
             display: flex;
             list-style: none;
@@ -1302,7 +1024,6 @@
             margin: 0;
             padding: 0;
         }
-
         .nav-links a {
             color: #4a5568;
             text-decoration: none;
@@ -1313,23 +1034,19 @@
             border-radius: 10px;
             white-space: nowrap;
         }
-
         .nav-links a:hover, .nav-links a:focus {
             background-color: rgba(149, 191, 71, 0.1);
             color: #95bf47;
             transform: translateY(-2px);
         }
-
         .dropdown {
             position: relative;
         }
-
         .dropdown > a::after {
             content: ' ↓';
             font-size: 0.8em;
             color: #95bf47;
         }
-
         .dropdown-content {
             display: none;
             position: absolute;
@@ -1343,11 +1060,9 @@
             z-index: 1001;
             border: 1px solid rgba(149, 191, 71, 0.2);
         }
-
         .dropdown:hover .dropdown-content {
             display: block;
         }
-
         .dropdown-content a {
             color: #4a5568;
             padding: 0.7rem 1.5rem;
@@ -1357,13 +1072,11 @@
             transition: all 0.2s ease;
             border-radius: 0;
         }
-
         .dropdown-content a:hover {
             background-color: rgba(149, 191, 71, 0.1);
             color: #95bf47;
             transform: translateX(5px);
         }
-
         .mobile-menu-toggle {
             display: none;
             background: none;
@@ -1373,23 +1086,19 @@
             cursor: pointer;
             padding: 0.5rem;
         }
-
         @media (max-width: 768px) {
             .site-nav {
                 padding: 0 20px;
                 flex-wrap: wrap;
                 position: relative;
             }
-
             .logo {
                 font-size: 1.4rem;
             }
-
             .mobile-menu-toggle {
                 display: block;
                 order: 2;
             }
-
             .nav-links {
                 display: none;
                 width: 100%;
@@ -1401,18 +1110,15 @@
                 padding: 1rem 0;
                 margin-top: 1rem;
             }
-
             .nav-links.active {
                 display: flex;
             }
-
             .nav-links a {
                 padding: 1rem 1.5rem;
                 border-radius: 0;
                 width: 100%;
                 text-align: left;
             }
-
             .dropdown-content {
                 position: static;
                 display: none;
@@ -1421,48 +1127,39 @@
                 background: #f8f9fa;
                 margin-left: 1rem;
             }
-
             .dropdown.active .dropdown-content,
             .dropdown.mobile-open .dropdown-content {
                 display: block;
             }
-
             .dropdown > a::after {
                 content: ' +';
             }
-
             .dropdown.active > a::after,
             .dropdown.mobile-open > a::after {
                 content: ' -';
             }
         }
-    
         /* Fix for anchor link offset due to sticky header */
         html {
             scroll-padding-top: 100px;
         }
-
         /* Alternative method for older browsers */
         [id]:target {
             scroll-margin-top: 100px;
         }
-
         /* Mobile scroll offset adjustments */
         @media (max-width: 768px) {
             html {
                 scroll-padding-top: 80px;
             }
-
             [id]:target {
                 scroll-margin-top: 80px;
             }
         }
-
         /* Smooth scrolling for better UX */
         html {
             scroll-behavior: smooth;
         }
-        
         /* Enhanced mobile menu functionality */
         @media (max-width: 768px) {
             .mobile-menu-toggle {
@@ -1470,7 +1167,6 @@
                 z-index: 1001 !important;
                 position: relative !important;
             }
-
             .nav-links {
                 position: absolute !important;
                 top: 100% !important;
@@ -1482,12 +1178,10 @@
                 overflow: hidden !important;
                 transition: all 0.3s ease !important;
             }
-
             .nav-links.active {
                 max-height: 500px !important;
                 overflow-y: auto !important;
             }
-
             .dropdown-content {
                 position: static !important;
                 box-shadow: none !important;
@@ -1497,7 +1191,6 @@
                 overflow: hidden !important;
                 transition: all 0.3s ease !important;
             }
-
             .dropdown.active .dropdown-content,
             .dropdown.mobile-open .dropdown-content {
                 max-height: 300px !important;
@@ -1506,9 +1199,9 @@
         }
         </style>
 </head>
-
 <body>
     <header class="site-header">
+    <link rel="stylesheet" href="/assets/cookie-consent.css">
         <nav class="site-nav">
             <a href="/" class="logo">🚀&nbsp;ShopifyAppAuthority</a>
             <ul class="nav-links">
@@ -1541,28 +1234,9 @@
             </button>
         </nav>
     </header>
-
-
-    
-
-
     <!-- Cookie Consent -->
-    <div id="cookieConsent" class="cookie-consent">
-        <div class="cookie-content">
-            <div class="cookie-text">
-                <strong>🍪 We use cookies to enhance your experience.</strong>
-                This site uses cookies for analytics and affiliate tracking. By continuing to browse, you consent to our use of cookies.
-                <a href="/privacy-policy/" style="color: #95bf47; text-decoration: underline;">Learn more</a>
-            </div>
-            <div class="cookie-buttons">
-                <button class="cookie-button accept-all" onclick="acceptCookies()">Accept All</button>
-                <button class="cookie-button reject-all" onclick="rejectCookies()">Reject All</button>
-            </div>
-        </div>
     </div>
-
-    
-
+    </div>
     <section class="hero">
         <div class="container">
             <h1>Best Conversion Optimization Apps for Shopify Stores in 2025</h1>
@@ -1570,24 +1244,19 @@
             <div class="author-badge">
                 💼 Digital marketing professional with 10+ years managing $100M+ in conversion optimization campaigns across multiple verticals
             </div>
-
-            
         </div>
     </section>
-
     <main class="main-content">
         <div class="container">
             <div class="meta-subheadline">
                 Published: 2025-01-20 • Last Updated: 2025-01-20 • Reading Time: 12 minutes
             </div>
-
             <!-- FAQ Link Box -->
             <div class="faq-link-box">
                 <h3>Quick Questions? We've Got Answers!</h3>
                 <p>Get instant answers to the most common conversion optimization questions.</p>
                 <a href="/faqs/conversion-optimization-faq/">View Conversion FAQ →</a>
             </div>
-
             <ol class="app-list">
                 <!-- 1. Unbounce -->
                 <li class="app-item" id="unbounce">
@@ -1608,11 +1277,9 @@
                             <span class="quick-info-value">High-converting landing pages</span>
                         </div>
                     </div>
-
                     <div class="app-description">
                         The gold standard for conversion-focused landing pages. Unbounce's drag-and-drop builder, advanced A/B testing, and Smart Traffic AI automatically optimize your pages for maximum conversions. Used by agencies and serious marketers who demand results.
                     </div>
-
                     <!-- Best For Box -->
                     <div class="best-for-box">
                         <h4>🎯 Perfect For</h4>
@@ -1625,23 +1292,19 @@
                             <li>Focus: High-converting campaign landing pages</li>
                         </ul>
                     </div>
-
                     <!-- Comparison Section -->
                     <div class="vs-comparison">
                         <h5>How Unbounce Compares</h5>
                         <p>Choose <strong>Unbounce over Leadpages</strong> if you need advanced A/B testing and Smart Traffic optimization. Skip Unbounce for <strong>Leadpages if you're budget-conscious</strong> and need simpler page building without advanced testing features.</p>
                     </div>
-
                     <div class="why-i-like">
                         <h4>Why Marketing Professionals Choose Unbounce</h4>
                         <p>Unbounce's Smart Traffic AI learns from your visitors and automatically sends each visitor to the landing page variant most likely to convert them. This machine learning optimization can improve conversion rates by 30% or more without any manual intervention.</p>
                     </div>
-
                     <!-- Early CTA -->
                     <div class="cta-early">
                         <a href="#" class="cta-secondary" target="_blank" rel="nofollow sponsored">Start Free - Get Unbounce Now</a>
                     </div>
-
                     <!-- Pros/Cons -->
                     <div class="pros-cons">
                         <div class="pros">
@@ -1664,7 +1327,6 @@
                             </ul>
                         </div>
                     </div>
-
                     <!-- Selling Points -->
                     <div class="selling-points">
                         <h4 class="selling-header">Why Smart Store Owners Choose Unbounce:</h4>
@@ -1691,18 +1353,15 @@
                             </div>
                         </div>
                     </div>
-
                     <!-- Mid CTA -->
                     <div class="cta-mid">
                         <a href="#" class="cta-secondary" target="_blank" rel="nofollow sponsored">Start Free Trial - Get Unbounce</a>
                     </div>
-
                     <!-- Review Link -->
                     <div style="text-align: center; margin: 1.5rem 0;">
                         <a href="/unbounce-review/" class="cta-secondary" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; font-size: 0.95rem; padding: 0.75rem 1.5rem;">Learn more about Unbounce →</a>
                     </div>
                 </li>
-
                 <!-- 2. Leadpages -->
                 <li class="app-item" id="leadpages">
                     <div class="app-rank">2</div>
@@ -1722,11 +1381,9 @@
                             <span class="quick-info-value">Easy page building</span>
                         </div>
                     </div>
-
                     <div class="app-description">
                         The beginner-friendly alternative to Unbounce with beautiful templates and simple drag-and-drop editing. Leadpages focuses on ease of use while still providing conversion-optimized designs and basic A/B testing capabilities.
                     </div>
-
                     <div class="best-for-box">
                         <h4>🎯 Perfect For</h4>
                         <p><strong>Small to medium stores needing simple, effective landing pages</strong></p>
@@ -1738,21 +1395,17 @@
                             <li>Focus: Quick page creation with proven templates</li>
                         </ul>
                     </div>
-
                     <div class="vs-comparison">
                         <h5>How Leadpages Compares</h5>
                         <p>Choose <strong>Leadpages over Unbounce</strong> if you want easier setup and lower costs with proven templates. Skip Leadpages for <strong>Unbounce if you need advanced AI optimization</strong> and sophisticated testing capabilities.</p>
                     </div>
-
                     <div class="why-i-like">
                         <h4>Why Small Business Owners Love Leadpages</h4>
                         <p>Leadpages' template library is curated based on conversion performance data from millions of pages. You're not just getting pretty designs—you're getting layouts that have proven to convert across different industries and use cases.</p>
                     </div>
-
                     <div class="cta-early">
                         <a href="#" class="cta-secondary" target="_blank" rel="nofollow sponsored">Start Free - Get Leadpages Now</a>
                     </div>
-
                     <div class="pros-cons">
                         <div class="pros">
                             <h4>Pros:</h4>
@@ -1774,7 +1427,6 @@
                             </ul>
                         </div>
                     </div>
-
                     <div class="selling-points">
                         <h4 class="selling-header">Why Smart Store Owners Choose Leadpages:</h4>
                         <div class="selling-point">
@@ -1800,16 +1452,13 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="cta-mid">
                         <a href="#" class="cta-secondary" target="_blank" rel="nofollow sponsored">Start Free Trial - Get Leadpages</a>
                     </div>
-
                     <div style="text-align: center; margin: 1.5rem 0;">
                         <a href="/leadpages-review/" class="cta-secondary" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; font-size: 0.95rem; padding: 0.75rem 1.5rem;">Learn more about Leadpages →</a>
                     </div>
                 </li>
-
                 <!-- 3. OptinMonster -->
                 <li class="app-item" id="optinmonster">
                     <div class="app-rank">3</div>
@@ -1829,11 +1478,9 @@
                             <span class="quick-info-value">Smart targeting popups</span>
                         </div>
                     </div>
-
                     <div class="app-description">
                         The most sophisticated popup and lead generation tool available. OptinMonster's advanced targeting and behavioral triggers help you capture more emails and reduce cart abandonment with intelligent, non-intrusive popups that actually convert.
                     </div>
-
                     <div class="best-for-box">
                         <h4>🎯 Perfect For</h4>
                         <p><strong>Stores focused on email list building and cart abandonment recovery</strong></p>
@@ -1845,21 +1492,17 @@
                             <li>Focus: Email capture and visitor conversion</li>
                         </ul>
                     </div>
-
                     <div class="vs-comparison">
                         <h5>How OptinMonster Compares</h5>
                         <p>Choose <strong>OptinMonster over Sumo</strong> if you need advanced targeting and behavioral triggers. Skip OptinMonster for <strong>Sumo if you want a free solution</strong> and don't need sophisticated targeting options.</p>
                     </div>
-
                     <div class="why-i-like">
                         <h4>Why Conversion Experts Recommend OptinMonster</h4>
                         <p>OptinMonster's exit-intent technology doesn't just detect when someone is about to leave—it uses machine learning to predict abandonment behavior and triggers campaigns at the optimal moment for each individual visitor.</p>
                     </div>
-
                     <div class="cta-early">
                         <a href="#" class="cta-secondary" target="_blank" rel="nofollow sponsored">Start Free - Get OptinMonster Now</a>
                     </div>
-
                     <div class="pros-cons">
                         <div class="pros">
                             <h4>Pros:</h4>
@@ -1881,7 +1524,6 @@
                             </ul>
                         </div>
                     </div>
-
                     <div class="selling-points">
                         <h4 class="selling-header">Why Smart Store Owners Choose OptinMonster:</h4>
                         <div class="selling-point">
@@ -1907,16 +1549,13 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="cta-mid">
                         <a href="#" class="cta-secondary" target="_blank" rel="nofollow sponsored">Start Free Trial - Get OptinMonster</a>
                     </div>
-
                     <div style="text-align: center; margin: 1.5rem 0;">
                         <a href="/optinmonster-review/" class="cta-secondary" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; font-size: 0.95rem; padding: 0.75rem 1.5rem;">Learn more about OptinMonster →</a>
                     </div>
                 </li>
-
                 <!-- 4. Thrive Leads -->
                 <li class="app-item" id="thrive-leads">
                     <div class="app-rank">4</div>
@@ -1936,11 +1575,9 @@
                             <span class="quick-info-value">WordPress integration</span>
                         </div>
                     </div>
-
                     <div class="app-description">
                         A WordPress-focused lead generation plugin that excels at creating highly targeted opt-in forms and content upgrades. Perfect for stores using WordPress with Shopify integration or content marketing strategies.
                     </div>
-
                     <div class="best-for-box">
                         <h4>🎯 Perfect For</h4>
                         <p><strong>WordPress-based stores with strong content marketing strategies</strong></p>
@@ -1952,21 +1589,17 @@
                             <li>Focus: Content-driven lead generation</li>
                         </ul>
                     </div>
-
                     <div class="vs-comparison">
                         <h5>How Thrive Leads Compares</h5>
                         <p>Choose <strong>Thrive Leads over OptinMonster</strong> if you use WordPress and want deeper content integration. Skip Thrive Leads for <strong>OptinMonster if you need cross-platform compatibility</strong> or don't use WordPress.</p>
                     </div>
-
                     <div class="why-i-like">
                         <h4>Why Content Marketers Choose Thrive Leads</h4>
                         <p>Thrive Leads' content locking and upgrade features let you gate premium content behind email signups, creating natural lead magnets that feel valuable rather than intrusive. This approach typically converts 40-60% better than generic popups.</p>
                     </div>
-
                     <div class="cta-early">
                         <a href="#" class="cta-secondary" target="_blank" rel="nofollow sponsored">Start Free - Get Thrive Leads Now</a>
                     </div>
-
                     <div class="pros-cons">
                         <div class="pros">
                             <h4>Pros:</h4>
@@ -1988,7 +1621,6 @@
                             </ul>
                         </div>
                     </div>
-
                     <div class="selling-points">
                         <h4 class="selling-header">Why Smart Store Owners Choose Thrive Leads:</h4>
                         <div class="selling-point">
@@ -2014,16 +1646,13 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="cta-mid">
                         <a href="#" class="cta-secondary" target="_blank" rel="nofollow sponsored">Start Free Trial - Get Thrive Leads</a>
                     </div>
-
                     <div style="text-align: center; margin: 1.5rem 0;">
                         <a href="/thrive-leads-review/" class="cta-secondary" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; font-size: 0.95rem; padding: 0.75rem 1.5rem;">Learn more about Thrive Leads →</a>
                     </div>
                 </li>
-
                 <!-- 5. Sumo -->
                 <li class="app-item" id="sumo">
                     <div class="app-rank">5</div>
@@ -2043,11 +1672,9 @@
                             <span class="quick-info-value">Budget-friendly growth</span>
                         </div>
                     </div>
-
                     <div class="app-description">
                         A comprehensive growth toolkit that combines email capture, social sharing, analytics, and more in one affordable package. Sumo's generous free plan makes it perfect for getting started with conversion optimization on any budget.
                     </div>
-
                     <div class="best-for-box">
                         <h4>🎯 Perfect For</h4>
                         <p><strong>New stores and budget-conscious businesses wanting multiple growth tools</strong></p>
@@ -2059,21 +1686,17 @@
                             <li>Focus: Comprehensive growth toolkit on a budget</li>
                         </ul>
                     </div>
-
                     <div class="vs-comparison">
                         <h5>How Sumo Compares</h5>
                         <p>Choose <strong>Sumo over OptinMonster</strong> if you want multiple tools in one package and need a free option. Skip Sumo for <strong>OptinMonster if you need advanced targeting</strong> and behavioral triggers for higher conversion rates.</p>
                     </div>
-
                     <div class="why-i-like">
                         <h4>Why Startups Love Sumo</h4>
                         <p>Sumo's free plan includes email capture popups, social sharing buttons, analytics, and heat maps—tools that would cost $100+ per month if purchased separately. It's the perfect way to get started with conversion optimization without any upfront investment.</p>
                     </div>
-
                     <div class="cta-early">
                         <a href="#" class="cta-secondary" target="_blank" rel="nofollow sponsored">Start Free - Get Sumo Now</a>
                     </div>
-
                     <div class="pros-cons">
                         <div class="pros">
                             <h4>Pros:</h4>
@@ -2095,7 +1718,6 @@
                             </ul>
                         </div>
                     </div>
-
                     <div class="selling-points">
                         <h4 class="selling-header">Why Smart Store Owners Choose Sumo:</h4>
                         <div class="selling-point">
@@ -2121,17 +1743,14 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="cta-mid">
                         <a href="#" class="cta-secondary" target="_blank" rel="nofollow sponsored">Start Free Trial - Get Sumo</a>
                     </div>
-
                     <div style="text-align: center; margin: 1.5rem 0;">
                         <a href="/sumo-review/" class="cta-secondary" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; font-size: 0.95rem; padding: 0.75rem 1.5rem;">Learn more about Sumo →</a>
                     </div>
                 </li>
             </ol>
-
             <!-- FAQ Section -->
             <section class="faq-section">
                 <h2>Frequently Asked Questions</h2>
@@ -2152,12 +1771,10 @@
                     <p>Sumo offers the most comprehensive free plan with email capture, social sharing, and basic popup features. It's perfect for getting started with conversion optimization on a budget.</p>
                 </div>
             </section>
-
             <!-- Decision Framework -->
             <section class="decision-framework">
                 <h2>Your Conversion Optimization App Decision Framework</h2>
                 <p class="decision-subtitle">Follow this step-by-step process to choose the perfect conversion optimization platform for your Shopify store</p>
-
                 <div class="decision-step">
                     <div class="step-number">1</div>
                     <h3 class="step-title">Assess Your Primary Goal</h3>
@@ -2173,7 +1790,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="decision-step">
                     <div class="step-number">2</div>
                     <h3 class="step-title">Consider Your Budget</h3>
@@ -2189,7 +1805,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="decision-step">
                     <div class="step-number">3</div>
                     <h3 class="step-title">Evaluate Your Technical Requirements</h3>
@@ -2205,7 +1820,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div style="background: white; border-radius: 12px; padding: 2rem; margin-top: 2rem; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
                     <h3 style="color: #4c1d95; margin-bottom: 1rem;">🎯 Quick Recommendation</h3>
                     <p style="font-size: 1.15rem; line-height: 1.7; color: #334155;">Start with Sumo's free plan to test basic conversion optimization, then upgrade to OptinMonster for advanced email capture or Unbounce for high-converting landing pages as your needs grow.</p>
@@ -2216,16 +1830,11 @@
                 <strong>Affiliate Disclosure:</strong> This page contains affiliate links. If you purchase through our links, we may earn a commission at no additional cost to you. Our reviews remain honest and unbiased.
             </div>
     </main>
-
     <script>
         // Cookie consent functionality
-        
-        
-
                 }
             }
         });
-
         // Click tracking for affiliate links
         function trackClick(appName, buttonType) {
             gtag('event', 'click', {
@@ -2234,19 +1843,16 @@
                 'custom_parameter_1': buttonType,
                 'custom_parameter_2': 'conversion_optimization_apps'
             });
-
             fbq('track', 'Lead', {
                 content_name: appName,
                 content_category: 'conversion_optimization_apps'
             });
         }
-
         // Mobile navigation functionality
         document.addEventListener('DOMContentLoaded', function() {
             const mobileToggle = document.querySelector('.mobile-menu-toggle');
             const navLinks = document.querySelector('.nav-links');
             const dropdowns = document.querySelectorAll('.dropdown');
-
             // Mobile menu toggle button
             if (mobileToggle) {
                 mobileToggle.addEventListener('click', function(e) {
@@ -2271,7 +1877,6 @@
                     });
                 }
             });
-
             document.addEventListener('click', function(e) {
                 if (window.innerWidth <= 768) {
                     if (!e.target.closest('nav')) {
@@ -2284,7 +1889,6 @@
             });
         });
     </script>
-
     <footer style="background: #2d3748; color: white; padding: 3rem 0; margin-top: 4rem;">
         <div class="container">
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
@@ -2315,7 +1919,6 @@
             </div>
         </div>
     </footer>
-
     <!-- Microsoft Clarity -->
     <script type="text/javascript">
         (function(c,l,a,r,i,t,y){
@@ -2323,14 +1926,11 @@
             t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
             y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
         })(window, document, "clarity", "script", "tegdksjizw");
-    
-
         // Mobile menu functionality
         document.addEventListener('DOMContentLoaded', function() {
             const mobileToggle = document.querySelector('.mobile-menu-toggle');
             const navLinks = document.querySelector('.nav-links');
             const dropdowns = document.querySelectorAll('.dropdown');
-
             // Mobile menu toggle button
             if (mobileToggle) {
                 mobileToggle.addEventListener('click', function(e) {
@@ -2346,28 +1946,24 @@
                     dropdownLink.addEventListener('click', function(e) {
                         if (window.innerWidth <= 768) {
                             e.preventDefault();
-
                             // Close other dropdowns
                             dropdowns.forEach(otherDropdown => {
                                 if (otherDropdown !== dropdown) {
                                     otherDropdown.classList.remove('mobile-open');
                                 }
                             });
-
                             // Toggle current dropdown
                             dropdown.classList.toggle('mobile-open');
                         }
                     });
                 }
             });
-
             // Close mobile menu when clicking outside
             document.addEventListener('click', function(e) {
                 if (!e.target.closest('.site-nav') && navLinks.classList.contains('active')) {
                     navLinks.classList.remove('active');
                 }
             });
-
             // Close mobile menu on window resize
             window.addEventListener('resize', function() {
                 if (window.innerWidth > 768) {
@@ -2381,5 +1977,6 @@
     // Initialize cookie consent on page load
     window.addEventListener('DOMContentLoaded', checkCookieConsent);
 </script>
+    <script src="/assets/cookie-consent.js"></script>
 </body>
 </html>

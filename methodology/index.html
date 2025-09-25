@@ -1,101 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="/assets/cookie-consent.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Testing Methodology - ShopifyAppAuthority</title>
     <meta name="description" content="Learn how we test and evaluate Shopify apps. Our comprehensive methodology includes feature testing, performance analysis, and real-world evaluation criteria.">
     <meta name="robots" content="index, follow">
-
     <!-- Open Graph -->
     <meta property="og:title" content="Our Testing Methodology - ShopifyAppAuthority">
     <meta property="og:description" content="Learn how we test and evaluate Shopify apps with our comprehensive methodology and evaluation criteria.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://shopifyappauthority.com/methodology/">
     <meta property="og:site_name" content="ShopifyAppAuthority">
-
     <!-- Canonical URL -->
     <link rel="canonical" href="https://shopifyappauthority.com/methodology/">
-
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="https://imagedelivery.net/mYndgAUf_CYgFA1HoO_-GQ/a9d5a4a6-72a7-4ff7-9c77-6e8ce42e9b00/public">
+    <link rel="icon" type="image/png" href="https://imagedelivery.net/mYndgAUf_CYgFA1HoO_-GQ/43e7272a-fb53-44aa-f0f2-7656a83bc700/public">
     <link rel="apple-touch-icon" href="https://imagedelivery.net/mYndgAUf_CYgFA1HoO_-GQ/a9d5a4a6-72a7-4ff7-9c77-6e8ce42e9b00/public">
-
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             line-height: 1.6;
             color: #2d3748;
             background: #ffffff;
         }
-
         .container {
             max-width: 800px;
             margin: 0 auto;
             padding: 0 20px;
         }
-
-        
-
-        
-
         .logo {
             font-weight: 700;
             font-size: 1.5rem;
             color: #2d3748;
             text-decoration: none;
         }
-
-        
-
-        
-
-        
-
         .hero {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             padding: 4rem 0;
             text-align: center;
         }
-
         .hero h1 {
             font-size: 2.5rem;
             font-weight: 700;
             margin-bottom: 1rem;
         }
-
         .hero .subtitle {
             font-size: 1.2rem;
             opacity: 0.9;
             max-width: 600px;
             margin: 0 auto;
         }
-
         .main-content {
             padding: 3rem 0;
         }
-
         .content-section {
             margin: 2rem 0;
             padding: 2rem;
             background: #f8f9fa;
             border-radius: 12px;
         }
-
         h2 {
             color: #2d3748;
             font-size: 1.8rem;
             margin-bottom: 1rem;
             font-weight: 600;
         }
-
         h3 {
             color: #2d3748;
             font-size: 1.4rem;
@@ -103,22 +80,18 @@
             margin-top: 1.5rem;
             font-weight: 600;
         }
-
         p {
             margin-bottom: 1rem;
             color: #4a5568;
         }
-
         ul {
             margin-left: 1.5rem;
             margin-bottom: 1rem;
         }
-
         li {
             margin-bottom: 0.5rem;
             color: #4a5568;
         }
-
         .author-badge {
             background: rgba(255, 255, 255, 0.2);
             padding: 0.8rem 1.5rem;
@@ -127,40 +100,32 @@
             display: inline-block;
             font-size: 0.95rem;
         }
-
         .breadcrumb {
             padding: 1rem 0;
             font-size: 0.9rem;
             color: #6c757d;
         }
-
         .breadcrumb a {
             color: #95bf47;
             text-decoration: none;
         }
-
         .breadcrumb a:hover {
             text-decoration: underline;
         }
-
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2rem;
             }
-
             .hero .subtitle {
                 font-size: 1rem;
             }
-
             .container {
                 padding: 0 15px;
             }
-
             .content-section {
                 padding: 1.5rem;
             }
         }
-            
             header {
             background: linear-gradient(180deg, #ffffff 0%, #fafafa 100%);
             border-bottom: 1px solid rgba(149, 191, 71, 0.2);
@@ -169,7 +134,6 @@
             z-index: 1000;
             backdrop-filter: blur(10px);
         }
-
         .site-nav {
             max-width: 1400px;
             margin: 0 auto;
@@ -179,7 +143,6 @@
             align-items: center;
             height: 70px;
         }
-
         .logo {
             font-size: 1.8rem;
             font-weight: bold;
@@ -191,14 +154,12 @@
             white-space: nowrap;
             line-height: 1;
         }
-
         .nav-links {
             display: flex;
             list-style: none;
             gap: 50px;
             align-items: center;
         }
-
         .nav-links a {
             color: #4a5568;
             text-decoration: none;
@@ -209,23 +170,19 @@
             border-radius: 10px;
             white-space: nowrap;
         }
-
         .nav-links a:hover, .nav-links a:focus {
             background-color: rgba(149, 191, 71, 0.1);
             color: #95bf47;
             transform: translateY(-2px);
         }
-
         .dropdown {
             position: relative;
         }
-
         .dropdown > a::after {
             content: ' ↓';
             font-size: 0.8em;
             color: #95bf47;
         }
-
         .dropdown-content {
             display: none;
             position: absolute;
@@ -239,11 +196,9 @@
             z-index: 1001;
             border: 1px solid rgba(149, 191, 71, 0.2);
         }
-
         .dropdown:hover .dropdown-content {
             display: block;
         }
-
         .dropdown-content a {
             color: #4a5568;
             padding: 0.7rem 1.5rem;
@@ -253,13 +208,11 @@
             transition: all 0.2s ease;
             border-radius: 0;
         }
-
         .dropdown-content a:hover {
             background-color: rgba(149, 191, 71, 0.1);
             color: #95bf47;
             transform: translateX(5px);
         }
-
         .mobile-menu-toggle {
             display: none;
             background: none;
@@ -269,15 +222,11 @@
             cursor: pointer;
             padding: 0.5rem;
         }
-
         @media (max-width: 768px) {
-            
-
             .mobile-menu-toggle {
                 display: block;
                 order: 2;
             }
-
             .nav-links {
                 display: none;
                 width: 100%;
@@ -289,18 +238,15 @@
                 padding: 1rem 0;
                 margin-top: 1rem;
             }
-
             .nav-links.active {
                 display: flex;
             }
-
             .nav-links a {
                 padding: 1rem 1.5rem;
                 border-radius: 0;
                 width: 100%;
                 text-align: left;
             }
-
             .dropdown-content {
                 position: static;
                 display: none;
@@ -309,16 +255,13 @@
                 background: #f8f9fa;
                 margin-left: 1rem;
             }
-
             .dropdown.active .dropdown-content,
             .dropdown.mobile-open .dropdown-content {
                 display: block;
             }
-
             .dropdown > a::after {
                 content: ' +';
             }
-
             .dropdown.active > a::after,
             .dropdown.mobile-open > a::after {
                 content: ' -';
@@ -333,7 +276,6 @@
             z-index: 1000;
             backdrop-filter: blur(10px);
         }
-
         .site-nav {
             max-width: 1400px;
             margin: 0 auto;
@@ -343,7 +285,6 @@
             align-items: center;
             height: 70px;
         }
-
         .logo {
             font-size: 1.8rem;
             font-weight: bold;
@@ -355,7 +296,6 @@
             white-space: nowrap;
             line-height: 1;
         }
-
         .nav-links {
             display: flex;
             list-style: none;
@@ -364,7 +304,6 @@
             margin: 0;
             padding: 0;
         }
-
         .nav-links a {
             color: #4a5568;
             text-decoration: none;
@@ -375,23 +314,19 @@
             border-radius: 10px;
             white-space: nowrap;
         }
-
         .nav-links a:hover, .nav-links a:focus {
             background-color: rgba(149, 191, 71, 0.1);
             color: #95bf47;
             transform: translateY(-2px);
         }
-
         .dropdown {
             position: relative;
         }
-
         .dropdown > a::after {
             content: ' ↓';
             font-size: 0.8em;
             color: #95bf47;
         }
-
         .dropdown-content {
             display: none;
             position: absolute;
@@ -405,11 +340,9 @@
             z-index: 1001;
             border: 1px solid rgba(149, 191, 71, 0.2);
         }
-
         .dropdown:hover .dropdown-content {
             display: block;
         }
-
         .dropdown-content a {
             color: #4a5568;
             padding: 0.7rem 1.5rem;
@@ -419,13 +352,11 @@
             transition: all 0.2s ease;
             border-radius: 0;
         }
-
         .dropdown-content a:hover {
             background-color: rgba(149, 191, 71, 0.1);
             color: #95bf47;
             transform: translateX(5px);
         }
-
         .mobile-menu-toggle {
             display: none;
             background: none;
@@ -435,23 +366,19 @@
             cursor: pointer;
             padding: 0.5rem;
         }
-
         @media (max-width: 768px) {
             .site-nav {
                 padding: 0 20px;
                 flex-wrap: wrap;
                 position: relative;
             }
-
             .logo {
                 font-size: 1.4rem;
             }
-
             .mobile-menu-toggle {
                 display: block;
                 order: 2;
             }
-
             .nav-links {
                 display: none;
                 width: 100%;
@@ -463,18 +390,15 @@
                 padding: 1rem 0;
                 margin-top: 1rem;
             }
-
             .nav-links.active {
                 display: flex;
             }
-
             .nav-links a {
                 padding: 1rem 1.5rem;
                 border-radius: 0;
                 width: 100%;
                 text-align: left;
             }
-
             .dropdown-content {
                 position: static;
                 display: none;
@@ -483,53 +407,43 @@
                 background: #f8f9fa;
                 margin-left: 1rem;
             }
-
             .dropdown.active .dropdown-content,
             .dropdown.mobile-open .dropdown-content {
                 display: block;
             }
-
             .dropdown > a::after {
                 content: ' +';
             }
-
             .dropdown.active > a::after,
             .dropdown.mobile-open > a::after {
                 content: ' -';
             }
         }
-    
         .hidden {
             display: none !important;
             visibility: hidden !important;
         }
-        
         /* Fix for anchor link offset due to sticky header */
         html {
             scroll-padding-top: 100px;
         }
-
         /* Alternative method for older browsers */
         [id]:target {
             scroll-margin-top: 100px;
         }
-
         /* Mobile scroll offset adjustments */
         @media (max-width: 768px) {
             html {
                 scroll-padding-top: 80px;
             }
-
             [id]:target {
                 scroll-margin-top: 80px;
             }
         }
-
         /* Smooth scrolling for better UX */
         html {
             scroll-behavior: smooth;
         }
-        
         /* Enhanced mobile menu functionality */
         @media (max-width: 768px) {
             .mobile-menu-toggle {
@@ -537,7 +451,6 @@
                 z-index: 1001 !important;
                 position: relative !important;
             }
-
             .nav-links {
                 position: absolute !important;
                 top: 100% !important;
@@ -549,12 +462,10 @@
                 overflow: hidden !important;
                 transition: all 0.3s ease !important;
             }
-
             .nav-links.active {
                 max-height: 500px !important;
                 overflow-y: auto !important;
             }
-
             .dropdown-content {
                 position: static !important;
                 box-shadow: none !important;
@@ -564,53 +475,23 @@
                 overflow: hidden !important;
                 transition: all 0.3s ease !important;
             }
-
             .dropdown.active .dropdown-content,
             .dropdown.mobile-open .dropdown-content {
                 max-height: 300px !important;
                 overflow-y: auto !important;
             }
         }
-        /* Cookie Consent - Required for Legal Compliance */
-        .cookie-consent {
-            position: fixed !important;
-            bottom: 0 !important;
-            left: 0 !important;
-            right: 0 !important;
-            background: rgba(26, 32, 44, 0.95) !important;
-            color: white !important;
-            padding: 20px !important;
-            z-index: 99999 !important;
-            backdrop-filter: blur(10px);
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            cursor: pointer;
-            box-sizing: border-box !important;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-        }
-
-        .cookie-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
         .cookie-text {
             flex: 1;
             min-width: 300px;
             font-size: 14px;
             line-height: 1.5;
         }
-
         .cookie-buttons {
             display: flex;
             gap: 10px;
             flex-wrap: wrap;
         }
-
         .cookie-button {
             padding: 10px 20px;
             border: none;
@@ -621,54 +502,30 @@
             font-size: 14px;
             min-width: 100px;
         }
-
         .accept-all {
             background: #95bf47;
             color: white;
         }
-
         .accept-all:hover {
             background: #7fa83a;
         }
-
         .reject-all {
             background: transparent;
             color: white;
             border: 1px solid rgba(255, 255, 255, 0.3);
         }
-
         .reject-all:hover {
             background: rgba(255, 255, 255, 0.1);
         }
-
-        .cookie-hidden {
-            display: none !important;
-        }
-
-        /* Mobile optimization for cookies popup */
-        @media (max-width: 768px) {
-            .cookie-consent {
-                padding: 15px !important;
-                font-size: 13px !important;
-            }
-
-            .cookie-content {
-                flex-direction: column !important;
-                gap: 15px !important;
-                text-align: center !important;
-            }
-
             .cookie-text {
                 min-width: auto !important;
                 font-size: 13px !important;
             }
-
             .cookie-buttons {
                 width: 100% !important;
                 justify-content: center !important;
                 gap: 10px !important;
             }
-
             .cookie-button {
                 min-width: 120px !important;
                 padding: 12px 20px !important;
@@ -679,6 +536,7 @@
 </head>
 <body>
     <header class="site-header">
+    <link rel="stylesheet" href="/assets/cookie-consent.css">
         <nav class="site-nav">
             <a href="/" class="logo">🚀&nbsp;ShopifyAppAuthority</a>
             <ul class="nav-links">
@@ -711,19 +569,11 @@
             </button>
         </nav>
     </header>
-
-
-    
-
-
-    
-
     <div class="breadcrumb">
         <div class="container">
             <a href="/">Home</a> → <span>Methodology</span>
         </div>
     </div>
-
     <section class="hero">
         <div class="container">
             <h1>Our Testing Methodology</h1>
@@ -733,20 +583,16 @@
             </div>
         </div>
     </section>
-
     <main class="main-content">
         <div class="container">
             <div class="content-section">
                 <h2>Introduction</h2>
                 <p>Email marketing drives an average of $42 for every $1 spent, making it one of the highest ROI marketing channels for Shopify stores. However, choosing the right email marketing app can make or break your success.</p>
-
                 <p>As a digital marketing professional with over a decade of experience managing ecommerce campaigns across 60+ product verticals, I've tested dozens of email marketing platforms for Shopify stores. Our guides cover the most effective options based on real-world performance, ease of use, and value for money.</p>
             </div>
-
             <div class="content-section">
                 <h2>How We Test Apps</h2>
                 <p>Our evaluation process is comprehensive and hands-on. We don't rely on marketing materials or surface-level reviews. Instead, we put each app through rigorous testing to understand how it performs in real-world scenarios.</p>
-
                 <h3>Feature Testing</h3>
                 <p>We conduct hands-on testing of:</p>
                 <ul>
@@ -756,7 +602,6 @@
                     <li><strong>Template design</strong> - Evaluating mobile responsiveness and customization options</li>
                     <li><strong>A/B testing tools</strong> - Testing split test functionality and statistical significance</li>
                 </ul>
-
                 <h3>Performance Analysis</h3>
                 <p>We measure actual performance metrics including:</p>
                 <ul>
@@ -766,7 +611,6 @@
                     <li><strong>Uptime reliability</strong> - Monitoring service availability over extended periods</li>
                     <li><strong>Data sync speed</strong> - Testing how quickly Shopify data updates in the platform</li>
                 </ul>
-
                 <h3>User Experience Evaluation</h3>
                 <p>We assess the practical usability of each platform:</p>
                 <ul>
@@ -776,7 +620,6 @@
                     <li><strong>Documentation quality</strong> - Reviewing help resources and tutorial clarity</li>
                     <li><strong>Mobile accessibility</strong> - Testing app functionality on mobile devices</li>
                 </ul>
-
                 <h3>Value Assessment</h3>
                 <p>We analyze the cost-benefit relationship:</p>
                 <ul>
@@ -786,7 +629,6 @@
                     <li><strong>Scalability costs</strong> - Projecting expenses as businesses grow</li>
                     <li><strong>Contract flexibility</strong> - Evaluating cancellation policies and commitment terms</li>
                 </ul>
-
                 <h3>Shopify Integration Testing</h3>
                 <p>We specifically test Shopify compatibility:</p>
                 <ul>
@@ -797,11 +639,9 @@
                     <li><strong>Conflict resolution</strong> - Testing compatibility with other Shopify apps</li>
                 </ul>
             </div>
-
             <div class="content-section">
                 <h2>Selection Criteria</h2>
                 <p>Apps are selected and ranked based on these key factors:</p>
-
                 <h3>Core Requirements</h3>
                 <ul>
                     <li><strong>Native Shopify integration</strong> - Must offer official Shopify app store integration</li>
@@ -810,7 +650,6 @@
                     <li><strong>Responsive support</strong> - Must provide timely customer service</li>
                     <li><strong>Transparent pricing</strong> - Must offer clear, understandable pricing structure</li>
                 </ul>
-
                 <h3>Evaluation Factors</h3>
                 <ul>
                     <li><strong>Ease of use</strong> - How quickly can users achieve their goals?</li>
@@ -821,11 +660,9 @@
                     <li><strong>Innovation</strong> - Is the platform keeping up with industry trends?</li>
                 </ul>
             </div>
-
             <div class="content-section">
                 <h2>Our Standards</h2>
                 <p>We maintain strict editorial standards to ensure our recommendations serve your best interests:</p>
-
                 <ul>
                     <li><strong>Independence</strong> - Our testing is not influenced by affiliate relationships</li>
                     <li><strong>Transparency</strong> - We disclose all affiliate relationships and potential conflicts</li>
@@ -833,12 +670,10 @@
                     <li><strong>Completeness</strong> - We test both strengths and weaknesses of each platform</li>
                     <li><strong>Relevance</strong> - We focus on features that matter to real Shopify store owners</li>
                 </ul>
-
                 <p>Our goal is to help you make informed decisions based on your specific needs, not to promote any particular platform. We believe the best recommendation is the one that truly fits your business requirements and budget.</p>
             </div>
         </div>
     </main>
-
     <footer style="background: #2d3748; color: white; padding: 3rem 0; margin-top: 4rem;">
         <div class="container">
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
@@ -868,7 +703,6 @@
             </div>
         </div>
     </footer>
-
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-J09TH92K0M"></script>
     <!-- Microsoft Clarity -->
@@ -885,7 +719,6 @@
       gtag('js', new Date());
       gtag('config', 'G-J09TH92K0M');
     </script>
-
     <!-- Facebook Pixel -->
     <script>
       !function(f,b,e,v,n,t,s)
@@ -898,14 +731,11 @@
       'https://connect.facebook.net/en_US/fbevents.js');
       fbq('init', '1087447432711058');
       fbq('track', 'PageView');
-    
-
         // Mobile menu functionality
         document.addEventListener('DOMContentLoaded', function() {
             const mobileToggle = document.querySelector('.mobile-menu-toggle');
             const navLinks = document.querySelector('.nav-links');
             const dropdowns = document.querySelectorAll('.dropdown');
-
             // Mobile menu toggle button
             if (mobileToggle) {
                 mobileToggle.addEventListener('click', function(e) {
@@ -921,28 +751,24 @@
                     dropdownLink.addEventListener('click', function(e) {
                         if (window.innerWidth <= 768) {
                             e.preventDefault();
-
                             // Close other dropdowns
                             dropdowns.forEach(otherDropdown => {
                                 if (otherDropdown !== dropdown) {
                                     otherDropdown.classList.remove('mobile-open');
                                 }
                             });
-
                             // Toggle current dropdown
                             dropdown.classList.toggle('mobile-open');
                         }
                     });
                 }
             });
-
             // Close mobile menu when clicking outside
             document.addEventListener('click', function(e) {
                 if (!e.target.closest('.site-nav') && navLinks.classList.contains('active')) {
                     navLinks.classList.remove('active');
                 }
             });
-
             // Close mobile menu on window resize
             window.addEventListener('resize', function() {
                 if (window.innerWidth > 768) {
@@ -953,34 +779,10 @@
                 }
             });
         });</script>    <!-- Cookie Consent - Required for Legal Compliance -->
-    <div id="cookieConsent" class="cookie-consent">
-        <div class="cookie-content">
-            <div class="cookie-text">
-                <strong>🍪 We use cookies to enhance your experience.</strong>
-                This site uses cookies for analytics, advertising, and affiliate tracking. By continuing to browse or clicking "Accept All", you consent to our use of cookies.
-                <a href="/privacy-policy/" style="color: #95bf47; text-decoration: underline; margin-left: 8px;">Privacy Policy</a>
-                        
-            </div>
-            <div class="cookie-buttons">
-                <button class="cookie-button accept-all" onclick="acceptCookies()">Accept All</button>
-                <button class="cookie-button reject-all" onclick="rejectCookies()">Reject All</button>
-            </div>
-        </div>
     </div>
-
-
-
+    </div>
 <script>
 // Simple cookie consent functions
-function acceptCookies() {
-    localStorage.setItem('cookieConsent', 'accepted');
-    localStorage.setItem('cookieConsentTimestamp', new Date().getTime());
-    var popup = document.getElementById('cookieConsent');
-    if (popup) {
-        popup.style.display = 'none';
-        popup.classList.add('cookie-hidden');
-    }
-
     // Enable analytics if gtag exists
     if (typeof gtag !== 'undefined') {
         gtag('consent', 'update', {
@@ -989,16 +791,6 @@ function acceptCookies() {
         });
     }
 }
-
-function rejectCookies() {
-    localStorage.setItem('cookieConsent', 'rejected');
-    localStorage.setItem('cookieConsentTimestamp', new Date().getTime());
-    var popup = document.getElementById('cookieConsent');
-    if (popup) {
-        popup.style.display = 'none';
-        popup.classList.add('cookie-hidden');
-    }
-
     // Disable analytics if gtag exists
     if (typeof gtag !== 'undefined') {
         gtag('consent', 'update', {
@@ -1007,26 +799,23 @@ function rejectCookies() {
         });
     }
 }
-
 // Check for existing consent on page load
 window.addEventListener('DOMContentLoaded', function() {
-    var consent = localStorage.getItem('cookieConsent');
-    var timestamp = localStorage.getItem('cookieConsentTimestamp');
+    var consent = ;
+    var timestamp = ;
     var popup = document.getElementById('cookieConsent');
-
     // Only hide if we have valid consent (accepted or rejected)
     if (popup && consent && (consent === 'accepted' || consent === 'rejected')) {
         // Check if consent is still valid (optional: expire after 365 days)
         var consentAge = timestamp ? (new Date().getTime() - parseInt(timestamp)) : Infinity;
         var maxAge = 365 * 24 * 60 * 60 * 1000; // 365 days in milliseconds
-
         if (consentAge < maxAge) {
             popup.style.display = 'none';
             popup.classList.add('cookie-hidden');
         } else {
             // Consent expired, clear and show popup
-            localStorage.removeItem('cookieConsent');
-            localStorage.removeItem('cookieConsentTimestamp');
+            ;
+            ;
             popup.style.display = 'block';
             popup.classList.remove('cookie-hidden');
         }
@@ -1036,22 +825,11 @@ window.addEventListener('DOMContentLoaded', function() {
         popup.classList.remove('cookie-hidden');
     }
 });
-
 // Click anywhere on popup to accept (backup) - removed to prevent accidental acceptance
 // Users should explicitly click Accept or Reject buttons
-document.addEventListener('DOMContentLoaded', function() {
-    // Ensure buttons are properly wired
-    var acceptBtn = document.querySelector('#cookieConsent .accept-all');
-    var rejectBtn = document.querySelector('#cookieConsent .reject-all');
-
-    if (acceptBtn && !acceptBtn.onclick) {
-        acceptBtn.addEventListener('click', acceptCookies);
-    }
-    if (rejectBtn && !rejectBtn.onclick) {
-        rejectBtn.addEventListener('click', rejectCookies);
     }
 });
 </script>
-
+    <script src="/assets/cookie-consent.js"></script>
 </body>
 </html>
