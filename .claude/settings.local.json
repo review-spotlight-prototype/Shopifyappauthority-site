@@ -12,7 +12,8 @@
       "Bash(del test-cookie-consent.html fix-cookie-consent.py)",
       "Bash(start cookie-debug.html)",
       "Bash(curl:*)",
-      "Bash(pip install:*)"
+      "Bash(pip install:*)",
+      "Bash(find:*)"
     ],
     "deny": [],
     "ask": []
