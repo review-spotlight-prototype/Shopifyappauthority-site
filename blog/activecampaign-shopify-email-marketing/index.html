@@ -734,12 +734,135 @@
                 max-height: 300px !important;
                 overflow-y: auto !important;
             }
+        /* Cookie Consent */
+        .cookie-consent {
+            position: fixed !important;
+            bottom: 0 !important;
+            left: 0 !important;
+            right: 0 !important;
+            background: rgba(26, 32, 44, 0.95) !important;
+            color: white !important;
+            padding: 20px !important;
+            z-index: 99999 !important;
+            backdrop-filter: blur(10px);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            cursor: pointer;
+            box-sizing: border-box !important;
+        }
+
+        /* Mobile optimization for cookies popup */
+        @media (max-width: 768px) {
+            .cookie-consent {
+                padding: 15px !important;
+                font-size: 14px !important;
+            }
+
+            .cookie-content {
+                flex-direction: column !important;
+                gap: 15px !important;
+                text-align: center !important;
+            }
+
+            .cookie-buttons {
+                width: 100% !important;
+                justify-content: center !important;
+                gap: 10px !important;
+            }
+
+            .cookie-button {
+                min-width: 120px !important;
+                padding: 12px 20px !important;
+                font-size: 14px !important;
+            }
+        }
+
+        .cookie-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .cookie-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .cookie-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .cookie-button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .accept-all {
+            background: #95bf47;
+            color: white;
+        }
+
+        .accept-all:hover {
+            background: #7fa83a;
+        }
+
+        .reject-all {
+            background: transparent;
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .reject-all:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
         }
         </style>
 </head>
 <body>
-    
+    <header class="site-header">
+        <nav class="site-nav">
+            <a href="/" class="logo">🚀&nbsp;ShopifyAppAuthority</a>
+            <ul class="nav-links">
+                <li><a href="/best-shopify-apps-2025-ultimate-guide/">Best Tools</a></li>
+                <li class="dropdown">
+                    <a href="/app-categories/" aria-haspopup="true" aria-expanded="false">App Categories</a>
+                    <div class="dropdown-content" role="menu">
+                        <a href="/best-shopify-apps-email-marketing/" role="menuitem">Email Marketing</a>
+                        <a href="/best-shopify-apps-conversion-optimization/" role="menuitem">Conversion & Sales</a>
+                        <a href="/reviews-social-proof-apps/" role="menuitem">Reviews & Social Proof</a>
+                        <a href="/best-shopify-apps-customer-service/" role="menuitem">Customer Service</a>
+                        <a href="/best-shopify-apps-crm-sales/" role="menuitem">CRM & Sales Apps</a>
+                        <a href="/best-shopify-apps-analytics-attribution/" role="menuitem">Analytics & Attribution</a>
+                        <a href="/free-shopify-apps/" role="menuitem">Free Apps</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="/faqs/" aria-haspopup="true" aria-expanded="false">Quick FAQs</a>
+                    <div class="dropdown-content" role="menu">
+                        <a href="/faqs/email-marketing-faq/" role="menuitem">Email Marketing FAQ</a>
+                        <a href="/faqs/crm-sales-faq/" role="menuitem">CRM & Sales FAQ</a>
+                        <a href="/faqs/analytics-attribution-faq/" role="menuitem">Analytics & Attribution FAQ</a>
+                    </div>
+                </li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/affiliate-disclosure/">Disclaimer</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+                ☰
+            </button>
+        </nav>
+    </header>
 
+    
     <main>
         <section class="article-header">
             <div class="container">
@@ -1187,6 +1310,22 @@
             </div>
         </article>
     </main>
+    <!-- Cookie Consent -->
+    <div id="cookieConsent" class="cookie-consent">
+        <div class="cookie-content">
+            <div class="cookie-text">
+                <strong>🍪 We use cookies to enhance your experience.</strong>
+                This site uses cookies for analytics and affiliate tracking. By continuing to browse, you consent to our use of cookies.
+                <a href="/privacy-policy/" style="color: #95bf47; text-decoration: underline;">Learn more</a>
+            </div>
+            <div class="cookie-buttons">
+                <button class="cookie-button accept-all" onclick="acceptCookies()">Accept All</button>
+                <button class="cookie-button reject-all" onclick="rejectCookies()">Reject All</button>
+            </div>
+        </div>
+    </div>
+
+
 
     <script defer>
         document.addEventListener('DOMContentLoaded', function() {
