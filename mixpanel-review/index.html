@@ -1646,20 +1646,46 @@ function rejectCookies() {
 }
 
 // Check for existing consent on page load
-window.addEventListener('load', function() {
+window.addEventListener('DOMContentLoaded', function() {
     var consent = localStorage.getItem('cookieConsent');
+    var timestamp = localStorage.getItem('cookieConsentTimestamp');
     var popup = document.getElementById('cookieConsent');
 
-    if (consent && popup) {
-        popup.style.display = 'none';
-        popup.classList.add('cookie-hidden');
+    // Only hide if we have valid consent (accepted or rejected)
+    if (popup && consent && (consent === 'accepted' || consent === 'rejected')) {
+        // Check if consent is still valid (optional: expire after 365 days)
+        var consentAge = timestamp ? (new Date().getTime() - parseInt(timestamp)) : Infinity;
+        var maxAge = 365 * 24 * 60 * 60 * 1000; // 365 days in milliseconds
+
+        if (consentAge < maxAge) {
+            popup.style.display = 'none';
+            popup.classList.add('cookie-hidden');
+        } else {
+            // Consent expired, clear and show popup
+            localStorage.removeItem('cookieConsent');
+            localStorage.removeItem('cookieConsentTimestamp');
+            popup.style.display = 'block';
+            popup.classList.remove('cookie-hidden');
+        }
+    } else if (popup && !consent) {
+        // No consent, ensure popup is visible
+        popup.style.display = 'block';
+        popup.classList.remove('cookie-hidden');
     }
 });
 
-// Click anywhere on popup to accept (backup)
-document.addEventListener('click', function(e) {
-    if (e.target.closest('#cookieConsent') && !e.target.closest('.cookie-button')) {
-        acceptCookies();
+// Click anywhere on popup to accept (backup) - removed to prevent accidental acceptance
+// Users should explicitly click Accept or Reject buttons
+document.addEventListener('DOMContentLoaded', function() {
+    // Ensure buttons are properly wired
+    var acceptBtn = document.querySelector('#cookieConsent .accept-all');
+    var rejectBtn = document.querySelector('#cookieConsent .reject-all');
+
+    if (acceptBtn && !acceptBtn.onclick) {
+        acceptBtn.addEventListener('click', acceptCookies);
+    }
+    if (rejectBtn && !rejectBtn.onclick) {
+        rejectBtn.addEventListener('click', rejectCookies);
     }
 });
 </script>

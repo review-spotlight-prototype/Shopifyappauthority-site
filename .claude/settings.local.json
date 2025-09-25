@@ -6,7 +6,10 @@
       "Bash(git commit:*)",
       "Bash(git push:*)",
       "WebSearch",
-      "Bash(grep:*)"
+      "Bash(grep:*)",
+      "Bash(start test-cookie-consent.html)",
+      "Bash(python:*)",
+      "Bash(del test-cookie-consent.html fix-cookie-consent.py)"
     ],
     "deny": [],
     "ask": []
