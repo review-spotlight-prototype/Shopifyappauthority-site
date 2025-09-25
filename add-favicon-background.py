@@ -32,8 +32,8 @@ def add_purple_background(image_url, output_path):
         draw = ImageDraw.Draw(new_image)
 
         # Draw purple circle background
-        # Using a nice purple color (#8B5CF6 - violet-500)
-        purple_color = (139, 92, 246, 255)  # RGBA
+        # Using dark purple color (#2A0134)
+        purple_color = (42, 1, 52, 255)  # RGBA
         draw.ellipse([0, 0, size-1, size-1], fill=purple_color)
 
         # Calculate position to center the original image
