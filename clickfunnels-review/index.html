@@ -901,71 +901,7 @@
         </div>
     </main>
     <script>
-        // Mobile menu toggle
-        document.querySelector(');
-        // Track affiliate clicks
-        document.querySelectorAll('a[href*="#"]').forEach(link => {
-            link.addEventListener('click', function() {
-                gtag('event', 'click', {
-                    'event_category': 'affiliate_link',
-                    'event_label': 'clickfunnels',
-                    'custom_parameter_1': 'review_page',
-                    'custom_parameter_2': 'funnel_builders'
-                });
-                fbq('track', 'Lead', {
-                    content_name: 'ClickFunnels',
-                    content_category: 'funnel_builders'
-                });
-            });
-        });
-        // Mobile menu functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const mobileToggle = document.querySelector('.mobile-menu-toggle');
-            const navLinks = document.querySelector('.nav-links');
-            const dropdowns = document.querySelectorAll('.dropdown');
-            // Mobile menu toggle button
-            if (mobileToggle) {
-                mobileToggle.addEventListener('click', function(e) {
-                    e.stopPropagation();
-                    navLinks.classList.toggle('active');
-                    this.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
-                });
-            }
-            // Mobile dropdown toggles
-            dropdowns.forEach(dropdown => {
-                const dropdownLink = dropdown.querySelector('a');
-                if (dropdownLink) {
-                    dropdownLink.addEventListener('click', function(e) {
-                        if (window.innerWidth <= 768) {
-                            e.preventDefault();
-                            // Close other dropdowns
-                            dropdowns.forEach(otherDropdown => {
-                                if (otherDropdown !== dropdown) {
-                                    otherDropdown.classList.remove('mobile-open');
-                                }
-                            });
-                            // Toggle current dropdown
-                            dropdown.classList.toggle('mobile-open');
-                        }
-                    });
-                }
-            });
-            // Close mobile menu when clicking outside
-            document.addEventListener('click', function(e) {
-                if (!e.target.closest('.site-nav') && navLinks.classList.contains('active')) {
-                    navLinks.classList.remove('active');
-                }
-            });
-            // Close mobile menu on window resize
-            window.addEventListener('resize', function() {
-                if (window.innerWidth > 768) {
-                    navLinks.classList.remove('active');
-                    dropdowns.forEach(dropdown => {
-                        dropdown.classList.remove('mobile-open');
-                    });
-                }
-            });
-        });</script>
+        </script>
     <footer style="background: #2d3748; color: white; padding: 3rem 0; margin-top: 4rem;">
         <div class="container">
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
@@ -1047,5 +983,69 @@ window.addEventListener('DOMContentLoaded', function() {
 });
 </script>
     <script src="/assets/cookie-consent.js"></script>
+    <script>
+        // Mobile navigation functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileToggle = document.querySelector('.mobile-menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+            const dropdowns = document.querySelectorAll('.dropdown');
+
+            // Mobile menu toggle button
+            if (mobileToggle && navLinks) {
+                mobileToggle.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    navLinks.classList.toggle('active');
+                    this.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
+                });
+            }
+
+            // Mobile dropdown toggles
+            dropdowns.forEach(dropdown => {
+                const dropdownLink = dropdown.querySelector('a');
+                if (dropdownLink) {
+                    dropdownLink.addEventListener('click', function(e) {
+                        if (window.innerWidth <= 768) {
+                            e.preventDefault();
+                            dropdowns.forEach(otherDropdown => {
+                                if (otherDropdown !== dropdown) {
+                                    otherDropdown.classList.remove('mobile-open');
+                                }
+                            });
+                            dropdown.classList.toggle('mobile-open');
+                        }
+                    });
+                }
+            });
+
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', function(e) {
+                if (window.innerWidth <= 768 && navLinks) {
+                    if (!e.target.closest('nav') && !e.target.closest('.mobile-menu-toggle')) {
+                        navLinks.classList.remove('active');
+                        if (mobileToggle) {
+                            mobileToggle.textContent = '☰';
+                        }
+                        dropdowns.forEach(dropdown => {
+                            dropdown.classList.remove('mobile-open');
+                        });
+                    }
+                }
+            });
+
+            // Close mobile menu on window resize
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768 && navLinks) {
+                    navLinks.classList.remove('active');
+                    if (mobileToggle) {
+                        mobileToggle.textContent = '☰';
+                    }
+                    dropdowns.forEach(dropdown => {
+                        dropdown.classList.remove('mobile-open');
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
