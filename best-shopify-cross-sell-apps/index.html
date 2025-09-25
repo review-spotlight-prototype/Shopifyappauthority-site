@@ -751,7 +751,8 @@
                 margin-left: 1rem;
             }
 
-            .dropdown.active .dropdown-content {
+            .dropdown.active .dropdown-content,
+            .dropdown.mobile-open .dropdown-content {
                 display: block;
             }
 
@@ -759,7 +760,8 @@
                 content: ' +';
             }
 
-            .dropdown.active > a::after {
+            .dropdown.active > a::after,
+            .dropdown.mobile-open > a::after {
                 content: ' -';
             }
         }
@@ -923,7 +925,8 @@
                 margin-left: 1rem;
             }
 
-            .dropdown.active .dropdown-content {
+            .dropdown.active .dropdown-content,
+            .dropdown.mobile-open .dropdown-content {
                 display: block;
             }
 
@@ -931,7 +934,8 @@
                 content: ' +';
             }
 
-            .dropdown.active > a::after {
+            .dropdown.active > a::after,
+            .dropdown.mobile-open > a::after {
                 content: ' -';
             }
         }
@@ -999,7 +1003,8 @@
                 transition: all 0.3s ease !important;
             }
 
-            .dropdown.active .dropdown-content {
+            .dropdown.active .dropdown-content,
+            .dropdown.mobile-open .dropdown-content {
                 max-height: 300px !important;
                 overflow-y: auto !important;
             }
@@ -1917,8 +1922,16 @@
         document.addEventListener('DOMContentLoaded', function() {
             const mobileToggle = document.querySelector('.mobile-menu-toggle');
             const navLinks = document.querySelector('.nav-links');
-            const dropdowns = document.querySelectorAll('
+            const dropdowns = document.querySelectorAll('.dropdown');
 
+            // Mobile menu toggle button
+            if (mobileToggle) {
+                mobileToggle.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    navLinks.classList.toggle('active');
+                    this.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
+                });
+            }
             // Mobile dropdown toggles
             dropdowns.forEach(dropdown => {
                 const dropdownLink = dropdown.querySelector('a');
