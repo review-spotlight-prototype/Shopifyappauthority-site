@@ -14,7 +14,9 @@
       "Bash(curl:*)",
       "Bash(pip install:*)",
       "Bash(find:*)",
-      "Bash(git checkout:*)"
+      "Bash(git checkout:*)",
+      "Bash(start C:ProjectsShopifyappauthority-sitebest-shopify-apps-email-marketingindex.html)",
+      "Bash(del test-checkmarks.html mobile-test.html)"
     ],
     "deny": [],
     "ask": []
