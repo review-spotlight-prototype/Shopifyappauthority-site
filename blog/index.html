@@ -228,25 +228,48 @@
         }
         /* Mobile Styles */
         @media (max-width: 768px) {
+            .site-nav {
+                padding: 0 20px;
+                flex-wrap: wrap;
+            }
+            .logo {
+                font-size: 1.4rem;
+                order: 1;
+            }
+            .mobile-menu-toggle {
+                display: block;
+                order: 2;
+            }
             .nav-links {
                 display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background: white;
+                width: 100%;
+                order: 3;
                 flex-direction: column;
                 gap: 0;
-                padding: 0;
-                box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-                z-index: 1000;
-                max-height: 80vh;
-                overflow-y: auto;
+                background: white;
+                border-top: 1px solid rgba(149, 191, 71, 0.2);
+                padding: 1rem 0;
+                margin-top: 1rem;
             }
             .nav-links.active {
                 display: flex;
             }
-            .mobile-menu-toggle {
+            .nav-links a {
+                padding: 1rem 1.5rem;
+                border-radius: 0;
+                width: 100%;
+                text-align: left;
+            }
+            .dropdown-content {
+                position: static;
+                display: none;
+                box-shadow: none;
+                border: none;
+                background: #f8f9fa;
+                margin-left: 1rem;
+            }
+            .dropdown.active .dropdown-content,
+            .dropdown.mobile-open .dropdown-content {
                 display: block;
             }
             .hero h1 {
@@ -288,7 +311,7 @@
         html {
             scroll-behavior: smooth;
         }
-        /* Enhanced mobile menu functionality */
+        /* Enhanced mobile menu functionality - matches homepage */
         @media (max-width: 768px) {
             .mobile-menu-toggle {
                 display: block !important;
@@ -305,10 +328,21 @@
                 max-height: 0 !important;
                 overflow: hidden !important;
                 transition: all 0.3s ease !important;
+                flex-direction: column !important;
+                gap: 0 !important;
+                border-top: 1px solid rgba(149, 191, 71, 0.2) !important;
+                padding: 0 !important;
+                margin-top: 0 !important;
             }
             .nav-links.active {
                 max-height: 500px !important;
                 overflow-y: auto !important;
+            }
+            .nav-links a {
+                padding: 1rem 1.5rem !important;
+                border-radius: 0 !important;
+                width: 100% !important;
+                text-align: left !important;
             }
             .dropdown-content {
                 position: static !important;
@@ -318,6 +352,7 @@
                 max-height: 0 !important;
                 overflow: hidden !important;
                 transition: all 0.3s ease !important;
+                margin-left: 1rem !important;
             }
             .dropdown.active .dropdown-content,
             .dropdown.mobile-open .dropdown-content {
