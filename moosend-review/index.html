@@ -772,20 +772,7 @@
         </div>
     </main>
     <script>
-        // Track affiliate clicks
-        document.querySelectorAll('a[href*="moosend"]').forEach(link => {
-            link.addEventListener('click', function() {
-                gtag('event', 'click', {
-                    'event_category': 'affiliate_link',
-                    'event_label': 'moosend',
-                    'custom_parameter_1': 'review_page',
-                    'custom_parameter_2': 'email_marketing_apps'
-                });
-                fbq('track', 'Lead', {
-                    content_name: 'Moosend',
-                    content_category: 'email_marketing_apps'
-                });
-            });
+        
         });
         </script>
     <footer style="background: #2d3748; color: white; padding: 3rem 0; margin-top: 4rem;">
@@ -938,5 +925,6 @@ window.addEventListener('DOMContentLoaded', function() {
     </script>    <script src="/search.js"></script>
 
     <script src="/email-capture.js" defer></script>
+    <script src="/analytics-config.js" defer></script>
 </body>
 </html>

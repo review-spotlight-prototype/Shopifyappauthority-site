@@ -1,0 +1,12 @@
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-J09TH92K0M"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  // Basic configuration - enhanced tracking in analytics-config.js
+  gtag('config', 'G-J09TH92K0M', {
+    'anonymize_ip': true
+  });
+</script>

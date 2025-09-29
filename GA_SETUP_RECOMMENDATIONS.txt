@@ -1,0 +1,49 @@
+
+=== Google Analytics Setup Recommendations ===
+
+1. IMMEDIATE ACTIONS:
+   - Review Google Analytics real-time reports to verify tracking
+   - Set up custom dimensions in GA4 for page_type and content_category
+   - Create audiences based on engagement metrics
+
+2. GA4 CONFIGURATION:
+   Go to your GA4 property and configure:
+
+   a) Custom Dimensions (Admin > Custom definitions):
+      - page_type (Event parameter)
+      - content_category (Event parameter)
+      - merchant (Event parameter)
+
+   b) Enhanced Measurement (Admin > Data Streams > Web):
+      - Enable all toggles (scrolls, outbound clicks, site search, etc.)
+
+   c) Audiences (Admin > Audiences):
+      - High-intent users (scroll > 75%, time > 60s)
+      - Review readers (page_type = review)
+      - Affiliate clickers (event = affiliate_click)
+
+3. EVENTS TO MONITOR:
+   Key events now being tracked:
+   - affiliate_click (with merchant details)
+   - internal_navigation (user flow)
+   - scroll_depth (25%, 50%, 75%, 90%, 100%)
+   - time_on_page (30s, 60s, 120s, 300s)
+   - email_signup (form submissions)
+   - search_query (site search)
+   - Web Vitals (LCP, FID for performance)
+
+4. REFERRAL TRACKING FIX:
+   - Linker parameter added for cross-domain tracking
+   - Add your domain to referral exclusion list in GA4
+
+5. TESTING:
+   - Use GA4 DebugView to see events in real-time
+   - Install Google Analytics Debugger Chrome extension
+   - Run: GATracking.debugMode(true) in browser console
+
+6. ATTRIBUTION:
+   The new setup tracks:
+   - Which pages lead to affiliate clicks
+   - User journey through your site
+   - Content engagement patterns
+   - Conversion paths
